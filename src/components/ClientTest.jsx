@@ -15,6 +15,7 @@ function ClientTest() {
     <div>
       <p>client test</p>
       <button onClick={() => test(num)}>click</button>
+      <br />
       <button onClick={handleClick}>inc</button>
       <p>end client</p>
     </div>

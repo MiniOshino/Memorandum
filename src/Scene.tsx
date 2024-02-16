@@ -1,18 +1,20 @@
 "use client";
-import React, { use, useEffect, useState } from "react";
+import React, { use, useEffect, useMemo, useState } from "react";
+import { load } from "./actions/load";
+import Image from "next/image";
 
-export function SceneLoader({ load }) {
-  const [scene, setScene] = useState(0);
-
-  console.log(load(0));
-
+const SpriteBox = ({ sprites }) => {
   return (
-    <>
-      <Scene content={() => load(scene)} next={(id) => setScene(id)}></Scene>
-    </>
+    <div>
+      {sprites?.right && (
+        <Image
+          src={`/public/asset/chars/${sprites.right}.png`}
+          alt={sprites.right}
+        />
+      )}
+    </div>
   );
-}
-
+};
 const TextBox = ({ name, text }) => {
   return (
     <div className="border-4">
@@ -22,25 +24,30 @@ const TextBox = ({ name, text }) => {
   );
 };
 
-const Scene = ({ content, next }) => {
-  const dialog = content.dialog || [];
-  const [currentScene, setScene] = useState(0);
-
-  console.log(content);
-  // detect mouse click or spacebar
+export const Scene = ({ initial_content }) => {
+  const [scene, setContent] = useState(initial_content);
+  const [frame, setFrame] = useState(0);
+  // console.log(scene.frames[frame]?.te)
 
   return (
     <div>
-      <TextBox
-        name={dialog[currentScene]?.textBox.name}
-        text={dialog[currentScene]?.textBox.text}
-      ></TextBox>
+      {scene.frames[frame]?.textBox && (
+        <TextBox
+          name={scene.frames[frame]?.textBox.name}
+          text={scene.frames[frame]?.textBox.text}
+        ></TextBox>
+      )}
       <button
-        onClick={() => {
-          if (currentScene > dialog.length) {
-            next();
+        onClick={async () => {
+          if (frame >= scene.frames.length - 1) {
+            console.log("get next scene");
+            // if (content.next.type === "fixed") {
+            setContent(await load(scene.scene_id + 1));
+            setFrame(0);
+            // } else {
+            // }
           } else {
-            setScene(currentScene + 1);
+            setFrame(frame + 1);
           }
         }}
       >

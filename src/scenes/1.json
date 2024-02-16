@@ -1,0 +1,21 @@
+{
+  "scene_id": 1,
+  "name": "chapter_one",
+  "backgrounds": ["Tavern"],
+  "frames": [
+    {
+      "textBox": { "name": "Roy", "text": "hallo" },
+      "sprites": { "right": "roy_normal" }
+    },
+    { "sprites": { "right": "nora_normal" } },
+    {
+      "textBox": { "name": "Nora", "text": "hi" },
+      "sprites": { "left": "nora_normal" }
+    },
+    {
+      "textBox": { "name": "Roy", "text": "bye" },
+      "sprites": { "right": null }
+    },
+    {}
+  ]
+}
