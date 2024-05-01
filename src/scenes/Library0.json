@@ -1,0 +1,141 @@
+{
+    "Begining" : {
+      "scene_id": "Begining",
+      "name": "Begining",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 200},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 200 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 200 },
+            "background": { "bg": "Light", "pbg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...Oh?", "speed": 200},
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "How curious...", "speed": 100 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "Another soul found their way here..", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "What interesting little beings..", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": " Regardless...", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "I welcome thee to the Library of forgotten pasts and blossoming futures.", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "We are the cagliostro, the vessels of this place...", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "..and I, am its nexus. I organize all that was, is, and will ever be, gathered here in this Library.", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 50 },
+            "background": { "bg": "Light"}
+        }
+      ],
+      "next": { "type": "random", "target": "Library0", "sceneID": "" },
+      "RNG": { "amount": 3}
+    },
+    "1" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "", "text": "Say, little one..", "speed": 50 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "", "text": "Is thou by chance interested in the world before the convergence?", "speed": 50 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "", "text": "...", "speed": 50 },
+            "background": { "bg": "Light"}
+            },
+        {
+            "textBox": { "name": "", "text": "...I see. Same with the previous souls.", "speed": 50 },
+            "background": { "bg": "Light"}
+        }
+         
+        ],
+        "next": { "type": "fixed", "target": "Library0", "sceneID": "Begining2" }
+      },
+      "2" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "", "text": "..The world before the convergence?", "speed": 50 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "", "text": "How odd..", "speed": 50 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "", "text": "The souls before you asked for the same..", "speed": 50 },
+            "background": { "bg": "Light"}
+            }
+         
+        ],
+        "next": { "type": "fixed", "target": "Library0", "sceneID": "Begining2" }
+      },
+      "3" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "", "text": "Art thou curious about something specific?", "speed": 50 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "", "text": "...by chance about the world before the convergence?", "speed": 50 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "", "text": "...", "speed": 50 },
+            "background": { "bg": "Light"}
+        },
+          {
+            "textBox": { "name": "", "text": "..As I thought.. the same with the souls before.", "speed": 50 },
+            "background": { "bg": "Light"}
+            }
+         
+        ],
+        "next": { "type": "fixed", "target": "Library0", "sceneID": "Begining2" }
+      },
+      "Begining2" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "", "text": "Very well then...", "speed": 50 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "", "text": "Come here, little soul.. I shall bring thee to the place where the last memory is preserved.", "speed": 50 },
+              "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "fixed", "target": "Chapter0", "sceneID": "Part1" }
+      }
+    }

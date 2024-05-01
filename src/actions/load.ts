@@ -1,10 +1,11 @@
 "use server";
 import * as fs from "fs";
 
-export async function load(id: number) {
-  const file = await Bun.file(`./src/scenes/${id}.json`);
-  const scene = await file.json();
+export async function load(id: string, sceneID: string) {
+  const file = await fs.readFileSync(`./src/scenes/${id}.json`);
+  const data = JSON.parse(file);
 
+console.log(data);
   // const file = await fs.readFile(`../scenes/${id}.JSON`);
   // console.log(file);
   // get scene from file
@@ -46,5 +47,5 @@ export async function load(id: number) {
   // ];
   // console.log(id);
 
-  return scene;
+  return data[sceneID];
 }

@@ -1,0 +1,653 @@
+{
+    "Chapter1" : {
+      "scene_id": "Chapter1",
+      "name": "Chapter 1: Empty beginnings.",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "", "speed": 50},
+            "background": { "bg": "Chapter1"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "Oooww...", "speed": 50, "show": "true" },
+          "sprites": { "lleft": "Nora_R_HOS_Hurt", "movementLL": "fade"},
+          "background": { "bg": "Darkness", "pbg": "Chapter1"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Oof.. That thing really did a number on me..", "speed": 50, "show": "true"  },
+          "sprites": { "lleft": "Nora_R_HOS_Hurt", "effectLL": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Well.. as it should have..", "speed": 50, "show": "true"  },
+          "sprites": { "lleft": "Nora_R_Neutral_Hurt"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Yet here I am.", "speed": 50, "show": "true"  },
+          "sprites": { "lleft": "Nora_R_Neutral_DepressedSad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "..and here he.. “It” is..", "speed": 50, "show": "true"  },
+          "sprites": { "lleft": "Nora_R_Neutral_Confused", "movementLL": "fadeout"},
+            "background": { "bg": "Light", "pbg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "If it's ever gonna wake up..", "speed": 50, "show": "true"  },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...", "speed": 50, "show": "true"  },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "…Hellooo? ...Good morning?", "speed": 50, "show": "true"  },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Please wake uppp...?", "speed": 50, "show": "true"  },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...!", "speed": 50, "show": "true"  },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Wow.. that worked.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Surprised", "movementLL": "fade"},
+            "background": { "bg": "Darkness", "pbg": "Light"}
+        },
+        {
+            "textBox": { "name": "???", "text": "!!!", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Shocked"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Hey hey.. Everything is alright now. You’re safe.. Relax.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Shocked"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "…we good?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Distracted"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "..That doesn’t look like a “good” expression…", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Well I'm not surprised. You got messed up badly.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_HOS_Neutral", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "I’m more surprised that you actually woke up with bare bones first aid.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Shrug_Surprised", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "And the fact that your flower is still perfectly intact.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"},
+            "items": { "item": "ZaynsLily", "show": "true"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Distracted"},
+            "background": { "bg": "Darkness"},
+            "items": { "item": "ZaynsLily"}
+
+        },
+        {
+            "textBox": { "name": "???", "text": "!!!", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Shocked"},
+            "background": { "bg": "Darkness"},
+            "items": { "item": "ZaynsLily", "show": "false"}
+
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Don’t worry! I made sure it was safe as well.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Shocked"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...That sure got a reaction out of you.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Surprised", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_HOS_Neutral", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(...Not very talkative this one, huh...)", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_HOS_Straightface", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "When I found you, you were curled around that flower.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "So whatever you were protecting it from.. You sure did.. And really well at that!", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Shrug_Surprised", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Considering your.. Physical state and all..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Shrug_Straightface", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Uhm... Does it mean something to you?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...I don’t know.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Sad", "effectRR": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(Woah.. it speaks.)", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Surprised", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...wait ...what do you mean “I don’t know”?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Sus", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Don’t tell me-", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "!", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Shocked", "movementR": "LLTR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Relax. Keep your eyes open, follow my finger.", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "What’s your name?", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...?", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Your name. The thing people call you when they need your attention..", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Distracted"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "I.. I don’t know…", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "That’s not good..", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_HOS_Concearned", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "And also barely following my finger...", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Anything else you remember?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Worried", "movementC": "RTC"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Where we are? What attacked you?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Confused", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "Not really...", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Ah.. We are lost then..", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Surprised", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "...”we”?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Surprised", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Welp, that's not good.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_L_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused", "movementLL": "CTLL"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "Didn’t you.. find {bold}me{/bold}?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "“Finding” is a very delicate word. It was more like.. Noticing.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Shrug_Hmpf", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(...)", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_L_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(What a cruel twist of fate..)", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_L_Neutral_Depressed", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(Is this supposed to be some form of purgatory..?)", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_L_Neutral_Depressed", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...Hah...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_L_Neutral_DepressedSad", "rright": "Zayn_L_NeutralNF_Distracted"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Well we can’t have that..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "???", "text": "I- I don’t understand..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Hmmm...R?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Sus", "rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "..R?", "text": "..R?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Sus", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "No.. L..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Sus", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...Z??", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_SusSF", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Rlz?", "text": "Rlz?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_SusSF", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Mmm.. Definitely Z.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Z...", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Sus", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Zayn...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Sus", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn...", "text": "Zayn?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_SusSF", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "..yeah... No... {bold}yah{/bold}, Zayn.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Your name is now Zayn.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Zayn...?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Well you need a name and I'm not calling you “Flower Keeper”.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Shrug_Straightface", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Why Zayn?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "I don’t know.. You look like one.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Distracted"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "How do I look like a “Zayn”?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Uhm… Intuition?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Straightface", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "What speaks for-", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Straightface", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Look I'm not good with naming things so just.. Your name is Zayn, questions later.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Pissed", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Pissed", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Zayn..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "..What’s your name?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Nora.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "The name’s Nora. The “u” is silent.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_owo", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "There is no “u” in Nora..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_owo", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...Or is there???", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Straightface", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "N-no you were supposed to..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_SusSF", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Whatever....", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Depresso", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "???", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Depresso", "rright": "Zayn_L_NeutralNF_Confused"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "NOW you-..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Pissed", "rright": "Zayn_L_NeutralNF_Shocked", "effectLL": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Anyway, Pleasure to meet you.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Shrug_Hmpf", "rright": "Zayn_L_NeutralNF_Shocked"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "I would recommend us not staying here for any longer than we need to.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "It’s getting dark, and you do not remember what attacked you, and I’m not about to fuck around and find out.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Straightface", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "So let’s visit a city.. Or village.", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "..And where might that be?", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Right..", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Straightface", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(...Doesn’t really matter now does it..)", "speed": 50, "show": "true"  },
+            "sprites": { "lleft": "Nora_R_Neutral_Distracted", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "..This way then!", "speed": 50, "show": "true"  },
+            "sprites": { "rrright": "Nora_R_Neutral_uwu", "rright": "Zayn_L_NeutralNF_Surprised", "movementRRR": "LLTRRR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...Are you coming or do you need help getting up?", "speed": 50, "show": "true"  },
+            "sprites": { "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "N-no! I’m fine..", "speed": 50, "show": "true"  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "rright": "Zayn_L_NeutralNF_Sad", "effectRR": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "I’ll.. just help you regardless..", "speed": 50, "show": "true"  },
+            "sprites": { "rright": "Zayn_L_NeutralNF_Sad", "effectRR": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Here..", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Sad", "movementR": "RRRTR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...good?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Worried", "movementC": "RTC"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Good enough.. I just need to rest..", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Worried", "rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Don’t know where to put your flower?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "I don’t want to hurt it..", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "(...It’s a flower.)", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Straightface", "rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "…Here, let me just..", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Thinking", "movementR": "CTR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "right": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_NeutralNF_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "There.", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_Neutral_Surprised", "movementC": "RTC"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "I clipped it to your hair. Looks good.", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Shrug_Neutral", "rright": "Zayn_L_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Cute even..", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_uwu", "rright": "Zayn_L_Neutral_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_uwu", "rright": "Zayn_L_Neutral_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Does it work for you?", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_Neutral_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Mhm.", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_Neutral_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Nice. Let’s get somewhere safe then.", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_uwu", "rright": "Zayn_L_Neutral_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...Thank you.", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_Neutral_Neutral", "rright": "Zayn_L_Neutral_Smile"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...yeah.", "speed": 50, "show": "true"  },
+            "sprites": { "center": "Nora_R_HOS_Neutral", "rright": "Zayn_L_Neutral_Smile"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "…Come along now.", "speed": 50, "show": "true"  },
+            "sprites": { "rrright": "Nora_R_HOS_Neutral", "rright": "Zayn_L_Neutral_Surprised", "movementRRR": "CTRRR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Mhm..!", "speed": 50, "show": "true"  },
+            "sprites": {"rright": "Zayn_R_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "", "speed": 50},
+            "sprites": {"rrright": "Zayn_R_Neutral_Neutral", "movementRRR" : "RRTRRR"},
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Chapter1", "sceneID": "Scene2" }
+    },
+    "Scene2" : {
+        "scene_id": "Part2",
+        "name": "Walk To Village",
+        "frames": [
+          {
+            "textBox": { "name": "", "text": "...", "speed": 50, "show": "true" },
+            "background": { "bg": "Darkness"}
+          },
+          {
+              "textBox": { "name": "", "text": "...", "speed": 50, "show": "true"  },
+              "background": { "bg": "Darkness"}
+          }
+        ],
+        "next": { "type": "fixed", "target": "Json name", "sceneID": "Sceneid" }
+      }
+    
+  }

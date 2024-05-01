@@ -1,10 +1,39 @@
 {
-  "scene_id": 0,
+"Chapter11" : {
+  "scene_id": "Chapter11",
   "name": "Chapter One",
-  "backgrounds": ["Tavern"],
   "frames": [
     {
-      "textBox": { "name": "Roy", "text": "hi" },
+      "textBox": { "name": "Lyzzy", "text": "Hi, this is a test string. (bold)Text that should be turned bold(/bold). And I hope this will work.", "speed": 50 },
+      "sprites": { "right": "roy_normal", "movementR": "LTR", "movementL": "RTL" },
+      "background": { "bg": "Darkness"}
+    },
+    { "sprites": { "right": "nora_normal" } },
+    {
+      "textBox": { "name": "Nora", "text": "Hi, this is a test string. (italic)Text that should be turned italic(/italic). And I hope this will work.", "speed": 200 },
+      "sprites": { "left": "nora_normal" }
+    },
+    {
+      "textBox": { "name": "Roy", "text": "bye" },
+      "sprites": { "right": null }
+    },
+    {}
+  ],
+  "possibleNextScene": [1],
+  "next": { "type": "fixed", "target": 0, "sceneID": "Chapter22" },
+  "next2": {
+  "type": "picked",
+  "question": "What day is it?",
+  "target": { "Sunday": 3, "Monday": 2 }
+  }
+},
+
+"Chapter22" : {
+  "scene_id": "Chapter22",
+  "name": "Chapter One",
+  "frames": [
+    {
+      "textBox": { "name": "Roy", "text": "EYoEYOeyO" },
       "sprites": { "right": "roy_normal" }
     },
     { "sprites": { "right": "nora_normal" } },
@@ -17,5 +46,13 @@
       "sprites": { "right": null }
     },
     {}
-  ]
+  ],
+  "possibleNextScene": [1],
+  "next": { "type": "fixed", "target": 0, "sceneID": "Chapter22" },
+  "next2": {
+  "type": "picked",
+  "question": "What day is it?",
+  "target": { "Sunday": 3, "Monday": 2 }
+  }
+}
 }

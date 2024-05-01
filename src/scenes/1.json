@@ -1,21 +1,17 @@
 {
-  "scene_id": 1,
-  "name": "chapter_one",
-  "backgrounds": ["Tavern"],
-  "frames": [
-    {
-      "textBox": { "name": "Roy", "text": "hallo" },
-      "sprites": { "right": "roy_normal" }
-    },
-    { "sprites": { "right": "nora_normal" } },
-    {
-      "textBox": { "name": "Nora", "text": "hi" },
-      "sprites": { "left": "nora_normal" }
-    },
-    {
-      "textBox": { "name": "Roy", "text": "bye" },
-      "sprites": { "right": null }
-    },
-    {}
-  ]
+  "Part1" : {
+    "scene_id": "Part1",
+    "name": "Noras Origin",
+    "frames": [
+      {
+        "textBox": { "name": "", "text": "...", "speed": 50, "show": "true" },
+        "background": { "bg": "Darkness"}
+      },
+      {
+          "textBox": { "name": "", "text": "...", "speed": 50, "show": "true"  },
+          "background": { "bg": "Darkness"}
+      }
+    ],
+    "next": { "type": "fixed", "target": "Json name", "sceneID": "Sceneid" }
+  }
 }

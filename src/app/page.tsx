@@ -1,7 +1,7 @@
 import Scene from "@/Scene";
 import { load } from "@/actions/load";
 import ClientTest from "@/components/ClientTest";
-
+import React, { useRef } from 'react';
 // const content = {
 //   scene_id: 0,
 //   name: "Chapter One",
@@ -27,17 +27,26 @@ async function test() {
   console.log("I run only on the server.");
 }
 
+
+
 export default async function Home() {
-  const defaultScene = await load(0);
-  console.log("Load:", defaultScene);
+  //const defaultScene = await load("Library0", "Begining");
+  //const defaultScene = await load("test", "test");
+  const defaultScene = await load("Chapter1", "Chapter1");
+  
+  //console.log("Load:", defaultScene);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p></p>
+    <main className=" overflow-hidden overflow-x-hidden overflow-y-hidden overscroll-none">
       <Scene initial_content={defaultScene}></Scene>
+    </main>
+  );
+}
+/*
+
       <ClientTest />
       <form action={test}>
         <button>hi</button>
       </form>
-    </main>
-  );
-}
+
+      flex min-h-screen flex-col items-center justify-between p-24
+*/

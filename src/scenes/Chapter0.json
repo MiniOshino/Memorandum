@@ -1,0 +1,113 @@
+{
+    "Part1" : {
+      "scene_id": "Part1",
+      "name": "Noras Origin",
+      "frames": [
+        {
+          "textBox": { "name": "", "text": "", "speed": 50 },
+          "background": { "bg": "Chapter0", "pbg": "Light", "effect": "static"}
+        },
+        {
+          "textBox": { "name": "", "text": "", "speed": 50 },
+          "background": { "bg": "Chapter0", "effect": "static", "effectstyle": "lingering"}
+        },
+        {
+          "textBox": { "name": "", "text": "...", "speed": 50 },
+          "background": { "bg": "Darkness", "pbg": "Chapter0"}
+        },
+        {
+          "textBox": { "name": "", "text": "Everyone is replaceable.", "speed": 50 },
+          "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "That is the first rule of the covenant.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Parents, Bosses, Allies.. Yourself.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "If someone dances out of line they are replaced. No redemptions, no second chances.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "As far as I'm concerned, someone leaving me, might as well have been their death.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Do not question.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Second rule of the covenant.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Information must be gathered, threats need to be removed.. Orders are not to be questioned.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Bonding is meaningless. Another mission, another temporary ally. They don't know me, I don't know them.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Perfection.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "The third pillar of the covenant.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "A flaw is a failure. A wound is a stain. A mistake is certain death.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...Yet somehow.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "She defied them all.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "A unique one... A curious one... A sneaky one...", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "I remembered them.. They remembered me.", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "Clumsy. Caring even.. Maybe too caring...", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...She was good at hiding it from everyone..", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "..So why did she not hide it from me?", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...Why me..?", "speed": 50 },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...Why...", "speed": 50 },
+            "background": { "bg": "Darkness", "effect": "static", "effectstyle": "vibe"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Chapter1", "sceneID": "Chapter1" }
+    }
+}
