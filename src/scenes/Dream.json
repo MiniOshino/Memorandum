@@ -1,0 +1,101 @@
+{
+    "Dream1" : {
+      "scene_id": "5",
+      "name": "The First Dream",
+      "storyProgressID": 6,
+      "frames": [
+        {
+          "textBox": { "name": "", "text": "...", "speed": 50 },
+          "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 50  },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral", "movementRR": "fade"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Alright, we have to go.", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "+*¬|§%*)ç)|§°°%=/ç%", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "You know we have to..", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "è*%()/)(/¢¬´¢¬{}]=/ç)(/*?", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Because they are looking for {italic} the {/italic} Lily.", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "=¢¬(", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "They will never stop.. You know they won’t..", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "¢|+&&=(", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "I’m sorry..", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "!è/&)=¬¢§¬¢|+(¬¢", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "||¦|&&(=+=&..=//||¬¢¬&(&§¬§|", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Right...", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Sad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Let’s head out then..", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 50  },
+            "sprites": {"rright": "Zayn_L_NeutralNF_Neutral", "movementRR": "fadeout"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "..................", "speed": 50  },
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "..................................................", "speed": 50  },
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Chapter2", "sceneID": "Chapter2" }
+    }
+  }

@@ -126,6 +126,7 @@
       "Begining2" : {
         "scene_id": "Begining",
         "name": "Begining",
+        "storyProgressID": 1,
         "frames": [
           {
             "textBox": { "name": "", "text": "Very well then...", "speed": 50 },

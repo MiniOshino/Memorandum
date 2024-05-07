@@ -1,0 +1,521 @@
+{
+    "Chapter2" : {
+      "scene_id": "6",
+      "name": "Waking up",
+      "hud": "StoryHud0",   
+      "logbook": {"entry": 1, "newpage": 1, "update": false},
+      "storyProgressID": 7,
+      "frames": [
+        {
+          "textBox": { "name": "Zayn", "text": "!!!", "speed": 50, "show": "true" },
+          "sprites": {"center": "Zayn_L_Neutral_Shocked", "effectC":"crash"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(Ngh… my head..)", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_Hurt", "effectC":"shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(..hm?)", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_ThinkingH"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(A blanket?)", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(...)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_R_Neutral_Neutral", "movementRR": "CTRR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(Nora seems to be gone.. But her stuff is still here.)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_R_Neutral_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(...Maybe she is outside..)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_R_Thinking_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "", "speed": 50},
+            "sprites": {"rrright": "Zayn_R_Thinking_Neutral", "movementRRR": "RRTRRR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Uh, excuse me. Have you seen the girl that was with me?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "movementRR": "RRRTRR", "lleft": "Silhouette", "movementLL": "fade"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Hm?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Ah, it’s you.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette", "effectLL": "jump"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "I guarantee she has not passed here since yesterday.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "At least not while I was awake.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Distracted", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "I hope she hasn’t gone out at night.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "At night?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Mmhmm.          There have been rumors of a creature roaming the woods.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "After darkness falls it can be heard, dragging something through the forest grounds.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette", "effectLL": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(A creature..        Nora mentioned something like that..)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Thinking", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Where is that creature now?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "How would I know? Hopefully far far away by now!", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette", "effectLL": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Can’t have something like that ruin business at the most profitable time of the year!", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Do you want it gone?      I could help.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Course I- Wait.. you?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Now.. don’t get me wrong missss-ster.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "But you look in no condition to deal with something like that.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(I suppose that's fair.. I don’t even have a weapon..)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Distracted", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(...But if that creature really attacked me..      I might remember something when I see it...)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Distracted", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "I know those eyes..", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Distracted", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Listen, as a caring man and you being a well paying customer, I’d rather have you stay in this safe little old Inn.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Distracted", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "As soon as the town gathered enough Ignaz we can contact Indarr’s hunter guild to deal with the problem.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(Ignaz again..)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Thinking", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "May I ask..    What is an “Ignaz”?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "You’re kidding right?      Ignaz?      The currency of this nation.      These coins?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "The thing you can exchange for goods and services like food and shelter.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Oh..    (food...)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Sad", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "Don’t you give me those puppy eyes.. We all gotta earn our money someway.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Sad", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Innkeeper", "text": "I’ll give you a heads up if I see that girl though.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "That would be nice..", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Thinking", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Thank you.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Silhouette"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_Thinking", "lleft": "Silhouette", "movementLL": "fadeout", "movementC": "RRTC"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(Ignaz..     He said they would pay hunters to get rid of the creature..)", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_Thinking"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "*Stomach grumbles*", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_Sad", "effectC": "shake"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(... I wonder how Nora got her Ignaz..)", "speed": 50, "show": "true" },
+            "sprites": {"center": "Zayn_L_Neutral_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...", "speed": 50},
+            "sprites": {"rright": "Zayn_L_Neutral_Thinking", "movementRR": "CTRR", "lleft": "Nora_L_Neutral_DepressedSad", "movementLL": "fade"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "..Nora?!", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "lleft": "Nora_L_Neutral_Shocked"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "!!", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "lleft": "Nora_R_Neutral_Surprised", "effectLL": "jump"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "O-oh, hi.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "lleft": "Nora_R_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Uhm, where did you go?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Nora_R_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "That’s my line...     Where were you?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Confused", "lleft": "Nora_R_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Uhm... The roof.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Nora_R_HOS_Distracted"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Huh?        How? Why?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Confused", "lleft": "Nora_R_HOS_Distracted"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "It’s a good lookout spot..    Got a nice overview of town ...and a lot of trees.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Confused", "lleft": "Nora_R_HOS_Straightface"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(I’m not even going to question that.)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Confused", "lleft": "Nora_R_HOS_Straightface"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(Hm.. now that I’m looking at her.. She has a blade.)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Nora_R_Neutral_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "Say, are you a hunter?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Nora_R_Neutral_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "A hunter? Where did that come from?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Nora_R_Neutral_Shook"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "I asked the Innkeeper about Ignaz.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Nora_R_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "They mentioned people hunt things for money and It’s hard to come by.", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Thinking", "lleft": "Nora_R_Neutral_Neutral"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Uh-uhm..", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Nora_L_HOS_DepressedSad"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Sorta..? Why do you ask?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Thinking_Neutral", "lleft": "Nora_R_HOS_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "I-", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Nora_R_HOS_Worried"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "*Stomach grumbles*", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "lleft": "Nora_R_HOS_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Ah..", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "lleft": "Nora_R_HOS_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Would you.. Like to get something to eat?", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Distracted", "lleft": "Nora_R_Neutral_Straightface"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "...yes...", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Shy", "lleft": "Nora_R_Neutral_Straightface"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "...", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Shy", "lleft": "Nora_R_Neutral_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "Let’s go get you some food then~", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Neutral", "lleft": "Nora_R_Neutral_Glee"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Nora", "text": "To town square! I spotted a market from the roof before!", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "lleft": "Nora_R_Neutral_uwu"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "W-wait!", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_L_Neutral_Surprised", "rrright": "Nora_R_Neutral_Glee", "effectRR": "jump", "movementRRR": "LLTRRR"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Zayn", "text": "(Why did she suddenly get so energetic-!)", "speed": 50, "show": "true" },
+            "sprites": {"rright": "Zayn_R_Thinking_Surprised"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "", "speed": 50},
+            "sprites": {"rrright": "Zayn_R_Thinking_Surprised", "movementRRR": "RRTRRR"},
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Json name", "sceneID": "Sceneid" }
+    },
+    
+    "Scene2" : {
+        "scene_id": "7",
+        "name": "Waking up",
+        "hud": "StoryHud0",   
+        "logbook": {"entry": 1, "newpage": 1, "update": false},
+          "frames": [   
+            {
+              "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true" },
+              "sprites": {"center": "Zayn_L_Neutral_Worried", "movementC": "fade"},
+              "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(Damn.. I lost her...)", "speed": 50, "show": "true"  },
+                "sprites": {"center": "Zayn_L_Neutral_Sad", "effectC": "shake"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(There are.. Too many people..)", "speed": 50, "show": "true"  },
+                "sprites": {"center": "Zayn_L_Neutral_Hurt"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(It’s so loud.. I..)", "speed": 50, "show": "true"  },
+                "sprites": {"center": "Zayn_L_Neutral_Hurt", "effectC": "shake"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(I need space... my head..)", "speed": 50, "show": "true"  },
+                "sprites": {"center": "Zayn_L_Neutral_Hurt", "effectC": "shake"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Hurt", "movementRR": "CTRR"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Sad"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(Finally.. Guess I’ll wait here..)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Worried"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(... I feel bad...)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Sad"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(I can’t do anything..)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Hurt"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(She patched me up, gave me a logbook, paid for a room, and is getting me some food now..)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Sad"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(...)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Neutral_Distracted"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(...Maybe...)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Thinking_Distracted"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(If I’d find that creature, I could get some money AND it might help me remember something.)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Thinking_Thinking"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "...", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Thinking_ThinkingH"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "(I can do it.. I feel a lot better than yesterday.)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_L_Thinking_ThinkingH"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "...Alright.", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_Neutral"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "A night active creature. Probably has a den somewhere close, maybe a cave or a hole.", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_Thinking"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "It’s den should be somewhat close to the village considering people heard it dragging things.", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_Neutral"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "This also means it's more of a scavenger rather than a trapping type..", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_ThinkingH"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "Either hunting things bigger than itself or does not have the means to carry its prey.", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_Thinking"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "I suppose the dragging could also have nothing to do with a thing and rather it just being the noise the creature makes while traversing ground..", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_ThinkingV"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "..Maybe a large snake?", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Zayn_R_Thinking_Neutral"},
+                "background": { "bg": "Darkness"}
+            }
+          ],
+          "next": { "type": "fixed", "target": "Chapter2", "sceneID": "Scene3" }
+        },
+        "Scene3" : {
+            "scene_id": "7.1",
+            "name": "Wakeup",
+            "hud": "StoryHud5",   
+            "frames": [
+                {
+                    "textBox": { "name": "Zayn", "text": "Or-", "speed": 50, "show": "true"  },
+                    "sprites": {"rright": "Zayn_R_Thinking_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+             
+            ],
+            "next": { "type": "fixed", "target": "Chapter2", "sceneID": "Scene4" }
+          },
+          "Scene4" : {
+              "scene_id": "7.1",
+              "name": "Wakeup",
+              "hud": "StoryHud4",   
+              "frames": [
+                  {
+                      "textBox": { "name": "Zayn", "text": "Or-", "speed": 50, "show": "true"  },
+                      "sprites": {"rright": "Zayn_R_Thinking_Neutral"},
+                      "background": { "bg": "Darkness"}
+                  }
+               
+              ],
+              "next": { "type": "fixed", "target": "Chapter2", "sceneID": "Scene4" }
+            }
+      
+  }

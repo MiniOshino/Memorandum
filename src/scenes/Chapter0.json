@@ -1,7 +1,8 @@
 {
     "Part1" : {
-      "scene_id": "Part1",
+      "scene_id": "1",
       "name": "Noras Origin",
+      "storyProgressID": 2,
       "frames": [
         {
           "textBox": { "name": "", "text": "", "speed": 50 },

@@ -43,7 +43,7 @@ const config: Config = {
           to: { transform: 'translate(0, 0)'},
         },
         RRTC: {
-          from: { transform: 'translate(47%, 0)'},
+          from: { transform: 'translate(60%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         LLTC: {
@@ -218,7 +218,27 @@ const config: Config = {
         lingering: {
           '0%, 25%' : { opacity: '1'},
           '100%' : { opacity: '0'},
-        }
+        },
+        jump: {
+          '0%, 100%' : {transform: 'translate(0, 0)'},
+          '50%' : {transform: 'translate(0, -10px)'},
+        },
+        banner: {
+          from: { transform: 'translate(0, -25%)'},
+          to: {transform: 'translate(0, 0%)'},
+        },
+        Rbanner: {
+          from: { transform: 'translate(0, 25%)'},
+          to: {transform: 'translate(0, 0%)'},
+        },
+        shatter: {
+          '0%, 100%': { transform: 'translate(0, 0)' },
+          '10%, 60%': { transform: 'translate(-4px, 0)' },
+          '20%, 70%': { transform: 'translate(0, -4px)' },
+          '30%, 80%': { transform: 'translate(-4px, -4px)' },
+          '40%, 90%': { transform: 'translate(0, -4px)' },
+          '50%': { transform: 'translate(0, 0)' },
+        },
       },
       animation: {
         shake: 'shake 0.5s infinite', // Apply the shake animation infinitely

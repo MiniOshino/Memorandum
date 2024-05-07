@@ -1,0 +1,13 @@
+{
+    "start" : {
+      "scene_id": "strt",
+      "name": "-",
+      "frames": [
+        {
+          "textBox": { "name": "", "text": "", "speed": 50},
+          "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "start"}
+    }
+  }

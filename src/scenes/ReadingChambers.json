@@ -1,0 +1,134 @@
+{
+    "ReadingChambers" : {
+      "scene_id": "-",
+      "name": "ReadingChambers",
+      "hud": "StoryHud6",   
+      "frames": [
+        {
+          "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers" }
+    },
+    "FirstArrival" : {
+        "scene_id": "-",
+        "name": "First Arrival",
+        "jayson": "ReadingChambers",
+        "hud": "StoryHud6",   
+        "frames": [
+            {
+                "textBox": { "name": "???", "text": "Murrr...", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral", "movementRR": "fade"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "???", "text": "Not again...", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "shake"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "???", "text": "A- Ah..", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "jump"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "???", "text": "Hey there..", "speed": 50, "show": "true"  },
+                "sprites": {"center": "Lyzzy_Neutral", "movementC": "RRTC"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "???", "text": "Sorry for ruining the immersion.. ", "speed": 50, "show": "true"  },
+                "sprites": {"center": "Lyzzy_Neutral"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "???", "text": "Don't worry.. I'll clean this mess up real quick..", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral", "movementRR": "CTRR"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "???", "text": "You can go back to..          reading..", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "", "text": "(It starts shoving the shards of the broken vase into its body, along with the flowers)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "shake"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "", "text": "(It continues rubbing its sleeve over the puddle until it vanishes)", "speed": 50, "show": "true"  },
+                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "shake"},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 50},
+                "sprites": {"rright": "Lyzzy_Neutral"},
+                "background": { "bg": "Darkness"}
+            }
+        ],
+        "next": { "type": "choice", "choices": 3, "question": "(It continues rubbing its sleeve over the puddle until it vanishes)",
+        "one": {"text": "What are you?", "path": "1C1", "stats": "Analytical"}, 
+        "two": {"text": "Who are you?", "path": "1C2", "stats": "Empathetic"}, 
+        "three": {"text": "Where am I?", "path": "1C3", "stats": "Self Interest"}
+            }
+        },
+        "1C1" : {
+            "scene_id": "-",
+            "name": "First Arrival",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Just a Creature..", "speed": 50, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+          },
+          "1C2" : {
+            "scene_id": "-",
+            "name": "First Arrival",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Nobody of great importance…", "speed": 50, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+          },
+          "1C3" : {
+            "scene_id": "-",
+            "name": "First Arrival",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "You’re in the library… duh.", "speed": 50, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+          },
+          "Scene2" : {
+            "scene_id": "-",
+            "name": "First Arrival",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Pay me no mind. I was never here..", "speed": 50, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(After collecting the last piece it swiftly turns the corner)", "speed": 50, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+          }
+      
+  }

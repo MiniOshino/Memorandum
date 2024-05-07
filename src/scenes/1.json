@@ -2,6 +2,8 @@
   "Part1" : {
     "scene_id": "Part1",
     "name": "Noras Origin",
+    "hud": "StoryHud0",   
+    "logbook": {"entry": 1, "newpage": 1, "update": false},
     "frames": [
       {
         "textBox": { "name": "", "text": "...", "speed": 50, "show": "true" },
@@ -9,6 +11,7 @@
       },
       {
           "textBox": { "name": "", "text": "...", "speed": 50, "show": "true"  },
+          "sprites": {"rright": "Zayn_L_NeutralNF_Neutral", "movementRR": "fadeout"},
           "background": { "bg": "Darkness"}
       }
     ],

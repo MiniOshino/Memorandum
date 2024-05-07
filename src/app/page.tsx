@@ -32,8 +32,13 @@ async function test() {
 export default async function Home() {
   //const defaultScene = await load("Library0", "Begining");
   //const defaultScene = await load("test", "test");
-  const defaultScene = await load("Chapter1", "Chapter1");
-  
+  const defaultScene = await load("Chapter2", "Scene3");
+
+
+  //const defaultScene = await load("start", "start");
+
+
+  //const actualScene = await load(JSON.parse(localStorage.getItem('CurrentChapter')!), JSON.parse(localStorage.getItem('CurrentPart')!))
   //console.log("Load:", defaultScene);
   return (
     <main className=" overflow-hidden overflow-x-hidden overflow-y-hidden overscroll-none">
