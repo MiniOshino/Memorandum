@@ -9,64 +9,199 @@
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "center": "Lyzzy_Neutral", "movementC": "fade", "left": "Zayn_L_Neutral_Neutral", "movementL": "fade"},
-          "background": { "bg": "Darkness"}
-        },
-        {
-            "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-            "sprites": { "center": "Lyzzy_Neutral", "left": "Zayn_L_Neutral_Neutral", "effectC": "shake"},
-            "background": { "bg": "Darkness"}
-        },
-        {
-            "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-            "sprites": { "center": "Lyzzy_Neutral", "left": "Zayn_L_Neutral_Neutral", "effectC": "crash"},
-            "background": { "bg": "Darkness"}
-        },
-        {
-          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "rright": "Lyzzy_Neutral", "movementRR": "CTRR", "lleft": "Zayn_L_Neutral_Neutral", "movementLL": "LTLL"},
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "sright": "Zayn_L_Neutral_Neutral"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "lleft": "Lyzzy_Neutral", "movementLL": "RRTLL", "right": "Zayn_L_Neutral_Neutral", "movementR": "LLTR"},
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "sright": "Zayn_L_Neutral_Neutral"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "center": "Lyzzy_Neutral", "movementC": "LLTC", "right": "Zayn_L_Neutral_Neutral"},
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "rrright": "Lyzzy_Neutral", "movementRRR": "CTRRR", "llleft": "Zayn_L_Neutral_Neutral", "movementLLL": "RTLLL"},
+          "sprites": { "lleft": "Zayn_L_Neutral_Neutral", "movementLL": "SRTLL"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "lleft": "Lyzzy_Neutral", "movementLL": "RRRTLL"},
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "LLTSR"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "rright": "Lyzzy_Neutral", "movementRR": "LLTRR"},
+          "sprites": { "sleft": "Zayn_L_Neutral_Neutral", "movementSL": "SRTSL"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "left": "Lyzzy_Neutral", "movementL": "RRTL"},
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "SLTSR"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "lleft": "Lyzzy_Neutral", "movementLL": "LTLL"},
+          "sprites": { "left": "Zayn_L_Neutral_Neutral", "movementL": "SRTL"},
           "background": { "bg": "Darkness"}
         },
         {
           "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
-          "sprites": { "right": "Lyzzy_Neutral", "movementR": "LLTR"},
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "LTSR"},
           "background": { "bg": "Darkness"}
-        }
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "center": "Zayn_L_Neutral_Neutral", "movementC": "SRTC"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "CTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "right": "Zayn_L_Neutral_Neutral", "movementR": "SRTR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "RTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "rright": "Zayn_L_Neutral_Neutral", "movementRR": "SRTRR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "RRTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "SRTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "SRTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "llleft": "Zayn_L_Neutral_Neutral", "movementLLL": "SRTLLL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "LLLTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "rrright": "Zayn_L_Neutral_Neutral", "movementRRR": "SRTRRR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Zayn_L_Neutral_Neutral", "movementSR": "RRRTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "sright": "Zayn_L_Neutral_Neutral"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "lleft": "Nora_R_Neutral_Neutral", "movementLL": "SLTLL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "LLTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "left": "Nora_R_Neutral_Neutral", "movementL": "SLTL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "LTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "center": "Nora_R_Neutral_Neutral", "movementC": "SLTC"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "CTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "right": "Nora_R_Neutral_Neutral", "movementR": "SLTR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "RTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "rright": "Nora_R_Neutral_Neutral", "movementRR": "SLTRR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "RRTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sright": "Nora_R_Neutral_Neutral", "movementSR": "SLTSR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "SRTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "llleft": "Nora_R_Neutral_Neutral", "movementLLL": "SLTLLL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "LLLTSL"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "rrright": "Nora_R_Neutral_Neutral", "movementRRR": "SLTRRR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Lyzzy", "text": "Heyyy", "speed": 50, "show": "true" },
+          "sprites": { "sleft": "Nora_R_Neutral_Neutral", "movementSL": "RRRTSL"},
+          "background": { "bg": "Darkness"}
+        } 
       ],
       "next": { "type": "fixed", "target": "Json name", "sceneID": "Sceneid" }
     }

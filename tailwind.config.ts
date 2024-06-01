@@ -16,6 +16,13 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'translate(0, 0)' },
+          '20%': { transform: 'translate(-5px, 0)' },
+          '40%': { transform: 'translate(5px, 0)' },
+          '60%': { transform: 'translate(-5px, 0)' },
+          '80%': { transform: 'translate(5px, 0)' },
+        },
         shake: {
           '0%, 100%': { transform: 'translate(0, 0)' },
           '20%': { transform: 'translate(2px, 2px)' },
@@ -29,6 +36,12 @@ const config: Config = {
           '40%': { transform: 'translate(-10px, -10px)' },
           '60%': { transform: 'translate(10px, -10px)' },
           '80%': { transform: 'translate(-10px, 10px)' },
+        },
+        blink: {
+          '0%' : { transform: 'translate(0, 0)', opacity: '1'},
+          '50%': { transform: 'translate(-5px, 0)', opacity: '1'},
+          '99%': {transform: 'translate(5px, 0)', opacity: '1'},
+          '100%': {transform: 'translate(5px, 0)', opacity: '0'},
         },
         delay: {
           '0%, 75%' : { opacity: '0'},
@@ -46,8 +59,16 @@ const config: Config = {
           from: { transform: 'translate(60%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SRTC: {
+          from: { transform: 'translate(80%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         LLTC: {
           from: { transform: 'translate(-57%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SLTC: {
+          from: { transform: 'translate(-80%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         RRRTC: {
@@ -71,8 +92,16 @@ const config: Config = {
           from: { transform: 'translate(-100%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SLTR: {
+          from: { transform: 'translate(-120%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         RRTR: {
           from: { transform: 'translate(10%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SRTR: {
+          from: { transform: 'translate(44%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         LLLTR: {
@@ -95,8 +124,16 @@ const config: Config = {
           from: { transform: 'translate(100%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SRTL: {
+          from: { transform: 'translate(120%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         LLTL: {
-          from: { transform: 'translate(-10%, 0)'},
+          from: { transform: 'translate(-22%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SLTL: {
+          from: { transform: 'translate(-45%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         RRRTL: {
@@ -120,8 +157,16 @@ const config: Config = {
           from: { transform: 'translate(120%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SRTLL: {
+          from: { transform: 'translate(140%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         LTLL: {
           from: { transform: 'translate(22%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SLTLL: {
+          from: { transform: 'translate(-22%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         RRRTLL: {
@@ -130,6 +175,72 @@ const config: Config = {
         },
         LLLTLL: {
           from: { transform: 'translate(-100%, 0)'}, 
+          to: { transform: 'translate(0, 0)'},
+        },
+        //------------------------------------POSITION MOVEMENT TO POSITION SL-----------------------------------
+        CTSL: {
+          from: { transform: 'translate(77%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        RTSL: {
+          from: { transform: 'translate(115%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        RRTSL: {
+          from: { transform: 'translate(140%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SRTSL: {
+          from: { transform: 'translate(160%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        LTSL: {
+          from: { transform: 'translate(44%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        LLTSL: {
+          from: { transform: 'translate(22%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        RRRTSL: {
+          from: { transform: 'translate(200%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        LLLTSL: {
+          from: { transform: 'translate(-100%, 0)'}, 
+          to: { transform: 'translate(0, 0)'},
+        },
+        //------------------------------------POSITION MOVEMENT TO POSITION SR-----------------------------------
+        CTSR: {
+          from: { transform: 'translate(-78%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        RTSR: {
+          from: { transform: 'translate(-44%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        RRTSR: {
+          from: { transform: 'translate(-22%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SLTSR: {
+          from: { transform: 'translate(-160%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        LTSR: {
+          from: { transform: 'translate(-120%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        LLTSR: {
+          from: { transform: 'translate(-140%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        RRRTSR: {
+          from: { transform: 'translate(100%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        LLLTSR: {
+          from: { transform: 'translate(-200%, 0)'}, 
           to: { transform: 'translate(0, 0)'},
         },
         //------------------------------------POSITION MOVEMENT TO POSITION RR-----------------------------------
@@ -145,8 +256,16 @@ const config: Config = {
           from: { transform: 'translate(-120%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SLTRR: {
+          from: { transform: 'translate(-140%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         RTRR: {
           from: { transform: 'translate(-22%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        SRTRR: {
+          from: { transform: 'translate(22%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         LLLTRR: {
@@ -155,6 +274,10 @@ const config: Config = {
         },
         RRRTRR: {
           from: { transform: 'translate(100%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        DTRR: {
+          from: { transform: 'translate(0, 100%)'},
           to: { transform: 'translate(0, 0)'},
         },
          //------------------------------------POSITION MOVEMENT TO POSITION lLL-----------------------------------
@@ -170,8 +293,12 @@ const config: Config = {
           from: { transform: 'translate(230%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SRTLLL: {
+          from: { transform: 'translate(255%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         LTLLL: {
-          from: { transform: 'translate(60%, 0)'},
+          from: { transform: 'translate(130%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         RRRTLLL: {
@@ -179,7 +306,11 @@ const config: Config = {
           to: { transform: 'translate(0, 0)'},
         },
         LLTLLL: {
-          from: { transform: 'translate(50%, 0)'}, 
+          from: { transform: 'translate(110%, 0)'}, 
+          to: { transform: 'translate(0, 0)'},
+        },
+        SLTLLL: {
+          from: { transform: 'translate(90%, 0)'}, 
           to: { transform: 'translate(0, 0)'},
         },
         //------------------------------------POSITION MOVEMENT TO POSITION RRR-----------------------------------
@@ -195,8 +326,12 @@ const config: Config = {
           from: { transform: 'translate(-230%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SLTRRR: {
+          from: { transform: 'translate(-255%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         RTRRR: {
-          from: { transform: 'translate(-60%, 0)'},
+          from: { transform: 'translate(-130%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         LLLTRRR: {
@@ -207,12 +342,20 @@ const config: Config = {
           from: { transform: 'translate(-110%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
+        SRTRRR: {
+          from: { transform: 'translate(-90%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
         vibe: {
           from: { opacity: '0' },
           to: { opacity: '1' },
         },
         vibeout: {
           from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+        svo: {
+          from: { opacity: '0.2' },
           to: { opacity: '0' },
         },
         lingering: {
@@ -238,6 +381,13 @@ const config: Config = {
           '30%, 80%': { transform: 'translate(-4px, -4px)' },
           '40%, 90%': { transform: 'translate(0, -4px)' },
           '50%': { transform: 'translate(0, 0)' },
+        },
+        crack: {
+          '0%, 100%': { transform: 'translate(0, 0)' },
+          '20%': { transform: 'translate(-4px, 0)' },
+          '40%': { transform: 'translate(0, -4px)' },
+          '60%': { transform: 'translate(-4px, -4px)' },
+          '80%': { transform: 'translate(0, -4px)' },
         },
       },
       animation: {

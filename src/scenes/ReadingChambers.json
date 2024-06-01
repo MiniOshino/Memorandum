@@ -2,7 +2,8 @@
     "ReadingChambers" : {
       "scene_id": "-",
       "name": "ReadingChambers",
-      "hud": "StoryHud6",   
+      "hud": "StoryHud6",
+      "type": "PNC",
       "frames": [
         {
           "background": { "bg": "Darkness"}
@@ -17,74 +18,74 @@
         "hud": "StoryHud6",   
         "frames": [
             {
-                "textBox": { "name": "???", "text": "Murrr...", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral", "movementRR": "fade"},
+                "textBox": { "name": "???", "text": "Murrr...", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Ugh", "movementRR": "fade"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "Not again...", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "shake"},
+                "textBox": { "name": "???", "text": "Not again...", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Ugh", "effectRR": "wiggle"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "A- Ah..", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "jump"},
+                "textBox": { "name": "???", "text": "A- Ah..", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Neutral", "effectRR": "jump"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "Hey there..", "speed": 50, "show": "true"  },
-                "sprites": {"center": "Lyzzy_Neutral", "movementC": "RRTC"},
+                "textBox": { "name": "???", "text": "Hey there..", "speed": 40, "show": "true"  },
+                "sprites": {"center": "Lyz_Neutral", "movementC": "RRTC"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "Sorry for ruining the immersion.. ", "speed": 50, "show": "true"  },
-                "sprites": {"center": "Lyzzy_Neutral"},
+                "textBox": { "name": "???", "text": "Sorry for ruining the immersion.. ", "speed": 40, "show": "true"  },
+                "sprites": {"center": "Lyz_Ugh"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "Don't worry.. I'll clean this mess up real quick..", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral", "movementRR": "CTRR"},
+                "textBox": { "name": "???", "text": "Don't worry.. I'll clean this mess up real quick..", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Ugh", "movementRR": "CTRR"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "You can go back to..          reading..", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral"},
+                "textBox": { "name": "???", "text": "You can go back to..          reading..", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Neutral"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "(It starts shoving the shards of the broken vase into its body, along with the flowers)", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "shake"},
+                "textBox": { "name": "", "text": "(It starts shoving the shards of the broken vase into its body, along with the flowers)", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Neutral", "effectRR": "shake"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "(It continues rubbing its sleeve over the puddle until it vanishes)", "speed": 50, "show": "true"  },
-                "sprites": {"rright": "Lyzzy_Neutral", "effectRR": "shake"},
+                "textBox": { "name": "", "text": "(It continues rubbing its sleeve over the puddle until it vanishes)", "speed": 40, "show": "true"  },
+                "sprites": {"rright": "Lyz_Neutral", "effectRR": "shake"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "", "speed": 50},
-                "sprites": {"rright": "Lyzzy_Neutral"},
+                "textBox": { "name": "", "text": "", "speed": 40},
+                "sprites": {"rright": "Lyz_Neutral"},
                 "background": { "bg": "Darkness"}
             }
         ],
-        "next": { "type": "choice", "choices": 3, "question": "(It continues rubbing its sleeve over the puddle until it vanishes)",
-        "one": {"text": "What are you?", "path": "1C1", "stats": "Analytical"}, 
-        "two": {"text": "Who are you?", "path": "1C2", "stats": "Empathetic"}, 
-        "three": {"text": "Where am I?", "path": "1C3", "stats": "Self Interest"}
+        "next": { "type": "choice", "question": "(It continues rubbing its sleeve over the puddle until it vanishes)",
+        "one": {"text": "What are you?", "path": "1C1", "stats": "Analytical", "compare": "true", "with": "true"},
+        "two": {"text": "Who are you?", "path": "1C2", "stats": "Empathetic", "compare": "true", "with": "true"}, 
+        "three": {"text": "Where am I?", "path": "1C3", "stats": "Self Interest", "compare": "true", "with": "true"}
             }
         },
         "1C1" : {
             "scene_id": "-",
             "name": "First Arrival",
-            "jayson": "ReadingChambers",  
+            "jayson": "ReadingChambers",
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Just a Creature..", "speed": 50, "show": "true"},
-                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "textBox": { "name": "???", "text": "Just a slimy creature..", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Lament"},
                     "background": { "bg": "Darkness"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2", "event": "SlimeInterest", "eventupdate": "1" }
           },
           "1C2" : {
             "scene_id": "-",
@@ -92,8 +93,8 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Nobody of great importance…", "speed": 50, "show": "true"},
-                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "textBox": { "name": "???", "text": "Nobody of great importance...", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Neutral"},
                     "background": { "bg": "Darkness"}
                 }
             ],
@@ -105,8 +106,8 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "You’re in the library… duh.", "speed": 50, "show": "true"},
-                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "textBox": { "name": "???", "text": "You’re in the library… duh.", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Ugh"},
                     "background": { "bg": "Darkness"}
                 }
             ],
@@ -118,17 +119,621 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Pay me no mind. I was never here..", "speed": 50, "show": "true"},
-                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "textBox": { "name": "???", "text": "Pay me no mind. I was never here..", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Neutral"},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(After collecting the last piece it swiftly turns the corner)", "speed": 50, "show": "true"},
-                    "sprites": {"rright": "Lyzzy_Neutral"},
+                    "textBox": { "name": "", "text": "(After collecting the last piece it swiftly turns the corner)", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Neutral", "movementRR": "fadeout"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You attempt to chase after it but before you manage to answer, it has already vanished tracelessly)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(A cold shiver sparks throughout you as you stare out into the dark corridor, moving back out of instinct)", "speed": 40, "show": "true"},
                     "background": { "bg": "Darkness"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "EventFV", "eventupdate": "2"}
+          },
+          "WLNBF" : {
+            "scene_id": "-",
+            "name": "WLNB First Interaction",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(You stare at the book you woke up in front of. The title reads “Where Lilies never bloom”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "Reach out to it", "path": "BC1", "compare": "true", "with": "true", "stats": "Confused"},
+            "two": {"text": "Use the force", "path": "BC2", "compare": "true", "with": "true", "stats": "Silly"}
+            }
+          },
+          "BC1" : {
+            "scene_id": "-",
+            "name": "BC1",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(You try to reach out to open it but the absence of hands makes this task harder than it seems)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "WLNBFN"}
+            
+          },
+          "BC2" : {
+            "scene_id": "-",
+            "name": "BC2",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(You try to use some sort of telepathic power like the other lights do...     without great success)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(Somehow you feel almost disappointed)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "WLNBFN"}
+          },
+          "WLNBFN" : {
+            "scene_id": "-",
+            "name": "WLNB Second Interaction",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(Despite your greatest efforts you seem to be unable to just “continue reading”, already failing at simply opening up the book)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(Was it even open in the first place?)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"InformationWLNB", "eventupdate":"1"}
+          },
+          "WLNBE" : {
+            "scene_id": "-",
+            "name": "WLNB Error",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(Yet for some reason you keep imagining a blue screen with a sad smiley..)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+          },
+          "WLNBN" : {
+            "scene_id": "-",
+            "name": "WLNB Neutral Interaction (Continue reading)",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(Your mind goes through all the things it experienced last time, as you start to fall back into a state of trance...)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "continue"}
+          },
+          "DoorF" : {
+            "scene_id": "-",
+            "name": "First Door Interaction",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(You stare at the door)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(Before even processing it, you seemed to have wandered over to it again as if it were pulling you in)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You feel that shiver again as you glare at the endless seeming corridor outside)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(You feel that shiver again as you glare at the endless seeming corridor outside)",
+            "one": {"text": "Leave the room", "path": "Lost", "compare": "true", "with": "true"},
+            "two": {"text": "Stay here", "path": "RatherNot", "compare": "true", "with": "true"}
+            }
+          },
+          "RatherNot" : {
+            "scene_id": "-",
+            "name": "Turn back",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(You decide to stay here for now. Maybe there is something you missed...)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+          },
+          "DoorN" : {
+            "scene_id": "-",
+            "name": "Neutral Door Interaction",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(As you stare at the door it seems to be staring back at you, beckoning you to enter through it again)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You decide to not be tempted by it again..             For now)", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+          },
+          "Lost" : {
+            "scene_id": "-",
+            "name": "Lost in Corridor",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "(You move out into the endless seeming hallway..)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(After wandering the endless hallways of the library for what seemed like forever, you slowly start to get dizzy)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(The halls seem to converge into one another as if the library itself had no distinct shape or form)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(It feels like you have seen past corridors again and again as you continue on forward)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You notice noises that sound like laughter, slowly fading into the scratching of metal as your vision starts to vibrate)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(Sudden smells and memories of past events rush to you as the corridor walls start merging and closing in as you phase through them.)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You feel a heavy impact, followed by silence until your consciousness fades)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "...", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "...", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(You wake up, feeling..      surprisingly well as you notice you are in the room you were, before embarking on this journey)", "speed": 50},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "...", "speed": 50, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral", "movementC": "fade"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Huh.             So you do notice me...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Please look at the red bot.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Alright..", "speed": 50, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness", "effect": "Whitescreen", "effectstyle": "vibeout"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 50},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "OW.. my eyes..", "path": "L1C1", "compare": "true", "with": "true", "stats": "Confused"},
+            "two": {"text": "What is this place?", "path": "L1C2", "compare": "true", "with": "true", "stats": "Curious"}
+          }
+        },
+        "L1C1" : {
+            "scene_id": "-",
+            "name": "OW my eyes",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "You don’t have eyes..           No need to be overdramatic.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Please answer these questions:", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "input", "target": "ReadingChambers", "sceneID": "Lost2"}
+          },
+          "L1C2" : {
+            "scene_id": "-",
+            "name": "OW my eyes",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "We will get to that..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Please answer these questions:", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "input", "target": "ReadingChambers", "sceneID": "Lost2"}
+          },
+          "Lost2" : {
+            "scene_id": "-",
+            "name": "Scene2",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "What were you feeling and or thinking about, when leaving the room?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(What were you feeling and or thinking about, when leaving the room?)",
+            "one": {"text": "Confused", "path": "Lost3", "compare": "true", "with": "true", "stats": "Confused"},
+            "two": {"text": "Curious", "path": "Lost3", "compare": "true", "with": "true", "stats": "Curious"},
+            "three": {"text": "Scared", "path": "Lost3", "compare": "true", "with": "true", "stats": "Scaredy cat"},
+            "four": {"text": "Hungry", "path": "Lost3", "compare": "true", "with": "true", "stats": "Silly"}
+          }
+        },
+        "Lost3" : {
+            "scene_id": "-",
+            "name": "Scene3",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "I see.. Mhm..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "What were you experiencing before “waking up”?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(What were you experiencing before “waking up”?)",
+            "one": {"text": "The World before the convergence", "path": "Lost4", "compare": "true", "with": "true", "stats": "Trusting"},
+            "two": {"text": "Where Lilies never bloom", "path": "Lost4", "compare": "InformationWLNB", "with": "1", "stats": "Questioning"}
+          }
+        },
+        "Lost4" : {
+            "scene_id": "-",
+            "name": "Scene4",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Alright..   Final question:", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "What was the first thing you noticed after “waking up”?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "What was the first thing you noticed after “waking up”?",
+            "one": {"text": "A slime", "path": "Lost5", "compare": "SlimeInterest", "with": "1", "stats": "Analytical"},
+            "two": {"text": "A Creature", "path": "Lost5", "compare": "true", "with": "true", "stats": "Questioning"},
+            "three": {"text": "Flying Lights", "path": "Lost5", "compare": "true", "with": "true", "stats": "Trusting"},
+            "four": {"text": "A book", "path": "Lost5", "compare": "true", "with": "true", "stats": "Trusting"}
+          }
+        },
+        "Lost5" : {
+            "scene_id": "-",
+            "name": "Scene5",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Oook...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "What a pain...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Distracted_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "So..      usually souls like you don't just..     Go outside of rooms.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Distracted_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "So please refrain from that in the future.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Since you seem unable to just “Go” to other rooms like the rest, use this instead..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "(They hand you a device but before you are able to process what it is, it turns into blue particles, flowing into you)", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "What do you mean like the rest?", "path": "Lost7", "compare": "true", "with": "true", "stats": "Questioning"},
+            "two": {"text": "What is even happening...", "path": "Lost6FIN", "compare": "EventSC", "with": "FIN", "stats": "Confused"},
+            "three": {"text": "What is even happening...", "path": "Lost6NS", "compare": "EventSC", "with": "NS", "stats": "Confused"}
+          }
+        },
+        "Lost6NS" : {
+            "scene_id": "-",
+            "name": "SCNS",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "That is what I'm trying to figure out..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Distracted_Lookup"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "There seems to be some bug that causes some souls to become conscious instead of just existing in a passive state..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Distracted_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Lost7"}
+          },
+          "Lost6FIN" : {
+            "scene_id": "-",
+            "name": "SCFIN",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Just some odd things happening around the place..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Distracted_Lookup"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "I mostly figured it out but the origin of the cause has yet to be traced..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Distracted_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Lost7"}
+          },
+          "Lost7" : {
+            "scene_id": "-",
+            "name": "Scene7",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Righty.. I should start from the beginning.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Welcome to the Library beyond time..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "An infinite space of stored knowledge and memories from past to present and so on.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Souls visit this place mostly accidentally through either deep meditation or slumber, experiencing various bits of data stored in these halls.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "If you had a fever dream once you probably visited section CRSD.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "After returning to consciousness, said souls leave this place again since an aware one cannot upkeep a connection to the Library.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Neutral_Distracted"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "At least that is how it is supposed to work.               Yet here you are..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Clearly observing me...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_Lookup"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Violently...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_LookupS"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Ugh, I don't like this anymore..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Stressed_Lookup"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "J-just use that device I gave you and don't enter the corridors again.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Paniked_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "You are interrupting my work and I don't wanna keep dragging you back into the rooms..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Paniked_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "The thing has the ID of this room and the Nexus Core already entered...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Paniked_Lookup"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Just ask them about things in the future and not me.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Stressed_Lookup"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40},
+                    "sprites": { "center": "Architect_Stressed_Lookup"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(Just ask them about things in the future and not me)",
+            "one": {"text": "Ok. Thank you!", "path": "L2C1", "compare": "true", "with": "true", "stats": "Friendly"},
+            "two": {"text": "How do I use this?", "path": "L2C2", "compare": "true", "with": "true", "stats": "Confused"}
+          }
+        },
+        "L2C1" : {
+            "scene_id": "-",
+            "name": "Ok. Thank you!",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "Y-yeah.. No problem...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Stressed_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "Bye.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "]=[; Return", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_NeutralS"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "LostFinal", "event": "EventFV", "eventupdate": "3"}
+          },
+          "L2C2" : {
+            "scene_id": "-",
+            "name": "How do I use this?",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "???", "text": "You will figure it out. Bye.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Paniked_Neutral"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "???", "text": "]=[; Return", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Paniked_Neutral"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "LostFinal", "event": "EventFV", "eventupdate": "3"}
+          },
+          "LostFinal" : {
+            "scene_id": "-",
+            "name": "Vanish",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_Thinking_NeutralS", "movementC": "blink"},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
           }
       
   }
