@@ -1,15 +1,18 @@
 "use client";
-import React, { use, useEffect, useMemo, useState } from "react";
+import React, { use, useEffect, useMemo, useState, useRef } from "react";
 import { load } from "./actions/load";
 import Image from 'next/image';
 import TextBoxx from './components/TextBox.png';
 import Darkness from './components/Darkness.png'
 import { Bagel_Fat_One } from "next/font/google";
+import Combat from "./Combat.js";
+
 
 if (localStorage.getItem('Savestate') === null){
   //------------------------------------------General Things--------------------------------------------
   localStorage.setItem('Savestate', 'true');
   localStorage.setItem('Username', '');
+  localStorage.setItem('Password', '');
   localStorage.setItem('StoryProgress', '0');
   localStorage.setItem('CurrentChapter', "Library0");
   localStorage.setItem('CurrentPart', "Begining");
@@ -17,6 +20,7 @@ if (localStorage.getItem('Savestate') === null){
   //------------------------------------------Events--------------------------------------------
 //NS: NOT STARTED, //1,2,3,4: CONVERSATION/EVENTPROGRESS //FIN: FINISHED
   localStorage.setItem('EventFV', "NS"); // First Visit Event:  / 1: Starting / 2: Finished talk with Lyz / 3: Finished talk with Architect  / 4: First Warp to Nexus Core /5: Finsihed fist convo with Nexus /6: Inquired about Story
+  localStorage.setItem('EventPR', "NS"); // Password Restriction Event / 1: Starting / 2:
   localStorage.setItem('EventSC', "NS"); // Slime Connection Event
   //------------------------------------------STATS--------------------------------------------
   localStorage.setItem('Curious', "0");
@@ -30,8 +34,8 @@ if (localStorage.getItem('Savestate') === null){
   localStorage.setItem('Silly', "0");
   localStorage.setItem('Trusting', "0");
   localStorage.setItem('Questioning', "0");
-  localStorage.setItem('SlimeInterest', "0"); //1: Is Inquiry by asking or default by SC
-  localStorage.setItem('Spydent', "0");
+  localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table
+  localStorage.setItem('Spydent', "false"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
   //------------------------------------------Choice Answers--------------------------------------------
   localStorage.setItem('true', "true");
   localStorage.setItem('Error', "false"); //You cannot go back to the Story if this is true
@@ -47,17 +51,35 @@ if (localStorage.getItem('Savestate') === null){
   localStorage.setItem('NQuestionInBetween', "false");
   //Story question in spirit
   //Finaish Convo in spirit
-
+  //------------------------------------------Architect QUESTIONS--------------------------------------
+  localStorage.setItem('AQuestionUnlockID', "false");
   //-------------------------------------------Chronological infromation---------------------------------
-  localStorage.setItem('InformationWLNB', "0"); //1: Checked the book on the table
+  localStorage.setItem('InformationWLNB', "0"); //1: Checked the book on the table /2: Reached the end of a released chapter
   localStorage.setItem('InformationCagliostro', '0'); // 1: Asked about Cagliostro to Nexus
-  localStorage.setItem('InformationInBetween', '0') //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
+  localStorage.setItem('InformationInBetween', '0'); //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
+  //-------------------------------------------RoomUnlocks---------------------------------
+  localStorage.setItem('Hall7L', "false"); // 1: Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
+  //-------------------------------------------CharacterUnlocks---------------------------------
+  localStorage.setItem('SlimeName', "false"); //Imma be honesty this is hardly useful as of right now but ig i keep it.
+  localStorage.setItem('InbetweenVibe', ''); // Either Analytical, Scaredy Cat, Friendly
+  localStorage.setItem('GreenTourGuide', 'false');
+  localStorage.setItem('Yellow', "0"); // 1: Finding yellow //2:
+  localStorage.setItem('Cyan', "0"); // 1: Finding Cyan //2:
+  localStorage.setItem('Magenta', "0"); // 1: Finding Magenta //2:
+  //---------------------------------------------LibraryInteractables------------------------------------------
+  localStorage.setItem('RCPot', "false");
+  localStorage.setItem('RCSoul', "false");
+  localStorage.setItem('RCCell', "false");
+  localStorage.setItem('NCTables', "false");
+  localStorage.setItem('NCRoof', "false");
+  localStorage.setItem('NCInfoWall', "false");
+  localStorage.setItem('H7Table', "false");
+
 } 
 
 
 
 //---------------------------------------------------------------------SPRITES--------------------------------------------------------------------------------------
-
 const SpriteBox = ({ sprites }) => {
   //RTL RRTL RTLL LTLL RRRTR etc
   const [key, setKey] = useState(0);
@@ -228,7 +250,13 @@ const SpriteBox = ({ sprites }) => {
         alt={sprites.llleft}
       />
       )}
-       
+       {/* ---------------------------------------------------------------Down?------------------------------------------------------------------ */}
+      {sprites?.movementD && (
+        <Image className={`absolute -z-20 w-[45%] h-[100%] top-[100%] left-[27%] ${sprites.movementD === "CTD" ? "animate-[CTD_4s]" : null}`}
+        src={require(`./components/${sprites.down}.png`)}
+        alt={sprites.down}
+      />
+      )}
     </div>
   );
 };
@@ -251,13 +279,21 @@ const Background = ({ background }) => {
       />}
       </div>
       )}
-
-      <div className={` absolute -z-50 w-full h-full ${background.pbg ? "animate-[vibe_2s]" : null} ease-in`}>
+        { background.grain && (<div className={` z-30 absolute w-[200%] h-[200%]`}>
+        { background.grain === "bitch" ? null :
+        <Image
+        className=" z-30 w-[50%] h-[50%]"
+        src={require(`./components/G${background.grain}.png`)}
+        alt={background.grain}
+      />}
+      </div>
+      )}
+      <div className={` absolute -z-50 w-full h-full ease-in`}>
         { background.bg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
-        src={require(`./components/${background.bg}.png`)}
-        alt={background.bg}
+        src={require(`./components/BG${background.bg}.png`)}
+        alt={'background.bg'}
       />}
       </div>
 
@@ -265,8 +301,8 @@ const Background = ({ background }) => {
         { background.pbg === "bitch" ? null :
        <Image
         className=" -z-40 w-full h-full"
-        src={require(`./components/${background.pbg}.png`)}
-        alt={background.pgb}
+        src={require(`./components/BG${background.pbg}.png`)}
+        alt={'background.pgb'}
       />}
       </div>
       )}
@@ -291,18 +327,134 @@ const Item = ({ items }) => {
 };
 //---------------------------------------------------------------------TEXTBOX--------------------------------------------------------------------------------------
 
-const TextBox = ({ name, text, speeed, show, tb }) => {
-  const Texting = ({ text, speed }) => {
+const TextBox = ({ name, text, speeed, show, tb}) => {
+//   const [rename, setRename] = useState(name);
+const [voice, setVoice] = useState([
+  ["Innkeeper","Slime"],
+  ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
+  ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz"],
+  ["Scarlett","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?"],
+  ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
+  ["Green", "(Green)","Yellow","(Yellow)"]]);
+//   const [speach, setSpeach] = useState('TextingNeutral');
+// console.log(speach);
+//   const VoiceCheck = () => {
+//     Object.entries(voice).map(([key, eq]) => {
+//       if (eq.includes(rename)){
+//         setSpeach(speach + key);
+//       }
+//     });
+//   };
+//   if (speach === "TextingNeutral"){
+//     VoiceCheck();
+//   }
+// console.log(speach);
+  
+  const Texting = ({ text, speed, ps }) => {
     const [displayText, setDisplayText] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const [bold, setBold] = useState(false);
     const [italic, setItalic] = useState(false);
     const [name, setName] = useState(false);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    const playAudio = () => {
+      //console.log('Im played');
+      if (audioRef.current) {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+      }
+    };
   
+    const stopAudio = () => {
+      if (audioRef.current && text !== '') {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+
+    // playAudio();
+    // setTimeout(() => {
+    //   stopAudio();
+    // }, text.length * speed);
+
     useEffect(() => {
       const interval = setInterval(() => {
         if (currentIndex < text.length) {
           const char = text[currentIndex];
+          
+          if (((text === "...") || text === '(...)' || text === '...!' || text === '...?' || text.includes('*'))) {
+            if (currentIndex === 0) {
+              console.log('Do it once');
+              playAudio();
+            setTimeout(() => {
+              playAudio();
+            }, 500);
+            setTimeout(() => {
+              playAudio();
+            }, 1000);
+            }
+          } else {
+          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+            playAudio();
+            //console.log('1');
+            //console.log(text.slice(currentIndex));
+          } else 
+          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && ((((text.slice(currentIndex + 4, currentIndex + 5) === ' '||text.slice(currentIndex).length <= 4)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 5, currentIndex + 6) === ' '||text.slice(currentIndex).length <= 5)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ')) || text.slice(currentIndex + 1, currentIndex + 2) === '{')){
+            playAudio();
+            setTimeout(() => {
+              playAudio();
+            }, 100);
+            //console.log('2');
+            //console.log(text.slice(currentIndex));
+
+          } else 
+          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 6, currentIndex + 7) === ' '||text.slice(currentIndex).length <= 6)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 7, currentIndex + 8) === ' '||text.slice(currentIndex).length <= 7)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+            playAudio();
+            setTimeout(() => {
+              playAudio();
+            }, 100);
+            setTimeout(() => {
+              playAudio();
+            }, 200);
+            //console.log('3');
+            //console.log(text.slice(currentIndex));
+
+          } else 
+          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 8, currentIndex + 9) === ' '||text.slice(currentIndex).length <= 8)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 9, currentIndex + 10) === ' '||text.slice(currentIndex).length <= 9)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+            playAudio();
+            setTimeout(() => {
+              playAudio();
+            }, 100);
+            setTimeout(() => {
+              playAudio();
+            }, 200);
+            setTimeout(() => {
+              playAudio();
+            }, 300);
+            //console.log('3');
+            //console.log(text.slice(currentIndex));
+
+          } else 
+          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') {  
+            playAudio();
+            setTimeout(() => {
+              playAudio();
+            }, 100);
+            setTimeout(() => {
+              playAudio();
+            }, 200);
+            setTimeout(() => {
+              playAudio();
+            }, 300);
+            setTimeout(() => {
+              playAudio();
+            }, 400);
+            //console.log('4');
+            //console.log(text.slice(currentIndex));
+
+          }
+        }
           if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{bold}') {
             setBold(true);
             setCurrentIndex(currentIndex + 5); // Skip the (bold) tag
@@ -334,9 +486,17 @@ const TextBox = ({ name, text, speeed, show, tb }) => {
       }, speed);
   
       return () => clearInterval(interval);
-    }, [text, speed, currentIndex, bold, italic, name]);
+    }, [text, speed, ps, currentIndex, bold, italic, name]);
   
-    return <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />;
+    return (
+      <div>
+        <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
+        {text !== '' && ps !== '' && (<audio ref={audioRef}>
+             <source src={(`/${voice[0].includes(tb.name) ? "TextingNeutral0" : voice[1].includes(tb.name) ? "TextingNeutral1" : voice[2].includes(tb.name) ? "TextingNeutral2" : voice[3].includes(tb.name) ? "TextingNeutral3" : voice[4].includes(tb.name) ? "TextingNeutral4" : voice[5].includes(tb.name) ? "TextingNeutral5" : null }.mp3`)} type="audio/mpeg"></source>
+          </audio>)}
+      </div>
+        
+    )
   };
   
   //console.log(show);
@@ -344,14 +504,14 @@ const TextBox = ({ name, text, speeed, show, tb }) => {
     <div className={`z-20`}>
       {show === "true" &&
 
-        <Image className={`absolute z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} alt="textbox" src={TextBoxx} />
+        <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} alt="textbox" src={TextBoxx} />
       }
     <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
       <div className="h-[45%] text-2xl font-semibold">
-          {name}
+          {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
         </div>
       <div className=" z-20 text-xl text-white h-[40%]">
-      <Texting text={text} speed={speeed} />
+      <Texting text={text} speed={speeed} ps={name}/>
       </div>
         
       </div>
@@ -500,7 +660,7 @@ const LSC = () => {
     localStorage.setItem('Warptablet', 'true');
   }
   //---------------------------------------------------Nexus Cagliostro Question-----------------------------------
-  if (localStorage.getItem('SlimeInterest') === '1' && localStorage.getItem('NQuestionSlime') === 'false'){
+  if (parseInt(localStorage.getItem('SlimeInterest' as string)|| '0') >= 1 && localStorage.getItem('NQuestionSlime') === 'false'){
     localStorage.setItem('NQuestionSlime', 'true');
   }
   if (localStorage.getItem('InformationInBetween') === '1' && localStorage.getItem('NQuestionMist') === 'false'){
@@ -520,6 +680,22 @@ const LSC = () => {
   if (localStorage.getItem('NQuestionInBetween') === 'read' && localStorage.getItem('InformationInBetween') === '1'){
     localStorage.setItem('InformationInBetween', '2');
   }
+  //--------------------------------------------------Bonus Unlocks-------------------------------------------
+  if ((parseInt(localStorage.getItem('Analytical' as string)|| '0') >= 3 || parseInt(localStorage.getItem("Silly" as string)|| '0') > parseInt(localStorage.getItem('Confused' as string)|| '0') || parseInt(localStorage.getItem("Curious" as string)|| '0') >= 3) && localStorage.getItem('Hall7L') === 'false'){
+    localStorage.setItem('Hall7L', "1");
+  }
+  //--------------------------------------------------IN BETWEEN MOOD UPDATES-----------------------------------
+  if (parseInt(localStorage.getItem('Scaredy cat' as string)|| '0') >= (parseInt(localStorage.getItem('Friendly' as string)|| '0') && parseInt(localStorage.getItem('Analytical' as string)|| '0'))){
+  localStorage.setItem('InbetweenVibe', 'Scaredy cat');
+  } else if (parseInt(localStorage.getItem('Analytical' as string)|| '0') >= parseInt(localStorage.getItem('Friendly' as string)|| '0') && parseInt(localStorage.getItem('Analytical' as string)|| '0') > parseInt(localStorage.getItem('Scaredy cat' as string)|| '0')){
+    localStorage.setItem('InbetweenVibe', 'Analytical');
+  } else { //Friendly > Analytical & Scaredy Cat
+    localStorage.setItem('InbetweenVibe', 'Friendly');
+  }
+  //----------------------------------------------------Event checks-----------------------------------
+  if (localStorage.getItem('Yellow') === '1' && localStorage.getItem('Cyan') === '1' && localStorage.getItem('Magenta') === '1' && localStorage.getItem('Spydent') === 'false'){
+    localStorage.setItem('Spydent', "true");
+  }
   return (
     <div>
 
@@ -535,6 +711,8 @@ export const Scene = ({ initial_content }) => {
   const [hud, setHud] = useState(0);
   const [room, setRoom] = useState(0);
   const [input, setInput] = useState('');
+  const [day, setDay] = useState(new Date());
+
 
   const handleInputChange = (event) => {
     setInput(event.target.value);
@@ -600,42 +778,129 @@ export const Scene = ({ initial_content }) => {
         <Logbook entry={scene.logbook}></Logbook>
       )}
     {/* ----------------------------------------------------------ID ROOM DEVICE---------------------------------------------------------------------------- */}
-      {hud === 2 && (
+      {(hud === 2 || hud === 3) && (
         <div className="absoulte z-40 animate-[vibe_0.5s]">
           <div className="absolute z-40 w-[100%] h-[100%] top-[0%] left-[0%]">
-          <div className="absolute flex flex-wrap place-content-start place-items-start z-50 top-[26%] left-[23%] w-[50%] h-[52%] border-solid border-4 border-green-600">
-            <button className=" w-[21%] h-[21%] border-solid border-4 border-red-500 m-2" onClick={async () =>{
-              setContent(await load("ReadingChambers", "ReadingChambers"));
+          {hud === 3 && (<div className="absolute w-[100%] h-[100%] z-40">
+          <input
+            type="text"
+            spellCheck='false'
+            className=" absolute text-cyan-600 outline-none shadow-none bg-transparent border-transparent border-0 border-solid p-2 top-[41%] left-[35.6%] w-[25%] h-[5%]"
+            placeholder="..."
+            value={input}
+            onChange={handleInputChange}
+            maxLength={7}
+          />
+          <button
+            className=" absolute px-4 py-2 rounded-md bg-transparent top-[57.8%] left-[42.8%] w-[10.6%] h-[7.5%]"
+            onClick={async () => {
+              if (input === ''){
+                setHud(2);
+              } else if (input === 'Ha11-7L'){
+                if (localStorage.getItem('Hall7L') === 'unlock'){
+                  setContent(await load("Extra", "IDDeviceRepeatRoom"));
+                  setFrame(0);
+                  setRoom(0);
+                  setHud(0);
+                } else {
+                  localStorage.setItem('Hall7L', 'unlock');
+                  setContent(await load("Extra", "IDDeviceCorrectRoom"));
+                  setFrame(0);
+                  setRoom(0);
+                  setHud(0);
+                }
+              } else if (input === 'Nxus-CR' || input === 'Rdng-BC'){
+                  setContent(await load("Extra", "IDDeviceRepeatRoom"));
+                  setFrame(0);
+                  setRoom(0);
+                  setHud(0);
+              } else {
+                setContent(await load("Extra", "IDDeviceUnlistedRoom"));
+                  setFrame(0);
+                  setRoom(0);
+                  setHud(0);
+              }
+
+
+              setInput('');
+            }}
+          ></button>
+        </div>)}
+          {hud === 2 && (<div className="absolute flex flex-wrap place-content-start place-items-start z-50 top-[26%] left-[24%] w-[49%] h-[52%]">
+          {localStorage.getItem('EventFV') === 'FIN' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+              setHud(3);
+            }}><Image
+            className="w-[108%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/IDAR.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+            <button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+              setContent(await load("ReadingChambers", "ReadingChambersV"));
               setFrame(0);
               setRoom(0);
               setHud(0);
-            }}>Reading Chambers</button>
-            <button className=" w-[21%] h-[21%] border-solid border-4 border-red-500 m-2" onClick={async () =>{
+            }}><Image
+            className="w-[108%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/IDRC.png`)}
+            alt={"InputPrompt"}
+              /></button>
+            <button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
               if (localStorage.getItem('EventFV') === '3'){
                 setContent(await load("NexusCore", "FirstVisit"));
                 setFrame(0);
                 setRoom(0);
                 setHud(0);
               } else {
-                setContent(await load("NexusCore", "NexusCore"));
+                setContent(await load("NexusCore", "NexusCoreV"));
                 setFrame(0);
                 setRoom(0);
                 setHud(0);
               }
-            }}>Nexus Core</button>
-          </div>
+            }}><Image
+            className="w-[108%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/IDNC.png`)}
+            alt={"InputPrompt"}
+              /></button>
+            {localStorage.getItem('Hall7L') === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+              if (localStorage.getItem('Password') === ''){ //----------------------------------------------------Rework needed when acc is made------------
+                setContent(await load("Ha117L", "FirstVisit"));
+                setFrame(0);
+                setRoom(0);
+                setHud(0);
+              } else {
+                setContent(await load("Ha117L", "Ha117LV"));
+                setFrame(0);
+                setRoom(0);
+                setHud(0);
+              }
+            }}><Image
+            className="w-[108%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/IDH7.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+          </div>)}
         </div>
         <Image
             className=" absolute z-30 top-[4%] left-[7%] w-[80%] h-[90%]"
             src={require(`./components/IDROOMDEVICE.png`)}
             alt={"IDROOMDEVICE"}
-            />
+        />
+        <Image
+            className=" absolute z-40 top-[26.9%] left-[65%] w-[4%] h-[6.3%]"
+            src={require(`./components/IDwhy.png`)}
+            alt={"IDROOMDEVICE"}
+        />
+        {hud === 3 && (<Image
+            className=" absolute z-30 top-[30%] left-[33%] w-[30%] h-[40%]"
+            src={require(`./components/RoomIDCheck.png`)}
+            alt={"IDROOMDEVICE"}
+         />)}
       </div>
       )}
       {scene.hud === "StoryHud5" && (
         <div>
         <button className={`absolute z-50 animate-[shatter_0.8s] top-[0%] left-[0%] w-[22%] h-[30%]`} onClick={async () => {
-          setContent(await load("ReadingChambers", "ReadingChambers"));
+          setContent(await load("ReadingChambers", "ReadingChambersFA"));
           setFrame(0);
           setRoom(0);
           setHud(0);
@@ -651,7 +916,7 @@ export const Scene = ({ initial_content }) => {
       {scene.hud === "StoryHud4" && (
         <div>
         <button className={`absolute z-50 animate-[shatter_5s] top-[0%] left-[0%] w-[22%] h-[30%]`} onClick={async () => {
-          setContent(await load("ReadingChambers", "ReadingChambers"));
+          setContent(await load("ReadingChambers", "ReadingChambersFA"));
           setFrame(0);
           setRoom(0);
           setHud(0);
@@ -718,30 +983,93 @@ export const Scene = ({ initial_content }) => {
         <div className="absolute w-[100%] h-[100%] z-40">
           <input
             type="text"
-            className=" absolute border-solid border-4 text-black bg-blue-400 border-gray-300 top-[30%] left-[30%] w-[20%] h-[10%]"
-            placeholder="Your Identifier"
+            spellCheck='false'
+            className=" absolute p-4 z-50 bg-transparent outline-none text-cyan-600 top-[36%] left-[32.5%] w-[36%] h-[7%]"
+            placeholder="..."
             value={input}
             onChange={handleInputChange}
             maxLength={15}
           />
           <button
-            className=" absolute bg-blue-500 text-white px-4 py-2 rounded-md top-[30%] left-[60%] w-[20%] h-[10%]"
+            className=" absolute px-4 py-2 z-50 rounded-md bg-transparent top-[57.5%] left-[43%] w-[15%] h-[9.5%]"
             onClick={async () => {
               //-----------------Username Input-------------------------------
-              localStorage.setItem('Username', input);
-              setInput('');
-              setContent(await load(scene.next.target, scene.next.sceneID));
-              setFrame(0);
+              if(scene.next.sceneID === 'Lost2'){
+                localStorage.setItem('Username', input);
+                setInput('');
+                setContent(await load(scene.next.target, scene.next.sceneID));
+                setFrame(0);
+              }
+              if (scene.next.sceneID === 'FScene4'){
+                localStorage.setItem('Password', input);
+                setInput('');
+                setContent(await load(scene.next.target, scene.next.sceneID));
+                setFrame(0);
+              }
+            }}
+          ></button>
+          <Image
+            className=" absolute z-30 top-[20%] left-[28%] w-[45%] h-[55%]"
+            src={require(`./components/InputPrompt.png`)}
+            alt={"InputPrompt"}
+        />
+        <div className="absolute w-[100%] place-content-start place-items-center bottom-0 h-[15%] flex flex-col">
+            <div className="text-white text-2xl font-bold">{scene.next.sceneID === 'Lost2' ? "(What’s your Identifier or Name?)" : "(As long as it is remembered.)"}</div>
+          </div>
+        </div>
+
+      )}
+      {/* ----------------------------------------------------------CrystalLogPW---------------------------------------------------------------------------- */}
+      {(scene.next.type === "CL" && frame >= scene.frames.length - 1 ) && (
+        <div className="absolute w-[100%] h-[100%] z-40">
+          <input
+            type="text"
+            spellCheck='false'
+            className=" absolute animate-[vibe_4s] border-transparent bg-transparent text-black p-2 top-[34.5%] left-[40.5%] w-[16.7%] h-[4.8%]"
+            placeholder="..."
+            value={input}
+            onChange={handleInputChange}
+            maxLength={15}
+          />
+          <button
+            className=" absolute bg-transparent text-white px-4 py-2 rounded-md top-[42%] left-[40.5%] w-[7%] h-[5%]"
+            onClick={async () => {
+              //-----------------Username Input-------------------------------
+              if (input === 'Luna' || input === 'luna'){
+                if (localStorage.getItem('EventPR') === 'NS'){
+                  setInput('');
+                  localStorage.setItem('EventPR', 'FIN');
+                  localStorage.setItem('CurrentPart', "Log1");
+                  var tempSP = parseInt(localStorage.getItem('Analytical' as string)|| '0');
+                  tempSP += 2;
+                  localStorage.setItem('Analytical', tempSP.toString());
+                  var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
+                  tempSPs += 1;
+                  localStorage.setItem('SlimeInterest', tempSPs.toString());
+                setContent(await load('ReadingChambers', 'PRFirstTry'));
+                setFrame(0);
+                } else {
+                  setInput('');
+                  setContent(await load('CrystalLog', 'Log1'));
+                  setFrame(0);
+                  localStorage.setItem('Hall7L', 'true');
+                  localStorage.setItem('CurrentPart', "Log1");
+                }
+              } else {
+                setInput('');
+                setContent(await load('Extra', 'BlueScreen'));
+                setFrame(0);
+              }
 
             }}
-          >Confirm</button>
+          ></button>
         </div>
       )}
     {/* ----------------------------------------------------------Choice---------------------------------------------------------------------------- */}
       {(scene.next.type === "choice" && frame >= scene.frames.length - 1 ) && (
         <div className="absolute w-[100%] h-[100%] z-40">
-          <div className="w-[100%] place-content-center place-items-center h-[80%] flex flex-col border-4 border-solid border-red-700">
-            {(scene.next.one && localStorage.getItem(scene.next.one.compare) === scene.next.one.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+          <div className="w-[100%] place-content-center place-items-center h-[72%] flex flex-col">
+            {(scene.next.one && localStorage.getItem(scene.next.one.compare) === scene.next.one.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.one.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.one.stats as string)|| '0');
               tempSP += 1;
@@ -752,13 +1080,24 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.one.path));
               setFrame(0);
-            }}>{scene.next.one.text}</button>)}
-            {(scene.next.oneB && localStorage.getItem(scene.next.oneB.compare) === scene.next.oneB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.one.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+
+            {(scene.next.oneB && localStorage.getItem(scene.next.oneB.compare) === scene.next.oneB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.oneB.path));
               setFrame(0);
-            }}>{scene.next.oneB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.oneB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.two && localStorage.getItem(scene.next.two.compare) === scene.next.two.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.two && localStorage.getItem(scene.next.two.compare) === scene.next.two.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.two.stats){
                 var tempSP = parseInt(localStorage.getItem(scene.next.two.stats as string)|| '0');
                 tempSP += 1;
@@ -769,13 +1108,24 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.two.path));
               setFrame(0);
-            }}>{scene.next.two.text}</button>)}
-             {(scene.next.twoB && localStorage.getItem(scene.next.twoB.compare) === scene.next.twoB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.two.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+
+             {(scene.next.twoB && localStorage.getItem(scene.next.twoB.compare) === scene.next.twoB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.twoB.path));
               setFrame(0);
-            }}>{scene.next.twoB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.twoB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.three && localStorage.getItem(scene.next.three.compare) === scene.next.three.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.three && localStorage.getItem(scene.next.three.compare) === scene.next.three.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.three.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.three.stats as string)|| '0');
               tempSP += 1;
@@ -786,13 +1136,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.three.path));
               setFrame(0);
-            }}>{scene.next.three.text}</button>)}
-             {(scene.next.threeB && localStorage.getItem(scene.next.threeB.compare) === scene.next.threeB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.three.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.threeB && localStorage.getItem(scene.next.threeB.compare) === scene.next.threeB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.threeB.path));
               setFrame(0);
-            }}>{scene.next.threeB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.threeB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.four && localStorage.getItem(scene.next.four.compare) === scene.next.four.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.four && localStorage.getItem(scene.next.four.compare) === scene.next.four.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.four.stats){
              var tempSP = parseInt(localStorage.getItem(scene.next.four.stats as string)|| '0');
              tempSP += 1;
@@ -803,13 +1163,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.four.path));
               setFrame(0);
-            }}>{scene.next.four.text}</button>)}
-             {(scene.next.fourB && localStorage.getItem(scene.next.fourB.compare) === scene.next.fourB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.four.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.fourB && localStorage.getItem(scene.next.fourB.compare) === scene.next.fourB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.fourB.path));
               setFrame(0);
-            }}>{scene.next.fourB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.fourB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.five && localStorage.getItem(scene.next.five.compare) === scene.next.five.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.five && localStorage.getItem(scene.next.five.compare) === scene.next.five.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.five.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.five.stats as string)|| '0');
               tempSP += 1;
@@ -820,13 +1190,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.five.path));
               setFrame(0);
-            }}>{scene.next.five.text}</button>)}
-             {(scene.next.fiveB && localStorage.getItem(scene.next.fiveB.compare) === scene.next.fiveB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.five.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.fiveB && localStorage.getItem(scene.next.fiveB.compare) === scene.next.fiveB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.fiveB.path));
               setFrame(0);
-            }}>{scene.next.fiveB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.fiveB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.six && localStorage.getItem(scene.next.six.compare) === scene.next.six.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.six && localStorage.getItem(scene.next.six.compare) === scene.next.six.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.six.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.six.stats as string)|| '0');
               tempSP += 1;
@@ -837,13 +1217,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.six.path));
               setFrame(0);
-            }}>{scene.next.six.text}</button>)}
-             {(scene.next.sixB && localStorage.getItem(scene.next.sixB.compare) === scene.next.sixB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.six.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.sixB && localStorage.getItem(scene.next.sixB.compare) === scene.next.sixB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.sixB.path));
               setFrame(0);
-            }}>{scene.next.sixB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.sixB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.seven && localStorage.getItem(scene.next.seven.compare) === scene.next.seven.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.seven && localStorage.getItem(scene.next.seven.compare) === scene.next.seven.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.seven.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.seven.stats as string)|| '0');
               tempSP += 1;
@@ -854,13 +1244,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.seven.path));
               setFrame(0);
-            }}>{scene.next.seven.text}</button>)}
-             {(scene.next.sevenB && localStorage.getItem(scene.next.sevenB.compare) === scene.next.sevenB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.seven.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.sevenB && localStorage.getItem(scene.next.sevenB.compare) === scene.next.sevenB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.sevenB.path));
               setFrame(0);
-            }}>{scene.next.sevenB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.sevenB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.eight && localStorage.getItem(scene.next.eight.compare) === scene.next.eight.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.eight && localStorage.getItem(scene.next.eight.compare) === scene.next.eight.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.eight.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.eight.stats as string)|| '0');
               tempSP += 1;
@@ -871,13 +1271,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.eight.path));
               setFrame(0);
-            }}>{scene.next.eight.text}</button>)}
-             {(scene.next.eightB && localStorage.getItem(scene.next.eightB.compare) === scene.next.eightB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.eight.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.eightB && localStorage.getItem(scene.next.eightB.compare) === scene.next.eightB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.eightB.path));
               setFrame(0);
-            }}>{scene.next.eightB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.eightB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.nine && localStorage.getItem(scene.next.nine.compare) === scene.next.nine.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.nine && localStorage.getItem(scene.next.nine.compare) === scene.next.nine.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.nine.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.nine.stats as string)|| '0');
               tempSP += 1;
@@ -888,13 +1298,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.nine.path));
               setFrame(0);
-            }}>{scene.next.nine.text}</button>)}
-             {(scene.next.nineB && localStorage.getItem(scene.next.nineB.compare) === scene.next.nineB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.nine.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.nineB && localStorage.getItem(scene.next.nineB.compare) === scene.next.nineB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.nineB.path));
               setFrame(0);
-            }}>{scene.next.nineB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.nineB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
 
-            {(scene.next.ten && localStorage.getItem(scene.next.ten.compare) === scene.next.ten.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            {(scene.next.ten && localStorage.getItem(scene.next.ten.compare) === scene.next.ten.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               if (scene.next.ten.stats){
               var tempSP = parseInt(localStorage.getItem(scene.next.ten.stats as string)|| '0');
               tempSP += 1;
@@ -905,13 +1325,23 @@ export const Scene = ({ initial_content }) => {
               }
               setContent(await load(scene.jayson, scene.next.ten.path));
               setFrame(0);
-            }}>{scene.next.ten.text}</button>)}
-             {(scene.next.tenB && localStorage.getItem(scene.next.tenB.compare) === scene.next.tenB.with ) && (<button className="w-[80%] h-[10%] border-solid border-4 border-blue-600 text-white text-xl" onClick={async () => {
+            }}><div className="z-40 translate-y-[110%]">{scene.next.ten.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
+             {(scene.next.tenB && localStorage.getItem(scene.next.tenB.compare) === scene.next.tenB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.tenB.path));
               setFrame(0);
-            }}>{scene.next.tenB.text}</button>)}
+            }}><div className="z-40 translate-y-[110%]">{scene.next.tenB.text}</div>
+            <Image
+            className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
+            src={require(`./components/ChoiceBanner.png`)}
+            alt={"InputPrompt"}
+              /></button>)}
           </div>
-          <div className="w-[100%] place-content-center place-items-center top-[80%] h-[20%] flex flex-col border-4 border-solid border-green-700">
+          <div className="w-[100%] place-content-center place-items-center top-[80%] h-[28%] flex flex-col">
             <div className="text-white text-2xl font-bold">{scene.next.question}</div>
           </div>
         </div>
@@ -921,7 +1351,7 @@ export const Scene = ({ initial_content }) => {
         <div>
           {/* -----------------------------------------------------Door------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) && (
-            <button className="absolute w-[20%] h-[40%] top-[20%] left-[40%] z-10 border-4 border-white border-solid" onClick={async () =>{
+            <button className="absolute w-[20%] h-[55.3%] top-[0%] left-[62.9%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
               if (localStorage.getItem('EventFV') === "2"){
                 setContent(await load('ReadingChambers', 'DoorF'));
                 setFrame(0);
@@ -929,11 +1359,17 @@ export const Scene = ({ initial_content }) => {
                 setContent(await load('ReadingChambers', 'DoorN'));
                 setFrame(0);
               }
-            }}></button>
+            }}>
+               <Image
+            className=" absolute w-[108%] h-[103%] top-[0%] left-[-3%]"
+            src={require(`./components/LB_RCDoor.png`)}
+            alt={"InputPrompt"}
+              />
+            </button>
           )}
           {/* -----------------------------------------------------WLNB------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) && (
-            <button className="absolute w-[20%] h-[30%] top-[20%] left-[60%] z-10 border-4 border-purple-700 border-solid" onClick={async () =>{
+            <button className="absolute w-[11.2%] h-[15%] top-[66.5%] left-[54.5%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
               if (localStorage.getItem('EventFV') === "FIN"){
                 setContent(await load('ReadingChambers', 'WLNBN'));
                 setFrame(0);
@@ -942,6 +1378,7 @@ export const Scene = ({ initial_content }) => {
                 setFrame(0);
               } else if (localStorage.getItem('EventFV') === '6'){
                 localStorage.setItem('EventFV', 'FIN');
+                localStorage.setItem('InformationWLNB', '1'); //After this you for sure know the title
                 setContent(await load('ReadingChambers', 'WLNBN'));
                 setFrame(0);
               } else if (localStorage.getItem('InformationWLNB') === '0'){
@@ -951,9 +1388,80 @@ export const Scene = ({ initial_content }) => {
                 setContent(await load('ReadingChambers', 'WLNBFN'));
                 setFrame(0);
               }
-            }}></button>
+            }}><Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_RCWLNB.png`)}
+            alt={"InputPrompt"}
+              />
+              </button>
           )}
-          
+          {/* -----------------------------------------------------Vase / POT------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[7.6%] h-[16.8%] top-[18%] left-[83.7%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('RCPot') === "false"){
+                setContent(await load('ReadingChambers', 'Pot'));
+                setFrame(0);
+              } else {
+                if ((day.getDay() === 2 || day.getDay() === 6) && localStorage.getItem('Yellow') === '0'){
+                  setContent(await load('ReadingChambers', 'Potdent'));
+                  setFrame(0);
+                } else {
+                  setContent(await load('ReadingChambers', 'Pot3'));
+                  setFrame(0);
+                }
+              }
+            }}>
+
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_RCPot.png`)}
+            alt={"InputPrompt"}
+              />
+              {((day.getDay() === 2 || day.getDay() === 6) && localStorage.getItem('Yellow') === '0' && localStorage.getItem('RCPot') === "true" && 
+            <Image
+            className=" absolute w-[94.2%] h-[95%] top-[2%] left-[0.5%]"
+            src={require(`./components/LB_RCPotSD.png`)}
+            alt={"InputPrompt"}
+              />
+            )}
+            </button>
+          )}
+          {/* -----------------------------------------------------Cell block------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[65%] h-[61.2%] top-[0%] left-[0%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('RCCell') === "false"){
+                setContent(await load('ReadingChambers', 'Cell'));
+                setFrame(0);
+              } else {
+                setContent(await load('ReadingChambers', 'Cell4'));
+                setFrame(0);
+              }
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_RCCellBlock.png`)}
+            alt={"InputPrompt"}
+              />
+            </button>
+          )}
+          {/* -----------------------------------------------------Souls------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[21.5%] h-[33.5%] top-[3.6%] left-[1%] z-20 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('RCSoul') === "false"){
+                setContent(await load('ReadingChambers', 'Souls'));
+                setFrame(0);
+              } else {
+                setContent(await load('ReadingChambers', 'Souls4'));
+                setFrame(0);
+              }
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_RCSouls.png`)}
+            alt={"InputPrompt"}
+              />
+            </button>
+          )}
         {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () =>{
           //------------------------------------------------------------First ARRIVAL EVENT CHECK------------------------------------
           if (localStorage.getItem('EventFV') === 'NS' || localStorage.getItem('EventFV') === '1'){
@@ -961,10 +1469,21 @@ export const Scene = ({ initial_content }) => {
             setContent(await load('ReadingChambers', 'FirstArrival'));
             setFrame(0);
           }
+           //------------------------------------------------------------Password Restriction EVENT CHECK------------------------------------
+           if ((localStorage.getItem('EventPR') === 'NS' || localStorage.getItem('EventPR') === '1') && localStorage.getItem('StoryProgress') === '14'){
+            localStorage.setItem('EventPR', '1');
+            setContent(await load('ReadingChambers', 'PasswordRestriction'));
+            setFrame(0);
+          }
           //------------------------------------------------------------------------------------------------------------------------
           setRoom(1);
         }}>
           <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Reading Chambers</div>
+          <Image
+            className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
+            src={require(`./components/RoomBanner.png`)}
+            alt={"InputPrompt"}
+              />
         </button>)}
         </div>
       )}
@@ -973,7 +1492,8 @@ export const Scene = ({ initial_content }) => {
         <div>
           {/* -----------------------------------------------------Desk------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) &&  (
-            <button className="absolute w-[20%] h-[40%] top-[20%] left-[40%] z-10 border-4 border-blue-600 border-solid" onClick={async () =>{
+            <div>
+            <button className="absolute w-[17%] h-[30%] top-[16.5%] left-[47.3%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
               if (localStorage.getItem('EventFV') === "4"){
                 if (localStorage.getItem('Analytical') === '2' || parseInt(localStorage.getItem('Questioning' as string)|| '0') > 2){
                   setContent(await load('NexusCore', 'NCA'));
@@ -989,10 +1509,74 @@ export const Scene = ({ initial_content }) => {
                 setContent(await load('NexusCore', 'NexusInit'));
                 setFrame(0);
               }
-            }}></button>
+            }}>
+              <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_NCNexusH.png`)}
+            alt={"InputPrompt"}
+              />
+              </button>
+              <Image
+            className=" absolute w-[17%] h-[30%] top-[16.5%] left-[47.3%] animate-[vibe_2s]"
+            src={require(`./components/LB_NCNexus.png`)}
+            alt={"InputPrompt"}
+              />
+              </div>
           )}
-          
-          
+           {/* -----------------------------------------------------Table------------------------------------------------------------*/}
+           {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[53.5%] h-[32.5%] bottom-0 left-[23.2%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('NCTables') === "false"){
+                setContent(await load('NexusCore', 'Tables'));
+                setFrame(0);
+              } else {
+                setContent(await load('NexusCore', 'Tables4'));
+                setFrame(0);
+              }
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_NCTables.png`)}
+            alt={"InputPrompt"}
+              />
+            </button>
+          )}
+          {/* -----------------------------------------------------Ceiling------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[100%] h-[15%] top-0 left-0 z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('NCRoof') === "false"){
+                setContent(await load('NexusCore', 'Roof'));
+                setFrame(0);
+              } else {
+                setContent(await load('NexusCore', 'Roof2'));
+                setFrame(0);
+              }
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_NCCeiling.png`)}
+            alt={"InputPrompt"}
+              />
+            </button>
+          )}
+          {/* -----------------------------------------------------InfoWall------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[7.2%] h-[59.9%] top-0 left-[12.4%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('NCInfoWall') === "false"){
+                setContent(await load('NexusCore', 'InfoWall'));
+                setFrame(0);
+              } else {
+                setContent(await load('NexusCore', 'InfoWall4'));
+                setFrame(0);
+              }
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_NCInfoWall.png`)}
+            alt={"InputPrompt"}
+              />
+            </button>
+          )}
         {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () =>{
           //------------------------------------------------------------EVENT CHECK------------------------------------
           
@@ -1000,13 +1584,74 @@ export const Scene = ({ initial_content }) => {
           setRoom(1);
         }}>
           <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Nexus Core</div>
+          <Image
+            className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
+            src={require(`./components/RoomBanner.png`)}
+            alt={"InputPrompt"}
+              />
         </button>)}
         </div>
+      )}
+     {/* ----------------------------------------------------------Ha11-7L---------------------------------------------------------------------------- */}
+     {scene.name === "Ha11-7L" && (
+        <div>
+          {/* -----------------------------------------------------Table------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[17.2%] h-[33.4%] top-[60.9%] left-[16.6%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+              if (localStorage.getItem('H7Table') === "false"){
+                setContent(await load('Ha117L', 'Table'));
+                setFrame(0);
+              } else {
+                if ((day.getDay() === 5) && localStorage.getItem('H7Table') === 'true'){
+                  setContent(await load('Ha117L', 'TableL'));
+                  setFrame(0);
+                } else {
+                  setContent(await load('Ha117L', 'Table6'));
+                  setFrame(0);
+                }
+              }
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={require(`./components/LB_H7Table.png`)}
+            alt={"InputPrompt"}
+              />
+              {(day.getDay() === 5 && localStorage.getItem('H7Table') === "true" && 
+            <Image
+            className=" absolute w-[112%] h-[99.5%] top-[1%] left-[0%]"
+            src={require(`./components/LB_H7TableL.png`)}
+            alt={"InputPrompt"}
+              />
+            )}
+            </button>
+          )}
+          {/* -----------------------------------------------------Mist------------------------------------------------------------*/}
+          
+        {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () =>{
+          //------------------------------------------------------------Event Checks------------------------------------
+          
+          //------------------------------------------------------------------------------------------------------------------------
+          setRoom(1);
+        }}>
+          <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Ha11-7L</div>
+          <Image
+            className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
+            src={require(`./components/RoomBanner.png`)}
+            alt={"InputPrompt"}
+              />
+        </button>)}
+        </div>
+      )}
+      {(scene.type === 'Combt' || scene.type === 'CombtT') && (
+        <Combat scene={scene} setScene={async (trgt, id) => {
+              setContent(await load(trgt, id));
+              setFrame(0);
+        }}></Combat>
       )}
       </div>
       </div>
       <div>
-      {scene.type !== 'PNC' && (<button className="absolute w-[100%] h-[100%] z-30"
+      {(scene.type !== 'PNC' && scene.type !== 'Combt')  && (<button className="absolute w-[100%] h-[100%] z-30"
         onClick={async () => {
           if (frame >= scene.frames.length - 1) {
             // -------------------------------------------------------------- WHERE ARE YOU IN THE STORY????--------------------------------------
@@ -1017,8 +1662,9 @@ export const Scene = ({ initial_content }) => {
             //Chapter 2: 6
             //Chapter 2.1 Interlude: 7
             //Chapter 2.1 Continuation: 7
-            //Chapter 0Part 2: 10
+            //Chapter 0, Part 2: 10
             //Chapter 3: 11
+            //Crystal log 1: 14
 
             //var tempSP = +localStorage.getItem?('StoryProgress'): '';
             var tempSP = parseInt(localStorage.getItem('StoryProgress')|| '0');
@@ -1032,7 +1678,7 @@ export const Scene = ({ initial_content }) => {
 
 
             console.log("get next scene");
-            if (scene.next.type === "fixed") {
+            if (scene.next.type === "fixed") {//-------------------Normal condition (With Event updates)---------------------------
 
               if (scene.next.event){
                 localStorage.setItem(scene.next.event, scene.next.eventupdate);
@@ -1041,17 +1687,59 @@ export const Scene = ({ initial_content }) => {
               setContent(await load(scene.next.target, scene.next.sceneID));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
-              
-            } else if (scene.next.type === 'special'){
+            } else if (scene.next.type === 'statcheck') {//-------------------Simple Stat condition (Currently only with "if higher then X")---------------------------
+              if (parseInt(localStorage.getItem(scene.next.stat as string)|| '0') >= scene.next.higher){
+                setContent(await load(scene.next.targetA,  scene.next.sceneIDA));
+                setFrame(0);
+              } else { //Maybe add is LOWER & Is higher then "other stat"
+                setContent(await load(scene.next.target, scene.next.sceneID));
+                setFrame(0);
+              }
+            } else if (scene.next.type === 'special'){//-------------------Special condition (Compares a fixed localStorage check)---------------------------
+              // ------------------------------------------------ First VISIT--------------------------------
               if (scene.next.target === 'Chapter2' && scene.next.sceneID === 'Scene5' && localStorage.getItem('EventFV') !== 'FIN'){
                 setContent(await load(scene.next.target, 'Scene2'));
+                setFrame(0);
+              } 
+              // ------------------------------------------------ Password Restriction--------------------------------
+              else if (scene.next.target === 'CrystalLog' && scene.next.sceneID === 'Log1' && localStorage.getItem('EventPR') !== 'FIN'){
+                setContent(await load(scene.next.target, 'CLPW'));
+                setFrame(0);
+                localStorage.setItem('CurrentPart', 'CLPW');
+              }
+              // -------------------------------------------------- Hall-7 Unlock--------------------------
+              else if (scene.next.target === 'ReadingChambers' && scene.next.sceneID === 'PRScene4' && localStorage.getItem('Hall7L') === '1'){
+                setContent(await load(scene.next.target, 'PRHall7U'));
+                setFrame(0);
+              } //-----------------------------------------------First time End of Chapter----------------------------
+              else if (scene.next.target === "Extra" && scene.next.sceneID === "NoNewContent" && localStorage.getItem('InformationWLNB') === '1'){
+                setContent(await load(scene.next.target, "FNoNewContent"));
                 setFrame(0);
               } else {
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
               }
 
-            } else if (scene.next.type === 'continue'){
+            } else if (scene.next.type === 'TIB'){//-------------------The Inbetween condition (Go where the mood demands)---------------------------
+              //--------------------------------------------------------THE INBETWEEN MODES---------------------------------------------
+              if (localStorage.getItem('InbetweenVibe') === 'Analytical'){
+                if (scene.next.sceneID === 'GreenHypo'){
+                  setContent(await load(scene.next.target, 'GreenHypoA'));
+                  setFrame(0);
+                }
+              } else if (localStorage.getItem('InbetweenVibe') === 'Friendly'){
+                if (scene.next.sceneID === 'GreenHypo'){
+                  setContent(await load(scene.next.target, 'GreenHypoF'));
+                  setFrame(0);
+                }
+              } else if (localStorage.getItem('InbetweenVibe') === 'Scaredy cat'){
+                if (scene.next.sceneID === 'GreenHypo'){
+                  setContent(await load(scene.next.target, 'GreenHypoS'));
+                  setFrame(0);
+                }
+              }
+
+            } else if (scene.next.type === 'continue'){//-------------------Continue condition (Continuzes with story accordnig to where u max were)---------------------------
                 const CC = localStorage.getItem('CurrentChapter');
                 const CP = localStorage.getItem('CurrentPart');
                 let trgt: string;
@@ -1074,7 +1762,7 @@ export const Scene = ({ initial_content }) => {
               setContent(await load(trgt, scn));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
-            } else if (scene.next.type === "random") {
+            } else if (scene.next.type === "random") {//-------------------Random condition (Its random)---------------------------
               const min = 1;
               const max = scene.RNG.amount;
               const rand = Math.round(min + Math.random() * (max - min));
@@ -1083,7 +1771,7 @@ export const Scene = ({ initial_content }) => {
               setContent(await load(scene.next.target, bar));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
-            } else if (scene.next.type === "start"){
+            } else if (scene.next.type === "start"){//-------------------Website bootup / reload condition (You land where you are supposed to at story start)---------------------------
 
               //const trgt = localStorage.getItem('CurrentChapter');
               //onst scn = localStorage.getItem('CurrentPart');
@@ -1113,9 +1801,15 @@ export const Scene = ({ initial_content }) => {
               }
               console.log(trgt);
               console.log(scn);
-              setContent(await load(trgt, scn));
-              //setContent(await load(scene.scene_id + 1));
-              setFrame(0);
+
+              if (trgt === 'Chapter2' && scn === 'Scene5' && localStorage.getItem('EventFV') !== 'FIN'){
+                setContent(await load(trgt, 'Scene2'));
+                setFrame(0);
+              } else {
+                setContent(await load(trgt, scn));
+                //setContent(await load(scene.scene_id + 1));
+                setFrame(0);
+              }
             }
             }
           } else {

@@ -6,10 +6,34 @@
       "type": "PNC",
       "frames": [
         {
-          "background": { "bg": "Darkness"}
+          "background": { "bg": "ReadingChambers"}
         }
       ],
       "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers" }
+    },
+    "ReadingChambersV" : {
+      "scene_id": "-",
+      "name": "ReadingChambers",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "ReadingChambers", "pbg":"Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambersV" }
+    },
+    "ReadingChambersFA" : {
+      "scene_id": "-",
+      "name": "ReadingChambers",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "ReadingChambersNP"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambersFA" }
     },
     "FirstArrival" : {
         "scene_id": "-",
@@ -18,54 +42,54 @@
         "hud": "StoryHud6",   
         "frames": [
             {
-                "textBox": { "name": "???", "text": "Murrr...", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "Murrr...", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Ugh", "movementRR": "fade"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "???", "text": "Not again...", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "Not again...", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Ugh", "effectRR": "wiggle"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "???", "text": "A- Ah..", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "A-       Ah..", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Neutral", "effectRR": "jump"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "???", "text": "Hey there..", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "Hey there..", "speed": 40, "show": "true"  },
                 "sprites": {"center": "Lyz_Neutral", "movementC": "RRTC"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "???", "text": "Sorry for ruining the immersion.. ", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "Sorry for ruining the immersion.. ", "speed": 40, "show": "true"  },
                 "sprites": {"center": "Lyz_Ugh"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "???", "text": "Don't worry.. I'll clean this mess up real quick..", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "Don't worry..           I'll clean this mess up real quick..", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Ugh", "movementRR": "CTRR"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "???", "text": "You can go back to..          reading..", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Lyz", "text": "You can go back to..          reading..", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Neutral"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "", "text": "(It starts shoving the shards of the broken vase into its body, along with the flowers)", "speed": 40, "show": "true"  },
+                "textBox": { "name": "{you}", "text": "(It starts shoving the shards of the broken vase into its body,       along with the flowers)", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Neutral", "effectRR": "shake"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "", "text": "(It continues rubbing its sleeve over the puddle until it vanishes)", "speed": 40, "show": "true"  },
+                "textBox": { "name": "{you}", "text": "(It continues rubbing its sleeve over the puddle until it vanishes)", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Lyz_Neutral", "effectRR": "shake"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             },
             {
-                "textBox": { "name": "", "text": "", "speed": 40},
+                "textBox": { "name": "", "text": "", "speed": 40, "show":"true"},
                 "sprites": {"rright": "Lyz_Neutral"},
-                "background": { "bg": "Darkness"}
+                "background": { "bg": "ReadingChambersNP"}
             }
         ],
         "next": { "type": "choice", "question": "(It continues rubbing its sleeve over the puddle until it vanishes)",
@@ -80,9 +104,9 @@
             "jayson": "ReadingChambers",
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Just a slimy creature..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "Just a slimy creature..", "speed": 40, "show": "true"},
                     "sprites": {"rright": "Lyz_Lament"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambersNP"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2", "event": "SlimeInterest", "eventupdate": "1" }
@@ -93,9 +117,9 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Nobody of great importance...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "Nobody of great importance...", "speed": 40, "show": "true"},
                     "sprites": {"rright": "Lyz_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambersNP"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
@@ -106,9 +130,9 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "You’re in the library… duh.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "You’re in the library…          duh.", "speed": 40, "show": "true"},
                     "sprites": {"rright": "Lyz_Ugh"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambersNP"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
@@ -119,25 +143,252 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Pay me no mind. I was never here..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "Pay me no mind.          I was never here..", "speed": 40, "show": "true"},
                     "sprites": {"rright": "Lyz_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambersNP"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(After collecting the last piece it swiftly turns the corner)", "speed": 40, "show": "true"},
+                    "textBox": { "name": "{you}", "text": "(After collecting the last piece,       it pulls out what looks like a vase,        inluding flowers,         out of its body)", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Ugh"},
+                    "background": { "bg": "ReadingChambersNP"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(It slowly places it onto the table,         giving it a smack after tilting over a few times before nodding proudly at it standing still)", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Ugh", "effectRR": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(Within an instant it glares back at you before swiftly vanishing trough the door)", "speed": 40, "show": "true"},
                     "sprites": {"rright": "Lyz_Neutral", "movementRR": "fadeout"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You attempt to chase after it but before you manage to answer, it has already vanished tracelessly)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You attempt to chase after it but before you manage to catch up,         it has already vanished tracelessly)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(A cold shiver sparks throughout you as you stare out into the dark corridor, moving back out of instinct)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(A cold shiver sparks throughout you as you stare out into the dark corridor,         moving back out of instinct)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "EventFV", "eventupdate": "2"}
+          },
+          "Pot" : {
+            "scene_id": "-",
+            "name": "pots",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You stare at the pot)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(You feel as if it is staring back at you,         remembering that you never actually saw the pot before it was destroyed..)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(As far as you are concerned,       this might as well be the worst replica in the history of ever)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(As far as you are concerned, this might as well be the worst replica in the history of ever)",
+            "one": {"text": "Probably a good replica", "path": "Pot2", "compare": "true", "with": "true", "stats": "Trusting"},
+            "two": {"text": "Definitely a bad replica", "path": "Pot2", "compare": "true", "with": "true", "stats": "Questioning"}
+            }
+          },
+          "Pot2" : {
+            "scene_id": "-",
+            "name": "Pot 2",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You proudly agree with your own assessment)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Pot3", "event":"RCPot", "eventupdate":"true"}
+          },
+          "Pot3" : {
+            "scene_id": "-",
+            "name": "potto neutral",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(The pot continues to silently stare you down)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+          },
+          "Potdent" : {
+            "scene_id": "-",
+            "name": "raT!",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(The pot? continues to silently stare you down)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Yellow)", "text": "...", "speed": 500, "show": "true"},
+                    "sprites": { "center": "Yellow", "movementC": "fade"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Yellow)", "text": "...", "speed": 500, "show": "true"},
+                    "sprites": { "center": "Yellow"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Yellow)", "text": "!!!", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Yellow", "effectC":"jump"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Yellow)", "text": "{italic}*skitter*{/italic}", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Yellow", "movementC":"fadeout"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Yellow)", "text": "{italic}*thunk*{/italic}               Squeeeeeeee!!!", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(You just barely manage to move in time to see a glimpse of the creature,       holding its head as it squeezes trough a blue tear in the wall)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(Before you have any chance to react,      the tear closes up behind it)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(...What was that about?)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"Yellow", "eventupdate":"1"}
+          },
+          "Cell" : {
+            "scene_id": "-",
+            "name": "cellblock",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(Your vision wanders along the cells across the room as you notice some lights with hovering blocks in front of them, vaguely resembling books)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(They seem entranced by their task as you continue to gaze at the tall cells filled with blocks, taking up most of the space in the room)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "Try to read as well", "path": "Cell2", "compare": "true", "with": "true", "stats": "Curious"},
+            "two": {"text": "Back away", "path": "Cell3", "compare": "true", "with": "true", "stats": "Scaredy cat"}
+            }
+          },
+          "Cell2" : {
+            "scene_id": "-",
+            "name": "readas weel",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You move closer to the shelves,    trying to mimic the lights but without great success..)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCCell", "eventupdate":"true"}
+          },
+          "Cell3" : {
+            "scene_id": "-",
+            "name": "backaway",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You back away,     not wanting to fall into a similar trance like the lights in the room.)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCCell", "eventupdate":"true"}
+          },
+          "Cell4" : {
+            "scene_id": "-",
+            "name": "backaway",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(If these truly are books..      What is written in them?)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+          },
+          "Souls" : {
+            "scene_id": "-",
+            "name": "cellblock",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You look around and notice an uncountable amount of shimmers, floating around in the room)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "{you}", "text": "(Some vanish and reappear at different locations as others remain still or float around)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "Attempt to call out to them", "path": "Souls2", "compare": "true", "with": "true", "stats": "Empathetic"},
+            "two": {"text": "Look down at yourself", "path": "Souls3", "compare": "true", "with": "true", "stats": "Self Interest"}
+            }
+          },
+          "Souls2" : {
+            "scene_id": "-",
+            "name": "atco",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You try to speak but nothing comes out.          The lights seem to ignore you anyway..)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCSoul", "eventupdate":"true"}
+          },
+          "Souls3" : {
+            "scene_id": "-",
+            "name": "lday",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You look down,        noticing the absence of a physical body while hovering above the ground.        You seem to be like them)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCSoul", "eventupdate":"true"}
+          },
+          "Souls4" : {
+            "scene_id": "-",
+            "name": "neutralsouls",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(The Souls seem to wander around as they usually do.        It feels,        almost tranquil in a way)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
           },
           "WLNBF" : {
             "scene_id": "-",
@@ -145,12 +396,12 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(You stare at the book you woke up in front of. The title reads “Where Lilies never bloom”)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You stare at the book you woke up in front of. The title reads “Where Lilies never bloom”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "",
@@ -164,8 +415,8 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(You try to reach out to open it but the absence of hands makes this task harder than it seems)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You try to reach out to open it but the absence of hands makes this task harder than it seems)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "WLNBFN"}
@@ -177,12 +428,12 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(You try to use some sort of telepathic power like the other lights do...     without great success)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You try to use some sort of telepathic power like the other lights do...     without great success)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(Somehow you feel almost disappointed)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(Somehow you feel almost disappointed)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "WLNBFN"}
@@ -193,12 +444,12 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(Despite your greatest efforts you seem to be unable to just “continue reading”, already failing at simply opening up the book)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(Despite your greatest efforts you seem to be unable to just “continue reading”, already failing at simply opening up the thing)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(Was it even open in the first place?)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(Was it even open in the first place?)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"InformationWLNB", "eventupdate":"1"}
@@ -209,16 +460,16 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(Yet for some reason you keep imagining a blue screen with a sad smiley..)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(Yet for some reason you keep imagining a blue screen with a sad smiley..)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
@@ -229,16 +480,16 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(Your mind goes through all the things it experienced last time, as you start to fall back into a state of trance...)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(Your mind goes through all the things it experienced last time, as you start to fall back into a state of trance...)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "continue"}
@@ -249,20 +500,20 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(You stare at the door)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You stare at the door)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(Before even processing it, you seemed to have wandered over to it again as if it were pulling you in)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(Before even processing it, you seemed to have wandered over to it again as if it were pulling you in)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You feel that shiver again as you glare at the endless seeming corridor outside)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You feel that shiver again as you glare at the endless seeming corridor outside)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "(You feel that shiver again as you glare at the endless seeming corridor outside)",
@@ -276,8 +527,8 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(You decide to stay here for now. Maybe there is something you missed...)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You decide to stay here for now. Maybe there is something you missed...)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
@@ -288,12 +539,12 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(As you stare at the door it seems to be staring back at you, beckoning you to enter through it again)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(As you stare at the door it seems to be staring back at you, beckoning you to enter through it again)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You decide to not be tempted by it again..             For now)", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You decide to not be tempted by it again..             For now)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
@@ -304,72 +555,72 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "(You move out into the endless seeming hallway..)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(You move out into the endless hallway..)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(After wandering the endless hallways of the library for what seemed like forever, you slowly start to get dizzy)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(After wandering the halls of the library for what seemed like forever, you slowly start to get dizzy)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(The halls seem to converge into one another as if the library itself had no distinct shape or form)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(The halls seem to converge into one another as if the library itself had no distinct shape or form)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(It feels like you have seen past corridors again and again as you continue on forward)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(It feels like you have seen past corridors again and again as you continue on forward)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You notice noises that sound like laughter, slowly fading into the scratching of metal as your vision starts to vibrate)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(You notice noises that sound like laughter, slowly fading into the scratching of metal as your vision starts to vibrate)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(Sudden smells and memories of past events rush to you as the corridor walls start merging and closing in as you phase through them.)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(Sudden smells and memories of past events rush to you as the corridor walls start merging and closing in as you phase through them)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You feel a heavy impact, followed by silence until your consciousness fades)", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "(You feel a heavy impact,        followed by silence until your consciousness fades)", "speed": 40},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "...", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "...", "speed": 500},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "...", "speed": 50},
+                    "textBox": { "name": "{you}", "text": "...", "speed": 500},
                     "background": { "bg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(You wake up, feeling..      surprisingly well as you notice you are in the room you were, before embarking on this journey)", "speed": 50},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "{you}", "text": "(You wake up, feeling..      surprisingly well as you notice you are in the room you were, before embarking on this journey)", "speed": 40, "show":"true"},
+                    "background": { "bg": "ReadingChambers", "pbg": "Darkness"}
                 },
                 {
-                    "textBox": { "name": "", "text": "...", "speed": 50, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "...", "speed": 500, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral", "movementC": "fade"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Huh.             So you do notice me...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Huh.             So you do notice me...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Please look at the red bot.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Please look at the red bot.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Alright..", "speed": 50, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Alright..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness", "effect": "Whitescreen", "effectstyle": "vibeout"}
+                    "background": { "bg": "ReadingChambers", "effect": "Whitescreen", "effectstyle": "vibeout"}
                 },
                 {
-                    "textBox": { "name": "", "text": "", "speed": 50},
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "choice", "question": "",
+            "next": { "type": "choice", "question": "(Alright..)",
             "one": {"text": "OW.. my eyes..", "path": "L1C1", "compare": "true", "with": "true", "stats": "Confused"},
             "two": {"text": "What is this place?", "path": "L1C2", "compare": "true", "with": "true", "stats": "Curious"}
           }
@@ -380,24 +631,24 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "You don’t have eyes..           No need to be overdramatic.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "You don’t have eyes..           No need to be overdramatic.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Please answer these questions:", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Please answer these questions:", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "input", "target": "ReadingChambers", "sceneID": "Lost2"}
@@ -408,24 +659,24 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "We will get to that..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "We will get to that..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Please answer these questions:", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Please answer these questions:", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "input", "target": "ReadingChambers", "sceneID": "Lost2"}
@@ -436,14 +687,14 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "What were you feeling and or thinking about, when leaving the room?", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "What were you feeling and or thinking about, when leaving the room?", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "(What were you feeling and or thinking about, when leaving the room?)",
@@ -459,19 +710,19 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "I see.. Mhm..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "I see.. Mhm..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "What were you experiencing before “waking up”?", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "What were you experiencing before “waking up”?", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "(What were you experiencing before “waking up”?)",
@@ -485,19 +736,19 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Alright..   Final question:", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Alright..   Final question:", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "What was the first thing you noticed after “waking up”?", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "What was the first thing you noticed after “waking up”?", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "What was the first thing you noticed after “waking up”?",
@@ -513,39 +764,39 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Oook...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Oook...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "What a pain...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "What a pain...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "So..      usually souls like you don't just..     Go outside of rooms.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "So..      usually souls like you don't just..     Go outside of rooms.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "So please refrain from that in the future.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "So please refrain from that in the future.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Since you seem unable to just “Go” to other rooms like the rest, use this instead..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Since you seem unable to just “Go” to other rooms like the rest, use this instead..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "(They hand you a device but before you are able to process what it is, it turns into blue particles, flowing into you)", "speed": 40, "show": "true"},
+                    "textBox": { "name": "{you}", "text": "(They hand you a device but before you are able to process what it is, it turns into blue particles, flowing into you)", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "",
@@ -560,14 +811,14 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "That is what I'm trying to figure out..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "That is what I'm trying to figure out..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "There seems to be some bug that causes some souls to become conscious instead of just existing in a passive state..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "There seems to be some bug that causes some souls to become conscious instead of just existing in a passive state..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Lost7"}
@@ -578,14 +829,14 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Just some odd things happening around the place..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Just some odd things happening around the place..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "I mostly figured it out but the origin of the cause has yet to be traced..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "I mostly figured it out but the origin of the cause has yet to be traced..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Lost7"}
@@ -596,84 +847,84 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Righty.. I should start from the beginning.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Righty.. I should start from the beginning.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Welcome to the Library beyond time..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Welcome to the Library beyond time..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "An infinite space of stored knowledge and memories from past to present and so on.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "An infinite space of stored knowledge and memories from past to present and so on.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Souls visit this place mostly accidentally through either deep meditation or slumber, experiencing various bits of data stored in these halls.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Souls visit this place mostly accidentally through either deep meditation or slumber, experiencing various bits of data stored in these halls.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "If you had a fever dream once you probably visited section CRSD.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "If you had a fever dream once you probably visited section CRSD.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "After returning to consciousness, said souls leave this place again since an aware one cannot upkeep a connection to the Library.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "After returning to consciousness, said souls leave this place again since an aware one cannot upkeep a connection to the Library.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Distracted"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "At least that is how it is supposed to work.               Yet here you are..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "At least that is how it is supposed to work.               Yet here you are..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Clearly observing me...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Clearly observing me...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Violently...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Violently...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_LookupS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Ugh, I don't like this anymore..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Ugh, I don't like this anymore..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Stressed_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "J-just use that device I gave you and don't enter the corridors again.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "J-just use that device I gave you and don't enter the corridors again.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Paniked_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "You are interrupting my work and I don't wanna keep dragging you back into the rooms..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "You are interrupting my work and I don't wanna keep dragging you back into the rooms..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Paniked_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "The thing has the ID of this room and the Nexus Core already entered...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "The thing has the ID of this room and the Nexus Core already entered...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Paniked_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Just ask them about things in the future and not me.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Just ask them about things in the future and not me.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Stressed_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "", "text": "", "speed": 40},
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Stressed_Lookup"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "choice", "question": "(Just ask them about things in the future and not me)",
@@ -687,19 +938,19 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "Y-yeah.. No problem...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Y-yeah.. No problem...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Stressed_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "Bye.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Bye.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "]=[; Return", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "]=[; Return", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_NeutralS"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "LostFinal", "event": "EventFV", "eventupdate": "3"}
@@ -710,14 +961,14 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "???", "text": "You will figure it out. Bye.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "You will figure it out. Bye.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Paniked_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "???", "text": "]=[; Return", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "]=[; Return", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Paniked_Neutral"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "LostFinal", "event": "EventFV", "eventupdate": "3"}
@@ -730,10 +981,516 @@
                 {
                     "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_NeutralS", "movementC": "blink"},
-                    "background": { "bg": "Darkness"}
+                    "background": { "bg": "ReadingChambers"}
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+          },
+          "PasswordRestriction" : {
+            "scene_id": "-",
+            "name": "Password Restric",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "......", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN", "movementC": "fade"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(......)",
+            "one": {"text": "AAAAAAAAAA!", "path": "PR1C1", "compare": "true", "with": "true"},
+            "two": {"text": "Why are you staring at me like that..?", "path": "PR1C2", "compare": "true", "with": "true"},
+            "three": {"text": "Another Slime?", "path": "PR1C3", "compare": "Analytical", "with": "2", "stats": "Analytical"}
           }
-      
+        },
+        "PR1C1" : {
+            "scene_id": "-",
+            "name": "AAAAAAAAA!",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "AAAAAAAAAAAAAAA!", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN", "effectC": "shake"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(AAAAAAAAAAAAAAA)",
+            "one": {"text": "AAAAAAAAAAAAAAAAAAA!", "path": "PR1C11", "compare": "true", "with": "true"},
+            "two": {"text": "You scared me!", "path": "PR1C12", "compare": "true", "with": "true", "stats": "Scaredy cat"}
+          }
+        },
+        "PR1C2" : {
+            "scene_id": "-",
+            "name": "Why u starin",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Cause you’re interesting.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Well..      at least partly.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(Well..      at least partly)",
+            "one": {"text": "What is that supposed to mean?", "path": "PR1C21", "compare": "true", "with": "true", "stats":"Self Interest"},
+            "two": {"text": "I’m flattered.", "path": "PR1C22", "compare": "true", "with": "true", "stats": "Friendly"}
+          }
+        },
+        "PR1C3" : {
+            "scene_id": "-",
+            "name": "Slim?",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Another?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Oh..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C21" : {
+            "scene_id": "-",
+            "name": "What u mean",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "It means that you’re at least +1 interesting.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C22" : {
+            "scene_id": "-",
+            "name": "flattered",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Glad you are.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C11" : {
+            "scene_id": "-",
+            "name": "AAAAAAAAAAAAAAAAAAAAAA!",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "{bold}AAAAAAAAAAAAAAAAAAAAAAAAA!{/bold}", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN", "effectC": "shake"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Why are we having a screaming contestttt?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN", "effectC": "shake"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(Why are we having a screaming contestttt?)",
+            "one": {"text": "Because it’s funny.", "path": "PR1C111", "compare": "true", "with": "true", "stats": "Silly"},
+            "two": {"text": "I don’t know...", "path": "PR1C112", "compare": "true", "with": "true", "stats": "Confused"}
+          }
+        },
+        "PR1C12" : {
+            "scene_id": "-",
+            "name": "You scared me!",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "I didn’t do anything though..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C111" : {
+            "scene_id": "-",
+            "name": "Bc funny",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Valid.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C112" : {
+            "scene_id": "-",
+            "name": "idk",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "..Weirdo.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PRScene2" : {
+            "scene_id": "-",
+            "name": "PW-Scene2",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Well, anyway..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Where u at?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "...", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Password restricted?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Ugh"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Uhm..     oh, the audiolog.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Ugh"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "I heard it was being treated as a separate entity of the chronological story..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "And thus needed to be simulated.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Zoneout"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "So all you gotta do is figure out the password the owner of the audio log would have used.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral", "effectC":"wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(So all you gotta do is figure out the password the owner of the audio log would have used)",
+            "one": {"text": "Who is the owner?", "path": "PR2C1", "compare": "true", "with": "true"},
+            "two": {"text": "I might know who that is.", "path": "PR2C2", "compare": "true", "with": "true", "stats": "Analytical"}
+          }
+        },
+        "PR2C1" : {
+            "scene_id": "-",
+            "name": "WhoOwnder?",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Isn’t that obvious?", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Zoneout"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_Zoneout"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(Isn’t that obvious?)",
+            "one": {"text": "Not really no. Tell me.", "path": "PR2C11", "compare": "true", "with": "true", "stats": "Confused"},
+            "two": {"text": "Is it? I’ll figure it out myself then.", "path": "PR2C12", "compare": "true", "with": "true", "stats": "Curious"}
+          }
+        },
+        "PR2C11" : {
+            "scene_id": "-",
+            "name": "tell me",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Oh..     It’s Nora’s.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Ugh"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene3"}
+        },
+        "PR2C12" : {
+            "scene_id": "-",
+            "name": "ill figure it out",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "A curious one.        I like that.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene3"}
+        },
+        "PR2C2" : {
+            "scene_id": "-",
+            "name": "ill figure it out",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Oya.     U a smarty ain’t ya.        Noice.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Zoneout", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene3"}
+        },
+        "PRScene3" : {
+            "scene_id": "-",
+            "name": "continScene3",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "In any case, I won’t tell you the password though.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "special", "target": "ReadingChambers", "sceneID": "PRScene4"}
+        },
+        "PRHall7U" : {
+            "scene_id": "-",
+            "name": "Hall7 unlocks",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyzzy", "text": "What I will tell you, is this though:", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Neutral", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "Ha11-7L", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "Just because I like ya~", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Habby"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene4", "event": "Hall7L", "eventupdate": "true"}
+        },
+        "PRScene4" : {
+            "scene_id": "-",
+            "name": "PW-Scene4",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Uhm, anyway..    Imma go now.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(Uhm..    Imma go now.)",
+            "one": {"text": "Ok bye!", "path": "PR3C1", "compare": "true", "with": "true", "stats": "Friendly"},
+            "two": {"text": "Wait, What’s your name?", "path": "PR3C2", "compare": "true", "with": "true", "stats": "Curious"}
+          }
+        },
+        "PR3C1" : {
+            "scene_id": "-",
+            "name": "byez",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Byeeeeeeeeeee", "speed": 40, "show": "true"},
+                    "sprites": { "down": "Lyz_FormlessN", "movementD": "CTD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "EventPR", "eventupdate": "2"}
+        },
+        "PR3C2" : {
+            "scene_id": "-",
+            "name": "byez",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Oh right..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "The names Vyr’nix Lyz. Or “V&*-)=@zz” Or “The shapeless” Or-", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Neutral", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "Actually.        Just call me Lyz or Lyzzy…", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Wuh"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PR3C22", "event": "SlimeName", "eventupdate": "true"}
+        },
+        "PR3C22" : {
+            "scene_id": "-",
+            "name": "byez",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyzzy", "text": "Until we meet againnnnnnnnnnn~", "speed": 40, "show": "true"},
+                    "sprites": { "down": "Lyzzy_Neutral", "movementD": "CTD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "EventPR", "eventupdate": "2"}
+        },
+        "PRFirstTry" : {
+            "scene_id": "-",
+            "name": "Firsttryyy",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "Crystal log 1", "speed": 40, "show": "true"},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "Hey, hey, wait, hol up.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Wuh", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "You can’t just first try this thing while I'm here waiting..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "I was gonna have an entire spiel about observing you while acting coy,", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Thinking", "effectC":"wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "And hinting you in the correct direction of the password!", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Neutral", "effectC":"jump"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "sprites": { "center": "Lyzzy_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(And hinting you in the correct direction of the password!)",
+            "one": {"text": "Uh… Sorry..?", "path": "FT1", "compare": "true", "with": "true", "stats": "Friendly"},
+            "two": {"text": "I’m trying to read here..", "path": "FT2", "compare": "true", "with": "true", "stats": "Silly"}
+          }
+        },
+        "FT1" : {
+            "scene_id": "-",
+            "name": "sowwy",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Well it’s too late for thaaat…", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRFirstTry2"}
+        },
+        "FT2" : {
+            "scene_id": "-",
+            "name": "Im trying to read here",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyzzy", "text": "{italic}B r u h{/italic}.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyzzy_Wuh"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRFirstTry2"}
+        },
+        "PRFirstTry2" : {
+            "scene_id": "-",
+            "name": "sowwy",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "My entire conversation plan is redundant now…", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD", "effectC":"wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Well it’s doomed anyway…", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Puddle", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Guess as a reward I can let you in on a little secret:", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Puddle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Ha11-7L", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Puddle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "I’m sure an apparent smarty like you will figure out what to do with that..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Puddle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Anyway..       I’ll go re-calculate my expectations for you souls..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Puddle", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "byeeeeeeeee….", "speed": 40, "show": "true"},
+                    "sprites": { "down": "Lyz_Puddle", "movementD": "CTD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "EventPR", "eventupdate":"FIN"}
+        }
+    
   }

@@ -1,0 +1,815 @@
+{
+    "Ha117L" : {
+      "scene_id": "-",
+      "name": "Ha11-7L",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "Ha117L"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L" }
+    },
+    "Ha117LV" : {
+      "scene_id": "-",
+      "name": "Ha11-7L",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "Ha117L", "pbg":"Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117LV" }
+    },
+    "FirstVisit" : {
+        "scene_id": "-",
+        "name": "First visit",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+          {
+            "textBox": { "name": "{you}", "text": "(You arrive in what looks like just another corridor, yet your senses seem to stay intact)", "speed": 40, "show": "true"},
+            "background": { "bg": "Ha117LWG", "pbg":"Darkness"}
+          },
+          {
+            "textBox": { "name": "{you}", "text": "(The only thing making this hall different, is a small table to the side, mounted by a robotic looking creature)", "speed": 40, "show": "true"},
+            "background": { "bg": "Ha117LWG"}
+          },
+          {
+            "textBox": { "name": "{you}", "text": "(It spots you immediately as you walk over to it, not averting its gaze the entire time)", "speed": 40, "show": "true"},
+            "background": { "bg": "Ha117LWG"}
+          },
+          {
+            "textBox": { "name": "(Green)", "text": "...", "speed": 500, "show": "true"},
+            "sprites": { "center": "Green", "movementC": "fade"},
+            "background": { "bg": "Ha117L", "pbg": "Ha117LWG"}
+          },
+          {
+            "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+            "sprites": { "center": "Green"},
+            "background": { "bg": "Ha117L"}
+          }
+        ],
+        "next": { "type": "choice", "question": "(...)",
+            "one": {"text": "Hi there!", "path": "F1C1", "compare": "true", "with": "true", "stats": "Friendly"},
+            "two": {"text": "Oh, the architect's robot.", "path": "F1C2", "compare": "true", "with": "true", "stats": "Analytical"},
+            "three": {"text": "Why are you looking at me like that..", "path": "F1C3", "compare": "true", "with": "true", "stats": "Scaredy cat"}
+          }
+      },
+      "F1C1" : {
+        "scene_id": "-",
+        "name": "Hi there",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "(Green)", "text": "Greetings, {name}{/name}.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene2" }
+      },
+      "F1C2" : {
+        "scene_id": "-",
+        "name": "oh u architec",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "(Green)", "text": "Indeed, {name}{/name}.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene2" }
+      },
+      "F1C3" : {
+        "scene_id": "-",
+        "name": "y u lookin",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "(Green)", "text": "Why would I not, {name}{/name}.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene2" }
+      },
+      "FScene2" : {
+        "scene_id": "-",
+        "name": "First visit",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "I am Green.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "Welcome to Ha11-7L,", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "The 7th corridor design applied & used about 7.67% times in the Library.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "It is favored by many due to its convenient ID and almost perfect % usage.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "choice", "question": "(It is favored by many due to its convenient ID and almost perfect % usage)",
+            "one": {"text": "Sweet", "path": "F2C1", "compare": "true", "with": "true"},
+            "two": {"text": "Are you a tour guide or something?", "path": "F2C2", "compare": "true", "with": "true"}
+          }
+      },
+      "F2C1" : {
+        "scene_id": "-",
+        "name": "sweetz",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "Indeed.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene3" }
+      },
+      "F2C2" : {
+        "scene_id": "-",
+        "name": "tour guide?",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "Negative.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene3" }
+      },
+      "FScene3" : {
+        "scene_id": "-",
+        "name": "F-Scene 3",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "My purpose here is temporary.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "I was asked to collect a security code from all scanned souls.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "This security code may be whatever you choose.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "It may be something you love, something important, something random.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "As long as it is remembered.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "input", "target": "Ha117L", "sceneID": "FScene4" }
+      },
+      "FScene4" : {
+        "scene_id": "-",
+        "name": "F-Scene 4",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "Appreciated.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "...", "speed": 500, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "...", "speed": 500, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "choice", "question": "(...)",
+            "one": {"text": "You would make a great tour guide tough..", "path": "F3C1", "compare": "true", "with": "true"},
+            "two": {"text": "Is there something wrong?", "path": "F3C2", "compare": "true", "with": "true"}
+          }
+      },
+      "F3C1" : {
+        "scene_id": "-",
+        "name": "tour guide!",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "Appreciated.            I will let the architect know.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "Though,       answer me a question first:", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene5", "event": "GreenTourGuide", "eventupdate": "true"}
+      },
+      "F3C2" : {
+        "scene_id": "-",
+        "name": "tour guide!",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "Negative.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "I was merely stalling for time until I could confirm.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene5" }
+      },
+      "FScene5" : {
+        "scene_id": "-",
+        "name": "tour guide!",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "If,     hypothetically,       something was watching over you from the shadows.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "How would that make you feel?", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "choice", "question": "(How would that make you feel?)",
+            "one": {"text": "Protected. I'm sure they are looking out for me.", "path": "FScene6", "compare": "true", "with": "true", "stats": "Friendly"},
+            "two": {"text": "Intrigued. I would like to know what is following me.", "path": "FScene6", "compare": "true", "with": "true", "stats":"Analytical"},
+            "three": {"text": "Nervous. I would run for my life.", "path": "FScene6", "compare": "true", "with": "true", "stats":"Scaredy cat"}
+          }
+      },
+      "FScene6" : {
+        "scene_id": "-",
+        "name": "tour guide!",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "Interesting.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "On that note,      I will leave now.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "Also,     for your information;", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "I lied.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "It was not a hypothetical.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "Goodbye.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(The robot turns around in a smooth 180° motion, lifting one of its dangling legs and cutting the blue tear wide open)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green" , "movementC": "fadeout"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "(With a swift little jump it leaps through it, the tear seemingly fixing itself behind it until the room goes back into silence)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "TIB", "target": "Ha117L", "sceneID": "GreenHypo" }
+      },
+      "GreenHypoA" : {
+        "scene_id": "-",
+        "name": "GHA",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(The last few words of the bot repeat in your mind as you feel a prickling sensation rushing through you)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You begin to wonder; “What would follow a mere {italic}random{/italic} soul into some {italic}random{/italic} Corridor?)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Curiosity takes over as you turn around to face “it”)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "                   (Nothing)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You are left standing alone inside the corridor..)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Yet the prickling feeling has not subsided..)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L" }
+      },
+      "GreenHypoF" : {
+        "scene_id": "-",
+        "name": "GHF",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(The last few words of the bot repeat in your mind as you feel a warmth radiating from behind you)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Whatever is following you, {italic}must{/italic} be the thing that is keeping you from feeling ill in a corridor as you turn around to face “it”)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "                   (Nothing)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You are left standing alone inside the corridor..)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Yet the warm feeling has not subsided..)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L" }
+      },
+      "GreenHypoS" : {
+        "scene_id": "-",
+        "name": "GHS",
+        "hud": "StoryHud6",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(The last few words of the bot repeat in your mind as you feel a cold sensation running trough your soul)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(As much as you want to leave, something is not letting you as you slowly turn around to face “it”)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "                   (Nothing)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You are left standing alone inside the corridor..)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Yet the ice cold feeling has not subsided..)", "speed": 40, "show": "true"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L" }
+      },
+      "Table" : {
+            "scene_id": "-",
+            "name": "Tablz",
+            "jayson": "Ha117L",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You stare at the table)", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Table", "movementC": "fade"},
+                    "background": { "bg": "Ha117L"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(What a delightful table)", "speed": 40, "show": "true"},
+                  "sprites": { "center": "Table"},
+                  "background": { "bg": "Ha117L"}
+                },
+                {
+                  "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                  "sprites": { "center": "Table"},
+                  "background": { "bg": "Ha117L"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "Move on", "path": "TableM", "compare": "true", "with": "true"},
+            "two": {"text": "Keep starring", "path": "Table2", "compare": "true", "with": "true"}
+            }
+          },
+          "TableM" : {
+        "scene_id": "-",
+        "name": "move on table",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(It is indeed a table)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You decide to move on with your life)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L" }
+      },
+      "Table2" : {
+        "scene_id": "-",
+        "name": "starem",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(You keep staring at the table)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Why is there a singular table in this hall?)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(It has nothing on it and barely covers any space in this massive corridor)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "choice", "question": "",
+            "one": {"text": "Move on", "path": "TableM", "compare": "true", "with": "true"},
+            "two": {"text": "Focus on the table", "path": "Table3", "compare": "true", "with": "true"}
+            }
+      },
+      "Table3" : {
+        "scene_id": "-",
+        "name": "focus",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(This table simply MUST mean something)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You eye the table up and down as you get closer)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(A smooth surface..)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(4 stable legs..)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(A cross holding them together..)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Maybe it is just a table after all..     But if anything-)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(Simple,      Compact,         Beautiful)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "choice", "question": "",
+            "one": {"text": "Carry on", "path": "Table5", "compare": "true", "with": "true", "stats": "Silly"},
+            "two": {"text": "Touch it", "path": "Table4", "compare": "true", "with": "true", "stats": "Confused"}
+            }
+      },
+      "Table4" : {
+        "scene_id": "-",
+        "name": "touch",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(You attempt to reach out, simply needing to know what it is made out of)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(With horror you realize, that you are still lacking the arms for such a task, as well as a sense of touch in general)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(What a cruel way to end this intimate moment…)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L", "event":"H7Table", "eventupdate":"true" }
+      },
+      "Table5" : {
+        "scene_id": "-",
+        "name": "carryon",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(This table has truly made you feel invigorated)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You now understand why this hall is so beloved)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L", "event":"H7Table", "eventupdate":"true" }
+      },
+      "Table6" : {
+        "scene_id": "-",
+        "name": "table neutral",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(It is indeed the beloved table in all its glory)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table", "movementC": "fade"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You feel a rush of relaxation washing through your very soul from just staring at it)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(How rejuvenating)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Table"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L" }
+      },
+      "TableL" : {
+        "scene_id": "-",
+        "name": "tablu",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "{you}", "text": "(It is indeed the beloved table in all its glory)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel", "movementC": "fade"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(You feel a rush of relaxation washing through your very soul from just staring at it)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(That smooth surface.         Those 4 stable legs.            A delightful cross holding-)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(...No)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(This is not the table you have come to love..)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "{you}", "text": "(This is but an Imposter!)", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Table?", "text": "...", "speed": 500, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Table?", "text": "...", "speed": 500, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Table?", "text": "Alright alright,      you win..", "speed": 40, "show": "true"},
+                "sprites": { "center": "Tablel"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "...", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral", "effectC": "wiggle"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "choice", "question": "",
+            "one": {"text": "I knew it.", "path": "TableL2", "compare": "true", "with": "true", "stats": "Questioning"},
+            "two": {"text": "You?!", "path": "TableL3", "compare": "true", "with": "true", "stats": "Confused"}
+            }
+      },
+      "TableL2" : {
+        "scene_id": "-",
+        "name": "knew it",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Lyzzy", "text": "Well, what can I say?      You caught the great Lyzzy~", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral", "effectC":"wiggle"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL22", "event": "SlimeName", "eventupdate": "true" }
+      },
+      "TableL22" : {
+        "scene_id": "-",
+        "name": "knewit2",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Lyzzy", "text": "Didn’t know you had such an eye for detail.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "And towards a table no less.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Wuh"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "Was fun watching ya tho.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral", "effectC": "jump"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL4" }
+      },
+      "TableL3" : {
+        "scene_id": "-",
+        "name": "u?",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Lyz", "text": "Yeah, me. The great Lyz.     ..What else did you expect?", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_Neutral"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL22", "event": "SlimeName", "eventupdate": "true" }
+      },
+      "TableL33" : {
+        "scene_id": "-",
+        "name": "u2",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Lyz", "text": "Wait..        Do you usually just stare at tables like that??", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_Zoneout"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "I thought there was no way you didn’t know...", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_Ugh"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "Ugh-", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_Ugh"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "Soul’s love tables.         Noted.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_Zoneout", "effectC":"wiggle"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL4" }
+      },
+      "TableL4" : {
+        "scene_id": "-",
+        "name": "oh well",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Lyz", "text": "But oh well, ya got me.       That was fun.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_FormlessD"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "I won’t do it again..", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_FormlessD"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "Or will I?", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_FormlessN"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "{italic}Dun, dunnnnnn~{/italic}", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_FormlessD", "effectC":"wiggle"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "Anyway,     I’ll take my leave.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyz_FormlessD"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Lyz", "text": "Boyeee.", "speed": 40, "show": "true"},
+                "sprites": { "down": "Lyz_FormlessN", "movementD": "CTD"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "Ha117L", "event": "H7Table", "eventupdate": "Slime" }
+      }
+}

@@ -1,0 +1,45 @@
+{
+    "Fights" : {
+      "scene_id": "Part1",
+      "name": "Noras Origin",
+      "type": "Combt",
+      "fight": "Tutorial",
+      "frames": [
+        {
+          "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Fights", "sceneID": "Fights" }
+    },
+    "Test1" : {
+      "scene_id": "Part1",
+      "name": "Noras Origin",
+      "type": "CombtT",
+      "frames": [
+        {
+          "textBox": { "name": "Me", "text": "Does this work? Would be crazy.", "speed": 40, "show":"true"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Me", "text": "Insane actually.", "speed": 40, "show":"true"},
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Fights", "sceneID": "Fights" }
+    },
+    "Test2" : {
+      "scene_id": "Part1",
+      "name": "Noras Origin",
+      "frames": [
+        {
+          "textBox": { "name": "Me", "text": "Ok here we go.", "speed": 40, "show":"true"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Me", "text": "Start combat:", "speed": 40, "show":"true"},
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Fights", "sceneID": "Fights" }
+    }
+  }

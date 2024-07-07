@@ -1,0 +1,44 @@
+{
+    "CLPW" : {
+    "scene_id": "-",
+    "name": "LogPassword",
+    "frames": [
+        {
+            "background": { "bg": "AudioLogPw", "pbg": "Darkness"}
+        }
+    ],
+    "next": { "type": "CL", "target": "CrystalLog", "sceneID": "CLPW" }
+    },
+    "Log1" : {
+        "scene_id": "14",
+        "name": "Crystal Log 1",
+        "storyProgressID": 15,
+        "frames": [
+            {
+                "textBox": { "name": "", "text": "Im here right??????? helpppp", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40},
+                "background": { "bg": "Darkness"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Chapter4", "sceneID": "Chapter4" }
+        },
+        "Log2" : {
+            "scene_id": "14",
+            "name": "Crystal Log 1",
+            "storyProgressID": 15,
+            "frames": [
+                {
+                    "textBox": { "name": "", "text": "whyyyyyyyyyyp", "speed": 40},
+                    "background": { "bg": "Darkness"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40},
+                    "background": { "bg": "Darkness"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "CrystalLog", "sceneID": "CLPW" }
+            }
+}

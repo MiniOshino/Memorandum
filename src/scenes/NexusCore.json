@@ -6,10 +6,22 @@
       "type": "PNC",
       "frames": [
         {
-          "background": { "bg": "Darkness"}
+          "background": { "bg": "NexusCore"}
         }
       ],
       "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore" }
+    },
+    "NexusCoreV" : {
+      "scene_id": "-",
+      "name": "NexusCore",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "NexusCore", "pbg":"Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCoreV" }
     },
     "FirstVisit" : {
         "scene_id": "-",
@@ -17,39 +29,237 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "", "text": "(As you somehow manage to use the device you are suddenly yanked away from where you were)", "speed": 40},
+            "textBox": { "name": "{you}", "text": "(As you somehow manage to use the device you are suddenly yanked away from where you were)", "speed": 40},
             "background": { "bg": "Darkness"}
           },
           {
-            "textBox": { "name": "", "text": "(Your vision goes black as you feel various forces tugging and pressing against you, feeling as gentle as it does violent)", "speed": 40},
+            "textBox": { "name": "{you}", "text": "(Your vision goes black as you feel various forces tugging and pressing against you, feeling as gentle as it does violent)", "speed": 40},
             "background": { "bg": "Darkness"}
           },
           {
-            "textBox": { "name": "", "text": "(After a few seconds your movement suddenly halts as your vision returns to you)", "speed": 40},
-            "background": { "bg": "Darkness"}
+            "textBox": { "name": "{you}", "text": "(After a few seconds your movement suddenly halts as your vision returns to you)", "speed": 40, "show":"true"},
+            "background": { "bg": "NexusCore", "pbg":"Darkness"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event": "EventFV", "eventupdate": "4"}
       },
+      "Tables" : {
+            "scene_id": "-",
+            "name": "tablesinNC",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You stare at the tables as you notice them all to be facing the main desk in the room. They are empty, without a soul to attend them)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "Inspect them", "path": "Tables2", "compare": "true", "with": "true", "stats": "Curious"},
+            "two": {"text": "Sit down", "path": "Tables3", "compare": "true", "with": "true", "stats": "Silly"}
+            }
+          },
+          "Tables2" : {
+            "scene_id": "-",
+            "name": "inspec",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You move around them,      confirming that they indeed are tables)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(More specifically,     floating blocks)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(You wonder how gravity works in these rooms anyway, considering you are floating, as you attempt to turn upside down)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(To your surprise,     you actually fall to the ground, feeling a faint sting from within you)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(Your question about gravity has been answered with more confusion..)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event":"NCTables", "eventupdate":"true"}
+          },
+          "Tables3" : {
+            "scene_id": "-",
+            "name": "sitdune",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You move to the side of the table,      lowering yourself to the floor to mimic “sitting”)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(Not before long, you notice that there is a distinct lack of benches, and you can see the underside of the tables)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(You decide to move onto the table, questioning the impracticality of this setup in the first place)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(Who is even supposed to sit here? And where?)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event":"NCTables", "eventupdate":"true"}
+          },
+          "Tables4" : {
+            "scene_id": "-",
+            "name": "neutraltable",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(The Tables are floating and empty as per usual. You wonder if someone even uses it)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore"}
+          },
+          "Roof" : {
+            "scene_id": "-",
+            "name": "ceeelinnggs",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You look around the room,      noticing its disproportionate size compared to it being completely hollow and empty,         as you look up)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(A deep sense of pressure starts to wash over you,       as if you are being watched by millions..     no..     undefined amount of eyes, piercing through your very being)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(You quickly stop looking around as the crushing feeling slowly vanishes..", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(You decide to never do that again..)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event":"NCRoof", "eventupdate":"true"}
+          },
+          "Roof2" : {
+            "scene_id": "-",
+            "name": "ceeiling neutral",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(Your soul trembles as you remember the crushing feeling..      Better not tempt it again..)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore"}
+          },
+          "InfoWall" : {
+            "scene_id": "-",
+            "name": "Infowall",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You stare at the distinct blue lines along the walls)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(Various symbols seem to be scrolling by as the occasional golden thread emerges from within)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "choice", "question": "",
+            "one": {"text": "Keep starring", "path": "InfoWall2", "compare": "true", "with": "true", "stats": "Curious"},
+            "two": {"text": "Touch it", "path": "InfoWall3", "compare": "true", "with": "true", "stats": "Confused"}
+            }
+          },
+          "InfoWall2" : {
+            "scene_id": "-",
+            "name": "starreeee",
+            "jayson": "NexusCore",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You continue to stare at the scrolling symbols, trying to make sense of them)", "speed": 40, "show": "true"},
+                    "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(Before a faint sense of dizziness dares to overtake you, you notice a similar pattern of symbols from before scroll by, before looking away)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                },
+                {
+                  "textBox": { "name": "{you}", "text": "(What could it mean?)", "speed": 40, "show": "true"},
+                  "background": { "bg": "NexusCore"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event":"NCInfoWall", "eventupdate":"true"}
+          },
+          "InfoWall3" : {
+            "scene_id": "-",
+            "name": "touchit",
+            "jayson": "NexusCore",  
+            "frames": [
+              {
+                "textBox": { "name": "{you}", "text": "(You move closer, attempting to touch the golden threads as they simply phase through you)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {
+              "textBox": { "name": "{you}", "text": "(As that plan failed, you attempt to touch the blue strip, promptly bonking yourself against the wall)", "speed": 40, "show": "true"},
+              "background": { "bg": "NexusCore"}
+            },
+            {
+              "textBox": { "name": "{you}", "text": "(You wonder to yourself, what the plan was to begin with..)", "speed": 40, "show": "true"},
+              "background": { "bg": "NexusCore"}
+            }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event":"NCInfoWall", "eventupdate":"true"}
+          },
+          "InfoWall4" : {
+            "scene_id": "-",
+            "name": "touchit",
+            "jayson": "NexusCore",  
+            "frames": [
+              {
+                "textBox": { "name": "{you}", "text": "(The symbols seem to keep scrolling by, not stopping for anything)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {
+              "textBox": { "name": "{you}", "text": "(Could one decipher these..?)", "speed": 40, "show": "true"},
+              "background": { "bg": "NexusCore"}
+            }
+            ],
+            "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore"}
+          },
       "NCA" : {
         "scene_id": "-",
         "name": "Analytical / Questioning High enough",
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "???", "text": "Ah~ Welcome to the Core little soul.           Remember me?~", "speed": 40, "show": "true"},
+            "textBox": { "name": "(Nexus)", "text": "Ah~ Welcome to the Core little soul.           Remember me?~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile", "movementC": "fade"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Hast thou been faring well?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Oh my.. Someone seems eager to find answers~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_SmileS"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "FirstChat"}
@@ -60,19 +270,19 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "???", "text": "Ah~ Welcome to the Core little soul.           Remember me?~", "speed": 40, "show": "true"},
+            "textBox": { "name": "(Nexus)", "text": "Ah~ Welcome to the Core little soul.           Remember me?~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile", "movementC": "fade"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Hast thou been faring well?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Oh my.. Someone seems.. distressed.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Worried"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "FirstChat"}
@@ -83,19 +293,19 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "???", "text": "Ah~ Welcome to the Core little soul.           Remember me?~", "speed": 40, "show": "true"},
+            "textBox": { "name": "(Nexus)", "text": "Ah~ Welcome to the Core little soul.           Remember me?~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile", "movementC": "fade"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Hast thou been faring well?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Hm.          Thou art seems to handle thyself well.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "FirstChat"}
@@ -108,22 +318,22 @@
           {
             "textBox": { "name": "Nexus", "text": "Considering thou hast made it here, I presume thee has met the Architect?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Worry not then, little soul.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "I shall answer all questions and clear all confusions thee may have in time,         and as many times as needed.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "I can even tone down the fancy speech for your understanding~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_owo"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus", "event": "EventFV", "eventupdate": "5"}
@@ -136,7 +346,7 @@
           {
             "textBox": { "name": "Nexus", "text": "Ah~ Greetings little soul. I hope thou has been faring well?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile", "movementC": "fade"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -147,14 +357,14 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "Now then.. What would you desire to know?", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Now then..              What would you desire to know?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "", "text": "", "speed": 40},
+            "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "choice", "question": "(Now then.. What would you desire to know?)",
@@ -186,32 +396,32 @@
           {
             "textBox": { "name": "Nexus", "text": "This place is history itself.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "Every life lived, every story written, every law understood, every art mastered, every feeling experienced, all is logged in these walls.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Every life lived,     every story written,        every law understood,        every art mastered,        every feeling experienced,            all is logged in these walls.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "It is a space where time stands still yet also flows all according to Chronos.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "The books represent said things yet hold no text but the experience itself.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Your story is currently being logged somewhere as well~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_SmileS"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "As to why they look like books?            That, you must ask the architect itself.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "As to why they mimic books?            That, you must ask the architect itself.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_owo"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -222,14 +432,14 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "As far as I am aware, you souls are special and are able to exist here consciously through a connection of sorts.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "As far as I am aware,        you souls are special and are able to exist here consciously through a connection of sorts.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_ReadingB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "As much as I am unsure about details of said connection, separating it will cause you to leave one way or another..", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "As much as I am unsure about details of said connection,           separating it will cause you to leave one way or another..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -242,32 +452,32 @@
           {
             "textBox": { "name": "Nexus", "text": "The Architect is the one that designed this place.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "From its internal architecture to where things are stored.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "As they may have told you, the corridors are not as much corridors as they are pointers, they are not meant to be traveled but traversed.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "As they may have told you,       the corridors are not as much corridors as they are pointers,             they are not meant to be traveled but traversed.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "They probably also told you to ask me about things..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_SmileS"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "But I am sure they would love to ramble about their work if you get them in the right mood~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smug"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "..As far as you are able to contact them that is..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Worried"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -280,17 +490,17 @@
           {
             "textBox": { "name": "Nexus", "text": "I am the Nexus Cagliostro.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Everything that happens in this Library goes through me..       eventually.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "In a sense, I am the center of this place.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "In a sense,         I am the center of this place.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -301,24 +511,24 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "We, the Cagliostro, monitor everything that enters and leaves this Library.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "We,         the Cagliostro,            monitor everything that enters and leaves this Library.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "From souls and conscious visitors, to information and experience.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "From souls and conscious visitors,            to information and experience.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "Each section is monitored by one of my own as each subsection is monitored by one of their own and so on, yet we are all one.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Each section is monitored by one of my own as each subsection is monitored by one of their own and so on,         yet we are all one.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "If you have any questions; the Cagliostro will gladly answer them for you.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "If you have any questions;        the Cagliostro will gladly answer them for you.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -329,24 +539,24 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "A Slime? I am aware of said conscious entity.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "A Slime?          I am aware of said conscious entity.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Surprised"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "It is.. An enigma to say the least, but it does no harm.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "It is..       An enigma to say the least,      but it does no harm.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "It roams the rooms and corridors of this Library and loves to experience stories, yet that is all I know.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "It roams the rooms and corridors of this Library and loves to experience stories,          yet that is all I know.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "I have not come face to face with it often myself, so I am surprised you are aware of them.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "I have not come face to face with it often myself,         so I am surprised you are aware of them.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Surprised"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -359,32 +569,32 @@
           {
             "textBox": { "name": "Nexus", "text": "Mist?", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Surprised"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "There is no such thing as weather in the Library.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "Although, souls observe the world differently than we do.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Although,       souls observe the world differently than we do.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_ReadingB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "If there is something beyond understanding it is abstracted in a way that the soul can process it.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_NeutralB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "Whatever said thing might have been, is not something I can tell you.    Yet..", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Whatever said thing might have been,      is not something I can tell you.    Yet..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "If it felt like it was observing you, it might have been “The inbetween”", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "If it felt like it was observing you,       it might have been “The inbetween”", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -395,24 +605,24 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "The Inbetween, or in other words “Nothingness”, exists in a constant state of observation.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "The Inbetween,       or in other words “Nothingness”,          exists in a constant state of observation.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_ReadingB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "It is a being between the living and the dead, physical and spiritual, the real and the surreal.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "It is a being between the living and the dead,          physical and spiritual, the real and the surreal.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_NeutralB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "It occasionally roams the library yet also the beyond, where neither death nor life exist.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "It occasionally roams the library yet also the beyond,         where neither death nor life exist.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_NeutralB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "Unfortunately, that also means this is all I can tell you.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Unfortunately,          that also means this is all I can tell you.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus"}
@@ -425,92 +635,92 @@
           {
             "textBox": { "name": "Nexus", "text": "The world before the Convergence...", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "You see.. This place has not always been here.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "You see..          This place has not always been here.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Reading"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "It, along with myself and other entities, was just.. Created one day.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "It,       along with myself and other entities,   was just..          Created one day.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Nothing before it is logged as nothing is known.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "Not by me, not by the Architect and not even by death itself..     Well..    almost.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Not by me,      not by the Architect and not even by death itself..     Well..    almost.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "There has been one flow of information that has been elusive to me and has caused quite the cascade of effects.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "One of these effects is the appearance of a story..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_ReadingB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "It claims to be the last memory that experienced the past world before its end yet is still being written as we speak..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_NeutralB"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Though,        I am sure you are wondering how to get back to “reading” that story.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "It must be quite confusing after gaining consciousness after all..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Worried"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "And without a physical body no less.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Surprised"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Rest assured it is not hard.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Simply stare at the medium you would like to “read” and remember what you have already experienced.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "And before you know it, you should be where you left off.", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "And before you know it,           you should be where you left off.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_SmileS"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Please make sure to focus though.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "Experiencing something without knowing what it is about may cause your consciousness to lose itself in its subconscious..", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Neutral"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "That would break the connection you have to this place entirely..       Or worse.", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Worried"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
             "textBox": { "name": "Nexus", "text": "I am sure a good little soul like you will do just fine thought~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_owo"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "Nexus", "event": "EventFV", "eventupdate": "6"}
@@ -521,14 +731,14 @@
         "jayson": "NexusCore",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "Alright. Safe travels little soul~", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "Alright.          Safe travels little soul~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_Smile"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           },
           {
-            "textBox": { "name": "Nexus", "text": "I shall be here whenever thee desire answers.. Unless when I am not, of course~", "speed": 40, "show": "true"},
+            "textBox": { "name": "Nexus", "text": "I shall be here whenever thee desire answers..            Unless when I am not, of course~", "speed": 40, "show": "true"},
             "sprites": { "center": "Nexus_owo"},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "NexusCore"}
           }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore"}

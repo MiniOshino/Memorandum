@@ -7,6 +7,7 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/Scene.tsx",
+    "./src/Combat.js",
   ],
   theme: {
     extend: {
@@ -97,7 +98,7 @@ const config: Config = {
           to: { transform: 'translate(0, 0)'},
         },
         RRTR: {
-          from: { transform: 'translate(10%, 0)'},
+          from: { transform: 'translate(22%, 0)'},
           to: { transform: 'translate(0, 0)'},
         },
         SRTR: {
@@ -344,6 +345,11 @@ const config: Config = {
         },
         SRTRRR: {
           from: { transform: 'translate(-90%, 0)'},
+          to: { transform: 'translate(0, 0)'},
+        },
+        //-----------------------------------------?????????????----------------------------
+        CTD: {
+          from: { transform: 'translate(0, -100%)'},
           to: { transform: 'translate(0, 0)'},
         },
         vibe: {

@@ -1,0 +1,236 @@
+{
+    "BlueScreen" : {
+        "scene_id": "-",
+        "name": "Bluescreen->ReadingChambers",
+        "frames": [
+            {
+                "background": { "bg": "BlueScreen"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers" }
+    },
+    "FNoNewContent" : {
+        "scene_id": "-",
+        "name": "First time reaching end of release chapter",
+        "jayson": "Extra",  
+        "frames": [
+            {
+                "background": { "bg": "BlueScreen"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(It seem like you reached the final released chapter for now)", "speed": 40, "show": "true"},
+                "background": { "bg": "Darkness", "pbg": "BlueScreen"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral", "movementC": "fade"},
+                "background": { "bg": "ReadingChambers", "pbg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "Whatcha starrin at {italic}me{/italic} for?", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Wuh"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "I do not control the speed at which chapters are released..", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Wuh", "effectC":"wiggle"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Wuh"},
+                "background": { "bg": "ReadingChambers"}
+            }
+        ],
+        "next": { "type": "choice", "question": "(I do not control the speed at which chapters are released..)",
+            "one": {"text": "Fair enough..", "path": "NoNewContent1", "compare": "true", "with": "true", "stats": "Trusting"},
+            "two": {"text": "Doubt that…", "path": "NoNewContent2", "compare": "true", "with": "true", "stats": "Questioning"}
+          }
+    },
+    "NoNewContent1" : {
+        "scene_id": "-",
+        "name": "fe",
+        "frames": [
+            {
+                "textBox": { "name": "Lyzzy", "text": "Mhm mhm..", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Thinking", "effectC":"wiggle"},
+                "background": { "bg": "ReadingChambers"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Extra", "sceneID": "NoNewContent3"}
+    },
+    "NoNewContent2" : {
+        "scene_id": "-",
+        "name": "doubtx",
+        "frames": [
+            {
+                "textBox": { "name": "Lyzzy", "text": "Wow,           ok.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Wuh", "effectC":"jump"},
+                "background": { "bg": "ReadingChambers"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Extra", "sceneID": "NoNewContent3"}
+    },
+    "NoNewContent3" : {
+        "scene_id": "-",
+        "name": "First time reaching end of release chapter 2",
+        "frames": [
+            {
+                "textBox": { "name": "Lyzzy", "text": "Regardless,        all you can do is wait.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "..Though,     because I’m just oh so gracious~", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "I am willing to give you a heads up when I notice something new.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Habby", "effectC": "wiggle"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "..After I decide on how to do that in the first place…", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Wuh"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "Until then,    feel free to explore the library!", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Neutral", "effectC": "jump"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "Maybe we might even meet again~", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Thinking", "effectC": "wiggle"},
+                "background": { "bg": "ReadingChambers"}
+            },
+            {
+                "textBox": { "name": "Lyzzy", "text": "Tata~", "speed": 40, "show": "true"},
+                "sprites": { "down": "Lyzzy_Neutral", "movementD": "CTD"},
+                "background": { "bg": "ReadingChambers"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "InformationWLNB", "eventupdate": "2" }
+    },
+    "NoNewContent" : {
+        "scene_id": "-",
+        "name": "Neutral end of release chapter",
+        "frames": [
+            {
+                "background": { "bg": "BlueScreen"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(It seem like you reached the final released chapter for now)", "speed": 40, "show": "true"},
+                "background": { "bg": "ReadingChambers", "pbg": "BlueScreen"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(All you can do is wait..)", "speed": 40, "show": "true"},
+                "background": { "bg": "ReadingChambers"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers" }
+    },
+    "IDDeviceCorrectRoom" : {
+        "scene_id": "-",
+        "name": "Room unlock",
+        "frames": [
+            {   
+                "textBox": { "name": "{you}", "text": "(The Device starts to rattle, vanishing into blue particles as your vision goes dark)", "speed": 40, "show": "true"},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(You feel some forces tugging and pushing again, until your vision returns to you)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(The device re-appears, displaying the cypher it usually does as you start to halucinate words being spoken)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”Data Search Complete; Recalibration Complete;”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”New room has been added to your device.”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(The device vanishes into you once more)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore" }
+    },
+    "IDDeviceRepeatRoom" : {
+        "scene_id": "-",
+        "name": "Already have room",
+        "frames": [
+            {   
+                "textBox": { "name": "{you}", "text": "(The Device starts to rattle, vanishing into blue particles as your vision goes dark)", "speed": 40, "show": "true"},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(You feel some forces tugging and pushing again, until your vision returns to you)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(The device re-appears, displaying the cypher it usually does as you start to halucinate words being spoken)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”Data Search Complete; Recalibration Complete;”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”Requested room is already listed on device.”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(The device vanishes into you once more)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore" }
+    },
+    "IDDeviceUnlistedRoom" : {
+        "scene_id": "-",
+        "name": "Room not listed",
+        "frames": [
+            {   
+                "textBox": { "name": "{you}", "text": "(The Device starts to rattle, vanishing into blue particles as your vision goes dark)", "speed": 40, "show": "true"},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(You feel some forces tugging and pushing again, until your vision returns to you)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(The device re-appears, displaying the cypher it usually does as you start to halucinate words being spoken)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”Data Search Complete; Recalibration Complete;”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”ID entered is not confirmed by the system as a used asset”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(”Access to non-asset rooms is prohibited by TAC. For more details contact ]=[”)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "{you}", "text": "(The device vanishes into you once more)", "speed": 40, "show": "true"},
+                "background": { "bg": "NexusCore"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event": "AQuestionUnlockID", "eventupdate": "true" }
+    }
+}

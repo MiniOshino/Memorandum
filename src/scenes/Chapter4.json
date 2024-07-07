@@ -1,0 +1,13 @@
+{
+    "Chapter4" : {
+      "scene_id": "15",
+        "name": "Chappy4",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "", "speed": 40},
+            "background": { "bg": "Chapter4"}
+        }
+      ],
+      "next": { "type": "special", "target": "Extra", "sceneID": "NoNewContent" }
+    }
+  }

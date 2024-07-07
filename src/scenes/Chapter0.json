@@ -13,99 +13,99 @@
           "background": { "bg": "Chapter0", "effect": "static", "effectstyle": "lingering"}
         },
         {
-          "textBox": { "name": "", "text": "...", "speed": 40 },
+          "textBox": { "name": "{Nora}", "text": "...", "speed": 500 },
           "background": { "bg": "Darkness", "pbg": "Chapter0"}
         },
         {
-          "textBox": { "name": "", "text": "Everyone is replaceable.", "speed": 40 },
+          "textBox": { "name": "{Nora}", "text": "Everyone is replaceable.", "speed": 40 },
           "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "That is the first rule of the covenant.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "That is the first rule of the covenant.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Parents, Bosses, Allies.. Yourself.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Parents, Bosses, Allies..        Yourself.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "If someone dances out of line they are replaced. No redemptions, no second chances.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "If someone dances out of line they are replaced.        No redemptions,           no second chances.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "As far as I'm concerned, someone leaving me, might as well have been their death.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "As far as I'm concerned,            someone leaving me, might as well have been their death.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Do not question.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Do not question.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Second rule of the covenant.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Second rule of the covenant.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Information must be gathered, threats need to be removed.. Orders are not to be questioned.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Information must be gathered,       threats need to be removed..         Orders are not to be questioned.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Bonding is meaningless. Another mission, another temporary ally. They don't know me, I don't know them.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Bonding is meaningless.       Another mission, another temporary ally.      They don't know me,      I don't know them.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Perfection.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Perfection.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "The third pillar of the covenant.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "The third pillar of the covenant.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "A flaw is a failure. A wound is a stain. A mistake is certain death.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "A flaw is a failure.        A wound is a stain.          A mistake is certain death.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...Yet somehow.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "..Yet somehow.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "She defied them all.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "She defied them all.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "A unique one... A curious one... A sneaky one...", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "A unique one...         A curious one...         A sneaky one...", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "I remembered them.. They remembered me.", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "I remembered them..       They remembered me.", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "Clumsy. Caring even.. Maybe too caring...", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "Clumsy.      Caring even..           Maybe too caring...", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...She was good at hiding it from everyone..", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "..She was good at hiding it from everyone..", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "..So why did she not hide it from me?", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "..So why did she not hide it from me?", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...Why me..?", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "..Why me..?", "speed": 40 },
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...Why...", "speed": 40 },
+            "textBox": { "name": "{Nora}", "text": "..Why...", "speed": 40 },
             "background": { "bg": "Darkness", "effect": "static", "effectstyle": "vibe"}
         }
       ],
@@ -117,19 +117,19 @@
         "storyProgressID": 11,
         "frames": [
             {
-                "textBox": { "name": "", "text": "...", "speed": 40 },
+                "textBox": { "name": "{Nora}", "text": "...", "speed": 500 },
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "......", "speed": 40 },
+                "textBox": { "name": "{Nora}", "text": "......", "speed": 250 },
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": ".............", "speed": 40 },
+                "textBox": { "name": "{Nora}", "text": ".............", "speed": 100 },
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "???", "text": "I like your eyes...", "speed": 40 },
+                "textBox": { "name": "{Luna}", "text": "I like your eyes...", "speed": 40 },
                 "background": { "bg": "Darkness"}
             },
             {
@@ -138,7 +138,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "Ah- That worked.", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "Ah-        That worked.", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C0", "movementLL": "fade"},
                 "background": { "bg": "Darkness"}
             },
@@ -158,7 +158,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "What's your style~? How do you work?", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "What's your style~?        How do you work?", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -178,16 +178,16 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "“Anomaly”", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "“Anomaly”", "speed": 40},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C0", "movementLL": "fadeout", "movementRR": "fadeout"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "That's what she called me..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "That's what she called me..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "That was the only time she ever did...", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "That was the only time she ever did...", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -211,7 +211,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "Ah..   well we can’t have that..", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "Ah..          well we can’t have that..", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -226,7 +226,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "...N...", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "..N...", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -247,11 +247,11 @@
             },
             {
                 "textBox": { "name": "”Ally”", "text": "Mmmm...", "speed": 40, "show": "true"},
-                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0", "effectLL": "wiggle"},
+                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Angy_C0", "effectLL": "wiggle"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "AH! Got it!", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "AH!        Got it!", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0", "effectLL": "jump"},
                 "background": { "bg": "Darkness"}
             },
@@ -287,7 +287,7 @@
             },
             {
                 "textBox": { "name": "”Ally”", "text": "That's not a name.", "speed": 40, "show": "true"},
-                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Angy_C0", "effectLL": "jump"},
+                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Angy_C0", "effectLL": "wiggle"},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -296,52 +296,52 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "“Irritating”", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "“Irritating”", "speed": 40},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0", "movementLL": "fadeout", "movementRR":"fadeout"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "That’s what I thought back then..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "That’s what I thought back then..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Adding unnecessary information... But it continued..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Adding unnecessary information...         And it continued..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "At every intersection in that mission, she kept adding unnecessary information.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "At every intersection in that mission, she kept adding unnecessary information.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Favorite colors..   Favorite food..    Favorite Number..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Favorite colors..   Favorite food..    Favorite Number..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Some things I did not even understand at the time.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Some things I did not even understand at the time.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Music?    Movies?     Genres?", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Music?    Movies?     Genres?", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "As much as I thought I did not care..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "As much as I thought I did not care..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "I still listened everytime she mentioned something new..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "I still listened everytime she mentioned something new..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Until the mission was over.    And we were separated.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Until the mission was over.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Yet..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Yet..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "That was not the last time I would see her...", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "That was not the last time I would see her...", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -365,21 +365,25 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "This was the first time I saw someone a second time..      I think..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "This was the first time I saw someone a second time...", "speed": 40},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0", "movementLL": "fadeout", "movementRR": "fadeout"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Or was it just because she was unique?", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "I think..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "Say, Nora?", "speed": 40, "show": "true"},
+                "textBox": { "name": "{Nora}", "text": "Or was it just because she was unique?", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "”Ally”", "text": "Say,       Nora?", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0", "movementLL": "fade", "movementRR": "fade"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "Z5R15-3?", "text": "...Hm?", "speed": 40, "show": "true"},
+                "textBox": { "name": "Z5R15-3?", "text": "..Hm?", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -399,7 +403,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "Z5R15-3", "text": "I told you before, I don't need a name.", "speed": 40, "show": "true"},
+                "textBox": { "name": "Z5R15-3", "text": "I told you before,         I don't need a ”name”.", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Angy_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -409,7 +413,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "Nora?", "text": "...", "speed": 40, "show": "true"},
+                "textBox": { "name": "Nora?", "text": "...", "speed": 500, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Distracted_C1"},
                 "background": { "bg": "Darkness"}
             },
@@ -434,48 +438,48 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "“Vortex”", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "“Vortex”", "speed": 40},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Distracted_C1", "movementLL": "fadeout", "movementRR": "fadeout"},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Another thing she kept mentioning.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Another thing she kept mentioning.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "“An odd word to refer to one’s memory”, I thought then.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "“An odd word to refer to one’s memory”, I thought.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "But that was her style..    A flawless memory.     A perfect database.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "But that was her style..    A flawless memory.     A perfect database.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Well, not according to her at least..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Well,       not according to her at least..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "She wanted to know everything.        And with everything I mean, {bold}Everything{/bold}.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "She wanted to know everything.        And with everything I mean, {bold}Everything{/bold}.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Even something as unnecessary as my favorite color...", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Even something as unnecessary as my favorite color...", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "...", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "...", "speed": 500},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "Blue..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Blue..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "", "text": "..Blue is my favorite color..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "..Blue is my favorite color..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "Come onnn.. Hurryyyyy!", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”?", "text": "Come onnn..         Hurryyyyy!", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1", "movementLL":"fade", "movementRR":"fade"},
                 "background": { "bg": "Darkness"}
             },
@@ -500,7 +504,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "Okok.. close your eyes.", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”?", "text": "Okok..         close your eyes.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1", "effectLL": "jump"},
                 "background": { "bg": "Darkness"}
             },
@@ -515,7 +519,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1"},
                 "background": { "bg": "Darkness"}
             },
@@ -539,7 +543,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”?", "text": "...", "speed": 500, "show":"true"},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -548,119 +552,127 @@
             },
             {
                 "textBox": { "name": "", "text": "", "speed": 40},
-                "background": { "bg": "Light", "pbg":"Darkness"}
+                "background": { "bg": "NightSkySmog", "pbg":"Darkness"}
             },
             {
-                "textBox": { "name": "Nora", "text": "It’s.. just the sky..", "speed": 40, "show":"true"},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "Nora", "text": "It’s..         just the sky..", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "”Ally”?", "text": "Wooowww..", "speed": 40, "show":"true"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "It’s not {italic}just{/italic} the sky.. It’s the night sky!", "speed": 40, "show":"true"},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "”Ally”?", "text": "It’s not {italic}just{/italic} the sky..            It’s the night sky!", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "”Ally”?", "text": "No smoke, no clouds, no..       almost no smog.", "speed": 40, "show":"true"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "”Ally”?", "text": "And look at all the stars!     Even a clear moon..", "speed": 40, "show":"true"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...", "speed": 40, "show":"true"},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "“Ordinary”", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "“Ordinary”", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "That is what it was to me.", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "That is what it was to me.", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "A sky I have seen plenty of times..", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "A sky I have seen plenty of times..", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "In just another place,     At just another time... ", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "In just another place,     At just another time... ", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "I didn’t understand.     But.. ", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "I didn’t understand.     But.. ", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "For some reason I wanted to..", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "For some reason..", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "I wanted to understand her.", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "I wanted to..", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "{Nora}", "text": "I wanted to understand.", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
+            },
+            {
+                "textBox": { "name": "{Nora}", "text": "I wanted to understand her.", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Distracted_C1", "movementLL": "fade", "movementRR": "fade"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "Nora", "text": "Say...", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "Nora", "text": "..What’s your name?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "!", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”?", "text": "!!!", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1", "effectLL":"jump"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”?", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Neutral_C1"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "Luna", "text": "Luna.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Neutral_Neutral", "rright": "Nora_Neutral_C1", "movementLL":"fade"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
                 "textBox": { "name": "Luna", "text": "My name is Luna.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Thinking_Smile", "rright": "Nora_Neutral_C1"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "“Luna”", "speed": 40},
+                "textBox": { "name": "", "text": "“Luna”", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Thinking_Smile", "rright": "Nora_Neutral_C1", "movementLL": "fadeout", "movementRR": "fadeout"},
-                "background": { "bg": "Light"}
+                "background": { "bg": "NightSkySmogNL", "pbg":"NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "“Like the moon in the night sky.”", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "“Like the moon in the night sky.”", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmogNL"}
             },
             {
-                "textBox": { "name": "", "text": "Like a guiding light.      Always there..", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "Like a guiding light.      Always there..", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmogNL"}
             },
             {
-                "textBox": { "name": "", "text": "...always there...", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "..always there...", "speed": 40, "show":"true"},
+                "background": { "bg": "NightSkySmog", "pbg":"NightSkySmogNL"}
             },
             {
-                "textBox": { "name": "", "text": "...always...", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "..always...", "speed": 40, "show":"true"},
+                "background": { "bg": "Darkness", "pbg":"NightSkySmog"}
             },
             {
-                "textBox": { "name": "", "text": "...", "speed": 40},
-                "background": { "bg": "Light"}
+                "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show":"true"},
+                "background": { "bg": "Darkness"}
             }
           ],
           "next": { "type": "fixed", "target": "Chapter3", "sceneID": "Chapter3" }

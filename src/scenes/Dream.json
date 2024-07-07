@@ -13,12 +13,12 @@
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "Zayn", "text": "...", "speed": 50  },
+            "textBox": { "name": "Zayn", "text": "...", "speed": 500  },
             "sprites": {"rright": "Zayn_L_NeutralNF_Neutral", "movementRR": "fade"},
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "Zayn", "text": "Alright, we have to go.", "speed": 50  },
+            "textBox": { "name": "Zayn", "text": "Alright,        we have to go.", "speed": 50  },
             "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
             "background": { "bg": "Darkness"}
         },
@@ -38,7 +38,7 @@
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "Zayn", "text": "Because they are looking for {italic} the {/italic} Lily.", "speed": 50  },
+            "textBox": { "name": "Zayn", "text": "Because they are looking for {italic}the{/italic} Lily.", "speed": 50  },
             "sprites": {"rright": "Zayn_L_NeutralNF_Neutral"},
             "background": { "bg": "Darkness"}
         },
@@ -48,7 +48,7 @@
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "Zayn", "text": "They will never stop.. You know they won’t..", "speed": 50  },
+            "textBox": { "name": "Zayn", "text": "They will never stop..         You know they won’t..", "speed": 50  },
             "sprites": {"rright": "Zayn_L_NeutralNF_Sad"},
             "background": { "bg": "Darkness"}
         },
@@ -83,7 +83,7 @@
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...", "speed": 50  },
+            "textBox": { "name": "", "text": "...", "speed": 500  },
             "sprites": {"rright": "Zayn_L_NeutralNF_Neutral", "movementRR": "fadeout"},
             "background": { "bg": "Darkness"}
         },
