@@ -2,8 +2,6 @@
 import React, { use, useEffect, useMemo, useState, useRef } from "react";
 import { load } from "./actions/load";
 import Image from 'next/image';
-import TextBoxx from './components/TextBox.png';
-import Darkness from './components/Darkness.png'
 import { Bagel_Fat_One } from "next/font/google";
 import Combat from "./Combat.js";
 
@@ -91,175 +89,238 @@ const SpriteBox = ({ sprites }) => {
     <div className="" key={key}>
       {/* ---------------------------------------------------------------CENTER------------------------------------------------------------------ */}
        {sprites?.center &&  ( sprites?.movementC || sprites?.effectC ? <Image className={` ${sprites.movementC === "fadeout" || sprites.movementC === "blink" ? "opacity-0" : "animate-[delay_3s]"} absolute z-10 w-[45%] h-[100%] top-[0%] left-[27%]`}
-          src={require(`./components/${sprites.center}.png`)}
-          alt={sprites.center}/> :
-        <Image className=" absolute z-10 w-[45%] h-[100%] top-[0%] left-[27%]"
-          src={require(`./components/${sprites.center}.png`)}
+          src={`${sprites.center}.png`}
           alt={sprites.center}
+          width={2000}
+          height={2600}/> :
+        <Image className=" absolute z-10 w-[45%] h-[100%] top-[0%] left-[27%]"
+          src={`${sprites.center}.png`}
+          alt={sprites.center}
+          width={2000}
+          height={2600}
         />
       )}
       {sprites?.movementC && (
         <Image className={`absolute z-10 w-[45%] h-[100%] top-[0%] left-[27%] ${sprites.movementC === "fade" ? "animate-[vibe_2s]" : sprites.movementC === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementC === "blink" ? " opacity-0 animate-[blink_0.1s]" : sprites.movementC === "RTC" ? "animate-[RTC_1s]" : sprites.movementC === "LTC" ? "animate-[LTC_1s]" : sprites.movementC === "SLTC" ? "animate-[SLTC_1s]" : sprites.movementC === "SRTC" ? "animate-[SRTC_1s]" : sprites.movementC === "RRTC" ? "animate-[RRTC_1s]" : sprites.movementC === "LLTC" ? "animate-[LLTC_1s]" : sprites.movementC === "RRRTC" ? "animate-[RRRTC_1s]" : "animate-[LLLTC_1s]"}`}
-        src={require(`./components/${sprites.center}.png`)}
-        alt={sprites.center}
+        src={`${sprites.center}.png`}
+          alt={sprites.center}
+          width={2000}
+          height={2600}
       />
       )}
       {sprites?.effectC && (
         <Image className={`absolute z-10 w-[45%] h-[100%] top-[0%] left-[27%] ${sprites.effectC === "shake" ? "animate-[shake_0.5s]" : sprites.effectC === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectC === "jump" ? "animate-[jump_0.5s]" : sprites.effectC === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.center}.png`)}
-        alt={sprites.center}
+        src={`${sprites.center}.png`}
+          alt={sprites.center}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------Right------------------------------------------------------------------ */}
       {sprites?.right &&  ( sprites?.movementR || sprites?.effectR ? <Image className={` ${sprites.movementR=== "fadeout" ? "opacity-0" : "animate-[delay_3s]"} absolute z-0 w-[45%] h-[100%] top-[0%] left-[45%]`}
-          src={require(`./components/${sprites.right}.png`)}
-          alt={sprites.right}/> :
-        <Image className=" absolute z-0 w-[45%] h-[100%] top-[0%] left-[45%]"
-          src={require(`./components/${sprites.right}.png`)}
+          src={`${sprites.right}.png`}
           alt={sprites.right}
+          width={2000}
+          height={2600}/> :
+        <Image className=" absolute z-0 w-[45%] h-[100%] top-[0%] left-[45%]"
+        src={`${sprites.right}.png`}
+        alt={sprites.right}
+        width={2000}
+        height={2600}
         />
       )}
       {sprites?.movementR && (
         <Image className={`absolute z-0 w-[45%] h-[100%] top-[0%] left-[45%] ${sprites.movementR === "fade" ? "animate-[vibe_2s]" : sprites.movementR === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementR === "CTR" ? "animate-[CTR_1s]" : sprites.movementR === "LTR" ? "animate-[LTR_1s]" : sprites.movementR === "LLTR" ? "animate-[LLTR_1s]" : sprites.movementR === "SLTR" ? "animate-[SLTR_1s]" : sprites.movementR === "SRTR" ? "animate-[SRTR_1s]" : sprites.movementR === "RRTR" ? "animate-[RRTR_1s]" : sprites.movementR === "LLLTR" ? "animate-[LLLTR_1s]" : "animate-[RRRTR_1s]"}`}
-        src={require(`./components/${sprites.right}.png`)}
-        alt={sprites.right}
+        src={`${sprites.right}.png`}
+          alt={sprites.right}
+          width={2000}
+          height={2600}
       />
       )}
       {sprites?.effectR && (
         <Image className={`absolute z-0 w-[45%] h-[100%] top-[0%] left-[45%] ${sprites.effectR === "shake" ? "animate-[shake_0.5s]" : sprites.effectR === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectR === "jump" ? "animate-[jump_0.5s]" : sprites.effectR === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.right}.png`)}
-        alt={sprites.right}
+        src={`${sprites.right}.png`}
+          alt={sprites.right}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------Left------------------------------------------------------------------ */}
        {sprites?.left &&  ( sprites?.movementL || sprites?.effectL ? <Image className={` ${sprites.movementL === "fadeout" ? "opacity-0" : "animate-[delay_3s]"} absolute z-0 w-[45%] h-[100%] top-[0%] left-[10%]`}
-          src={require(`./components/${sprites.left}.png`)}
-          alt={sprites.left}/> :
+          src={`${sprites.left}.png`}
+          alt={sprites.left}
+          width={2000}
+          height={2600}/> :
         <Image className=" absolute z-0 w-[45%] h-[100%] top-[0%] left-[10%]"
-          src={require(`./components/${sprites.left}.png`)}
-          alt={sprites.left}  
+        src={`${sprites.left}.png`}
+        alt={sprites.left}
+        width={2000}
+        height={2600}
         />
       )}
       {sprites?.movementL && (
         <Image className={`absolute z-0 w-[45%] h-[100%] top-[0%] left-[10%] ${sprites.movementL === "fade" ? "animate-[vibe_2s]" : sprites.movementL === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementL === "CTL" ? "animate-[CTL_1s]" : sprites.movementL === "RTL" ? "animate-[RTL_1s]" : sprites.movementL === "RRTL" ? "animate-[RRTL_1s]" : sprites.movementL === "SLTL" ? "animate-[SLTL_1s]" : sprites.movementL === "SRTL" ? "animate-[SRTL_1s]" : sprites.movementL === "LLTL" ? "animate-[LLTL_1s]" : sprites.movementL === "RRRTL" ? "animate-[RRRTL_1s]" : "animate-[LLLTL_1s]"}`}
-        src={require(`./components/${sprites.left}.png`)}
-        alt={sprites.left}
+        src={`${sprites.left}.png`}
+          alt={sprites.left}
+          width={2000}
+          height={2600}
       />
       )}
       {sprites?.effectL && (
         <Image className={`absolute z-0 w-[45%] h-[100%] top-[0%] left-[10%] ${sprites.effectL === "shake" ? "animate-[shake_0.5s]" : sprites.effectL === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectL === "jump" ? "animate-[jump_0.5s]" : sprites.effectL === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.left}.png`)}
-        alt={sprites.left}
+        src={`${sprites.left}.png`}
+          alt={sprites.left}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------RightRight------------------------------------------------------------------ */}
       {sprites?.rright &&  ( sprites?.movementRR || sprites?.effectRR ? <Image className={` ${sprites.movementRR === "fadeout" ? "opacity-0" : "animate-[delay_3s]"} absolute -z-10 w-[45%] h-[100%] top-[0%] left-[55%]`}
-          src={require(`./components/${sprites.rright}.png`)}
-          alt={sprites.rright}/> :
+         src={`${sprites.rright}.png`}
+         alt={sprites.rright}
+         width={2000}
+         height={2600}/> :
         <Image className=" absolute -z-10 w-[45%] h-[100%] top-[0%] left-[55%]"
-          src={require(`./components/${sprites.rright}.png`)}
-          alt={sprites.rright}
+        src={`${sprites.rright}.png`}
+        alt={sprites.rright}
+        width={2000}
+        height={2600}
         />
       )}
       {sprites?.movementRR && (
         <Image className={`absolute -z-10 w-[45%] h-[100%] top-[0%] left-[55%] ${sprites.movementRR === "fade" ? "animate-[vibe_2s]" : sprites.movementRR === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementRR === "DTRR" ? "animate-[DTRR_2s]" : sprites.movementRR === "SLTRR" ? "animate-[SLTRR_1s]" : sprites.movementRR === "SRTRR" ? "animate-[SRTRR_1s]" : sprites.movementRR === "RTRR" ? "animate-[RTRR_1s]" : sprites.movementRR === "CTRR" ? "animate-[CTRR_1s]" : sprites.movementRR === "LTRR" ? "animate-[LTRR_1s]" : sprites.movementRR === "LLTRR" ? "animate-[LLTRR_1s]" : sprites.movementRR === "LLLTRR" ? "animate-[LLLTRR_1s]" : "animate-[RRRTRR_1s]"}`}
-        src={require(`./components/${sprites.rright}.png`)}
-        alt={sprites.rright}
+        src={`${sprites.rright}.png`}
+          alt={sprites.rright}
+          width={2000}
+          height={2600}
       />  
       )}
       {sprites?.effectRR && (
         <Image className={`absolute -z-10 w-[45%] h-[100%] top-[0%] left-[55%] ${sprites.effectRR === "shake" ? "animate-[shake_0.5s]" : sprites.effectRR === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectRR === "jump" ? "animate-[jump_0.5s]" : sprites.effectRR === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.rright}.png`)}
-        alt={sprites.rright}
+        src={`${sprites.rright}.png`}
+          alt={sprites.rright}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------SPECIALRIGHT------------------------------------------------------------------ */}
       {sprites?.sright &&  ( sprites?.movementSR || sprites?.effectSR ? <Image className={` ${sprites.movementSR === "fadeout" ? "opacity-0" : "animate-[delay_3s]"} absolute z-10 w-[45%] h-[100%] top-[0%] left-[65%]`}
-          src={require(`./components/${sprites.sright}.png`)}
-          alt={sprites.sright}/> :
-        <Image className=" absolute z-10 w-[45%] h-[100%] top-[0%] left-[65%]"
-          src={require(`./components/${sprites.sright}.png`)}
+          src={`${sprites.sright}.png`}
           alt={sprites.sright}
+          width={2000}
+          height={2600}/> :
+        <Image className=" absolute z-10 w-[45%] h-[100%] top-[0%] left-[65%]"
+        src={`${sprites.sright}.png`}
+        alt={sprites.sright}
+        width={2000}
+        height={2600}
         />  
       )}
       {sprites?.movementSR && (
         <Image className={`absolute z-10 w-[45%] h-[100%] top-[0%] left-[65%] ${sprites.movementSR === "fade" ? "animate-[vibe_2s]" : sprites.movementSR === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementSR === "SLTSR" ? "animate-[SLTSR_1s]" : sprites.movementSR === "RTSR" ? "animate-[RTSR_1s]" : sprites.movementSR === "CTSR" ? "animate-[CTSR_1s]" : sprites.movementSR === "LTSR" ? "animate-[LTSR_1s]" : sprites.movementSR === "LLTSR" ? "animate-[LLTSR_1s]" : sprites.movementSR === "RRTSR" ? "animate-[RRTSR_1s]" : sprites.movementSR === "LLLTSR" ? "animate-[LLLTSR_1s]" : "animate-[RRRTSR_1s]"}`}
-        src={require(`./components/${sprites.sright}.png`)}
-        alt={sprites.sright}
+        src={`${sprites.sright}.png`}
+          alt={sprites.sright}
+          width={2000}
+          height={2600}
       />  
       )}
       {sprites?.effectSR && (
         <Image className={`absolute z-10 w-[45%] h-[100%] top-[0%] left-[65%] ${sprites.effectSR === "shake" ? "animate-[shake_0.5s]" : sprites.effectSR === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectSR === "jump" ? "animate-[jump_0.5s]" : sprites.effectSR === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.sright}.png`)}
-        alt={sprites.sright}
+        src={`${sprites.sright}.png`}
+          alt={sprites.sright}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------LeftLeft------------------------------------------------------------------ */}
       {sprites?.lleft &&  ( sprites?.movementLL || sprites?.effectLL ? <Image className={` ${sprites.movementLL === "fadeout" ? "opacity-0" : "animate-[delay_3s]"} absolute -z-10 w-[45%] h-[100%] top-[0%] left-[0%]`}
-          src={require(`./components/${sprites.lleft}.png`)}
-          alt={sprites.lleft}/> :
-        <Image className=" absolute -z-10 w-[45%] h-[100%] top-[0%] left-[0%]"
-          src={require(`./components/${sprites.lleft}.png`)}
+          src={`${sprites.lleft}.png`}
           alt={sprites.lleft}
+          width={2000}
+          height={2600}/> :
+        <Image className=" absolute -z-10 w-[45%] h-[100%] top-[0%] left-[0%]"
+        src={`${sprites.lleft}.png`}
+        alt={sprites.lleft}
+        width={2000}
+        height={2600}
         />
       )}
       {sprites?.movementLL && (
         <Image className={`absolute -z-10 w-[45%] h-[100%] top-[0%] left-[0%] ${sprites.movementLL === "fade" ? "animate-[vibe_2s]" : sprites.movementLL === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementLL === "RTLL" ? "animate-[RTLL_1s]" : sprites.movementLL === "SLTLL" ? "animate-[SLTLL_1s]" : sprites.movementLL === "SRTLL" ? "animate-[SRTLL_1s]" : sprites.movementLL === "CTLL" ? "animate-[CTLL_1s]" : sprites.movementLL === "LTLL" ? "animate-[LTLL_1s]" : sprites.movementLL === "RRTLL" ? "animate-[RRTLL_1s]" : sprites.movementLL === "LLLTLL" ? "animate-[LLLTLL_1s]" : "animate-[RRRTLL_1s]"}`}
-        src={require(`./components/${sprites.lleft}.png`)}
+        src={`${sprites.lleft}.png`}
         alt={sprites.lleft}
+        width={2000}
+        height={2600}
       />
       )}
       {sprites?.effectLL && (
         <Image className={`absolute -z-10 w-[45%] h-[100%] top-[0%] left-[0%] ${sprites.effectLL === "shake" ? "animate-[shake_0.5s]" : sprites.effectLL === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectLL === "jump" ? "animate-[jump_0.5s]" : sprites.effectLL === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.lleft}.png`)}
-        alt={sprites.lleft}
+        src={`${sprites.lleft}.png`}
+          alt={sprites.lleft}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------SPECIAL LEFT------------------------------------------------------------------ */}
       {sprites?.sleft &&  ( sprites?.movementSL || sprites?.effectSL ? <Image className={` ${sprites.movementSL === "fadeout" ? "opacity-0" : "animate-[delay_3s]"} absolute z-0 w-[45%] h-[100%] top-[0%] left-[-10%]`}
-          src={require(`./components/${sprites.sleft}.png`)}
-          alt={sprites.sleft}/> :
-        <Image className=" absolute z-0 w-[45%] h-[100%] top-[0%] left-[-10%]"
-          src={require(`./components/${sprites.sleft}.png`)}
+          src={`${sprites.sleft}.png`}
           alt={sprites.sleft}
+          width={2000}
+          height={2600}/> :
+        <Image className=" absolute z-0 w-[45%] h-[100%] top-[0%] left-[-10%]"
+        src={`${sprites.sleft}.png`}
+        alt={sprites.sleft}
+        width={2000}
+        height={2600}
         />
       )}
       {sprites?.movementSL && (
         <Image className={`absolute z-0 w-[45%] h-[100%] top-[0%] left-[-10%] ${sprites.movementSL === "fade" ? "animate-[vibe_2s]" : sprites.movementSL === "fadeout" ? " opacity-0 animate-[vibeout_2s]" : sprites.movementSL === "LLTSL" ? "animate-[LLTSL_1s]" : sprites.movementSL === "LTSL" ? "animate-[LTSL_1s]" : sprites.movementSL === "CTSL" ? "animate-[CTSL_1s]" : sprites.movementSL === "RTSL" ? "animate-[RTSL_1s]" : sprites.movementSL === "RRTSL" ? "animate-[RRTSL_1s]" : sprites.movementSL === "SRTSL" ? "animate-[SRTSL_1s]" : sprites.movementSL === "RRRTSL" ? "animate-[RRRTSL_1s]" : "animate-[LLLTSL_1s]"}`}
-        src={require(`./components/${sprites.sleft}.png`)}
-        alt={sprites.sleft}
+        src={`${sprites.sleft}.png`}
+          alt={sprites.sleft}
+          width={2000}
+          height={2600}
       />
       )}
       {sprites?.effectSL && (
         <Image className={`absolute z-0 w-[45%] h-[100%] top-[0%] left-[-10%] ${sprites.effectSL === "shake" ? "animate-[shake_0.5s]" : sprites.effectSL === "wiggle" ? "animate-[wiggle_1s]" : sprites.effectSL === "jump" ? "animate-[jump_0.5s]" : sprites.effectSL === "crash" ? "animate-[crash_0.5s]" : null }`}
-        src={require(`./components/${sprites.sleft}.png`)}
-        alt={sprites.sleft}
+        src={`${sprites.sleft}.png`}
+          alt={sprites.sleft}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------RightRightRight------------------------------------------------------------------ */}
       {sprites?.movementRRR && (
         <Image className={`absolute -z-20 w-[45%] h-[100%] top-[0%] left-[105%] ${sprites.movementRRR === "RTRRR" ? "animate-[RTRRR_1s]" : sprites.movementRRR === "CTRRR" ? "animate-[CTRRR_1s]" : sprites.movementRRR === "LTRRR" ? "animate-[LTRRR_1s]" : sprites.movementRRR === "SLTRRR" ? "animate-[SLTRRR_1s]" : sprites.movementRRR === "SRTRRR" ? "animate-[SRTRRR_1s]" : sprites.movementRRR === "LLTRRR" ? "animate-[LLTRRR_1s]" : sprites.movementRRR === "LLLTRRR" ? "animate-[LLLTRRR_1s]" : "animate-[RRTRRR_1s]"}`}
-        src={require(`./components/${sprites.rrright}.png`)}
-        alt={sprites.rrright}
+        src={`${sprites.rrright}.png`}
+          alt={sprites.rrright}
+          width={2000}
+          height={2600}
       />
       )}
       {/* ---------------------------------------------------------------LeftLeftLeft------------------------------------------------------------------ */}
       {sprites?.movementLLL && (
         <Image className={`absolute -z-20 w-[45%] h-[100%] top-[0%] left-[-50%] ${sprites.movementLLL === "RTLLL" ? "animate-[RTLLL_1s]" : sprites.movementLLL === "CTLLL" ? "animate-[CTLLL_1s]" : sprites.movementLLL === "LTLLL" ? "animate-[LTLLL_1s]" : sprites.movementLLL === "SLTLLL" ? "animate-[SLTLLL_1s]" : sprites.movementLLL === "SRTLLL" ? "animate-[SRTLLL_1s]" : sprites.movementLLL === "RRTLLL" ? "animate-[RRTLLL_1s]" : sprites.movementLLL === "LLTLLL" ? "animate-[LLTLLL_1s]" : "animate-[RRRTLLL_1s]"}`}
-        src={require(`./components/${sprites.llleft}.png`)}
-        alt={sprites.llleft}
+        src={`${sprites.llleft}.png`}
+          alt={sprites.llleft}
+          width={2000}
+          height={2600}
       />
       )}
        {/* ---------------------------------------------------------------Down?------------------------------------------------------------------ */}
       {sprites?.movementD && (
         <Image className={`absolute -z-20 w-[45%] h-[100%] top-[100%] left-[27%] ${sprites.movementD === "CTD" ? "animate-[CTD_4s]" : null}`}
-        src={require(`./components/${sprites.down}.png`)}
-        alt={sprites.down}
+        src={`${sprites.down}.png`}
+          alt={sprites.down}
+          width={2000}
+          height={2600}
       />
       )}
     </div>
   );
 };
+
 //---------------------------------------------------------------------BACKGROUND--------------------------------------------------------------------------------------
 const Background = ({ background }) => {
   const [key, setKey] = useState(0);
@@ -274,17 +335,21 @@ const Background = ({ background }) => {
         { background.effect === "bitch" ? null :
         <Image
         className=" z-40 w-[50%] h-[50%]"
-        src={require(`./components/${background.effect}.gif`)}
+        src={`${background.effect}.gif`}
         alt={background.effect}
+        width={3840}
+        height={2160}
       />}
       </div>
       )}
-        { background.grain && (<div className={` z-30 absolute w-[200%] h-[200%]`}>
+        { background.grain && (<div className={` z-10 absolute w-[200%] h-[200%]`}>
         { background.grain === "bitch" ? null :
         <Image
         className=" z-30 w-[50%] h-[50%]"
-        src={require(`./components/G${background.grain}.png`)}
-        alt={background.grain}
+        src={`G${background.grain}.png`}
+                alt={background.grain}
+        width={3840}
+        height={2160}
       />}
       </div>
       )}
@@ -292,8 +357,10 @@ const Background = ({ background }) => {
         { background.bg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
-        src={require(`./components/BG${background.bg}.png`)}
-        alt={'background.bg'}
+        src={`BG${background.bg}.png`}
+        alt='background.bg'
+        width={3840}
+        height={2160}
       />}
       </div>
 
@@ -301,14 +368,17 @@ const Background = ({ background }) => {
         { background.pbg === "bitch" ? null :
        <Image
         className=" -z-40 w-full h-full"
-        src={require(`./components/BG${background.pbg}.png`)}
+        src={`BG${background.pbg}.png`}
         alt={'background.pgb'}
+        width={3840}
+        height={2160}
       />}
       </div>
       )}
     </div>
   );
 };
+
 //---------------------------------------------------------------------ITEMS--------------------------------------------------------------------------------------
 
 const Item = ({ items }) => {
@@ -318,8 +388,10 @@ const Item = ({ items }) => {
         { items.item === "bitch" ? null :
        <Image
         className=" z-20 w-[100%] h-[100%]"
-        src={require(`./components/Item${items.item}.png`)}
-        alt={items.item}
+        src={`Item${items.item}.png`}
+          alt={items.item}
+          width={2000}
+          height={2000}
       />}
       </div>
     </div>
@@ -492,7 +564,7 @@ const [voice, setVoice] = useState([
       <div>
         <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
         {text !== '' && ps !== '' && (<audio ref={audioRef}>
-             <source src={(`/${voice[0].includes(tb.name) ? "TextingNeutral0" : voice[1].includes(tb.name) ? "TextingNeutral1" : voice[2].includes(tb.name) ? "TextingNeutral2" : voice[3].includes(tb.name) ? "TextingNeutral3" : voice[4].includes(tb.name) ? "TextingNeutral4" : voice[5].includes(tb.name) ? "TextingNeutral5" : null }.mp3`)} type="audio/mpeg"></source>
+             <source src={(`${voice[0].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral0.mp3" : voice[1].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral1.mp3" : voice[2].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral2.mp3" : voice[3].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral3.mp3" : voice[4].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral4.mp3" : voice[5].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral5.mp3" : null }`)} type="audio/mpeg"></source>
           </audio>)}
       </div>
         
@@ -504,7 +576,10 @@ const [voice, setVoice] = useState([
     <div className={`z-20`}>
       {show === "true" &&
 
-        <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} alt="textbox" src={TextBoxx} />
+        <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
+        alt={"TextBox"}
+        width={3840}
+        height={602} />
       }
     <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
       <div className="h-[45%] text-2xl font-semibold">
@@ -524,7 +599,7 @@ const [voice, setVoice] = useState([
 const Sfx = ({sfx}) => {
   return (
       <audio autoPlay>
-         <source src={(`/${sfx}.mp3`)} type="audio/mpeg"></source>
+         <source src={(`${sfx}.mp3`)} type="audio/mpeg"></source>
       </audio>
   );
 };
@@ -567,7 +642,7 @@ const Logbook = ({entry}) => {
           )}
          {/* ----------------------------------------------------------PEOPLE---------------------------------------------------------------------------- */}
          {(entry.entry >= 5 && page === 97) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(80)}}>{entry.entry === 5 && entry.update ? "Nora *" : "Nora" }</button>
+            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(80)}}>{entry.entry === 5 || entry.entry === 6 && entry.update ? "Nora *" : "Nora" }</button>
           )}
           {(entry.entry >= 5 && page === 97) && (
             <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(81)}}>{entry.entry === 5 && entry.update ? "Zayn *" : "Zayn" }</button>
@@ -580,33 +655,53 @@ const Logbook = ({entry}) => {
 
       {(page === 100 || page === 99 || page === 98 || page === 97) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/LogbookFP.png`)}
-         alt={"Logbook"}
+         src={`LogbookFP.png`}
+          alt={"LogbookFP.png"}
+          width={3000}
+          height={2000}
          />
       )}
       {(page === entry.newpage) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/LogbookHP.png`)}
-         alt={"Logbook"}
+         src={`LogbookHP.png`}
+          alt={"LogbookHP.png"}
+          width={3000}
+          height={2000}
          />
       )}
       {(page !== 100 && page !== 99 && page !== 98 && page !== 97 && page !== entry.newpage) && (<Image
           className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-          src={require(`./components/LogbookGP.png`)}
-          alt={"LogbookLog1"}
+          src={`LogbookGP.png`}
+          alt={"LogbookGP.png"}
+          width={3000}
+          height={2000}
           />
       )}
          {/* ----------------------------------------------------------PEOPLE---------------------------------------------------------------------------- */}
-         {(page === 80) && (<Image
+      {(page === 80 && entry.entry <= 5) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/PNora1.png`)}
-         alt={"Logbook"}
+         src={`PNora1.png`}
+          alt={"PNora1.png"}
+          width={3000}
+          height={2000}
          />
       )}
+      {(page === 80 && entry.entry >= 6) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`PNora2.png`}
+          alt={"PNora2.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
+
+
       {(page === 81) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/PZayn1.png`)}
-         alt={"Logbook"}
+         src={`PZayn1.png`}
+          alt={"PZayn1.png"}
+          width={3000}
+          height={2000}
          />
       )}
          {/* ----------------------------------------------------------INFORMATION---------------------------------------------------------------------------- */}
@@ -614,39 +709,51 @@ const Logbook = ({entry}) => {
 
       {(page === 61) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/IMagic.png`)}
-         alt={"Logbook"}
+         src={`IMagic.png`}
+          alt={"IMagic.png"}
+          width={3000}
+          height={2000}
          />
       )}
       {(page === 60) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/IWorld.png`)}
-         alt={"Logbook"}
+         src={`IWorld.png`}
+          alt={"IWorld.png"}
+          width={3000}
+          height={2000}
          />
       )}
          {/* ----------------------------------------------------------DIARY---------------------------------------------------------------------------- */}
       {(page === 3) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/Diary3.png`)}
-         alt={"Logbook"}
+         src={`Diary3.png`}
+          alt={"Diary3.png"}
+          width={3000}
+          height={2000}
          />
       )}
       {(page === 2 && entry.entry >= 4) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/Diary2_1.png`)}
-         alt={"Logbook"}
+         src={`Diary2_1.png`}
+          alt={"Diary2_1.png"}
+          width={3000}
+          height={2000}
          />
       )}
       {(page === 2 && entry.entry <= 3 ) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/Diary2.png`)}
-         alt={"Logbook"}
+         src={`Diary2.png`}
+          alt={"Diary2.png"}
+          width={3000}
+          height={2000}
          />
       )}
       {(page === 1) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
-         src={require(`./components/Diary1.png`)}
-         alt={"Logbook"}
+         src={`Diary1.png`}
+          alt={"Diary1.png"}
+          width={3000}
+          height={2000}
          />
       )}
     </div>
@@ -763,13 +870,17 @@ export const Scene = ({ initial_content }) => {
         }}>
         {scene.logbook.update === false && (<Image
           className=" absolute z-50  w-[100%] h-[100%] top-[-10%]"
-          src={require(`./components/Logbookbanner.png`)}
-          alt={"Logbookbanner"}
+          src={`Logbookbanner.png`}
+          alt={"Logbookbanner.png"}
+          width={1000}
+          height={1000}
           />)}
           {scene.logbook.update === true && (<Image
           className=" absolute z-50  w-[100%] h-[100%] top-[-10%]"
-          src={require(`./components/LogbookbannerS.png`)}
-          alt={"LogbookbannerS"}
+          src={`LogbookbannerS.png`}
+          alt={"LogbookbannerS.png"}
+          width={1000}
+          height={1000}
           />)}
         </button>
          </div>
@@ -831,8 +942,10 @@ export const Scene = ({ initial_content }) => {
               setHud(3);
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/IDAR.png`)}
-            alt={"InputPrompt"}
+            src={`IDAR.png`}
+            alt={"IDAR.png"}
+            width={1091}
+            height={630}
               /></button>)}
             <button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
               setContent(await load("ReadingChambers", "ReadingChambersV"));
@@ -841,8 +954,10 @@ export const Scene = ({ initial_content }) => {
               setHud(0);
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/IDRC.png`)}
-            alt={"InputPrompt"}
+            src={`IDRC.png`}
+            alt={"IDRC.png"}
+            width={1091}
+            height={630}
               /></button>
             <button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
               if (localStorage.getItem('EventFV') === '3'){
@@ -858,8 +973,10 @@ export const Scene = ({ initial_content }) => {
               }
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/IDNC.png`)}
-            alt={"InputPrompt"}
+            src={`IDNC.png`}
+            alt={"IDNC.png"}
+            width={1091}
+            height={630}
               /></button>
             {localStorage.getItem('Hall7L') === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
               if (localStorage.getItem('Password') === ''){ //----------------------------------------------------Rework needed when acc is made------------
@@ -875,25 +992,33 @@ export const Scene = ({ initial_content }) => {
               }
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/IDH7.png`)}
-            alt={"InputPrompt"}
+            src={`IDH7.png`}
+            alt={"IDH7.png"}
+            width={1091}
+            height={630}
               /></button>)}
           </div>)}
         </div>
         <Image
             className=" absolute z-30 top-[4%] left-[7%] w-[80%] h-[90%]"
-            src={require(`./components/IDROOMDEVICE.png`)}
-            alt={"IDROOMDEVICE"}
+            src={`IDROOMDEVICE.png`}
+            alt={"IDROOMDEVICE.png"}
+            width={3000}
+            height={2000}
         />
         <Image
             className=" absolute z-40 top-[26.9%] left-[65%] w-[4%] h-[6.3%]"
-            src={require(`./components/IDwhy.png`)}
-            alt={"IDROOMDEVICE"}
+            src={`IDwhy.png`}
+            alt={"IDwhy.png"}
+            width={164}
+            height={153}
         />
         {hud === 3 && (<Image
             className=" absolute z-30 top-[30%] left-[33%] w-[30%] h-[40%]"
-            src={require(`./components/RoomIDCheck.png`)}
-            alt={"IDROOMDEVICE"}
+            src={`RoomIDCheck.png`}
+            alt={"RoomIDCheck.png"}
+            width={1176}
+            height={738}
          />)}
       </div>
       )}
@@ -907,8 +1032,10 @@ export const Scene = ({ initial_content }) => {
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[0%]"
-          src={require(`./components/Shatter.png`)}
-          alt={"Shatter"}
+          src={`Shatter.png`}
+            alt={"Shatter.png"}
+            width={520}
+            height={380}
           />
         </button>
          </div>
@@ -923,8 +1050,10 @@ export const Scene = ({ initial_content }) => {
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[0%]"
-          src={require(`./components/ShatterText.png`)}
-          alt={"ShatterText"}
+          src={`ShatterText.png`}
+            alt={"ShatterText.png"}
+            width={520}
+            height={380}
           />
         </button>
          </div>
@@ -939,8 +1068,10 @@ export const Scene = ({ initial_content }) => {
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[0%]"
-          src={require(`./components/Shatter.png`)}
-          alt={"Shatter"}
+          src={`Shatter.png`}
+            alt={"Shatter.png"}
+            width={520}
+            height={380}
           />
         </button>
          </div>
@@ -955,8 +1086,10 @@ export const Scene = ({ initial_content }) => {
         }}>
           <Image
           className=" absolute -z-30  w-[100%] h-[100%] top-[0%]"
-          src={require(`./components/Shatter.png`)}
-          alt={"Shatter"}
+          src={`Shatter.png`}
+            alt={"Shatter.png"}
+            width={520}
+            height={380}
           />
         </button>
          </div>
@@ -972,8 +1105,10 @@ export const Scene = ({ initial_content }) => {
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[-10%]"
-          src={require(`./components/IDBanner.png`)}
-          alt={"IDBanner"}
+          src={`IDBanner.png`}
+            alt={"IDBanner.png"}
+            width={1000}
+            height={1000}
           />
         </button>
          </div>
@@ -1010,8 +1145,10 @@ export const Scene = ({ initial_content }) => {
           ></button>
           <Image
             className=" absolute z-30 top-[20%] left-[28%] w-[45%] h-[55%]"
-            src={require(`./components/InputPrompt.png`)}
-            alt={"InputPrompt"}
+            src={`InputPrompt.png`}
+            alt={"InputPrompt.png"}
+            width={1243}
+            height={807}
         />
         <div className="absolute w-[100%] place-content-start place-items-center bottom-0 h-[15%] flex flex-col">
             <div className="text-white text-2xl font-bold">{scene.next.sceneID === 'Lost2' ? "(What’s your Identifier or Name?)" : "(As long as it is remembered.)"}</div>
@@ -1083,8 +1220,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.one.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.oneB && localStorage.getItem(scene.next.oneB.compare) === scene.next.oneB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1093,8 +1232,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.oneB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.two && localStorage.getItem(scene.next.two.compare) === scene.next.two.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1111,8 +1252,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.two.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
              {(scene.next.twoB && localStorage.getItem(scene.next.twoB.compare) === scene.next.twoB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1121,8 +1264,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.twoB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.three && localStorage.getItem(scene.next.three.compare) === scene.next.three.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1139,8 +1284,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.three.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.threeB && localStorage.getItem(scene.next.threeB.compare) === scene.next.threeB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.threeB.path));
@@ -1148,8 +1295,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.threeB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.four && localStorage.getItem(scene.next.four.compare) === scene.next.four.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1166,8 +1315,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.four.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.fourB && localStorage.getItem(scene.next.fourB.compare) === scene.next.fourB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.fourB.path));
@@ -1175,8 +1326,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.fourB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.five && localStorage.getItem(scene.next.five.compare) === scene.next.five.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1193,8 +1346,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.five.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.fiveB && localStorage.getItem(scene.next.fiveB.compare) === scene.next.fiveB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.fiveB.path));
@@ -1202,8 +1357,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.fiveB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.six && localStorage.getItem(scene.next.six.compare) === scene.next.six.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1220,8 +1377,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.six.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.sixB && localStorage.getItem(scene.next.sixB.compare) === scene.next.sixB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.sixB.path));
@@ -1229,8 +1388,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.sixB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.seven && localStorage.getItem(scene.next.seven.compare) === scene.next.seven.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1247,8 +1408,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.seven.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.sevenB && localStorage.getItem(scene.next.sevenB.compare) === scene.next.sevenB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.sevenB.path));
@@ -1256,8 +1419,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.sevenB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.eight && localStorage.getItem(scene.next.eight.compare) === scene.next.eight.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1274,8 +1439,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.eight.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.eightB && localStorage.getItem(scene.next.eightB.compare) === scene.next.eightB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.eightB.path));
@@ -1283,8 +1450,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.eightB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.nine && localStorage.getItem(scene.next.nine.compare) === scene.next.nine.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1301,8 +1470,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.nine.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.nineB && localStorage.getItem(scene.next.nineB.compare) === scene.next.nineB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.nineB.path));
@@ -1310,8 +1481,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.nineB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
 
             {(scene.next.ten && localStorage.getItem(scene.next.ten.compare) === scene.next.ten.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
@@ -1328,8 +1501,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.ten.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
              {(scene.next.tenB && localStorage.getItem(scene.next.tenB.compare) === scene.next.tenB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
               setContent(await load(scene.jayson, scene.next.tenB.path));
@@ -1337,8 +1512,10 @@ export const Scene = ({ initial_content }) => {
             }}><div className="z-40 translate-y-[110%]">{scene.next.tenB.text}</div>
             <Image
             className=" w-[100%] z-30 h-[130%] top-0 translate-y-[-25%]"
-            src={require(`./components/ChoiceBanner.png`)}
-            alt={"InputPrompt"}
+            src={`ChoiceBanner.png`}
+            alt={"ChoiceBanner.png"}
+            width={2835}
+            height={284}
               /></button>)}
           </div>
           <div className="w-[100%] place-content-center place-items-center top-[80%] h-[28%] flex flex-col">
@@ -1362,8 +1539,10 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[108%] h-[103%] top-[0%] left-[-3%]"
-            src={require(`./components/LB_RCDoor.png`)}
-            alt={"InputPrompt"}
+            src={`LB_RCDoor.png`}
+            alt={"LB_RCDoor.png"}
+            width={769}
+            height={1229}
               />
             </button>
           )}
@@ -1390,8 +1569,10 @@ export const Scene = ({ initial_content }) => {
               }
             }}><Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_RCWLNB.png`)}
-            alt={"InputPrompt"}
+            src={`LB_RCWLNB.png`}
+            alt={"LB_RCWLNB.png"}
+            width={428}
+            height={329}
               />
               </button>
           )}
@@ -1414,14 +1595,18 @@ export const Scene = ({ initial_content }) => {
 
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_RCPot.png`)}
-            alt={"InputPrompt"}
+            src={`LB_RCPot.png`}
+            alt={"LB_RCPot.png"}
+            width={288}
+            height={364}
               />
               {((day.getDay() === 2 || day.getDay() === 6) && localStorage.getItem('Yellow') === '0' && localStorage.getItem('RCPot') === "true" && 
             <Image
             className=" absolute w-[94.2%] h-[95%] top-[2%] left-[0.5%]"
-            src={require(`./components/LB_RCPotSD.png`)}
-            alt={"InputPrompt"}
+            src={`LB_RCPotSD.png`}
+            alt={"LB_RCPotSD.png"}
+            width={270}
+            height={349}
               />
             )}
             </button>
@@ -1439,8 +1624,10 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_RCCellBlock.png`)}
-            alt={"InputPrompt"}
+            src={`LB_RCCellBlock.png`}
+            alt={"LB_RCCellBlock.png"}
+            width={2494}
+            height={1322}
               />
             </button>
           )}
@@ -1457,8 +1644,10 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_RCSouls.png`)}
-            alt={"InputPrompt"}
+            src={`LB_RCSouls.png`}
+            alt={"LB_RCSouls.png"}
+            width={826}
+            height={727}
               />
             </button>
           )}
@@ -1481,8 +1670,10 @@ export const Scene = ({ initial_content }) => {
           <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Reading Chambers</div>
           <Image
             className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
-            src={require(`./components/RoomBanner.png`)}
-            alt={"InputPrompt"}
+            src={`RoomBanner.png`}
+            alt={"RoomBanner.png"}
+            width={1996}
+            height={395}
               />
         </button>)}
         </div>
@@ -1512,14 +1703,18 @@ export const Scene = ({ initial_content }) => {
             }}>
               <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_NCNexusH.png`)}
-            alt={"InputPrompt"}
+            src={`LB_NCNexusH.png`}
+            alt={"LB_NCNexusH.png"}
+            width={648}
+            height={634}
               />
               </button>
               <Image
             className=" absolute w-[17%] h-[30%] top-[16.5%] left-[47.3%] animate-[vibe_2s]"
-            src={require(`./components/LB_NCNexus.png`)}
-            alt={"InputPrompt"}
+            src={`LB_NCNexus.png`}
+            alt={"LB_NCNexus.png"}
+            width={648}
+            height={634}
               />
               </div>
           )}
@@ -1536,8 +1731,10 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_NCTables.png`)}
-            alt={"InputPrompt"}
+            src={`LB_NCTables.png`}
+            alt={"LB_NCTables.png"}
+            width={2053}
+            height={705}
               />
             </button>
           )}
@@ -1554,8 +1751,10 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_NCCeiling.png`)}
-            alt={"InputPrompt"}
+            src={`LB_NCCeiling.png`}
+            alt={"LB_NCCeiling.png"}
+            width={3840}
+            height={392}
               />
             </button>
           )}
@@ -1572,8 +1771,10 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_NCInfoWall.png`)}
-            alt={"InputPrompt"}
+            src={`LB_NCInfoWall.png`}
+            alt={"LB_NCInfoWall.png"}
+            width={280}
+            height={1293}
               />
             </button>
           )}
@@ -1586,8 +1787,10 @@ export const Scene = ({ initial_content }) => {
           <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Nexus Core</div>
           <Image
             className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
-            src={require(`./components/RoomBanner.png`)}
-            alt={"InputPrompt"}
+            src={`RoomBanner.png`}
+            alt={"RoomBanner.png"}
+            width={1996}
+            height={395}
               />
         </button>)}
         </div>
@@ -1613,14 +1816,18 @@ export const Scene = ({ initial_content }) => {
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
-            src={require(`./components/LB_H7Table.png`)}
-            alt={"InputPrompt"}
+            src={`LB_H7Table.png`}
+            alt={"LB_H7Table.png"}
+            width={660}
+            height={720}
               />
               {(day.getDay() === 5 && localStorage.getItem('H7Table') === "true" && 
             <Image
             className=" absolute w-[112%] h-[99.5%] top-[1%] left-[0%]"
-            src={require(`./components/LB_H7TableL.png`)}
-            alt={"InputPrompt"}
+            src={`LB_H7TableL.png`}
+            alt={"LB_H7TableL.png"}
+            width={663}
+            height={717}
               />
             )}
             </button>
@@ -1636,8 +1843,10 @@ export const Scene = ({ initial_content }) => {
           <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Ha11-7L</div>
           <Image
             className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
-            src={require(`./components/RoomBanner.png`)}
-            alt={"InputPrompt"}
+            src={`RoomBanner.png`}
+            alt={"RoomBanner.png"}
+            width={1996}
+            height={395}
               />
         </button>)}
         </div>

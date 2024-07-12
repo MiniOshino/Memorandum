@@ -534,21 +534,21 @@ export const Combat = ({ scene, setScene }) => {
         {anim === "Attack" ? (
           <Image
             className=" z-40 w-[50%] h-[50%] animate-[vibeout_2s]"
-            src={require(`./components/snacknanachi.gif`)}
+            src={`snacknanachi.gif`}
             alt={"snackachi"}
           />
         ) : null}
         {anim === "Block" ? (
           <Image
             className=" z-40 w-[50%] h-[50%] animate-[vibeout_2s]"
-            src={require(`./components/shibainusideeye.gif`)}
+            src={`shibainusideeye.gif`}
             alt={"snackachi"}
           />
         ) : null}
         {anim === "Parry" ? (
           <Image
             className=" z-40 w-[50%] h-[50%] animate-[vibeout_2s]"
-            src={require(`./components/Whitescreen.gif`)}
+            src={`Whitescreen.gif`}
             alt={"snackachi"}
           />
         ) : null}

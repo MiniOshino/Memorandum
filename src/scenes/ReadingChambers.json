@@ -305,7 +305,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCCell", "eventupdate":"true"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Cell4", "event":"RCCell", "eventupdate":"true"}
           },
           "Cell3" : {
             "scene_id": "-",
@@ -317,7 +317,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCCell", "eventupdate":"true"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Cell4", "event":"RCCell", "eventupdate":"true"}
           },
           "Cell4" : {
             "scene_id": "-",
@@ -364,7 +364,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCSoul", "eventupdate":"true"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Souls4", "event":"RCSoul", "eventupdate":"true"}
           },
           "Souls3" : {
             "scene_id": "-",
@@ -376,7 +376,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event":"RCSoul", "eventupdate":"true"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Souls4", "event":"RCSoul", "eventupdate":"true"}
           },
           "Souls4" : {
             "scene_id": "-",
@@ -1390,8 +1390,8 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "", "text": "Crystal log 1", "speed": 40, "show": "true"},
-                    "background": { "bg": "Darkness"}
+                    "textBox": { "name": "", "text": "{italic}*bzzzzzzz*{/italic}", "speed": 40, "show": "true"},
+                    "background": { "bg": "CL", "grain": "CL"}
                 },
                 {
                     "textBox": { "name": "Lyzzy", "text": "Hey, hey, wait, hol up.", "speed": 40, "show": "true"},
@@ -1400,7 +1400,7 @@
                 },
                 {
                     "textBox": { "name": "Lyzzy", "text": "You can’t just first try this thing while I'm here waiting..", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Lyzzy_Neutral"},
+                    "sprites": { "center": "Lyzzy_Wuh"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
@@ -1410,11 +1410,11 @@
                 },
                 {
                     "textBox": { "name": "Lyzzy", "text": "And hinting you in the correct direction of the password!", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Lyzzy_Neutral", "effectC":"jump"},
+                    "sprites": { "center": "Lyzzy_Wuh", "effectC":"jump"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "sprites": { "center": "Lyzzy_Neutral"},
+                    "sprites": { "center": "Lyzzy_Wuh"},
                     "background": { "bg": "ReadingChambers"}
                 }
             ],

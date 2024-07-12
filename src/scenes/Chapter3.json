@@ -7,6 +7,14 @@
         "storyProgressID": 12,
         "frames": [
             {
+                "textBox": { "name": "", "text": "", "speed": 40},
+                "background": { "bg": "Chapter3"}
+            },
+            {
+                "textBox": { "name": "", "text": "", "speed": 40},
+                "background": { "bg": "VillageFRoomInv", "pbg": "Chapter3"}
+            },
+            {
                 "textBox": { "name": "Zayn", "text": "!!!", "speed": 40, "show":"true", "effect": "shake" },
                 "sprites": {"left": "Zayn_R_Neutral_Shocked", "effectL": "shake"},
                 "background": { "bg": "VillageFRoomInv"}
@@ -157,7 +165,7 @@
                 "background": { "bg": "ForestPathNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "A-ah.    My bad.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "A-ah.         My bad.", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Silhouette", "left": "Zayn_R_Neutral_Worried", "movementL": "RTL", "effectSR": "shake"},
                 "background": { "bg": "ForestPathNight"}
             },
@@ -177,7 +185,7 @@
                 "background": { "bg": "ForestPathNight"}
             },
             {
-                "textBox": { "name": "Bandit", "text": "G-GET AWAY FROM ME!", "speed": 40, "show":"true"},
+                "textBox": { "name": "Bandit", "text": "G-     GET AWAY FROM ME!", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Silhouette", "center": "Zayn_R_Thinking_Shocked", "effectSR": "jump"},
                 "background": { "bg": "ForestPathNight"}
             },
@@ -227,7 +235,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "As I thought.. Underground..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "As I thought..         Underground..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_ThinkingH"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -242,12 +250,12 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "..Maybe she is hurt.. I have to help...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "..Maybe she is hurt..             I have to help...", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Neutral_Worried"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Alright..     Here goes nothing..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Alright..       Here goes nothing..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Neutral_Serious"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -277,7 +285,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Oh. It’s you.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Oh.          It’s you.", "speed": 40, "show":"true"},
                 "sprites": {"rright": "Nora_L_Neutral_Surprised", "lleft": "Zayn_R_Neutral_Surprised"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -307,7 +315,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Oh, don’t worry about them..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Oh,           don’t worry about them..", "speed": 40, "show":"true"},
                 "sprites": {"left": "Zayn_R_Neutral_Serious", "rright": "Nora_L_Neutral_DistractedD"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -317,7 +325,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Look!   I found a map!", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Look!         I found a map!", "speed": 40, "show":"true"},
                 "sprites": {"left": "Zayn_R_Neutral_Serious", "rright": "Nora_L_Neutral_uwu", "effectRR": "jump"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -332,17 +340,17 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "That is lovely but..   What about-", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "That is lovely but..      What about-", "speed": 40, "show":"true"},
                 "sprites": {"left": "Zayn_R_Thinking_Worried", "rright": "Nora_L_Neutral_uwu"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Like I said,    don't worry about em..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Like I said,     don't worry about em..", "speed": 40, "show":"true"},
                 "sprites": {"left": "Zayn_R_Thinking_Worried", "rright": "Nora_L_Neutral_DistractedS"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "They are fine.    Just some loud bandits.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "They are fine.      Just some loud bandits.", "speed": 40, "show":"true"},
                 "sprites": {"left": "Zayn_R_Thinking_Worried", "rright": "Nora_L_Neutral_DistractedS"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -357,7 +365,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "(...They are breathing..     A faint smell of blood..    Not that much though..)", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "(...They are breathing..         A faint smell of blood..         Not that much though..)", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Zayn_R_Thinking_Serious"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -392,7 +400,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I mean..    Yes..    but..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I mean..     Yes..      but..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_DistractedS","rright": "Zayn_L_Neutral_Worried"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -422,12 +430,12 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I thought..      I thought I finally understood you a bit more yesterday..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I thought..       I thought I finally understood you a bit more yesterday..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Surprised","rright": "Zayn_L_Neutral_Hurt", "effectRR": "shake"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "But I don’t at all.      What..     Who even are you?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "But I don’t at all.       What..        Who even are you?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Worried","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -472,7 +480,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "I.....", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "I....", "speed": 40, "show":"true"},
                 "sprites": {"sleft": "Nora_R_HOS_DepressedSad","rright": "Zayn_L_Neutral_Sad", "movementSL": "LLTSL"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -497,17 +505,17 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "A-are you alright?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "A-    are you alright?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Worried", "rright": "Zayn_L_Neutral_Hurt"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I’m.. not sure..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I’m..         not sure..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Worried","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I’m sorry..     I’m just so confused..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I’m sorry..       I’m just so confused..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Worried","rright": "Zayn_L_Neutral_Sad", "effectRR": "shake"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -557,7 +565,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "There...      Happy now..?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "There...       Happy now..?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Sigh","rright": "Zayn_L_Neutral_Smile"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -577,7 +585,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Well I hate it.    It can go again.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Well I hate it.     It can go again.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Sigh","rright": "Zayn_L_Neutral_Smile"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -587,12 +595,12 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Yap, even worse.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Yap,       even worse.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Smile"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Anyway, we got a map so let's go.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Anyway,         we got a map so let's go.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Distracted","rright": "Zayn_L_Neutral_Smile"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -612,7 +620,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "I’m not some comicaly brutal lunatic, ok...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "I’m not some comicaly brutal lunatic,   ok...", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Straightface","rright": "Zayn_L_Thinking_Smile"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -622,7 +630,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Now,   let’s get going.       Don’t want to stay here for too long..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Now,     let’s get going.        Don’t want to stay here for too long..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_L_Neutral_Straightface","rright": "Zayn_L_Neutral_Smile"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -637,27 +645,27 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_Distracted","rright": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...uhm...    Tough, that from before..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "...uhm...     Tough,       that from before..", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_DistractedS","rright": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "You weren’t actually like.. That scared of me that you flinched like that right?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "You weren’t actually like..         That scared of me that you flinched like that right?", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_DistractedS","rright": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "A-ah..    No, that wasn’t because of you..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "A-ah..      No,       that wasn’t because of you..", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_DistractedS","rright": "Zayn_L_Neutral_Distracted"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "You.. sure?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "You..       sure?", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_Distracted","rright": "Zayn_L_Neutral_Distracted"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -677,7 +685,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Oh.     Uhm..    Kinda glad you flinched then.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Oh.     Uhm..     Kinda glad you flinched then.", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_Surprised","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -687,7 +695,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I’m worried..     Hope he is alright..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I’m worried..      Hope he is alright..", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_Neutral","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -697,7 +705,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "..Least we know that you aren’t unarmed now.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "..Least we know that you aren’t technically unarmed now.", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_uwu","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -717,7 +725,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Hey, you wanted more of the “me” from yesterday, so...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Hey,         you wanted more of the “me” from yesterday,    so...", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Shrug_Sigh","rright": "Zayn_L_Neutral_Serious"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -747,7 +755,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Besides, he definitely isn’t capable of hurting others for a while.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Besides,         he definitely isn’t capable of hurting others for a while.", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_R_HOS_Neutral","rright": "Zayn_L_Neutral_Distracted"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -757,12 +765,12 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"center": "Nora_R_Shrug_Straightface","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Uhm..    Also! This shows that you are feeling better again!", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Uhm..     Also!,      this shows that you are feeling better again!", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Worried"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -782,7 +790,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "I’m not good at comforting people, ok.    Cut me some slack.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "I’m not good at comforting people, ok.       Cut me some slack.", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_R_Neutral_Sigh","rright": "Zayn_L_Neutral_Distracted"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -847,7 +855,7 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Do you..    Want to talk about it?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Do you..     Want to talk about it?", "speed": 40, "show":"true"},
                 "sprites": {"center": "Nora_L_Neutral_NeutralS","rright": "Zayn_L_Neutral_Worried"},
                 "background": { "bg": "ForestThiccNight"}
             },
@@ -947,7 +955,7 @@
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "..Well you did gather all the wood and stuff.... So, let me help you with this one.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "..Well you did gather all the wood and stuff....    So,      let me help you with this one.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Neutral","rright": "Zayn_R_Thinking_ThinkingH"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1021,7 +1029,7 @@
                 "items": { "item": "Amy", "show": "false"}
             },
             {
-                "textBox": { "name": "Nora", "text": "I…             It was created, so it needs a name.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "I…             It was created,     so it needs a name.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Distracted","right": "Zayn_L_Thinking_Neutral"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1036,7 +1044,7 @@
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Heh..    It’s a left handed prototype..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Heh..      It’s a left handed prototype..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Distracted","right": "Zayn_L_Thinking_Neutral"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1051,7 +1059,7 @@
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Practical.      What else can it do?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Practical.       What else can it do?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Neutral","right": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1101,12 +1109,12 @@
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "See you in a bit..        Just need a little nap..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "See you in a bit..         Just need a little nap..", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Nora_R_Neutral_NeutralS","lleft": "Zayn_R_Thinking_Neutral"},
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Mhm..      See you later.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Mhm..        See you later.", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Nora_R_Neutral_NeutralS","lleft": "Zayn_R_Neutral_Neutral"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1121,7 +1129,7 @@
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...Uhm, Zayn?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "...Uhm,       Zayn?", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Nora_L_Neutral_DistractedS","lleft": "Zayn_R_Neutral_Smile"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1131,7 +1139,7 @@
                 "background": { "bg": "ForestCampNight"}
             },
             {
-                "textBox": { "name": "Nora", "text": "You..     are gonna keep guard until I wake up, right?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "You..      are gonna keep guard until I wake up,     right?", "speed": 40, "show":"true"},
                 "sprites": {"sright": "Nora_L_Neutral_Neutral","lleft": "Zayn_R_Neutral_Surprised"},
                 "background": { "bg": "ForestCampNight"}
             },
@@ -1194,73 +1202,92 @@
             },
             {
                 "textBox": { "name": "Nora", "text": "..mmm..", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Neutral_Confused", "movementC": "fade"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Zayn", "text": "(..She looks like shes cold..)", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Neutral"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Zayn", "text": "(Maybe I should-)", "speed": 40, "show":"true"},
+                "sprites": {"right": "Zayn_R_Thinking_Neutral", "movementR":"CTR"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...!", "speed": 500, "show":"true"},
+                "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
+                "sprites": {"right": "Zayn_R_Thinking_Neutral"},
+                "background": { "bg": "ForestCampDay"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "!!!", "speed": 40, "show":"true"},
+                "sprites": {"right": "Zayn_R_Thinking_Neutral","rright":"Nora_L_Neutral_Surprised", "effectRR":"jump"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Zayn", "text": "!", "speed": 40, "show":"true"},
+                "sprites": {"right": "Zayn_R_Thinking_Surprised","rright":"Nora_L_Neutral_Surprised", "effectR":"jump"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "How long did I-?", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Neutral","rright":"Nora_L_Neutral_Distracted", "movementC":"RTC", "effectRR":"wiggle"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Zayn", "text": "Quite a while.          It’s almost evening.", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Neutral_Neutral","rright":"Nora_L_Neutral_Distracted"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "Mff..      Why didn’t you wake me up?", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Neutral_Neutral","rright":"Nora_L_Neutral_Sigh"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Zayn", "text": "You looked like you needed the rest.", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Neutral","rright":"Nora_L_Neutral_Sigh"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "…And what’s with the coat..?", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Neutral","rright":"Nora_L_Neutral_Straightface"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "You..   looked like you needed it..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "You..      looked like you needed it..", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Confused","rright":"Nora_L_Neutral_Straightface"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Confused","rright":"Nora_L_Neutral_Straightface"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Confused","rright":"Nora_L_Neutral_Straightface"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "…Guess that’s fair.", "speed": 40, "show":"true"},
+                "sprites": {"center": "Zayn_R_Thinking_Confused","rright":"Nora_L_Neutral_Distracted"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Mmmmmmm-      hah~", "speed": 40, "show":"true"},
-                "sprites": {"lleft": "Nora_R_HOS_Hmpf", "movementLL": "fade"},
+                "textBox": { "name": "Nora", "text": "Mmmmmmm-                    hah~", "speed": 40, "show":"true"},
+                "sprites": {"lleft": "Nora_R_BHOS_Hmpf", "center": "Zayn_R_Thinking_Surprised", "effectC":"jump"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "Haven’t slept this well in a while..", "speed": 40, "show":"true"},
-                "sprites": {"lleft": "Nora_R_Neutral_uwu", "effectLL": "jump"},
+                "sprites": {"lleft": "Nora_R_Neutral_uwu", "effectLL": "jump", "rright": "Zayn_L_Thinking_Surprised", "movementRR":"CTRR"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
                 "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
-                "sprites": {"lleft": "Nora_R_Neutral_uwu", "rright":"Zayn_L_Neutral_Neutral", "movementRR": "fade"},
+                "sprites": {"lleft": "Nora_R_Neutral_uwu", "rright":"Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestCampDay"}
             },
             {
@@ -1269,7 +1296,7 @@
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "No.   I was keeping guard, remember?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "No.     I was keeping guard, remember?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_Neutral_Straightface", "rright":"Zayn_L_Neutral_Surprised"},
                 "background": { "bg": "ForestCampDay"}
             },
@@ -1319,7 +1346,7 @@
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Sometimes ”things” can also be names, you know..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Sometimes ”things” can also be names,      you know..", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_R_HOS_Neutral", "rright":"Zayn_L_Thinking_Confused"},
                 "background": { "bg": "ForestCampDay"}
             },
@@ -1344,7 +1371,7 @@
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Pack the boiled water and pour some over the pit. We can leave the rest.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Pack the boiled water and pour some over the pit.          We can leave the rest.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Confused", "right":"Nora_R_Neutral_Neutral", "movementLL": "RRTLL", "movementR": "RRRTR"},
                 "background": { "bg": "ForestCampDay"}
             },
@@ -1354,7 +1381,7 @@
                 "background": { "bg": "ForestCampDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Ah. Don’t worry.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Ah.         Don’t worry.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Confused", "right":"Nora_L_Neutral_Surprised"},
                 "background": { "bg": "ForestCampDay"}
             },
@@ -1418,7 +1445,7 @@
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Like..    a personal trick or ability. Least thats what we called it.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Like..      a personal trick or ability.       Least thats what they called it.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Neutral", "center":"Nora_R_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccDay"}
             },
@@ -1463,12 +1490,12 @@
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "What can I say?      Didn’t think you would actually try to get up there.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "What can I say?       Didn’t think you would actually try to get up there.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Confused", "center":"Nora_R_Shrug_Straightface"},
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Well, you mentioned you were on the roof, soooo.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Well,      you mentioned you were on the roof.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Neutral", "center":"Nora_R_Shrug_Straightface"},
                 "background": { "bg": "ForestThiccDay"}
             },
@@ -1488,7 +1515,7 @@
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Also, consider this a secret.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Also,       consider this a secret.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Neutral_Neutral", "center":"Nora_R_Neutral_Distracted"},
                 "background": { "bg": "ForestThiccDay"}
             },
@@ -1503,12 +1530,12 @@
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Cause it’s a secret, duh.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Cause it’s a secret,    duh.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Neutral", "center":"Nora_R_Shrug_Straightface"},
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Can I..    Note it down?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Can I..     Note it down?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Thinking_Confused", "center":"Nora_R_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccDay"}
             },
@@ -1518,7 +1545,7 @@
                 "background": { "bg": "ForestThiccDay"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Ok, good.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Ok,      good.", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Zayn_R_Neutral_Neutral", "center":"Nora_R_Neutral_Sigh"},
                 "background": { "bg": "ForestThiccDay"}
             },
@@ -1588,7 +1615,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "No.     I hear something.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "No.      I hear something.", "speed": 40, "show":"true"},
                 "sprites": {"rright": "Zayn_L_Thinking_Distracted", "left":"Nora_R_Neutral_uwu"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1598,12 +1625,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I think it's.. A bell??", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I think it's..         A bell??", "speed": 40, "show":"true"},
                 "sprites": {"rright": "Zayn_L_Thinking_Thinking", "left":"Nora_R_Neutral_Surprised"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Well.. we are approaching something on the map..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Well..     we are approaching something on the map..", "speed": 40, "show":"true"},
                 "sprites": {"rright": "Zayn_L_Thinking_Thinking", "left":"Nora_L_Neutral_Sus"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1613,7 +1640,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Wait, I hear something rattling as well..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Wait,      I hear something rattling as well..", "speed": 40, "show":"true"},
                 "sprites": {"left":"Nora_L_Neutral_SusSF","rright": "Zayn_L_WeaponD_ThinkingH"},
                 "background": { "bg": "ForestThiccEvening", "effect": "static", "effectstyle": "svibeout"}
             },
@@ -1623,7 +1650,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Oh!   It’s a cat!", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Oh!     It’s a cat!", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_L_Neutral_Surprised","rright": "Zayn_L_WeaponD_ThinkingH", "effectLL":"jump"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1678,12 +1705,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "...There..      Isn’t something behind me..         Right?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "...There..       Isn’t something behind me..         Right?", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_SusSF","rright": "Zayn_L_Neutral_Confused"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Well..       no, though that would have been funny.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Well..       no,        though that would have been funny.", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Confused"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1717,7 +1744,7 @@
                 "items": { "item": "Dagger", "show": "false"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Actually, better question.          From where?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Actually,        better question.          From where?", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Sus","rright": "Zayn_L_Neutral_Confused"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1727,12 +1754,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Well, you are holding it.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Well,        you are holding it.", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_ThinkingV"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Listen, I’m as confused as you are.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Listen,        I’m as confused as you are.", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Confused"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1784,7 +1811,7 @@
                 "items": { "item": "Bandage", "show": "false"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "You clearly seem more aware of something then me.     What is happening?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "You clearly seem more aware of something then me.       What is happening?", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_R_Neutral_Neutral","rright": "Zayn_L_Neutral_Confused", "effectRR": "wiggle"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1814,7 +1841,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Anyway, when I found you, you were clutching this bandage in your hand.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Anyway,    when I found you,          you were clutching this bandage in your hand.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_R_Neutral_Neutral","rright": "Zayn_L_Thinking_Serious"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1854,7 +1881,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Alright. Let me think.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "Alright.          Let me think.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_R_Neutral_Neutral","rright": "Zayn_L_Neutral_Thinking"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1879,7 +1906,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I..    can’t.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I..     can’t.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Confused"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1924,7 +1951,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "{italic}*Huff*{/italic}    ...I really wanted to analyze that..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "{italic}*Huff*{/italic}", "speed": 40, "show":"true"},
+                "sprites": {"lleft":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Neutral"},
+                "background": { "bg": "ForestThiccEvening"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "...I really wanted to analyze that..", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1944,7 +1976,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Don’t worry though.     I’m sure it will come to you later.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Don’t worry though.      I’m sure it will come to you later.", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_HOS_Neutral","rright": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1954,7 +1986,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "It will be fineee.     Besides, it looks like you {bold}do{/bold} have a weapon!", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "It will be fineee.      Besides,     it looks like you {bold}do{/bold} have a weapon!", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_uwu","rright": "Zayn_L_Neutral_Confused"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1964,7 +1996,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "...Also, we should get going again if we want to make it by tomorrow.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "...Also,       we should get going again if we want to make it by tomorrow.", "speed": 40, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Straightface","rright": "Zayn_L_Neutral_Distracted"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -1989,12 +2021,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I have been wondering, who or..  {italic}What{/italic}, I have been.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I have been wondering, who or..    {italic}What{/italic},        I have been.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_L_Neutral_Neutral","rright": "Zayn_L_Thinking_Neutral"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "It was..     Almost a relief to know I was unarmed..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "It was..      Almost a relief to know I was unarmed..", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_L_Neutral_Neutral","rright": "Zayn_L_Thinking_Worried"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -2004,12 +2036,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "...", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"center":"Nora_L_Neutral_Distracted","rright": "Zayn_L_Neutral_Sad"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "I..      didn’t hurt anyone before..     Right?", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "I..      didn’t hurt anyone before..      Right?", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_L_Neutral_Neutral","rright": "Zayn_L_Neutral_Worried"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -2024,17 +2056,17 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Or all of the above.    I mean, look at me.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Or all of the above.     I mean, look at me.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_R_Shrug_Surprised","rright": "Zayn_L_Neutral_Neutral"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "You..     definitely hurt some bandits.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "You..      definitely hurt some bandits.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_R_Shrug_Straightface","rright": "Zayn_L_Neutral_Worried"},
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Nora", "text": "Ok   {italic}maaaaybe{/italic},     I’m not the best example,       {bold}BUT{/bold}, I only knocked them out..        {italic}G e n t l y{/italic}.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Nora", "text": "Ok     {italic}maaaaybe{/italic},     I’m not the best example,       {bold}BUT{/bold},      I only knocked them out..        {italic}G e n t l y{/italic}.", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_L_HOS_Straightface","rright": "Zayn_L_Neutral_Worried"},
                 "background": { "bg": "ForestThiccEvening"}
             },
@@ -2044,7 +2076,12 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "{italic]*Sigh*{/italic}    ...Worrying about it won’t get me anywhere I guess..", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "{italic}*Sigh*{/italic}", "speed": 40, "show":"true"},
+                "sprites": {"center":"Nora_L_Neutral_Neutral","rright": "Zayn_L_Neutral_Thinking"},
+                "background": { "bg": "ForestThiccEvening"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "...Worrying about it won’t get me anywhere I guess..", "speed": 40, "show":"true"},
                 "sprites": {"center":"Nora_L_Neutral_Neutral","rright": "Zayn_L_Neutral_Thinking"},
                 "background": { "bg": "ForestThiccEvening"}
             },

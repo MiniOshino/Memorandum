@@ -1,6 +1,6 @@
 import Scene from "@/Scene";
 import { load } from "@/actions/load";
-import ClientTest from "@/components/ClientTest";
+//import ClientTest from "@/ClientTest";
 import React, { useRef } from 'react';
 // const content = {
 //   scene_id: 0,
@@ -33,7 +33,7 @@ export default async function Home() {
   //const defaultScene = await load("Chapter0", "Part2");
   //const defaultScene = await load("test", "test");
   //const defaultScene = await load("Fights", "Fights");
-  //const defaultScene = await load("Chapter3", "Scene5");
+  //const defaultScene = await load("CrystalLog", "Log1");
 
 
   const defaultScene = await load("start", "start");

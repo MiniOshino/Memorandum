@@ -1,7 +1,7 @@
 {
     "CLPW" : {
     "scene_id": "-",
-    "name": "LogPassword",
+    "name": "PW Log",
     "frames": [
         {
             "background": { "bg": "AudioLogPw", "pbg": "Darkness"}
@@ -15,13 +15,173 @@
         "storyProgressID": 15,
         "frames": [
             {
-                "textBox": { "name": "", "text": "Im here right??????? helpppp", "speed": 40},
-                "background": { "bg": "Darkness"}
+                "textBox": { "name": "", "text": "{italic}*bzzzzzzz*{/italic}", "speed": 40, "show": "true"},
+                "background": { "bg": "CL", "grain": "CL"}
             },
             {
-                "textBox": { "name": "", "text": "", "speed": 40},
-                "background": { "bg": "Darkness"}
+                "textBox": { "name": "", "text": "{italic}*thud thud*{/italic}", "speed": 40, "show": "true"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "{Nora}", "text": "...Is this thing on?", "speed": 40, "show": "true"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "...Hm, the light is glowing so I guess it's working.", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_DistractedS", "movementRR": "fade"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "{italic}*clears throat*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Straightface", "effectRR": "wiggle"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "So,        It's the 23rd of Valnor and with this..   log of sorts,        I will start my experiment on the workings of crystals.", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Neutral"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Needless to say this will be kept secret,         as it is prohibited for anyone but the labs at HQ to be in possession of these things. ", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_DistractedS"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Unfortunately,        {italic}SOME{/italic} lunatic decided it would be a great idea and shoved this idea right in front of me,       so that my curiosity would gobble it up immediately.", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Sus"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "S-    so with that..         …uhm…", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Sad"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "", "text": "{italic}*muffled*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Sad", "effectRR": "shake"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "I- I can't do this Luna..        What if we get caught?", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Worried"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "And why with this recording thing?       We are just creating evidence-", "speed": 40, "show": "true"},
+                "sprites": {"rright": "NoraCL_L_Neutral_Sad"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "Oh come on now..       we talked this through.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_Sad", "movementLL":"fade"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "I just thought that it would do you good to finally do some things {italic}YOU{/italic} want to do.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Surprised", "rright": "NoraCL_L_Neutral_NeutralS"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "Not just wobble along with what HQ has to say..", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Thinking", "rright": "NoraCL_L_Neutral_NeutralS"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "But going directly against them?", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Thinking", "rright": "NoraCL_L_Neutral_Worried"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "It's fiiiine.        Not like they know of this place anyway.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_Worried"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "Besides,        as long as you keep that device close to you,        nobody will hear it!", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Neutral", "rright": "NoraCL_L_Neutral_NeutralS", "effectLL": "wiggle"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "Here,      take some sweets and relax~      They’re gonna give you the energy you need!", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_NeutralS"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Not now..           Huff...", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_SighS"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Doing something for myself..", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_DistractedS"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Ok.           I'll try.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_Neutral"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "{italic}*clap clap*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Smile", "rright": "NoraCL_L_Neutral_Neutral", "effectLL": "jump"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "Hehe~        Nice, nicee~", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Smile", "rright": "NoraCL_L_Neutral_Neutral"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "", "text": "{italic}*muffled fades*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Smile", "rright": "NoraCL_L_Neutral_Neutral", "effectRR": "shake"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "{italic}*clears throat*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_Straightface", "effectRR":"wiggle"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "As I was saying..", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Neutral", "rright": "NoraCL_L_Neutral_Straightface"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "She brought me this crystal she took from some shipping crate and a bunch of sparkly looking rocks in a bag, that she gathered in her last sonar mission.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Neutral", "rright": "NoraCL_L_Neutral_Neutral"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Presumably,     some of these rocks might be crystals as well so today's plan is to differentiate them and find a way to extract their properties of sorts.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Neutral", "rright": "NoraCL_L_Neutral_Neutral"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "", "text": "{italic}*muffled*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Neutral", "rright": "NoraCL_L_Neutral_Neutral", "effectRR": "shake"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Do I stop it now?", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Neutral_Neutral", "rright": "NoraCL_L_Neutral_Sus"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Luna", "text": "Well,     you don't want to clog up the disc space with just noise right?", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Smile", "rright": "NoraCL_L_Neutral_Sus", "effectLL":"wiggle"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Right   right.", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_Sus"},
+                "background": { "bg": "CL", "grain": "CL"}
+            },
+            {
+                "textBox": { "name": "", "text": "{italic}*recording ends*{/italic}", "speed": 40, "show": "true"},
+                "sprites": {"lleft":"Luna_Thinking_Neutral", "rright": "NoraCL_L_Neutral_Sus", "movementRR": "fadeout", "movementLL": "fadeout"},
+                "background": { "bg": "CL", "grain": "CL"}
             }
+            
         ],
         "next": { "type": "fixed", "target": "Chapter4", "sceneID": "Chapter4" }
         },

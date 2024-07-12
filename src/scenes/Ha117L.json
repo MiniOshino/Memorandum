@@ -339,12 +339,12 @@
                 "background": { "bg": "Ha117L"}
             },
             {
-                "textBox": { "name": "{you}", "text": "(The robot turns around in a smooth 180° motion, lifting one of its dangling legs and cutting the blue tear wide open)", "speed": 40, "show": "true"},
+                "textBox": { "name": "{you}", "text": "(The robots upper body turns around in a smooth 180° motion, lifting one of its dangling legs and cutting the blue tear wide open)", "speed": 40, "show": "true"},
                 "sprites": { "center": "Green" , "movementC": "fadeout"},
                 "background": { "bg": "Ha117L"}
             },
             {
-                "textBox": { "name": "", "text": "(With a swift little jump it leaps through it, the tear seemingly fixing itself behind it until the room goes back into silence)", "speed": 40, "show": "true"},
+                "textBox": { "name": "{you}", "text": "(With a swift little jump it leaps through it, the tear seemingly fixing itself behind it until the room goes back into silence)", "speed": 40, "show": "true"},
                 "background": { "bg": "Ha117L"}
             }
         ],
