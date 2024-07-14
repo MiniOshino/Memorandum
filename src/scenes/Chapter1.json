@@ -1176,7 +1176,7 @@
                 "background": { "bg": "VillageFRoomNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "(Hm? Why is there an “L” written into the logbook?)", "speed": 40, "show": "true"  },
+                "textBox": { "name": "Zayn", "text": "(Hm?        Why is there an “L” written into the logbook?)", "speed": 40, "show": "true"  },
                 "sprites": {"rright": "Zayn_L_Logbook_ThinkingH"},
                 "background": { "bg": "VillageFRoomNight"}
             },
