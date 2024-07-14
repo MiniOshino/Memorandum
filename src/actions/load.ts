@@ -2,6 +2,11 @@
 import * as fs from "fs";
 
 export async function load(id: string, sceneID: string) {
+  console.log(process.cwd());
+  fs.readdirSync(process.cwd()).forEach(file => console.log(file));
+  console.log("------------------------------------------");
+  fs.readdirSync(process.cwd() + "/src/scenes").forEach(file => console.log(file));
+
   const file = await fs.readFileSync(`./src/scenes/${id}.json`, "utf-8");
   const data = JSON.parse(file);
 
