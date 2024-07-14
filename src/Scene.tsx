@@ -2044,6 +2044,22 @@ export const Scene = ({ initial_content }) => {
               }
             }
             }
+            
+              //
+              //frame.sprites.rrright
+              //frame.sprites.sright
+              //frame.sprites.rright
+              //frame.sprites.right
+              //frame.sprites.center
+              //frame.sprites.left
+              //frame.sprites.lleft
+              //frame.sprites.sleft
+              //frame.sprites.llleft
+              //frame.sprites.down
+              //frame.background.bg
+              //frame.items.item
+
+            
           } else {
             setFrame(frame + 1);
             console.log("Next frame please");
