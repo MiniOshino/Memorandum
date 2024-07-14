@@ -380,7 +380,6 @@ const Background = ({ background }) => {
 };
 
 //---------------------------------------------------------------------ITEMS--------------------------------------------------------------------------------------
-
 const Item = ({ items }) => {
   return (
     <div>
@@ -397,8 +396,8 @@ const Item = ({ items }) => {
     </div>
   );
 };
-//---------------------------------------------------------------------TEXTBOX--------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------TEXTBOX--------------------------------------------------------------------------------------
 const TextBox = ({ name, text, speeed, show, tb}) => {
 //   const [rename, setRename] = useState(name);
 const [voice, setVoice] = useState([
@@ -573,7 +572,25 @@ const [voice, setVoice] = useState([
   
   //console.log(show);
   return (
-    <div className={`z-20`}>
+    <div>
+    {show === "special" && (<div className={`z-20`}>
+      {show === "special" &&
+
+        <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
+        alt={"STextBox"}
+        width={3840}
+        height={602} />
+      }
+    <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[30%] left-[50%] translate-x-[-50%] border-solid border-4 border-green-600">
+      <div className="h-[45%] text-2xl font-semibold">
+          {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
+        </div>
+      <div className=" z-20 text-xl text-white h-[40%]">
+      <Texting text={text} speed={speeed} ps={name}/>
+      </div>
+      </div>
+    </div>)}
+    {show !== "special" && (<div className={`z-20`}>
       {show === "true" &&
 
         <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
@@ -588,23 +605,22 @@ const [voice, setVoice] = useState([
       <div className=" z-20 text-xl text-white h-[40%]">
       <Texting text={text} speed={speeed} ps={name}/>
       </div>
-        
       </div>
-  
+    </div>)}
     </div>
   );
 };
-//---------------------------------------------------------------------SOUND--------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------SOUND--------------------------------------------------------------------------------------
 const Sfx = ({sfx}) => {
   return (
       <audio autoPlay>
-         <source src={(`${sfx}.mp3`)} type="audio/mpeg"></source>
+         <source src={(`https://beans.images.ni-verse.com/SFX${sfx}.mp3`)} type="audio/mpeg"></source>
       </audio>
   );
 };
-//---------------------------------------------------------------------LOGBOOK--------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------LOGBOOK--------------------------------------------------------------------------------------
 const Logbook = ({entry}) => {
   const [page, setPage] = useState(100);
   const [pagetype, setPagetype] = useState(0);

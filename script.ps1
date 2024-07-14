@@ -1,7 +1,7 @@
 Get-ChildItem "src\components" | 
 Foreach-Object {
     # .\script.ps1  (to start the script)
-    
+    # $env:CLOUDFLARE_API_TOKEN="CODE[s]"
     # echo $_.FullName 
     echo $_.Name
     $var1 = $_.Name

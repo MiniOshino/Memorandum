@@ -1,0 +1,23 @@
+{
+    "test" : {
+      "scene_id": "Ths the test",
+      "name": "Test",
+      "frames": [
+        {
+          "textBox": { "name": "", "text": "...", "speed": 50, "show": "special" },
+          "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "", "text": "...Dash", "speed": 50, "show": "special" },
+            "background": { "bg": "Dash"},
+            "sfx": "Dash"
+        },
+        {
+            "textBox": { "name": "", "text": "...Dot", "speed": 50, "show": "special" },
+            "background": { "bg": "Dot"},
+            "sfx": "Dot"
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    }
+  }
