@@ -6,74 +6,7 @@ import { Bagel_Fat_One } from "next/font/google";
 import Combat from "./Combat.js";
 
 
-if (localStorage.getItem('Savestate') === null){
-  //------------------------------------------General Things--------------------------------------------
-  localStorage.setItem('Savestate', 'true');
-  localStorage.setItem('Username', '');
-  localStorage.setItem('Password', '');
-  localStorage.setItem('StoryProgress', '0');
-  localStorage.setItem('CurrentChapter', "Library0");
-  localStorage.setItem('CurrentPart', "Begining");
-  localStorage.setItem('Warptablet', "false");
-  //------------------------------------------Events--------------------------------------------
-//NS: NOT STARTED, //1,2,3,4: CONVERSATION/EVENTPROGRESS //FIN: FINISHED
-  localStorage.setItem('EventFV', "NS"); // First Visit Event:  / 1: Starting / 2: Finished talk with Lyz / 3: Finished talk with Architect  / 4: First Warp to Nexus Core /5: Finsihed fist convo with Nexus /6: Inquired about Story
-  localStorage.setItem('EventPR', "NS"); // Password Restriction Event / 1: Starting / 2:
-  localStorage.setItem('EventSC', "NS"); // Slime Connection Event
-  //------------------------------------------STATS--------------------------------------------
-  localStorage.setItem('Curious', "0");
-  localStorage.setItem('Interested', "0");
-  localStorage.setItem('Scaredy cat', "0");
-  localStorage.setItem('Analytical', "0");
-  localStorage.setItem('Friendly', "0");
-  localStorage.setItem('Empathetic', "0");
-  localStorage.setItem('Self Interest', "0");
-  localStorage.setItem('Confused', "0");
-  localStorage.setItem('Silly', "0");
-  localStorage.setItem('Trusting', "0");
-  localStorage.setItem('Questioning', "0");
-  localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table
-  localStorage.setItem('Spydent', "false"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
-  //------------------------------------------Choice Answers--------------------------------------------
-  localStorage.setItem('true', "true");
-  localStorage.setItem('Error', "false"); //You cannot go back to the Story if this is true
-  //------------------------------------------CAGLIOSTRO QUESTIONS--------------------------------------
-  //false: Not unlocked true: Unlocked read: read
-  localStorage.setItem('NQuestionWITP', "true");
-  localStorage.setItem('NQuestionHDIL', "true");
-  localStorage.setItem('NQuestionArchitect', "true");
-  localStorage.setItem('NQuestionNexus', "true");
-  localStorage.setItem('NQuestionCagliostro', "false");
-  localStorage.setItem('NQuestionSlime', "false");
-  localStorage.setItem('NQuestionMist', "false");
-  localStorage.setItem('NQuestionInBetween', "false");
-  //Story question in spirit
-  //Finaish Convo in spirit
-  //------------------------------------------Architect QUESTIONS--------------------------------------
-  localStorage.setItem('AQuestionUnlockID', "false");
-  //-------------------------------------------Chronological infromation---------------------------------
-  localStorage.setItem('InformationWLNB', "0"); //1: Checked the book on the table /2: Reached the end of a released chapter
-  localStorage.setItem('InformationCagliostro', '0'); // 1: Asked about Cagliostro to Nexus
-  localStorage.setItem('InformationInBetween', '0'); //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
-  //-------------------------------------------RoomUnlocks---------------------------------
-  localStorage.setItem('Hall7L', "false"); // 1: Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
-  //-------------------------------------------CharacterUnlocks---------------------------------
-  localStorage.setItem('SlimeName', "false"); //Imma be honesty this is hardly useful as of right now but ig i keep it.
-  localStorage.setItem('InbetweenVibe', ''); // Either Analytical, Scaredy Cat, Friendly
-  localStorage.setItem('GreenTourGuide', 'false');
-  localStorage.setItem('Yellow', "0"); // 1: Finding yellow //2:
-  localStorage.setItem('Cyan', "0"); // 1: Finding Cyan //2:
-  localStorage.setItem('Magenta', "0"); // 1: Finding Magenta //2:
-  //---------------------------------------------LibraryInteractables------------------------------------------
-  localStorage.setItem('RCPot', "false");
-  localStorage.setItem('RCSoul', "false");
-  localStorage.setItem('RCCell', "false");
-  localStorage.setItem('NCTables', "false");
-  localStorage.setItem('NCRoof', "false");
-  localStorage.setItem('NCInfoWall', "false");
-  localStorage.setItem('H7Table', "false");
-
-} 
+ 
 
 
 
@@ -778,6 +711,7 @@ const Logbook = ({entry}) => {
 
 //---------------------------------------------------------------------TEMP EVENT LOCALSTORAGE CHECKER--------------------------------------------------------------------------------------
 const LSC = () => {
+  useEffect (() => {
   //Thigsn like IF CURIOUS >= 6 SETITEM QUESTION 8 TRUE or some shit.
   if (localStorage.getItem('EventFV') === '3' && localStorage.getItem('Warptablet') === 'false'){
     localStorage.setItem('Warptablet', 'true');
@@ -819,6 +753,7 @@ const LSC = () => {
   if (localStorage.getItem('Yellow') === '1' && localStorage.getItem('Cyan') === '1' && localStorage.getItem('Magenta') === '1' && localStorage.getItem('Spydent') === 'false'){
     localStorage.setItem('Spydent', "true");
   }
+});
   return (
     <div>
 
@@ -840,6 +775,78 @@ export const Scene = ({ initial_content }) => {
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
+
+  useEffect (() => {
+    if (localStorage.getItem('Savestate') === null){
+      //------------------------------------------General Things--------------------------------------------
+      localStorage.setItem('Savestate', 'true');
+      localStorage.setItem('Username', '');
+      localStorage.setItem('Password', '');
+      localStorage.setItem('StoryProgress', '0');
+      localStorage.setItem('CurrentChapter', "Library0");
+      localStorage.setItem('CurrentPart', "Begining");
+      localStorage.setItem('Warptablet', "false");
+      //------------------------------------------Events--------------------------------------------
+    //NS: NOT STARTED, //1,2,3,4: CONVERSATION/EVENTPROGRESS //FIN: FINISHED
+      localStorage.setItem('EventFV', "NS"); // First Visit Event:  / 1: Starting / 2: Finished talk with Lyz / 3: Finished talk with Architect  / 4: First Warp to Nexus Core /5: Finsihed fist convo with Nexus /6: Inquired about Story
+      localStorage.setItem('EventPR', "NS"); // Password Restriction Event / 1: Starting / 2:
+      localStorage.setItem('EventSC', "NS"); // Slime Connection Event
+      //------------------------------------------STATS--------------------------------------------
+      localStorage.setItem('Curious', "0");
+      localStorage.setItem('Interested', "0");
+      localStorage.setItem('Scaredy cat', "0");
+      localStorage.setItem('Analytical', "0");
+      localStorage.setItem('Friendly', "0");
+      localStorage.setItem('Empathetic', "0");
+      localStorage.setItem('Self Interest', "0");
+      localStorage.setItem('Confused', "0");
+      localStorage.setItem('Silly', "0");
+      localStorage.setItem('Trusting', "0");
+      localStorage.setItem('Questioning', "0");
+      localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table
+      localStorage.setItem('Spydent', "false"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
+      //------------------------------------------Choice Answers--------------------------------------------
+      localStorage.setItem('true', "true");
+      localStorage.setItem('Error', "false"); //You cannot go back to the Story if this is true
+      //------------------------------------------CAGLIOSTRO QUESTIONS--------------------------------------
+      //false: Not unlocked true: Unlocked read: read
+      localStorage.setItem('NQuestionWITP', "true");
+      localStorage.setItem('NQuestionHDIL', "true");
+      localStorage.setItem('NQuestionArchitect', "true");
+      localStorage.setItem('NQuestionNexus', "true");
+      localStorage.setItem('NQuestionCagliostro', "false");
+      localStorage.setItem('NQuestionSlime', "false");
+      localStorage.setItem('NQuestionMist', "false");
+      localStorage.setItem('NQuestionInBetween', "false");
+      //Story question in spirit
+      //Finaish Convo in spirit
+      //------------------------------------------Architect QUESTIONS--------------------------------------
+      localStorage.setItem('AQuestionUnlockID', "false");
+      //-------------------------------------------Chronological infromation---------------------------------
+      localStorage.setItem('InformationWLNB', "0"); //1: Checked the book on the table /2: Reached the end of a released chapter
+      localStorage.setItem('InformationCagliostro', '0'); // 1: Asked about Cagliostro to Nexus
+      localStorage.setItem('InformationInBetween', '0'); //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
+      //-------------------------------------------RoomUnlocks---------------------------------
+      localStorage.setItem('Hall7L', "false"); // 1: Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
+      //-------------------------------------------CharacterUnlocks---------------------------------
+      localStorage.setItem('SlimeName', "false"); //Imma be honesty this is hardly useful as of right now but ig i keep it.
+      localStorage.setItem('InbetweenVibe', ''); // Either Analytical, Scaredy Cat, Friendly
+      localStorage.setItem('GreenTourGuide', 'false');
+      localStorage.setItem('Yellow', "0"); // 1: Finding yellow //2:
+      localStorage.setItem('Cyan', "0"); // 1: Finding Cyan //2:
+      localStorage.setItem('Magenta', "0"); // 1: Finding Magenta //2:
+      //---------------------------------------------LibraryInteractables------------------------------------------
+      localStorage.setItem('RCPot', "false");
+      localStorage.setItem('RCSoul', "false");
+      localStorage.setItem('RCCell', "false");
+      localStorage.setItem('NCTables', "false");
+      localStorage.setItem('NCRoof', "false");
+      localStorage.setItem('NCInfoWall', "false");
+      localStorage.setItem('H7Table', "false");
+    
+    }
+  },[]);
+
 
   return (
     <div>
