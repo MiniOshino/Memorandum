@@ -4,18 +4,101 @@
       "name": "Test",
       "frames": [
         {
-          "textBox": { "name": "", "text": "...", "speed": 50, "show": "special" },
-          "background": { "bg": "Darkness"}
+            "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "", "text": "...Dash", "speed": 50, "show": "special" },
             "background": { "bg": "Dash"},
             "sfx": "Dash"
         },
         {
-            "textBox": { "name": "", "text": "...Dot", "speed": 50, "show": "special" },
+            "background": { "bg": "Darkness"}
+        },
+        {
             "background": { "bg": "Dot"},
             "sfx": "Dot"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dash"},
+            "sfx": "Dash"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dash"},
+            "sfx": "Dash"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dash"},
+            "sfx": "Dash"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dash"},
+            "sfx": "Dash"
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test2" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "ReadingChambers", "pbg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Ask about the world before the convergence!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness", "pbg": "Connection"}
         }
       ],
       "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }

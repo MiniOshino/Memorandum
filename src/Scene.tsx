@@ -330,219 +330,7 @@ const Item = ({ items }) => {
   );
 };
 
-//---------------------------------------------------------------------TEXTBOX--------------------------------------------------------------------------------------
-const TextBox = ({ name, text, speeed, show, tb}) => {
-//   const [rename, setRename] = useState(name);
-const [voice, setVoice] = useState([
-  ["Innkeeper","Slime"],
-  ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
-  ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz"],
-  ["Scarlett","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?"],
-  ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
-  ["Green", "(Green)","Yellow","(Yellow)"]]);
-//   const [speach, setSpeach] = useState('TextingNeutral');
-// console.log(speach);
-//   const VoiceCheck = () => {
-//     Object.entries(voice).map(([key, eq]) => {
-//       if (eq.includes(rename)){
-//         setSpeach(speach + key);
-//       }
-//     });
-//   };
-//   if (speach === "TextingNeutral"){
-//     VoiceCheck();
-//   }
-// console.log(speach);
-  
-  const Texting = ({ text, speed, ps }) => {
-    const [displayText, setDisplayText] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [bold, setBold] = useState(false);
-    const [italic, setItalic] = useState(false);
-    const [name, setName] = useState(false);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
 
-    const playAudio = () => {
-      //console.log('Im played');
-      if (audioRef.current) {
-        audioRef.current.currentTime = 0;
-        audioRef.current.play();
-      }
-    };
-  
-    const stopAudio = () => {
-      if (audioRef.current && text !== '') {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-      }
-    };
-
-    // playAudio();
-    // setTimeout(() => {
-    //   stopAudio();
-    // }, text.length * speed);
-
-    useEffect(() => {
-      const interval = setInterval(() => {
-        if (currentIndex < text.length) {
-          const char = text[currentIndex];
-          
-          if (((text === "...") || text === '(...)' || text === '...!' || text === '...?' || text.includes('*'))) {
-            if (currentIndex === 0) {
-              console.log('Do it once');
-              playAudio();
-            setTimeout(() => {
-              playAudio();
-            }, 500);
-            setTimeout(() => {
-              playAudio();
-            }, 1000);
-            }
-          } else {
-          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
-            playAudio();
-            //console.log('1');
-            //console.log(text.slice(currentIndex));
-          } else 
-          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && ((((text.slice(currentIndex + 4, currentIndex + 5) === ' '||text.slice(currentIndex).length <= 4)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 5, currentIndex + 6) === ' '||text.slice(currentIndex).length <= 5)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ')) || text.slice(currentIndex + 1, currentIndex + 2) === '{')){
-            playAudio();
-            setTimeout(() => {
-              playAudio();
-            }, 100);
-            //console.log('2');
-            //console.log(text.slice(currentIndex));
-
-          } else 
-          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 6, currentIndex + 7) === ' '||text.slice(currentIndex).length <= 6)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 7, currentIndex + 8) === ' '||text.slice(currentIndex).length <= 7)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
-            playAudio();
-            setTimeout(() => {
-              playAudio();
-            }, 100);
-            setTimeout(() => {
-              playAudio();
-            }, 200);
-            //console.log('3');
-            //console.log(text.slice(currentIndex));
-
-          } else 
-          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 8, currentIndex + 9) === ' '||text.slice(currentIndex).length <= 8)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 9, currentIndex + 10) === ' '||text.slice(currentIndex).length <= 9)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
-            playAudio();
-            setTimeout(() => {
-              playAudio();
-            }, 100);
-            setTimeout(() => {
-              playAudio();
-            }, 200);
-            setTimeout(() => {
-              playAudio();
-            }, 300);
-            //console.log('3');
-            //console.log(text.slice(currentIndex));
-
-          } else 
-          if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') {  
-            playAudio();
-            setTimeout(() => {
-              playAudio();
-            }, 100);
-            setTimeout(() => {
-              playAudio();
-            }, 200);
-            setTimeout(() => {
-              playAudio();
-            }, 300);
-            setTimeout(() => {
-              playAudio();
-            }, 400);
-            //console.log('4');
-            //console.log(text.slice(currentIndex));
-
-          }
-        }
-          if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{bold}') {
-            setBold(true);
-            setCurrentIndex(currentIndex + 5); // Skip the (bold) tag
-          } else if (char === '{' && text.slice(currentIndex, currentIndex + 7) === '{/bold}') {
-            setBold(false);
-            setCurrentIndex(currentIndex + 6); // Skip the (/bold) tag
-          } else if (char === '{' && text.slice(currentIndex, currentIndex + 8) === '{italic}') {
-            setItalic(true);
-            setCurrentIndex(currentIndex + 7); // Skip the (italic) tag
-          } else if (char === '{' && text.slice(currentIndex, currentIndex + 9) === '{/italic}') {
-            setItalic(false);
-            setCurrentIndex(currentIndex + 8); // Skip the (/italic) tag
-          } else if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{name}') {
-            setName(true);
-            setCurrentIndex(currentIndex + 5); 
-          } else if (char === '{' && text.slice(currentIndex, currentIndex + 7) === '{/name}') {
-            setName(false);
-            setCurrentIndex(currentIndex + 6);
-          } else {
-            setDisplayText(prevText => {
-              const nextText = (name ? localStorage.getItem('Username') : '') + (bold ? '<strong>' : '') + (italic ? '<em>' : '') + char + (italic ? '</em>' : '') + (bold ? '</strong>' : '');
-              return prevText + nextText;
-            });
-            setCurrentIndex(prevIndex => prevIndex + 1);
-          }
-        } else {
-          clearInterval(interval);
-        }
-      }, speed);
-  
-      return () => clearInterval(interval);
-    }, [text, speed, ps, currentIndex, bold, italic, name]);
-  
-    return (
-      <div>
-        <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
-        {text !== '' && ps !== '' && (<audio ref={audioRef}>
-             <source src={(`${voice[0].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral0.mp3" : voice[1].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral1.mp3" : voice[2].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral2.mp3" : voice[3].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral3.mp3" : voice[4].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral4.mp3" : voice[5].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral5.mp3" : null }`)} type="audio/mpeg"></source>
-          </audio>)}
-      </div>
-        
-    )
-  };
-  
-  //console.log(show);
-  return (
-    <div>
-    {show === "special" && (<div className={`z-20`}>
-      {show === "special" &&
-
-        <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
-        alt={"STextBox"}
-        width={3840}
-        height={602} />
-      }
-    <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[30%] left-[50%] translate-x-[-50%] border-solid border-4 border-green-600">
-      <div className="h-[45%] text-2xl font-semibold">
-          {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
-        </div>
-      <div className=" z-20 text-xl text-white h-[40%]">
-      <Texting text={text} speed={speeed} ps={name}/>
-      </div>
-      </div>
-    </div>)}
-    {show !== "special" && (<div className={`z-20`}>
-      {show === "true" &&
-
-        <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
-        alt={"TextBox"}
-        width={3840}
-        height={602} />
-      }
-    <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
-      <div className="h-[45%] text-2xl font-semibold">
-          {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
-        </div>
-      <div className=" z-20 text-xl text-white h-[40%]">
-      <Texting text={text} speed={speeed} ps={name}/>
-      </div>
-      </div>
-    </div>)}
-    </div>
-  );
-};
 
 //---------------------------------------------------------------------SOUND--------------------------------------------------------------------------------------
 const Sfx = ({sfx}) => {
@@ -562,39 +350,39 @@ const Logbook = ({entry}) => {
       <div className="absolute z-40 w-[100%] h-[100%] top-[0%] left-[0%]">
         {(page === 100 || page === 99 || page === 98 || page === 97) && (<div className="absolute flex place-items-start place-content-center flex-col w-[15%] h-[69%] top-[11%] left-[22%]">
           {(entry.entry >= 1 && page === 100) && (
-            <button className=" z-50 text-2xl font-bold text-black" onClick={async () => {setPage(99)}}>Log</button>
+            <button className=" z-50 hover:text-gray-400 text-2xl font-bold text-black" onClick={async () => {setPage(99)}}>Log</button>
           )}
           {(entry.entry >= 3 && page === 100) && (
-            <button className=" z-50 text-2xl font-bold text-black" onClick={async () => {setPage(98)}}>Information</button>
+            <button className=" z-50 hover:text-gray-400 text-2xl font-bold text-black" onClick={async () => {setPage(98)}}>Information</button>
           )}
           {(entry.entry >= 5 && page === 100) && (
-            <button className=" z-50 text-2xl font-bold text-black" onClick={async () => {setPage(97)}}>People</button>
+            <button className=" z-50 hover:text-gray-400 text-2xl font-bold text-black" onClick={async () => {setPage(97)}}>People</button>
           )}
          {/* ----------------------------------------------------------DIARY---------------------------------------------------------------------------- */}
           
           {(entry.entry >= 1 && page === 99) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(1)}}>{entry.entry === 1 && entry.update ? "Entry 1 *" : "Entry 1" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(1)}}>{entry.entry === 1 && entry.update ? "Entry 1 *" : "Entry 1" }</button>
           )}
           {(entry.entry >= 2 && page === 99) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(2)}}>{(entry.entry === 2 || entry.entry === 4) && entry.update ? "Entry 2 *" : "Entry 2" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(2)}}>{(entry.entry === 2 || entry.entry === 4) && entry.update ? "Entry 2 *" : "Entry 2" }</button>
           )}
           {(entry.entry >= 5 && page === 99) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(3)}}>{entry.entry === 5 && entry.update ? "Entry 3 *" : "Entry 3" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(3)}}>{entry.entry === 5 && entry.update ? "Entry 3 *" : "Entry 3" }</button>
           )}
          {/* ----------------------------------------------------------INFORMATION---------------------------------------------------------------------------- */}
 
           {(entry.entry >= 3 && page === 98) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(60)}}>{entry.entry === 3 && entry.update ? "World *" : "World" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(60)}}>{entry.entry === 3 && entry.update ? "World *" : "World" }</button>
           )}
           {(entry.entry >= 3 && page === 98) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(61)}}>{entry.entry === 3 && entry.update ? "Magic *" : "Magic" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(61)}}>{entry.entry === 3 && entry.update ? "Magic *" : "Magic" }</button>
           )}
          {/* ----------------------------------------------------------PEOPLE---------------------------------------------------------------------------- */}
          {(entry.entry >= 5 && page === 97) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(80)}}>{entry.entry === 5 || entry.entry === 6 && entry.update ? "Nora *" : "Nora" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(80)}}>{entry.entry === 5 || entry.entry === 6 && entry.update ? "Nora *" : "Nora" }</button>
           )}
           {(entry.entry >= 5 && page === 97) && (
-            <button className=" z-50 text-xl font-bold text-black" onClick={async () => {setPage(81)}}>{entry.entry === 5 && entry.update ? "Zayn *" : "Zayn" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(81)}}>{entry.entry === 5 && entry.update ? "Zayn *" : "Zayn" }</button>
           )}
         </div>)}
       </div>
@@ -738,8 +526,8 @@ const LSC = () => {
     localStorage.setItem('InformationInBetween', '2');
   }
   //--------------------------------------------------Bonus Unlocks-------------------------------------------
-  if ((parseInt(localStorage.getItem('Analytical' as string)|| '0') >= 3 || parseInt(localStorage.getItem("Silly" as string)|| '0') > parseInt(localStorage.getItem('Confused' as string)|| '0') || parseInt(localStorage.getItem("Curious" as string)|| '0') >= 3) && localStorage.getItem('Hall7L') === 'false'){
-    localStorage.setItem('Hall7L', "1");
+  if ((parseInt(localStorage.getItem('Analytical' as string)|| '0') >= 3 || parseInt(localStorage.getItem("Silly" as string)|| '0') > parseInt(localStorage.getItem('Confused' as string)|| '0') || parseInt(localStorage.getItem("Curious" as string)|| '0') >= 3) && localStorage.getItem('Ha11-7L') === 'false'){
+    localStorage.setItem('Ha11-7L', "1");
   }
   //--------------------------------------------------IN BETWEEN MOOD UPDATES-----------------------------------
   if (parseInt(localStorage.getItem('Scaredy cat' as string)|| '0') >= (parseInt(localStorage.getItem('Friendly' as string)|| '0') && parseInt(localStorage.getItem('Analytical' as string)|| '0'))){
@@ -772,6 +560,9 @@ export const Scene = ({ initial_content }) => {
   const [day, setDay] = useState(new Date());
 
 
+  const [skip, setSkip] = useState(true);
+  const [skiped, setSkipted] = useState(false);
+
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
@@ -803,7 +594,7 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('Silly', "0");
       localStorage.setItem('Trusting', "0");
       localStorage.setItem('Questioning', "0");
-      localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table
+      localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table //+1 Entering the Beacon room from the Pings (yt shorts)
       localStorage.setItem('Spydent', "false"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
       //------------------------------------------Choice Answers--------------------------------------------
       localStorage.setItem('true', "true");
@@ -827,7 +618,8 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('InformationCagliostro', '0'); // 1: Asked about Cagliostro to Nexus
       localStorage.setItem('InformationInBetween', '0'); //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
       //-------------------------------------------RoomUnlocks---------------------------------
-      localStorage.setItem('Hall7L', "false"); // 1: Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
+      localStorage.setItem('Ha11-7L', "false"); // Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
+      localStorage.setItem('f659-f9', "false"); //You dont need it on true to get the unlock
       //-------------------------------------------CharacterUnlocks---------------------------------
       localStorage.setItem('SlimeName', "false"); //Imma be honesty this is hardly useful as of right now but ig i keep it.
       localStorage.setItem('InbetweenVibe', ''); // Either Analytical, Scaredy Cat, Friendly
@@ -839,42 +631,381 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('RCPot', "false");
       localStorage.setItem('RCSoul', "false");
       localStorage.setItem('RCCell', "false");
+      //--------------------------------------------
       localStorage.setItem('NCTables', "false");
       localStorage.setItem('NCRoof', "false");
       localStorage.setItem('NCInfoWall', "false");
+      //--------------------------------------------
       localStorage.setItem('H7Table', "false");
+      //--------------------------------------------
+      localStorage.setItem('T1Beacon', "false");
     
     }
   },[]);
 
   const preload = ((nextscene) => {
-    console.log(nextscene);
+    //console.log(nextscene);
     const images = new Set();
     for(const f of nextscene.frames){
-      console.log(f);
+      //console.log(f);
       if (f.sprites){
-      if (f.sprites.rrright) images.add(f.sprites.rrright + ".png")
-      if (f.sprites.sright) images.add(f.sprites.sright + ".png")
-      if (f.sprites.rright) images.add(f.sprites.rright + ".png")
-      if (f.sprites.right) images.add(f.sprites.right + ".png")
-      if (f.sprites.center) images.add(f.sprites.center + ".png")
-      if (f.sprites.left) images.add(f.sprites.left + ".png")
-      if (f.sprites.lleft) images.add(f.sprites.lleft + ".png")
-      if (f.sprites.sleft) images.add(f.sprites.sleft + ".png")
-      if (f.sprites.llleft) images.add(f.sprites.llleft + ".png")
-      if (f.sprites.down) images.add(f.sprites.down + ".png") 
+      if (f.sprites.rrright && f.sprites.rrright !== nextscene.frames[0].sprites?.rrright) images.add(f.sprites.rrright + ".png")
+      if (f.sprites.sright && f.sprites.sright !== nextscene.frames[0].sprites?.sright) images.add(f.sprites.sright + ".png")
+      if (f.sprites.rright && f.sprites.rright !== nextscene.frames[0].sprites?.rright) images.add(f.sprites.rright + ".png")
+      if (f.sprites.right && f.sprites.right !== nextscene.frames[0].sprites?.right) images.add(f.sprites.right + ".png")
+      if (f.sprites.center && f.sprites.center !== nextscene.frames[0].sprites?.center) images.add(f.sprites.center + ".png")
+      if (f.sprites.left && f.sprites.left !== nextscene.frames[0].sprites?.left) images.add(f.sprites.left + ".png")
+      if (f.sprites.lleft && f.sprites.lleft !== nextscene.frames[0].sprites?.lleft) images.add(f.sprites.lleft + ".png")
+      if (f.sprites.sleft && f.sprites.sleft !== nextscene.frames[0].sprites?.sleft) images.add(f.sprites.sleft + ".png")
+      if (f.sprites.llleft && f.sprites.llleft !== nextscene.frames[0].sprites?.llleft) images.add(f.sprites.llleft + ".png")
+      if (f.sprites.down && f.sprites.down !== nextscene.frames[0].sprites?.down) images.add(f.sprites.down + ".png") 
       }
     
-    if (f.background?.bg) images.add("BG" + f.background.bg + ".png")
+    if (f.background?.bg && f.background?.bg !== nextscene.frames[0].background.bg) images.add("BG" + f.background.bg + ".png")
     if (f.background?.effect) images.add(f.background.effect + ".gif")
     if (f.items?.item) images.add("Item" + f.items.item + ".png")
     }
-    console.log('IMAGES HERE');
-    console.log(images);
+    //console.log('IMAGES HERE');
+    //console.log(images);
     images.forEach((img) => {
       fetch(`https://beans.images.ni-verse.com/${img}`, {mode: "no-cors"});
     });
   });
+
+  const reset = () => {
+    setSkipted(false);
+    setSkip(true);
+  };
+  const why2 = () => {
+    setSkip(false); 
+    setSkipted(true);
+  };
+  //---------------------------------------------------------------------TEXTBOX--------------------------------------------------------------------------------------
+const TextBox = ({ name, text, speeed, show, tb}) => {
+  //   const [rename, setRename] = useState(name);
+  const [voice, setVoice] = useState([
+    ["Innkeeper","Slime"],
+    ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
+    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz"],
+    ["Scarlett","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?"],
+    ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
+    ["Green", "(Green)","Yellow","(Yellow)","{Dial}"]]);
+  //   const [speach, setSpeach] = useState('TextingNeutral');
+  // console.log(speach);
+  //   const VoiceCheck = () => {
+  //     Object.entries(voice).map(([key, eq]) => {
+  //       if (eq.includes(rename)){
+  //         setSpeach(speach + key);
+  //       }
+  //     });
+  //   };
+  //   if (speach === "TextingNeutral"){
+  //     VoiceCheck();
+  //   }
+  // console.log(speach);
+
+  // const TextingC = ({text}) => {
+  //   const [displayText, setDisplayText] = useState('');
+  //   const [currentIndex, setCurrentIndex] = useState(0);
+  //   const [bold, setBold] = useState(false);
+  //   const [italic, setItalic] = useState(false);
+  //   const [name, setName] = useState(false);
+  //   const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  //   useEffect(() => {
+  //     const interval = setInterval(() => {
+  //       if (currentIndex < text.length) {
+  //         const char = text[currentIndex];
+          
+  //         if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{bold}') {
+  //           setBold(true);
+  //           setCurrentIndex(currentIndex + 5); // Skip the (bold) tag
+  //         } else if (char === '{' && text.slice(currentIndex, currentIndex + 7) === '{/bold}') {
+  //           setBold(false);
+  //           setCurrentIndex(currentIndex + 6); // Skip the (/bold) tag
+  //         } else if (char === '{' && text.slice(currentIndex, currentIndex + 8) === '{italic}') {
+  //           setItalic(true);
+  //           setCurrentIndex(currentIndex + 7); // Skip the (italic) tag
+  //         } else if (char === '{' && text.slice(currentIndex, currentIndex + 9) === '{/italic}') {
+  //           setItalic(false);
+  //           setCurrentIndex(currentIndex + 8); // Skip the (/italic) tag
+  //         } else if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{name}') {
+  //           setName(true);
+  //           setCurrentIndex(currentIndex + 5); 
+  //         } else if (char === '{' && text.slice(currentIndex, currentIndex + 7) === '{/name}') {
+  //           setName(false);
+  //           setCurrentIndex(currentIndex + 6);
+  //         } else {
+  //           setDisplayText(prevText => {
+  //             const nextText = (name ? localStorage.getItem('Username') : '') + (bold ? '<strong>' : '') + (italic ? '<em>' : '') + char + (italic ? '</em>' : '') + (bold ? '</strong>' : '');
+  //             return prevText + nextText;
+  //           });
+  //           setCurrentIndex(prevIndex => prevIndex + 1);
+  //         }
+          
+  //       } else {
+  //         clearInterval(interval);
+
+  //       }
+  //     });
+  
+  //     return () => clearInterval(interval);
+  //   }, [text, currentIndex, bold, italic, name]);
+  
+  //   return (
+  //     <div>
+  //       <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
+  //     </div>
+        
+  //   )
+  // };
+
+  const StyledText = ({ text }) => {
+    // Split the string and apply styles
+    const parts = text.split(/(\{bold\}|\{\/bold\}|\{italic\}|\{\/italic\}|\{name\}|\{\/name\})/);
+  
+    return (
+      <p>
+        {parts.map((part, index) => {
+          if (part === '{bold}') {
+            return (
+              <strong key={index} className="font-bold">
+                {parts[index + 1]}
+              </strong>
+            );
+          } else if (part === '{italic}') {
+            return (
+              <em key={index} className="italic">
+                {parts[index + 1]}
+              </em>
+            );
+          } else if (part === '{name}') {
+            return (
+              <span key={index} className="font-normal">
+                {localStorage.getItem('Username')}
+              </span>
+            );
+          } else if (
+            part === '{/bold}' ||
+            part === '{/italic}' ||
+            part === '{/name}' ||
+            parts[index - 1] === '{bold}' ||
+            parts[index - 1] === '{italic}' ||
+            parts[index - 1] === '{name}'
+          ) {
+            return null; // Skip the closing tags and already processed parts
+          } else {
+            return part;
+          }
+        })}
+      </p>
+    );
+  };
+  
+    const Texting = ({ text, speed, ps, why}) => {
+      const [displayText, setDisplayText] = useState('');
+      const [currentIndex, setCurrentIndex] = useState(0);
+      const [bold, setBold] = useState(false);
+      const [italic, setItalic] = useState(false);
+      const [name, setName] = useState(false);
+      const audioRef = useRef<HTMLAudioElement | null>(null);
+  
+      const playAudio = () => {
+        //console.log('Im played');
+        if (audioRef.current) {
+          audioRef.current.currentTime = 0;
+          audioRef.current.play();
+        }
+      };
+    
+      const stopAudio = () => {
+        if (audioRef.current && text !== '') {
+          audioRef.current.pause();
+          audioRef.current.currentTime = 0;
+        }
+      };
+  
+      // playAudio();
+      // setTimeout(() => {
+      //   stopAudio();
+      // }, text.length * speed);
+  
+      useEffect(() => {
+        const interval = setInterval(() => {
+          if (currentIndex < text.length) {
+            const char = text[currentIndex];
+  
+            if (((text === "...") || text === '(...)' || text === '...!' || text === '...?' || text.includes('*'))) {
+              if (currentIndex === 0) {
+                console.log('Do it once');
+                playAudio();
+              setTimeout(() => {
+                playAudio();
+              }, 500);
+              setTimeout(() => {
+                playAudio();
+              }, 1000);
+              }
+            } else {
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+              playAudio();
+              //console.log('1');
+              //console.log(text.slice(currentIndex));
+            } else 
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && ((((text.slice(currentIndex + 4, currentIndex + 5) === ' '||text.slice(currentIndex).length <= 4)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 5, currentIndex + 6) === ' '||text.slice(currentIndex).length <= 5)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ')) || text.slice(currentIndex + 1, currentIndex + 2) === '{')){
+              playAudio();
+              setTimeout(() => {
+                playAudio();
+              }, 100);
+              //console.log('2');
+              //console.log(text.slice(currentIndex));
+  
+            } else 
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 6, currentIndex + 7) === ' '||text.slice(currentIndex).length <= 6)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 7, currentIndex + 8) === ' '||text.slice(currentIndex).length <= 7)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+              playAudio();
+              setTimeout(() => {
+                playAudio();
+              }, 100);
+              setTimeout(() => {
+                playAudio();
+              }, 200);
+              //console.log('3');
+              //console.log(text.slice(currentIndex));
+  
+            } else 
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 8, currentIndex + 9) === ' '||text.slice(currentIndex).length <= 8)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 9, currentIndex + 10) === ' '||text.slice(currentIndex).length <= 9)&& text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+              playAudio();
+              setTimeout(() => {
+                playAudio();
+              }, 100);
+              setTimeout(() => {
+                playAudio();
+              }, 200);
+              setTimeout(() => {
+                playAudio();
+              }, 300);
+              //console.log('3');
+              //console.log(text.slice(currentIndex));
+  
+            } else 
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') {  
+              playAudio();
+              setTimeout(() => {
+                playAudio();
+              }, 100);
+              setTimeout(() => {
+                playAudio();
+              }, 200);
+              setTimeout(() => {
+                playAudio();
+              }, 300);
+              setTimeout(() => {
+                playAudio();
+              }, 400);
+              //console.log('4');
+              //console.log(text.slice(currentIndex));
+  
+            }
+          }
+            if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{bold}') {
+              setBold(true);
+              setCurrentIndex(currentIndex + 5); // Skip the (bold) tag
+            } else if (char === '{' && text.slice(currentIndex, currentIndex + 7) === '{/bold}') {
+              setBold(false);
+              setCurrentIndex(currentIndex + 6); // Skip the (/bold) tag
+            } else if (char === '{' && text.slice(currentIndex, currentIndex + 8) === '{italic}') {
+              setItalic(true);
+              setCurrentIndex(currentIndex + 7); // Skip the (italic) tag
+            } else if (char === '{' && text.slice(currentIndex, currentIndex + 9) === '{/italic}') {
+              setItalic(false);
+              setCurrentIndex(currentIndex + 8); // Skip the (/italic) tag
+            } else if (char === '{' && text.slice(currentIndex, currentIndex + 6) === '{name}') {
+              setName(true);
+              setCurrentIndex(currentIndex + 5); 
+            } else if (char === '{' && text.slice(currentIndex, currentIndex + 7) === '{/name}') {
+              setName(false);
+              setCurrentIndex(currentIndex + 6);
+            } else {
+              setDisplayText(prevText => {
+                const nextText = (name ? localStorage.getItem('Username') : '') + (bold ? '<strong>' : '') + (italic ? '<em>' : '') + char + (italic ? '</em>' : '') + (bold ? '</strong>' : '');
+                return prevText + nextText;
+              });
+              setCurrentIndex(prevIndex => prevIndex + 1);
+            }
+            
+          } else {
+            clearInterval(interval);
+            why();
+            //reset();
+          }
+        }, speed);
+    
+        return () => clearInterval(interval);
+      }, [text, speed, ps, currentIndex, bold, italic, name, why]);
+    
+      return (
+        <div>
+          <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
+          {text !== '' && ps !== '' && (<audio ref={audioRef}>
+               <source src={(`${voice[0].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral0.mp3" : voice[1].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral1.mp3" : voice[2].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral2.mp3" : voice[3].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral3.mp3" : voice[4].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral4.mp3" : voice[5].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral5.mp3" : null }`)} type="audio/mpeg"></source>
+            </audio>)}
+        </div>
+          
+      )
+    };
+    
+    //console.log(show);
+    return (
+      <div>
+        {skip && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () => {setSkipted(true);
+            setSkip(false);
+          }}></button>)}
+      {show === "special" && (<div className={`z-20`}>
+        {show === "special" &&
+  
+          <Image className={`absolute bottom-0 h-[30%] w-[32%] left-[50%] translate-x-[-50%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`STextBox.png`}
+          alt={"STextBox"}
+          width={3840}
+          height={602} />
+        }
+      <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[30%] left-[50%] translate-x-[-50%]">
+        <div className="h-[45%] text-2xl font-semibold">
+            {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
+          </div>
+        <div className=" z-20 text-xl text-white h-[40%]">
+        {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
+            reset();
+          } else {
+            why2();
+          }}}/>)}
+        </div>
+        </div>
+      </div>)}
+      {show !== "special" && (<div className={`z-20`}>
+        {show === "true" &&
+  
+          <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
+          alt={"TextBox"}
+          width={3840}
+          height={602} />
+        }
+      <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
+        <div className="h-[45%] text-2xl font-semibold">
+            {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
+          </div>
+        <div className=" z-20 text-xl text-white h-[40%]">
+        {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {
+          if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
+            reset();
+          } else {
+            why2();
+          }}}/>)}
+        </div>
+        </div>
+      </div>)}
+      </div>
+    );
+  };
 
   return (
     <div>
@@ -934,6 +1065,42 @@ export const Scene = ({ initial_content }) => {
           height={1000}
           />)}
         </button>
+        {(scene.hud === "StoryHud0" && localStorage.getItem('EventFV') === 'FIN') && (<button className={`absolute z-50 hover:animate-[crack_1s] top-[0%] left-[0%] w-[15%] h-[20%]`} onClick={async () => {
+          preload(await load("ReadingChambers", "ReadingChambers"));
+          setContent(await load("ReadingChambers", "ReadingChambers"));
+          setFrame(0);
+          setRoom(0);
+          setHud(0);
+          reset();
+        }}>
+          <Image
+          className=" absolute -z-30  w-[100%] h-[100%] top-[0%]"
+          src={`Shatter.png`}
+            alt={"Shatter.png"}
+            width={520}
+            height={380}
+          />
+        </button>)}
+         </div>
+      )}
+      {(scene.hud === "StoryHudB") && (
+        <div>
+        {(localStorage.getItem('EventFV') === 'FIN') && (<button className={`absolute z-50 hover:animate-[crack_1s] top-[0%] left-[0%] w-[15%] h-[20%]`} onClick={async () => {
+          preload(await load("ReadingChambers", "ReadingChambers"));
+          setContent(await load("ReadingChambers", "ReadingChambers"));
+          setFrame(0);
+          setRoom(0);
+          setHud(0);
+          reset();
+        }}>
+          <Image
+          className=" absolute -z-30  w-[100%] h-[100%] top-[0%]"
+          src={`Shatter.png`}
+            alt={"Shatter.png"}
+            width={520}
+            height={380}
+          />
+        </button>)}
          </div>
       )}
       {hud === 1 && (
@@ -958,24 +1125,16 @@ export const Scene = ({ initial_content }) => {
             onClick={async () => {
               if (input === ''){
                 setHud(2);
-              } else if (input === 'Ha11-7L'){
-                if (localStorage.getItem('Hall7L') === 'unlock'){
+              } else if (input === 'Nxus-CR' || input === 'Rdng-BC' || (input === 'Ha11-7L' && localStorage.getItem('Ha11-7L') === 'unlock') || (input === 'f659-f9' && localStorage.getItem('f659-f9') === 'unlock')){
                   preload(await load("Extra", "IDDeviceRepeatRoom"));
                   setContent(await load("Extra", "IDDeviceRepeatRoom"));
                   setFrame(0);
                   setRoom(0);
                   setHud(0);
-                } else {
-                  localStorage.setItem('Hall7L', 'unlock');
+              } else if (input === 'Ha11-7L' || input === 'f659-f9'){
+                  localStorage.setItem(input, 'unlock');
                   preload(await load("Extra", "IDDeviceCorrectRoom"));
                   setContent(await load("Extra", "IDDeviceCorrectRoom"));
-                  setFrame(0);
-                  setRoom(0);
-                  setHud(0);
-                }
-              } else if (input === 'Nxus-CR' || input === 'Rdng-BC'){
-                preload(await load("Extra", "IDDeviceRepeatRoom"));
-                  setContent(await load("Extra", "IDDeviceRepeatRoom"));
                   setFrame(0);
                   setRoom(0);
                   setHud(0);
@@ -995,6 +1154,7 @@ export const Scene = ({ initial_content }) => {
           {hud === 2 && (<div className="absolute flex flex-wrap place-content-start place-items-start z-50 top-[26%] left-[24%] w-[49%] h-[52%]">
           {localStorage.getItem('EventFV') === 'FIN' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
               setHud(3);
+              reset();
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
             src={`IDAR.png`}
@@ -1008,6 +1168,7 @@ export const Scene = ({ initial_content }) => {
               setFrame(0);
               setRoom(0);
               setHud(0);
+              reset();
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
             src={`IDRC.png`}
@@ -1022,13 +1183,15 @@ export const Scene = ({ initial_content }) => {
                 setFrame(0);
                 setRoom(0);
                 setHud(0);
-              } else {
+                reset();
+            } else {
                 preload(await load("NexusCore", "NexusCoreV"));
                 setContent(await load("NexusCore", "NexusCoreV"));
                 setFrame(0);
                 setRoom(0);
                 setHud(0);
-              }
+                reset();
+            }
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
             src={`IDNC.png`}
@@ -1036,24 +1199,39 @@ export const Scene = ({ initial_content }) => {
             width={1091}
             height={630}
               /></button>
-            {localStorage.getItem('Hall7L') === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
-              if (localStorage.getItem('Password') === ''){ //----------------------------------------------------Rework needed when acc is made------------
-                preload(await load("Ha117L", "FirstVisit"));
-                setContent(await load("Ha117L", "FirstVisit"));
-                setFrame(0);
-                setRoom(0);
-                setHud(0);
-              } else {
+            {localStorage.getItem('Ha11-7L') === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
                 preload(await load("Ha117L", "Ha117LV"));
                 setContent(await load("Ha117L", "Ha117LV"));
                 setFrame(0);
                 setRoom(0);
                 setHud(0);
-              }
+                reset();
             }}><Image
             className="w-[108%] h-[100%] top-[0%] left-[0%]"
             src={`IDH7.png`}
             alt={"IDH7.png"}
+            width={1091}
+            height={630}
+              /></button>)}
+              {localStorage.getItem('f659-f9') === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+               if (localStorage.getItem('T1Beacon') === 'false'){
+                preload(await load('Transmitter', 'BeaconOneF'));
+                setContent(await load('Transmitter', 'BeaconOneF'));
+                setFrame(0);
+                setHud(0);
+                reset();
+              } else {
+                preload(await load("Transmitter", "Beacon1V"));
+                setContent(await load("Transmitter", "Beacon1V"));
+                setFrame(0);
+                setRoom(0);
+                setHud(0);
+                reset();
+              }
+            }}><Image
+            className="w-[108%] h-[100%] top-[0%] left-[0%]"
+            src={`IDB1.png`}
+            alt={"IDB1.png"}
             width={1091}
             height={630}
               /></button>)}
@@ -1090,6 +1268,7 @@ export const Scene = ({ initial_content }) => {
           setFrame(0);
           setRoom(0);
           setHud(0);
+          reset();
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[0%]"
@@ -1109,6 +1288,7 @@ export const Scene = ({ initial_content }) => {
           setFrame(0);
           setRoom(0);
           setHud(0);
+          reset();
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[0%]"
@@ -1128,6 +1308,7 @@ export const Scene = ({ initial_content }) => {
           setFrame(0);
           setRoom(0);
           setHud(0);
+          reset();
         }}>
           <Image
           className=" absolute z-50  w-[100%] h-[100%] top-[0%]"
@@ -1147,6 +1328,7 @@ export const Scene = ({ initial_content }) => {
           setFrame(0);
           setRoom(0);
           setHud(0);
+          reset();
         }}>
           <Image
           className=" absolute -z-30  w-[100%] h-[100%] top-[0%]"
@@ -1223,7 +1405,7 @@ export const Scene = ({ initial_content }) => {
 
       )}
       {/* ----------------------------------------------------------CrystalLogPW---------------------------------------------------------------------------- */}
-      {(scene.next.type === "CL" && frame >= scene.frames.length - 1 ) && (
+      {(scene.next.type === "CLP" && frame >= scene.frames.length - 1 ) && (
         <div className="absolute w-[100%] h-[100%] z-40">
           <input
             type="text"
@@ -1241,8 +1423,8 @@ export const Scene = ({ initial_content }) => {
               if (input === 'Luna' || input === 'luna'){
                 if (localStorage.getItem('EventPR') === 'NS'){
                   setInput('');
-                  localStorage.setItem('EventPR', 'FIN');
-                  localStorage.setItem('CurrentPart', "Log1");
+                  //localStorage.setItem('EventPR', 'FIN');
+                  //localStorage.setItem('CurrentPart', "Log1");
                   var tempSP = parseInt(localStorage.getItem('Analytical' as string)|| '0');
                   tempSP += 2;
                   localStorage.setItem('Analytical', tempSP.toString());
@@ -1257,7 +1439,7 @@ export const Scene = ({ initial_content }) => {
                   preload(await load('CrystalLog', 'Log1'));
                   setContent(await load('CrystalLog', 'Log1'));
                   setFrame(0);
-                  localStorage.setItem('Hall7L', 'true');
+                  localStorage.setItem('Ha11-7L', 'true');
                   localStorage.setItem('CurrentPart', "Log1");
                 }
               } else {
@@ -1331,6 +1513,7 @@ export const Scene = ({ initial_content }) => {
               /></button>)}
 
              {(scene.next.twoB && localStorage.getItem(scene.next.twoB.compare) === scene.next.twoB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.twoB.path));
               setContent(await load(scene.jayson, scene.next.twoB.path));
               setFrame(0);
@@ -1364,6 +1547,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.threeB && localStorage.getItem(scene.next.threeB.compare) === scene.next.threeB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.threeB.path));
               setContent(await load(scene.jayson, scene.next.threeB.path));
               setFrame(0);
@@ -1397,6 +1581,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.fourB && localStorage.getItem(scene.next.fourB.compare) === scene.next.fourB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.fourB.path));
               setContent(await load(scene.jayson, scene.next.fourB.path));
               setFrame(0);
@@ -1430,6 +1615,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.fiveB && localStorage.getItem(scene.next.fiveB.compare) === scene.next.fiveB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.fiveB.path));
               setContent(await load(scene.jayson, scene.next.fiveB.path));
               setFrame(0);
@@ -1463,6 +1649,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.sixB && localStorage.getItem(scene.next.sixB.compare) === scene.next.sixB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.sixB.path));
               setContent(await load(scene.jayson, scene.next.sixB.path));
               setFrame(0);
@@ -1496,6 +1683,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.sevenB && localStorage.getItem(scene.next.sevenB.compare) === scene.next.sevenB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.sevenB.path));
               setContent(await load(scene.jayson, scene.next.sevenB.path));
               setFrame(0);
@@ -1529,6 +1717,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.eightB && localStorage.getItem(scene.next.eightB.compare) === scene.next.eightB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.eightB.path));
               setContent(await load(scene.jayson, scene.next.eightB.path));
               setFrame(0);
@@ -1562,6 +1751,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.nineB && localStorage.getItem(scene.next.nineB.compare) === scene.next.nineB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.nineB.path));
               setContent(await load(scene.jayson, scene.next.nineB.path));
               setFrame(0);
@@ -1595,6 +1785,7 @@ export const Scene = ({ initial_content }) => {
             height={284}
               /></button>)}
              {(scene.next.tenB && localStorage.getItem(scene.next.tenB.compare) === scene.next.tenB.with ) && (<button className="w-[80%] h-[10%] mb-1 flex flex-col place-content-center place-items-center text-white text-xl" onClick={async () => {
+
               preload(await load(scene.jayson, scene.next.tenB.path));
               setContent(await load(scene.jayson, scene.next.tenB.path));
               setFrame(0);
@@ -1611,6 +1802,52 @@ export const Scene = ({ initial_content }) => {
             <div className="text-white text-2xl font-bold">{scene.next.question}</div>
           </div>
         </div>
+      )}
+    {/* ----------------------------------------------------------Choice---------------------------------------------------------------------------- */}
+      {(scene.next.type === "ChapSelect" && frame >= scene.frames.length -1) && (
+        <div className="">
+        <div className="absolute z-40 w-[100%] h-[100%] top-[0%] left-[0%]">
+          <div className="absolute flex place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
+            {(true) && (
+              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+                console.log('Chappy 1 select');
+                preload(await load("Chapter1", "Chapter1"));
+                setContent(await load("Chapter1", "Chapter1"));
+                setFrame(0);
+              }}>Instance 1</button>
+            )}
+            {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 6) && (
+              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+                preload(await load("Chapter2", "Chapter2"));
+                setContent(await load("Chapter2", "Chapter2"));
+                setFrame(0);}}>Instance 2</button>
+            )}
+           {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 11) && (
+              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+                preload(await load("Chapter3", "Chapter3"));
+                setContent(await load("Chapter3", "Chapter3"));
+                setFrame(0);}}>Instance 3</button>
+            )}
+            {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 15) && (
+              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+                preload(await load("Chapter4", "Chapter4"));
+                setContent(await load("Chapter4", "Chapter4"));
+                setFrame(0);}}>Instance 4</button>
+            )}
+          </div>
+        </div>
+    
+           {/* ----------------------------------------------------------PAGE DESIGN---------------------------------------------------------------------------- */}
+  
+        <Image
+           className=" absolute z-30 top-[0%] left-[0%] w-[100%] h-[100%]"
+           src={`ChapSelect.png`}
+            alt={"ChapSelect.png"}
+            width={3000}
+            height={2000}
+           />
+        
+      </div>
       )}
     {/* ----------------------------------------------------------READING CHAMBERS---------------------------------------------------------------------------- */}
       {scene.name === "ReadingChambers" && (
@@ -1922,6 +2159,9 @@ export const Scene = ({ initial_content }) => {
                 setFrame(0);
               } else {
                 if ((day.getDay() === 5) && localStorage.getItem('H7Table') === 'true'){
+                  var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
+                  tempSPs += 1;
+                  localStorage.setItem('SlimeInterest', tempSPs.toString());
                   preload(await load('Ha117L', 'TableL'));
                   setContent(await load('Ha117L', 'TableL'));
                   setFrame(0);
@@ -1954,11 +2194,56 @@ export const Scene = ({ initial_content }) => {
           
         {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () =>{
           //------------------------------------------------------------Event Checks------------------------------------
-          
+          if (localStorage.getItem('Password') === ''){ //----------------------------------------------------Rework needed when acc is made------------
+            preload(await load("Ha117L", "FirstVisit"));
+            setContent(await load("Ha117L", "FirstVisit"));
+            setFrame(0);
+            setRoom(0);
+            setHud(0);
+          }
           //------------------------------------------------------------------------------------------------------------------------
           setRoom(1);
         }}>
           <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">Ha11-7L</div>
+          <Image
+            className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
+            src={`RoomBanner.png`}
+            alt={"RoomBanner.png"}
+            width={1996}
+            height={395}
+              />
+        </button>)}
+        </div>
+      )}
+      {/* ----------------------------------------------------------Transmitter One---------------------------------------------------------------------------- */}
+     {scene.name === "TransmitterOne" && (
+        <div>
+          {/* -----------------------------------------------------Beacon------------------------------------------------------------*/}
+          {(room === 1 && hud === 0 ) && (
+            <button className="absolute w-[37.7%] h-[98.7%] top-[0%] left-[31.1%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+                  preload(await load('Transmitter', 'BeaconOne'));
+                  setContent(await load('Transmitter', 'BeaconOne'));
+                  setFrame(0);
+            }}>
+               <Image
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={`LB_B1Beacon.png`}
+            alt={"LB_B1Beacon.png"}
+            width={660}
+            height={720}
+              />
+              
+            </button>
+          )}
+          {/* -----------------------------------------------------Mist------------------------------------------------------------*/}
+          
+        {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () =>{
+          //------------------------------------------------------------Event Checks------------------------------------
+          
+          //------------------------------------------------------------------------------------------------------------------------
+          setRoom(1);
+        }}>
+          <div className="absolute w-[100%] h-[10%] z-50 bottom-0 text-3xl font-bold text-white animate-[vibe_1s]">F659-F9</div>
           <Image
             className=" absolute w-[50%] z-40 h-[15%] bottom-0 translate-x-[50%] animate-[vibe_2s]"
             src={`RoomBanner.png`}
@@ -2002,10 +2287,8 @@ export const Scene = ({ initial_content }) => {
               localStorage.setItem('CurrentPart', scene.next.sceneID);
               localStorage.setItem('StoryProgress', scene.storyProgressID);
             }
-            // -------------------------------------------------------------- WHERE ARE YOU IN THE STORY????--------------------------------------
-
-
             console.log("get next scene");
+
             if (scene.next.type === "fixed") {//-------------------Normal condition (With Event updates)---------------------------
 
               if (scene.next.event){
@@ -2013,8 +2296,24 @@ export const Scene = ({ initial_content }) => {
               }
               preload(await load(scene.next.target, scene.next.sceneID));
               setContent(await load(scene.next.target, scene.next.sceneID));
-              //setContent(await load(scene.scene_id + 1));
               setFrame(0);
+            } else if (scene.next.type === 'CL'){//---------------------Crystal Log Chronological (If you read it in Simul you will read it chronological)
+              if (hud === 4){
+                if (scene.next.target === "ReadingChambers"){
+                  preload(await load(scene.next.target, scene.next.sceneID));
+                  setContent(await load(scene.next.target, scene.next.sceneID));
+                  setFrame(0);
+                  setHud(0);
+                } else {
+                  preload(await load("CrystalLog", scene.next.continuation));
+                  setContent(await load("CrystalLog", scene.next.continuation));
+                  setFrame(0);
+                }
+              } else {
+                preload(await load(scene.next.target, scene.next.sceneID));
+                setContent(await load(scene.next.target, scene.next.sceneID));
+                setFrame(0);
+              }
             } else if (scene.next.type === 'statcheck') {//-------------------Simple Stat condition (Currently only with "if higher then X")---------------------------
               if (parseInt(localStorage.getItem(scene.next.stat as string)|| '0') >= scene.next.higher){
                 preload(await load(scene.next.targetA,  scene.next.sceneIDA));
@@ -2040,7 +2339,7 @@ export const Scene = ({ initial_content }) => {
                 localStorage.setItem('CurrentPart', 'CLPW');
               }
               // -------------------------------------------------- Hall-7 Unlock--------------------------
-              else if (scene.next.target === 'ReadingChambers' && scene.next.sceneID === 'PRScene4' && localStorage.getItem('Hall7L') === '1'){
+              else if (scene.next.target === 'ReadingChambers' && scene.next.sceneID === 'PRScene4' && localStorage.getItem('Ha11-7L') === '1'){
                 preload(await load(scene.next.target, 'PRHall7U'));
                 setContent(await load(scene.next.target, 'PRHall7U'));
                 setFrame(0);
@@ -2112,7 +2411,11 @@ export const Scene = ({ initial_content }) => {
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
             } else if (scene.next.type === "start"){//-------------------Website bootup / reload condition (You land where you are supposed to at story start)---------------------------
-
+              if (/Mobi|Android/i.test(navigator.userAgent)){
+                  console.log('Moblie user');
+                  setContent(await load("Extra", 'mobile'));
+                  setFrame(0);
+              } else {
               //const trgt = localStorage.getItem('CurrentChapter');
               //onst scn = localStorage.getItem('CurrentPart');
               //const trgt = JSON.parse(localStorage.getItem('CurrentChapter')!);
@@ -2154,24 +2457,50 @@ export const Scene = ({ initial_content }) => {
                 setFrame(0);
               }
             }
-            }
-              //
-              //frame.sprites.rrright
-              //frame.sprites.sright
-              //frame.sprites.rright
-              //frame.sprites.right
-              //frame.sprites.center
-              //frame.sprites.left
-              //frame.sprites.lleft
-              //frame.sprites.sleft
-              //frame.sprites.llleft
-              //frame.sprites.down
-              //frame.background.bg
-              //frame.items.item
-
+            //
+            //frame.sprites.rrright
+            //frame.sprites.sright
+            //frame.sprites.rright
+            //frame.sprites.right
+            //frame.sprites.center
+            //frame.sprites.left
+            //frame.sprites.lleft
+            //frame.sprites.sleft
+            //frame.sprites.llleft
+            //frame.sprites.down
+            //frame.background.bg
+            //frame.items.item
             
+            reset();
+          }
+          }
           } else {
+            //---Preload next frame?
+      const images = new Set();
+      if (scene.frames[frame + 2]?.sprites){
+      if (scene.frames[frame + 2]?.sprites.rrright && scene.frames[frame + 2]?.sprites.rrright !== scene.frames[frame + 1]?.sprites?.rrright) images.add(scene.frames[frame + 2].sprites.rrright + ".png")
+      if (scene.frames[frame + 2]?.sprites.sright && scene.frames[frame + 2]?.sprites.sright !== scene.frames[frame + 1]?.sprites?.sright) images.add(scene.frames[frame + 2].sprites.sright + ".png")
+      if (scene.frames[frame + 2]?.sprites.rright && scene.frames[frame + 2]?.sprites.rright !== scene.frames[frame + 1]?.sprites?.rright) images.add(scene.frames[frame + 2].sprites.rright + ".png")
+      if (scene.frames[frame + 2]?.sprites.right && scene.frames[frame + 2]?.sprites.right !== scene.frames[frame + 1]?.sprites?.right) images.add(scene.frames[frame + 2].sprites.right + ".png")
+      if (scene.frames[frame + 2]?.sprites.center && scene.frames[frame + 2]?.sprites.center !== scene.frames[frame + 1]?.sprites?.center) images.add(scene.frames[frame + 2].sprites.center + ".png")
+      if (scene.frames[frame + 2]?.sprites.left && scene.frames[frame + 2]?.sprites.left !== scene.frames[frame + 1]?.sprites?.left) images.add(scene.frames[frame + 2].sprites.left + ".png")
+      if (scene.frames[frame + 2]?.sprites.lleft && scene.frames[frame + 2]?.sprites.lleft !== scene.frames[frame + 1]?.sprites?.lleft) images.add(scene.frames[frame + 2].sprites.lleft + ".png")
+      if (scene.frames[frame + 2]?.sprites.sleft && scene.frames[frame + 2]?.sprites.sleft !== scene.frames[frame + 1]?.sprites?.sleft) images.add(scene.frames[frame + 2].sprites.sleft + ".png")
+      if (scene.frames[frame + 2]?.sprites.llleft && scene.frames[frame + 2]?.sprites.llleft !== scene.frames[frame + 1]?.sprites?.llleft) images.add(scene.frames[frame + 2].sprites.llleft + ".png")
+      if (scene.frames[frame + 2]?.sprites.down && scene.frames[frame + 2]?.sprites.down !== scene.frames[frame + 1]?.sprites?.down) images.add(scene.frames[frame + 2].sprites.down + ".png") 
+      }
+    
+    if (scene.frames[frame + 2]?.background?.bg && scene.frames[frame + 2].background?.bg !== scene.frames[frame + 1]?.background?.bg) images.add("BG" + scene.frames[frame + 2].background.bg + ".png")
+    if (scene.frames[frame + 2]?.background?.effect) images.add(scene.frames[frame + 1].background?.effect + ".gif")
+    if (scene.frames[frame + 2]?.items?.item) images.add("Item" + scene.frames[frame + 1].items?.item + ".png")
+    
+    //console.log('IMAGES HERE');
+    //console.log(images);
+    images.forEach((img) => {
+      fetch(`https://beans.images.ni-verse.com/${img}`, {mode: "no-cors"});
+    });
             setFrame(frame + 1);
+            reset();
             console.log("Next frame please");
           }
         }}

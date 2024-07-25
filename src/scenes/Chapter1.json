@@ -2,6 +2,7 @@
     "Chapter1" : {
       "scene_id": "2",
       "name": "Chapter 1: Empty beginnings.",
+      "hud": "StoryHudB",
       "storyProgressID": 3,
       "frames": [
         {
@@ -668,6 +669,7 @@
     "Scene2" : {
         "scene_id": "3",
         "name": "Walk To Village",
+        "hud": "StoryHudB",   
         "storyProgressID": 4,
         "frames": [
           {
@@ -796,6 +798,7 @@
       "Scene3" : {
         "scene_id": "4",
         "name": "Innkeeper Chat",
+        "hud": "StoryHudB",   
         "frames": [
           {
             "textBox": { "name": "Nora", "text": "Yo.", "speed": 40, "show": "true" },

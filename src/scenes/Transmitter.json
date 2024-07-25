@@ -1,0 +1,50 @@
+{
+    "Beacon1" : {
+      "scene_id": "-",
+      "name": "TransmitterOne",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "TransmitterOne"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1" }
+    },
+    "Beacon1V" : {
+      "scene_id": "-",
+      "name": "TransmitterOne",
+      "hud": "StoryHud6",
+      "type": "PNC",
+      "frames": [
+        {
+          "background": { "bg": "TransmitterOne", "pbg":"Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1V" }
+    },
+    "BeaconOneF" : {
+      "scene_id": "-",
+      "name": "Beacon Nr. 1",
+      "jayson": "Transmitter",
+      "frames": [
+        {
+            "textBox": { "name": "{you}", "text": "(As you vision )", "speed": 40, "show": "true"},
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1" }
+    },
+    "BeaconOne" : {
+      "scene_id": "-",
+      "name": "Beacon Nr. 1",
+      "jayson": "Transmitter",
+      "frames": [
+        {
+            "textBox": { "name": "{you}", "text": "(This is a beacon)", "speed": 40, "show": "true"},
+            "background": { "bg": "TransmitterOne"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1" }
+    }
+}

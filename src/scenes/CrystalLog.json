@@ -7,7 +7,7 @@
             "background": { "bg": "AudioLogPw", "pbg": "Darkness"}
         }
     ],
-    "next": { "type": "CL", "target": "CrystalLog", "sceneID": "CLPW" }
+    "next": { "type": "CLP", "target": "CrystalLog", "sceneID": "CLPW" }
     },
     "Log1" : {
         "scene_id": "14",
@@ -183,11 +183,11 @@
             }
             
         ],
-        "next": { "type": "fixed", "target": "Chapter4", "sceneID": "Chapter4" }
+        "next": { "type": "CL", "target": "Chapter4", "sceneID": "Chapter4", "continuation": "Log2" }
         },
         "Log2" : {
-            "scene_id": "14",
-            "name": "Crystal Log 1",
+            "scene_id": "-",
+            "name": "Crystal Log 2",
             "storyProgressID": 15,
             "frames": [
                 {
@@ -199,6 +199,6 @@
                     "background": { "bg": "Darkness"}
                 }
             ],
-            "next": { "type": "fixed", "target": "CrystalLog", "sceneID": "CLPW" }
+            "next": { "type": "CL", "target": "-", "sceneID": "-", "continuation": "Log3"}
             }
 }

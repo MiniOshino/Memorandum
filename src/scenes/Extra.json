@@ -232,5 +232,32 @@
             }
         ],
         "next": { "type": "fixed", "target": "NexusCore", "sceneID": "NexusCore", "event": "AQuestionUnlockID", "eventupdate": "true" }
+    },
+    "mobile" : {
+        "scene_id": "-",
+        "name": "mobile user stuff",
+        "frames": [
+            {   
+                "textBox": { "name": "", "text": "[Error]", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "", "text": "This device is not suited for connecting.", "speed": 40},
+                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "", "text": "Please use a desktop.", "speed": 40},
+                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "", "text": "I apologize for the troubles.", "speed": 40},
+                "background": { "bg": "NexusCore"}
+            },
+            {   
+                "textBox": { "name": "", "text": "”Coding is hard” -L7", "speed": 40},
+                "background": { "bg": "NexusCore"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Extra", "sceneID": "mobile"}
     }
 }

@@ -26,12 +26,11 @@
     "FirstVisit" : {
         "scene_id": "-",
         "name": "First visit",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
           {
             "textBox": { "name": "{you}", "text": "(You arrive in what looks like just another corridor, yet your senses seem to stay intact)", "speed": 40, "show": "true"},
-            "background": { "bg": "Ha117LWG", "pbg":"Darkness"}
+            "background": { "bg": "Ha117LWG", "pbg":"Ha117L"}
           },
           {
             "textBox": { "name": "{you}", "text": "(The only thing making this hall different, is a small table to the side, mounted by a robotic looking creature)", "speed": 40, "show": "true"},
@@ -61,7 +60,6 @@
       "F1C1" : {
         "scene_id": "-",
         "name": "Hi there",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -75,7 +73,6 @@
       "F1C2" : {
         "scene_id": "-",
         "name": "oh u architec",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -89,7 +86,6 @@
       "F1C3" : {
         "scene_id": "-",
         "name": "y u lookin",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -103,7 +99,6 @@
       "FScene2" : {
         "scene_id": "-",
         "name": "First visit",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -140,7 +135,6 @@
       "F2C1" : {
         "scene_id": "-",
         "name": "sweetz",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -154,7 +148,6 @@
       "F2C2" : {
         "scene_id": "-",
         "name": "tour guide?",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -168,7 +161,6 @@
       "FScene3" : {
         "scene_id": "-",
         "name": "F-Scene 3",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -207,7 +199,6 @@
       "FScene4" : {
         "scene_id": "-",
         "name": "F-Scene 4",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -239,7 +230,6 @@
       "F3C1" : {
         "scene_id": "-",
         "name": "tour guide!",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -258,7 +248,6 @@
       "F3C2" : {
         "scene_id": "-",
         "name": "tour guide!",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -277,7 +266,6 @@
       "FScene5" : {
         "scene_id": "-",
         "name": "tour guide!",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -305,7 +293,6 @@
       "FScene6" : {
         "scene_id": "-",
         "name": "tour guide!",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -353,7 +340,6 @@
       "GreenHypoA" : {
         "scene_id": "-",
         "name": "GHA",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -386,7 +372,6 @@
       "GreenHypoF" : {
         "scene_id": "-",
         "name": "GHF",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -415,7 +400,6 @@
       "GreenHypoS" : {
         "scene_id": "-",
         "name": "GHS",
-        "hud": "StoryHud6",
         "jayson": "Ha117L",
         "frames": [
             {
@@ -772,7 +756,7 @@
                 "background": { "bg": "Ha117L"}
             }
         ],
-        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL4" }
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL4"}
       },
       "TableL4" : {
         "scene_id": "-",

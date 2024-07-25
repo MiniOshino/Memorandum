@@ -4,7 +4,7 @@
       "name": "Noras Origin",
       "frames": [
         {
-            "textBox": { "name": "", "text": "...??", "speed": 50, "show": "true" },
+            "textBox": { "name": "", "text": "Hello, this is a really long text to see if the thing im testing works or if it just kinda dies on me so i hope it actually works uwu", "speed": 50, "show": "true" },
             "background": { "bg": "Darkness"}
         },
         {

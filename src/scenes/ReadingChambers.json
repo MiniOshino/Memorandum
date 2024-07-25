@@ -39,7 +39,6 @@
         "scene_id": "-",
         "name": "First Arrival",
         "jayson": "ReadingChambers",
-        "hud": "StoryHud6",   
         "frames": [
             {
                 "textBox": { "name": "Lyz", "text": "Murrr...", "speed": 40, "show": "true"  },
@@ -483,6 +482,37 @@
                     "textBox": { "name": "{you}", "text": "(The title reads: “Where Lilies never bloom”)", "speed": 40, "show": "true"},
                     "background": { "bg": "ReadingChambers"}
                 },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(What would you like to think about?)",
+            "one": {"text": "Continue", "path": "WLNBNC", "compare": "true", "with": "true"},
+            "two": {"text": "Select a Chapter", "path": "WLNBNS", "compare": "true", "with": "true"}
+            }
+          },
+          "WLNBNS" : {
+            "scene_id": "-",
+            "name": "Chappy select",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "{you}", "text": "(You try to remember a specific part of the story)", "speed": 40, "show": "true"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "ChapSelect"}
+          },
+          "WLNBNC" : {
+            "scene_id": "-",
+            "name": "WLNB Neutral Interaction (Continue reading)",
+            "jayson": "ReadingChambers",  
+            "frames": [
                 {
                     "textBox": { "name": "{you}", "text": "(You try to get back to where you were before, as you try to focus on the story)", "speed": 40, "show": "true"},
                     "background": { "bg": "ReadingChambers"}
@@ -997,6 +1027,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessN"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1018,6 +1049,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessN"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1043,6 +1075,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessD"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1112,6 +1145,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessN"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1211,6 +1245,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1231,6 +1266,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_Zoneout"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1313,7 +1349,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene4", "event": "Hall7L", "eventupdate": "true"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene4", "event": "Ha11-7L", "eventupdate": "true"}
         },
         "PRScene4" : {
             "scene_id": "-",
@@ -1326,6 +1362,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessD"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1414,6 +1451,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyzzy_Wuh"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1434,7 +1472,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRFirstTry2"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRFirstTry2", "event": "CurrentPart", "eventupdate":"Log1"}
         },
         "FT2" : {
             "scene_id": "-",
@@ -1442,12 +1480,12 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "Lyzzy", "text": "{italic}B r u h{/italic}.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyzzy", "text": "B r u h.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyzzy_Wuh"},
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRFirstTry2"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRFirstTry2", "event": "CurrentPart", "eventupdate":"Log1"}
         },
         "PRFirstTry2" : {
             "scene_id": "-",
