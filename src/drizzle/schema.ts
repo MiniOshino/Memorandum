@@ -27,7 +27,7 @@ export const FlagsTable = pgTable(
   'flags',
   {
     id: serial("id").primaryKey(),
-    name: text('flag_name').notNull().unique().primaryKey(),
+    name: text('flag_name').notNull().unique(),
   }
 )
 
