@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS "flags" (
 	"id" serial PRIMARY KEY NOT NULL,
-	"flag_name" text PRIMARY KEY NOT NULL,
+	"flag_name" text NOT NULL,
 	CONSTRAINT "flags_flag_name_unique" UNIQUE("flag_name")
 );
 --> statement-breakpoint

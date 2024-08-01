@@ -1,5 +1,5 @@
 {
-  "id": "dd1367f5-81b1-4aef-870d-d5ac24f0d136",
+  "id": "d525a76d-9142-4865-a12b-199d99224f41",
   "prevId": "c410b10e-e6a3-4b66-b9f5-c89155a7040c",
   "version": "7",
   "dialect": "postgresql",
@@ -17,7 +17,7 @@
         "flag_name": {
           "name": "flag_name",
           "type": "text",
-          "primaryKey": true,
+          "primaryKey": false,
           "notNull": true
         }
       },
