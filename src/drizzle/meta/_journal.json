@@ -8,6 +8,13 @@
       "when": 1722447606515,
       "tag": "0000_goofy_falcon",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1722497917864,
+      "tag": "0001_safe_gideon",
+      "breakpoints": true
     }
   ]
 }
