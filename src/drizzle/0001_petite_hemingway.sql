@@ -25,5 +25,3 @@ DO $$ BEGIN
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;
---> statement-breakpoint
-ALTER TABLE "users" ADD CONSTRAINT "users_user_name_unique" UNIQUE("user_name");

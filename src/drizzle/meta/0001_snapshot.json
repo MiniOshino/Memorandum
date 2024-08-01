@@ -1,5 +1,5 @@
 {
-  "id": "d525a76d-9142-4865-a12b-199d99224f41",
+  "id": "a92e97c4-edff-46de-a0bc-de58436cbb4e",
   "prevId": "c410b10e-e6a3-4b66-b9f5-c89155a7040c",
   "version": "7",
   "dialect": "postgresql",
@@ -61,15 +61,7 @@
       "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {},
-      "uniqueConstraints": {
-        "users_user_name_unique": {
-          "name": "users_user_name_unique",
-          "nullsNotDistinct": false,
-          "columns": [
-            "user_name"
-          ]
-        }
-      }
+      "uniqueConstraints": {}
     },
     "public.users_to_flags": {
       "name": "users_to_flags",
