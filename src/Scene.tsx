@@ -538,8 +538,8 @@ const LSC = () => {
     localStorage.setItem('InbetweenVibe', 'Friendly');
   }
   //----------------------------------------------------Event checks-----------------------------------
-  if (localStorage.getItem('Yellow') === '1' && localStorage.getItem('Cyan') === '1' && localStorage.getItem('Magenta') === '1' && localStorage.getItem('Spydent') === 'false'){
-    localStorage.setItem('Spydent', "true");
+  if (localStorage.getItem('Yellow') === '1' && localStorage.getItem('Cyan') === '1' && localStorage.getItem('Magenta') === '1' && localStorage.getItem('Spydent') === 'NS'){
+    localStorage.setItem('Spydent', "1");
   }
 });
   return (
@@ -582,6 +582,7 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('EventFV', "NS"); // First Visit Event:  / 1: Starting / 2: Finished talk with Lyz / 3: Finished talk with Architect  / 4: First Warp to Nexus Core /5: Finsihed fist convo with Nexus /6: Inquired about Story
       localStorage.setItem('EventPR', "NS"); // Password Restriction Event / 1: Starting / 2:
       localStorage.setItem('EventSC', "NS"); // Slime Connection Event
+      localStorage.setItem('Spydent', "NS"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
       //------------------------------------------STATS--------------------------------------------
       localStorage.setItem('Curious', "0");
       localStorage.setItem('Interested', "0");
@@ -595,7 +596,6 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('Trusting', "0");
       localStorage.setItem('Questioning', "0");
       localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table //+1 Entering the Beacon room from the Pings (yt shorts)
-      localStorage.setItem('Spydent', "false"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
       //------------------------------------------Choice Answers--------------------------------------------
       localStorage.setItem('true', "true");
       localStorage.setItem('Error', "false"); //You cannot go back to the Story if this is true
@@ -623,7 +623,7 @@ export const Scene = ({ initial_content }) => {
       //-------------------------------------------CharacterUnlocks---------------------------------
       localStorage.setItem('SlimeName', "false"); //Imma be honesty this is hardly useful as of right now but ig i keep it.
       localStorage.setItem('InbetweenVibe', ''); // Either Analytical, Scaredy Cat, Friendly
-      localStorage.setItem('GreenTourGuide', 'false');
+      localStorage.setItem('GreenTourGuide', 'false'); //Telling it it would make a good tour guide
       localStorage.setItem('Yellow', "0"); // 1: Finding yellow //2:
       localStorage.setItem('Cyan', "0"); // 1: Finding Cyan //2:
       localStorage.setItem('Magenta', "0"); // 1: Finding Magenta //2:
@@ -2221,9 +2221,18 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           {/* -----------------------------------------------------Beacon------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) && (
             <button className="absolute w-[37.7%] h-[98.7%] top-[0%] left-[31.1%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
-                  preload(await load('Transmitter', 'BeaconOne'));
-                  setContent(await load('Transmitter', 'BeaconOne'));
-                  setFrame(0);
+              if (localStorage.getItem('T1Beacon') === 'false'){
+                var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
+                tempSPs += 1;
+                localStorage.setItem('SlimeInterest', tempSPs.toString());
+                preload(await load('Transmitter', 'BeaconOneN'));
+                setContent(await load('Transmitter', 'BeaconOneN'));
+                setFrame(0);
+              } else {
+                preload(await load('Transmitter', 'BeaconOne'));
+                setContent(await load('Transmitter', 'BeaconOne'));
+                setFrame(0);
+              }    
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"

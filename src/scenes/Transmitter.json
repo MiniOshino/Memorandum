@@ -45,6 +45,18 @@
             "background": { "bg": "TransmitterOne"}
         }
       ],
+      "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1", "event": "T1Beacon", "eventupdate": "true" }
+    },
+    "BeaconOneN" : {
+      "scene_id": "-",
+      "name": "Beacon Nr. 1",
+      "jayson": "Transmitter",
+      "frames": [
+        {
+            "textBox": { "name": "{you}", "text": "(morese repeat)", "speed": 40, "show": "true"},
+            "background": { "bg": "TransmitterOne"}
+        }
+      ],
       "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1" }
     }
 }
