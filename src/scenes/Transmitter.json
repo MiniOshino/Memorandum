@@ -29,8 +29,32 @@
       "jayson": "Transmitter",
       "frames": [
         {
-            "textBox": { "name": "{you}", "text": "(As you vision )", "speed": 40, "show": "true"},
+            "textBox": { "name": "{you}", "text": "(“Pitch black darkness”)", "speed": 40, "show": "true"},
             "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(The only thing echoing in your mind, as all your senses seem to have lost function)", "speed": 40, "show": "true"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(Did the device take you to a wrong room?)", "speed": 40, "show": "true"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(A sense of impending doom rushes through you,      until you notice a faint beeping from behind..)", "speed": 40, "show": "true"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(You turn around,         noticing a single device,            lighting up its surroundings,               faintly buzzing and beeping)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne", "pbg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(The both of you seem to be standing on a limited flat surface,              followed by the dark abyss next to it)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(You could have sworn it wasn’t there a second ago)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
         }
       ],
       "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1" }
@@ -41,8 +65,69 @@
       "jayson": "Transmitter",
       "frames": [
         {
-            "textBox": { "name": "{you}", "text": "(This is a beacon)", "speed": 40, "show": "true"},
+            "textBox": { "name": "{you}", "text": "(You take a step closer to the device)", "speed": 40, "show": "true"},
             "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(Its presence seems entirely out of place, compared to the completely hollow room around you)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(The screen seems to display various symbols)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(What is this device?)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(You move back a bit, trying to focus on the noises that caught your attention in the first place)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "", "text": "{italic}*Beeep Beep Beep Beep...*      *Beeep Beep Beep Beep...*      *Beeep Beep Beep Beep...*     *Beeep Beep Beep Beep...*{/italic}", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"},
+          "sfx": "VOTOWH"
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(It seems to be repeating the same thing over and over again…)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(Why is it beeping?         Does it have a purpouse?)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(Is someone meant to hear this?)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(Who,       is meant to hear this?)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(As you contemplate all those questions,            the hollow room starts to seem more narrow)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(You hallucinate the beeping,        echoing from non-existing walls,           slowly closing in as you stare at the device)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(For a split second...)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(...It felt like the device was crying)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(You move back once more)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(The rooms seems to return to normal,        leaving only the faint buzzing and beeping of the device in front of you)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
         }
       ],
       "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1", "event": "T1Beacon", "eventupdate": "true" }
@@ -53,8 +138,13 @@
       "jayson": "Transmitter",
       "frames": [
         {
-            "textBox": { "name": "{you}", "text": "(morese repeat)", "speed": 40, "show": "true"},
-            "background": { "bg": "TransmitterOne"}
+          "textBox": { "name": "", "text": "{italic}*Beeep Beep Beep Beep...*      *Beeep Beep Beep Beep...*      *Beeep Beep Beep Beep...*     *Beeep Beep Beep Beep...*{/italic}", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"},
+          "sfx": "VOTOWH"
+        },
+        {
+          "textBox": { "name": "{you}", "text": "(A faint wave of sorrow washes over you as you listen to the device some more...)", "speed": 40, "show": "true"},
+          "background": { "bg": "TransmitterOne"}
         }
       ],
       "next": { "type": "fixed", "target": "Transmitter", "sceneID": "Beacon1" }

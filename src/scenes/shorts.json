@@ -21,29 +21,15 @@
             "background": { "bg": "Darkness"}
         },
         {
-            "background": { "bg": "Dash"},
-            "sfx": "Dash"
+            "background": { "bg": "Dot"},
+            "sfx": "Dot"
         },
         {
             "background": { "bg": "Darkness"}
         },
         {
-            "background": { "bg": "Dash"},
-            "sfx": "Dash"
-        },
-        {
-            "background": { "bg": "Darkness"}
-        },
-        {
-            "background": { "bg": "Dash"},
-            "sfx": "Dash"
-        },
-        {
-            "background": { "bg": "Darkness"}
-        },
-        {
-            "background": { "bg": "Dash"},
-            "sfx": "Dash"
+            "background": { "bg": "Dot"},
+            "sfx": "Dot"
         }
       ],
       "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
