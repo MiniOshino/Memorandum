@@ -2225,13 +2225,15 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
                 tempSPs += 1;
                 localStorage.setItem('SlimeInterest', tempSPs.toString());
-                preload(await load('Transmitter', 'BeaconOneN'));
-                setContent(await load('Transmitter', 'BeaconOneN'));
-                setFrame(0);
-              } else {
                 preload(await load('Transmitter', 'BeaconOne'));
                 setContent(await load('Transmitter', 'BeaconOne'));
                 setFrame(0);
+                reset();
+              } else {
+                preload(await load('Transmitter', 'BeaconOneN'));
+                setContent(await load('Transmitter', 'BeaconOneN'));
+                setFrame(0);
+                reset();
               }    
             }}>
                <Image
