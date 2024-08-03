@@ -617,6 +617,7 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('InformationWLNB', "0"); //1: Checked the book on the table /2: Reached the end of a released chapter
       localStorage.setItem('InformationCagliostro', '0'); // 1: Asked about Cagliostro to Nexus
       localStorage.setItem('InformationInBetween', '0'); //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
+      localStorage.setItem('PostDream', "false") //set on true after the final 3rd dream. No longer plays them in the story (still have to make that special next that skips them if true)
       //-------------------------------------------RoomUnlocks---------------------------------
       localStorage.setItem('Ha11-7L', "false"); // Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
       localStorage.setItem('f659-f9', "false"); //You dont need it on true to get the unlock
@@ -834,7 +835,6 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         const interval = setInterval(() => {
           if (currentIndex < text.length) {
             const char = text[currentIndex];
-  
             if (((text === "...") || text === '(...)' || text === '...!' || text === '...?' || text.includes('*'))) {
               if (currentIndex === 0) {
                 console.log('Do it once');
@@ -847,7 +847,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               }, 1000);
               }
             } else {
-            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && ((text.slice(currentIndex + 1, currentIndex + 2) === ' ' && currentIndex === 0)||((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
               playAudio();
               //console.log('1');
               //console.log(text.slice(currentIndex));
