@@ -1,5 +1,5 @@
 {
-    "test" : {
+    "test2" : {
       "scene_id": "Ths the test",
       "name": "Test",
       "frames": [
@@ -34,52 +34,155 @@
       ],
       "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
     },
-    "test2" : {
+    "test" : {
       "scene_id": "Ths the test2",
       "name": "Test",
       "frames": [
         {
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "1 2,         1 2", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Alright.        Nice.          Lovely.", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "I think..        With that the connection is stable.", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Honestly farther than I thought I would get..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Uhm..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Nevermind..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "The visual core is not fully working..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "I’ll get it to work until next time..        Until then:", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Go check out the Library!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "And the last memory of course!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Yeah!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Man I suck at this-", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
             "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
-            "background": { "bg": "Darkness"}
-        },
+            "background": { "bg": "Darkness", "pbg": "Connection"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test3" : {
+      "scene_id": "Ths the test3",
+      "name": "Test",
+      "frames": [
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
-            "background": { "bg": "ReadingChambers", "pbg": "Darkness"}
-        },
-        {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "1 2,         1 2", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "Alright.        Nice.          Lovely.", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "I think..        With that the connection is stable.", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "Honestly farther than I thought I would get..", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Nora}", "text": "Ask about the world before the convergence!", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "Uhm..", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "Nevermind..", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "The visual core is not fully working..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "I’ll get it to work until next time..        Until then:", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Go check out the Library!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "And the last memory of course!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Yeah!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Man I suck at this-", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {

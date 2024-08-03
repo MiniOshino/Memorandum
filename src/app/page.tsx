@@ -34,10 +34,10 @@ export default async function Home() {
   //const defaultScene = await load("test", "test");
   //const defaultScene = await load("Fights", "Fights");
   
-  //const defaultScene = await load("shorts", "test");
+  const defaultScene = await load("shorts", "test");
   
 
-  const defaultScene = await load("start", "start");
+  //const defaultScene = await load("start", "start");
 
   //const actualScene = await load(JSON.parse(localStorage.getItem('CurrentChapter')!), JSON.parse(localStorage.getItem('CurrentPart')!))
   //console.log("Load:", defaultScene);
