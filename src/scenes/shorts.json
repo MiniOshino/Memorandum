@@ -40,19 +40,19 @@
       "frames": [
         {
             "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
-            "background": { "bg": "Connection"}
+            "background": { "sbg": "PinWallZayn"}
         },
         {
             "textBox": { "name": "{Nora}", "text": "1 2,         1 2", "speed": 40, "show": "special"},
-            "background": { "bg": "Connection"}
+            "background": { "sbg": "PinWallZayn"}
         },
         {
             "textBox": { "name": "{Nora}", "text": "Alright.        Nice.          Lovely.", "speed": 40, "show": "special"},
-            "background": { "bg": "Connection"}
+            "background": { "sbg": "PinWallZayn"}
         },
         {
             "textBox": { "name": "{Nora}", "text": "I think..        With that the connection is stable.", "speed": 40, "show": "special"},
-            "background": { "bg": "Connection"}
+            "background": { "sbg": "Connection"}
         },
         {
             "textBox": { "name": "{Nora}", "text": "Honestly farther than I thought I would get..", "speed": 40, "show": "special"},

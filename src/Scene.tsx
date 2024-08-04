@@ -286,7 +286,7 @@ const Background = ({ background }) => {
       />}
       </div>
       )}
-      <div className={` absolute -z-50 w-full h-full ease-in`}>
+      { background.bg && (<div className={` absolute -z-50 w-full h-full ease-in`}>
         { background.bg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
@@ -295,7 +295,7 @@ const Background = ({ background }) => {
         width={3840}
         height={2160}
       />}
-      </div>
+      </div>)}
 
       { background.pbg && (<div className=" absolute -z-40 w-full h-full opacity-0 animate-[vibeout_2s] ease-in">
         { background.pbg === "bitch" ? null :
@@ -304,6 +304,29 @@ const Background = ({ background }) => {
         src={`BG${background.pbg}.png`}
         alt={'background.pgb'}
         width={3840}
+        height={2160}
+      />}
+      </div>
+      )}
+      {/*------------------------------------Shorts BG---------------------------------------------- */}
+      {background.sbg && (<div className={` absolute -z-50 w-[32%] h-full ease-in left-[50%] translate-x-[-50%]`}>
+        { background.sbg === "bitch" ? null :
+       <Image
+        className=" z-0 w-full h-full"
+        src={`SHORTS${background.sbg}.png`}
+        alt='background.sbg'
+        width={1214}
+        height={2160}
+      />}
+      </div>)}
+
+      { background.spbg && (<div className=" absolute -z-40 w-[32%] h-full opacity-0 animate-[vibeout_2s] ease-in left-[50%] translate-x-[-50%]">
+        { background.spbg === "bitch" ? null :
+       <Image
+        className=" -z-40 w-full h-full"
+        src={`SHORTS${background.spbg}.png`}
+        alt={'background.spgb'}
+        width={1214}
         height={2160}
       />}
       </div>
