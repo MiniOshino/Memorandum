@@ -1926,7 +1926,7 @@
                 "background": { "bg": "ForestThiccEvening"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "…", "speed": 500, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
                 "sprites": {"lleft":"Nora_R_Neutral_Neutral","rright": "Zayn_L_Neutral_ThinkingV", "effectRR": "wiggle"},
                 "background": { "bg": "ForestThiccEvening"}
             },
