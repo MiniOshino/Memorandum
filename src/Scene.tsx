@@ -789,7 +789,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
     const parts = text.split(/(\{bold\}|\{\/bold\}|\{italic\}|\{\/italic\}|\{name\}|\{\/name\})/);
   
     return (
-      <p>
+      <div  className=" text-center items-center justify-center flex">
         {parts.map((part, index) => {
           if (part === '{bold}') {
             return (
@@ -822,7 +822,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             return part;
           }
         })}
-      </p>
+      </div>
     );
   };
   
@@ -967,7 +967,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       }, [text, speed, ps, currentIndex, bold, italic, name, why]);
     
       return (
-        <div>
+        <div className=" text-center items-center justify-center flex">
           <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
           {text !== '' && ps !== '' && (<audio ref={audioRef}>
                <source src={(`${voice[0].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral0.mp3" : voice[1].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral1.mp3" : voice[2].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral2.mp3" : voice[3].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral3.mp3" : voice[4].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral4.mp3" : voice[5].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral5.mp3" : null }`)} type="audio/mpeg"></source>
@@ -995,7 +995,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div className="h-[45%] text-2xl font-semibold">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
           </div>
-        <div className=" z-20 text-xl text-white h-[40%]">
+        <div className=" z-20 text-xl text-white h-[60%]">
         {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
             reset();
           } else {
@@ -1016,7 +1016,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div className="h-[45%] text-2xl font-semibold">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
           </div>
-        <div className=" z-20 text-xl text-white h-[40%]">
+        <div className=" z-20 text-xl text-white h-[50%]">
         {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {
           if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
             reset();

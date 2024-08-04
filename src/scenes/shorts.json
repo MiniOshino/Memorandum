@@ -39,7 +39,7 @@
       "name": "Test",
       "frames": [
         {
-            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
+            "textBox": { "name": "{Nora}", "text": "This is a really long text to test if this whoel thing is working or not bc yes great idea me", "speed": 40, "show": "special"},
             "background": { "sbg": "PinWallZayn"}
         },
         {
