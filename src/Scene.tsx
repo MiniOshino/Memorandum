@@ -314,7 +314,7 @@ const Background = ({ background }) => {
        <Image
         className=" z-0 w-full h-full"
         src={`SHORTS${background.sbg}.png`}
-        alt='background.sbg'
+        alt={`SHORTS${background.sbg}.png`}
         width={1214}
         height={2160}
       />}
@@ -710,7 +710,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
   const [voice, setVoice] = useState([
     ["Innkeeper","Slime"],
     ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
-    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz"],
+    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz", "L7"],
     ["Scarlett","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?"],
     ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
     ["Green", "(Green)","Yellow","(Yellow)","{Dial}"]]);
