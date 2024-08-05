@@ -34,7 +34,7 @@ export default async function Home() {
   //const defaultScene = await load("test", "test");
   //const defaultScene = await load("Fights", "Fights");
   
-  const defaultScene = await load("shorts", "test3");
+  const defaultScene = await load("shorts", "test");
   
 
   //const defaultScene = await load("start", "start");
