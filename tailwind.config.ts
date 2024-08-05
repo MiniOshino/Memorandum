@@ -395,6 +395,46 @@ const config: Config = {
           '60%': { transform: 'translate(-4px, -4px)' },
           '80%': { transform: 'translate(0, -4px)' },
         },
+        zoomspazin: {
+          '0%': { transform: 'rotate(0deg) scale(1) translate(-50%, 0)', filter: 'blur(0px)' },
+          '5%': { transform: 'rotate(0deg) scale(1.1) translate(-47%, 0)', filter: 'blur(1px)' },
+          '15%': { transform: 'rotate(10deg) scale(1.3) translate(-38%, 0)', filter: 'blur(2px)' },
+          '23%': { transform: 'rotate(7deg) scale(1.3) translate(-38%, 0)', filter: 'blur(1px)' },
+          '30%': { transform: 'rotate(5deg) scale(1.3) translate(-38%, 0)', filter: 'blur(2px)' },
+          '100%': { transform: 'rotate(5deg) scale(1.3) translate(-38%, 0)', filter: 'blur(2px)' },
+        },
+        zoomspazout: {
+          '0%': { transform: 'rotate(5deg) scale(1.3) translate(-38%, 0)', filter: 'blur(2px)' },
+          '5%': { transform: 'rotate(10deg) scale(1.3) translate(-40%, 0)', filter: 'blur(4px)' },
+          '15%': { transform: 'rotate(5deg) scale(1.1) translate(-47%, 0)', filter: 'blur(2px)' },
+          '30%': { transform: 'rotate(-5deg) scale(1.1) translate(-42%, 0)', filter: 'blur(1px)' },
+          '50%': { transform: 'rotate(0deg) scale(1) translate(-50%, 0)', filter: 'blur(0px)' },
+          '100%': { transform: 'rotate(0deg) scale(1) translate(-50%, 0)', filter: 'blur(0px)' },
+        },
+        zoomin: {
+          '0%': { transform: 'scale(1) translate(-50%, 0)', filter: 'blur(0px)' },
+          '15%': { transform: 'scale(1.2) translate(-42%, 0)', filter: 'blur(2px)' },
+          '30%': { transform: 'scale(1.2) translate(-42%, 0)', filter: 'blur(0px)' },
+          '100%': { transform: 'scale(1.2) translate(-42%, 0)', filter: 'blur(0px)' },
+        },
+        zoomout: {
+          '0%': { transform: 'scale(1.2) translate(-42%, 0)', filter: 'blur(0px)' },
+          '20%': { transform: 'scale(1) translate(-50%, 0)', filter: 'blur(3px)' },
+          '30%': { transform: 'scale(1) translate(-50%, 0)', filter: 'blur(0px)' },
+          '100%': { transform: 'scale(1) translate(-50%, 0)', filter: 'blur(0px)' },
+        },
+        refocus: {
+          '0%': { filter: 'blur(0px)' },
+          '40%': { filter: 'blur(0px)' },
+          '70%': { filter: 'blur(3px)' },
+          '100%': { filter: 'blur(0px)' },
+        },
+        rotateright: {
+          '0%': { transform: 'rotate(0deg) translate(-50%, 0)'},
+          '25%': {transform: 'rotate(10deg) translate(-50%, 10%)'},
+          '75%': {transform: 'rotate(10deg) translate(-50%, 10%)' },
+          '100%': {transform: 'rotate(0deg) translate(-50%, 0)' },
+        },
       },
       animation: {
         shake: 'shake 0.5s infinite', // Apply the shake animation infinitely

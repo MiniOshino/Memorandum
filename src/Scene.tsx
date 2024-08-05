@@ -286,7 +286,7 @@ const Background = ({ background }) => {
       />}
       </div>
       )}
-      { background.bg && (<div className={` absolute -z-50 w-full h-full ease-in`}>
+      { background.bg && (<div className={` absolute ${background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-full h-full ease-in`}>
         { background.bg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
@@ -309,7 +309,7 @@ const Background = ({ background }) => {
       </div>
       )}
       {/*------------------------------------Shorts BG---------------------------------------------- */}
-      {background.sbg && (<div className={` absolute -z-50 w-[32%] h-full ease-in left-[50%] translate-x-[-50%]`}>
+      {background.sbg && (<div className={` absolute ${background.animation === "zoomin" ? "animate-[zoomin_5s]" : background.animation === "rotateright" ? "animate-[rotateright_4s]" : background.animation === "refocus" ? "animate-[refocus_2s]" : background.animation === "zoomout" ? "animate-[zoomout_5s]" : background.animation === "zoomspazin" ? "animate-[zoomspazin_10s]" : background.animation === "zoomspazout" ? "animate-[zoomspazout_10s]" : background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-[32%] h-full ease-in left-[50%] translate-x-[-50%]`}>
         { background.sbg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
@@ -320,7 +320,7 @@ const Background = ({ background }) => {
       />}
       </div>)}
 
-      { background.spbg && (<div className=" absolute -z-40 w-[32%] h-full opacity-0 animate-[vibeout_2s] ease-in left-[50%] translate-x-[-50%]">
+      { background.spbg && (<div className=" absolute -z-40 w-[32%] h-full opacity-0 animate-[vibeout_0.5s] ease-in left-[50%] translate-x-[-50%]">
         { background.spbg === "bitch" ? null :
        <Image
         className=" -z-40 w-full h-full"
