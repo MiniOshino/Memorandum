@@ -1013,10 +1013,10 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           height={602} />
         }
       <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
-        <div className="h-[45%] text-2xl font-semibold">
+        <div className="h-[39%] text-2xl font-semibold">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
           </div>
-        <div className=" z-20 text-xl text-white h-[50%]">
+        <div className=" z-20 text-xl text-white h-[46%]">
         {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {
           if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
             reset();
@@ -2175,23 +2175,26 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div>
           {/* -----------------------------------------------------Table------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) && (
-            <button className="absolute w-[17.2%] h-[33.4%] top-[60.9%] left-[16.6%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+            <button className="absolute w-[18.9%] h-[36%] top-[59.3%] left-[15.8%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
               if (localStorage.getItem('H7Table') === "false"){
                 preload(await load('Ha117L', 'Table'));
                 setContent(await load('Ha117L', 'Table'));
                 setFrame(0);
+                reset();
               } else {
-                if ((day.getDay() === 5) && localStorage.getItem('H7Table') === 'true'){
+                if ((day.getDay() === 2) && localStorage.getItem('H7Table') === 'true'){
                   var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
                   tempSPs += 1;
                   localStorage.setItem('SlimeInterest', tempSPs.toString());
                   preload(await load('Ha117L', 'TableL'));
                   setContent(await load('Ha117L', 'TableL'));
                   setFrame(0);
+                  reset();
                 } else {
                   preload(await load('Ha117L', 'Table6'));
                   setContent(await load('Ha117L', 'Table6'));
                   setFrame(0);
+                  reset();
                 }
               }
             }}>
@@ -2202,11 +2205,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             width={660}
             height={720}
               />
-              {(day.getDay() === 5 && localStorage.getItem('H7Table') === "true" && 
+              {(day.getDay() === 2 && localStorage.getItem('H7Table') === "true" && 
             <Image
-            className=" absolute w-[112%] h-[99.5%] top-[1%] left-[0%]"
-            src={`LB_H7TableL.png`}
-            alt={"LB_H7TableL.png"}
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={`LB_H7TableLyz.png`}
+            alt={"LB_H7TableLyz.png"}
             width={663}
             height={717}
               />
@@ -2223,6 +2226,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             setFrame(0);
             setRoom(0);
             setHud(0);
+            reset();
           }
           //------------------------------------------------------------------------------------------------------------------------
           setRoom(1);
@@ -2331,6 +2335,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               preload(await load(scene.next.target, scene.next.sceneID));
               setContent(await load(scene.next.target, scene.next.sceneID));
               setFrame(0);
+              reset();
             } else if (scene.next.type === 'CL'){//---------------------Crystal Log Chronological (If you read it in Simul you will read it chronological)
               if (hud === 4){
                 if (scene.next.target === "ReadingChambers"){
@@ -2338,25 +2343,30 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                   setContent(await load(scene.next.target, scene.next.sceneID));
                   setFrame(0);
                   setHud(0);
+                  reset();
                 } else {
                   preload(await load("CrystalLog", scene.next.continuation));
                   setContent(await load("CrystalLog", scene.next.continuation));
                   setFrame(0);
+                  reset();
                 }
               } else {
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
+                reset();
               }
             } else if (scene.next.type === 'statcheck') {//-------------------Simple Stat condition (Currently only with "if higher then X")---------------------------
               if (parseInt(localStorage.getItem(scene.next.stat as string)|| '0') >= scene.next.higher){
                 preload(await load(scene.next.targetA,  scene.next.sceneIDA));
                 setContent(await load(scene.next.targetA,  scene.next.sceneIDA));
                 setFrame(0);
+                reset();
               } else { //Maybe add is LOWER & Is higher then "other stat"
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
+                reset();
               }
             } else if (scene.next.type === 'special'){//-------------------Special condition (Compares a fixed localStorage check)---------------------------
               // ------------------------------------------------ First VISIT--------------------------------
@@ -2364,12 +2374,14 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load(scene.next.target, 'Scene2'));
                 setContent(await load(scene.next.target, 'Scene2'));
                 setFrame(0);
+                reset();
               } 
               // ------------------------------------------------ Password Restriction--------------------------------
               else if (scene.next.target === 'CrystalLog' && scene.next.sceneID === 'Log1' && localStorage.getItem('EventPR') !== 'FIN'){
                 preload(await load(scene.next.target, 'CLPW'));
                 setContent(await load(scene.next.target, 'CLPW'));
                 setFrame(0);
+                reset();
                 localStorage.setItem('CurrentPart', 'CLPW');
               }
               // -------------------------------------------------- Hall-7 Unlock--------------------------
@@ -2377,15 +2389,18 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load(scene.next.target, 'PRHall7U'));
                 setContent(await load(scene.next.target, 'PRHall7U'));
                 setFrame(0);
+                reset();
               } //-----------------------------------------------First time End of Chapter----------------------------
               else if (scene.next.target === "Extra" && scene.next.sceneID === "NoNewContent" && localStorage.getItem('InformationWLNB') === '1'){
                 preload(await load(scene.next.target, "FNoNewContent"));
                 setContent(await load(scene.next.target, "FNoNewContent"));
                 setFrame(0);
+                reset();
               } else {
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
+                reset();
               }
 
             } else if (scene.next.type === 'TIB'){//-------------------The Inbetween condition (Go where the mood demands)---------------------------
@@ -2395,18 +2410,21 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                   preload(await load(scene.next.target, 'GreenHypoA'));
                   setContent(await load(scene.next.target, 'GreenHypoA'));
                   setFrame(0);
+                  reset();
                 }
               } else if (localStorage.getItem('InbetweenVibe') === 'Friendly'){
                 if (scene.next.sceneID === 'GreenHypo'){
                   preload(await load(scene.next.target, 'GreenHypoF'));
                   setContent(await load(scene.next.target, 'GreenHypoF'));
                   setFrame(0);
+                  reset();
                 }
               } else if (localStorage.getItem('InbetweenVibe') === 'Scaredy cat'){
                 if (scene.next.sceneID === 'GreenHypo'){
                   preload(await load(scene.next.target, 'GreenHypoS'));
                   setContent(await load(scene.next.target, 'GreenHypoS'));
                   setFrame(0);
+                  reset();
                 }
               }
 
@@ -2434,6 +2452,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               setContent(await load(trgt, scn));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
+              reset();
             } else if (scene.next.type === "random") {//-------------------Random condition (Its random)---------------------------
               const min = 1;
               const max = scene.RNG.amount;
@@ -2444,6 +2463,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               setContent(await load(scene.next.target, bar));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
+              reset();
             } else if (scene.next.type === "start"){//-------------------Website bootup / reload condition (You land where you are supposed to at story start)---------------------------
               if (/Mobi|Android/i.test(navigator.userAgent)){
                   console.log('Moblie user');
@@ -2459,6 +2479,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 //Preload not needed ig
                 setContent(await load('ReadingChambers', 'ReadingChambers'));
                 setFrame(0);
+                reset();
               } else {
                 const CC = localStorage.getItem('CurrentChapter');
                 const CP = localStorage.getItem('CurrentPart');
@@ -2484,11 +2505,13 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load(trgt, 'Scene2'));
                 setContent(await load(trgt, 'Scene2'));
                 setFrame(0);
+                reset();
               } else {
                 preload(await load(trgt, scn));
                 setContent(await load(trgt, scn));
                 //setContent(await load(scene.scene_id + 1));
                 setFrame(0);
+                reset();
               }
             }
             //

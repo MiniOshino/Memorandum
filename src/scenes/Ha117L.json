@@ -687,8 +687,8 @@
         "jayson": "Ha117L",
         "frames": [
             {
-                "textBox": { "name": "Lyzzy", "text": "Well, what can I say?      You caught the great Lyzzy~", "speed": 40, "show": "true"},
-                "sprites": { "center": "Lyzzy_Neutral", "effectC":"wiggle"},
+                "textBox": { "name": "Lyzzy", "text": "Well,        what can I say?             You caught the great Lyzzy~", "speed": 40, "show": "true"},
+                "sprites": { "center": "Lyzzy_Thinking", "effectC":"wiggle"},
                 "background": { "bg": "Ha117L"}
             }
         ],
@@ -723,12 +723,12 @@
         "jayson": "Ha117L",
         "frames": [
             {
-                "textBox": { "name": "Lyz", "text": "Yeah, me. The great Lyz.     ..What else did you expect?", "speed": 40, "show": "true"},
+                "textBox": { "name": "Lyz", "text": "Yeah, me.            The great Lyz.     ..What else did you expect?", "speed": 40, "show": "true"},
                 "sprites": { "center": "Lyz_Neutral"},
                 "background": { "bg": "Ha117L"}
             }
         ],
-        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL22", "event": "SlimeName", "eventupdate": "true" }
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "TableL33", "event": "SlimeName", "eventupdate": "true" }
       },
       "TableL33" : {
         "scene_id": "-",
@@ -736,7 +736,7 @@
         "jayson": "Ha117L",
         "frames": [
             {
-                "textBox": { "name": "Lyz", "text": "Wait..        Do you usually just stare at tables like that??", "speed": 40, "show": "true"},
+                "textBox": { "name": "Lyz", "text": "Wait..                Do you usually just stare at tables like that??", "speed": 40, "show": "true"},
                 "sprites": { "center": "Lyz_Zoneout"},
                 "background": { "bg": "Ha117L"}
             },
