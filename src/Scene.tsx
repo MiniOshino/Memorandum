@@ -2182,7 +2182,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 setFrame(0);
                 reset();
               } else {
-                if ((day.getDay() === 2) && localStorage.getItem('H7Table') === 'true'){
+                if ((day.getDay() === 5) && localStorage.getItem('H7Table') === 'true'){
                   var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
                   tempSPs += 1;
                   localStorage.setItem('SlimeInterest', tempSPs.toString());
@@ -2205,7 +2205,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             width={660}
             height={720}
               />
-              {(day.getDay() === 2 && localStorage.getItem('H7Table') === "true" && 
+              {(day.getDay() === 5 && localStorage.getItem('H7Table') === "true" && 
             <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
             src={`LB_H7TableLyz.png`}
