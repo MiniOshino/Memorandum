@@ -1830,32 +1830,60 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       {(scene.next.type === "ChapSelect" && frame >= scene.frames.length -1) && (
         <div className="">
         <div className="absolute z-40 w-[100%] h-[100%] top-[0%] left-[0%]">
-          <div className="absolute flex place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
+          <div className="absolute flex flex-col place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
             {(true) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 console.log('Chappy 1 select');
                 preload(await load("Chapter1", "Chapter1"));
                 setContent(await load("Chapter1", "Chapter1"));
                 setFrame(0);
-              }}>Instance 1</button>
+              }}><div className="z-50 translate-y-[80%]">Instance 1</div>
+              <Image
+                className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                src={`ChapSelectButtonV1.png`}
+                alt={"ChapSelectButtonV1.png"}
+                width={763}
+                height={260}
+           /></button>
             )}
             {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 6) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 preload(await load("Chapter2", "Chapter2"));
                 setContent(await load("Chapter2", "Chapter2"));
-                setFrame(0);}}>Instance 2</button>
+                setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 2</div>
+                <Image
+                  className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                  src={`ChapSelectButtonV1.png`}
+                  alt={"ChapSelectButtonV1.png"}
+                  width={763}
+                  height={260}
+             /></button>
             )}
            {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 11) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 preload(await load("Chapter3", "Chapter3"));
                 setContent(await load("Chapter3", "Chapter3"));
-                setFrame(0);}}>Instance 3</button>
+                setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 3</div>
+                <Image
+                  className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                  src={`ChapSelectButtonV1.png`}
+                  alt={"ChapSelectButtonV1.png"}
+                  width={763}
+                  height={260}
+             /></button>
             )}
             {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 15) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 preload(await load("Chapter4", "Chapter4"));
                 setContent(await load("Chapter4", "Chapter4"));
-                setFrame(0);}}>Instance 4</button>
+                setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 4</div>
+                <Image
+                  className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                  src={`ChapSelectButtonV1.png`}
+                  alt={"ChapSelectButtonV1.png"}
+                  width={763}
+                  height={260}
+             /></button>
             )}
           </div>
         </div>
@@ -1864,10 +1892,10 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
   
         <Image
            className=" absolute z-30 top-[0%] left-[0%] w-[100%] h-[100%]"
-           src={`ChapSelect.png`}
-            alt={"ChapSelect.png"}
-            width={3000}
-            height={2000}
+           src={`ChapSelectV1.png`}
+            alt={"ChapSelectV1.png"}
+            width={3840}
+            height={2160}
            />
         
       </div>
