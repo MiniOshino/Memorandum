@@ -242,20 +242,32 @@
                 "background": { "bg": "Darkness"}
             },
             {   
-                "textBox": { "name": "", "text": "This device is not suited for connecting.", "speed": 40},
-                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+                "textBox": { "name": "", "text": "[Connection unstable]", "speed": 40},
+                "background": { "bg": "Darkness"}
             },
             {   
-                "textBox": { "name": "", "text": "Please use a desktop.", "speed": 40},
-                "background": { "bg": "NexusCore", "pbg": "Darkness"}
+                "textBox": { "name": "", "text": "[This device is not suited for connecting]", "speed": 40},
+                "background": { "bg": "Darkness"}
             },
             {   
-                "textBox": { "name": "", "text": "I apologize for the troubles.", "speed": 40},
-                "background": { "bg": "NexusCore"}
+                "textBox": { "name": "", "text": "[Please use a more suited device]", "speed": 40},
+                "background": { "bg": "Darkness"}
             },
             {   
-                "textBox": { "name": "", "text": "”Coding is hard” -L7", "speed": 40},
-                "background": { "bg": "NexusCore"}
+                "textBox": { "name": "", "text": "Ah,        I apologize for the troubles...", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "", "text": "But using a desktop is the best solution I have found...", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "", "text": "At least for the foreseeable future.", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {   
+                "textBox": { "name": "", "text": "Sorryyy~  -L7", "speed": 40},
+                "background": { "bg": "Darkness"}
             }
         ],
         "next": { "type": "fixed", "target": "Extra", "sceneID": "mobile"}
