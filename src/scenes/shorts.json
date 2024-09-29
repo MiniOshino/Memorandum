@@ -1,5 +1,5 @@
 {
-    "test" : {
+    "test6" : {
       "scene_id": "Ths the test",
       "name": "Test",
       "frames": [
@@ -48,7 +48,7 @@
       ],
       "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
     },
-    "test2" : {
+    "test5" : {
       "scene_id": "Ths the test2",
       "name": "Test",
       "frames": [
@@ -57,8 +57,8 @@
             "background": { "bg": "Darkness"}
         },
         {
-            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
-            "background": { "bg": "ReadingChambers", "pbg": "Darkness"}
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection", "pbg": "Darkness"}
         },
         {
             "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
@@ -81,7 +81,11 @@
             "background": { "bg": "Connection"}
         },
         {
-            "textBox": { "name": "{Nora}", "text": "Ask about the world before the convergence!", "speed": 40, "show": "special"},
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Ask them about the world before the convergence!", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
         },
         {
@@ -95,6 +99,343 @@
         {
             "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
             "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness", "pbg": "Connection"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test8" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection", "pbg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "I don't understand..                   Did I send it to the wrong signal?", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "No..         That worked fine..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "..Why doesn't it..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "…Wait..          it worked!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "H-hey can you-", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "", "text": "{italic}*Beeep*{/italic}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"},
+            "sfx": "Dash"
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "No wait!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "I JUST GOT IT TO WORK!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "shake"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "FU-!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "crash"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness", "pbg": "Connection"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test7" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection", "pbg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "...Ok        ok,          it works again.", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "One seconnnddd..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Okokokok,      my name is,         uhhh…           L7!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "I'm from the Library of Memories-", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "No wait,           I don't even know where I am connected to for sure..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "wiggle"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "To whoever can even understand me,         send something back!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Like..         I don't know,          light a beacon?", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "", "text": "{italic}*Beeep*{/italic}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"},
+            "sfx": "Dash"
+        },
+        {
+            "textBox": { "name": "{Dial}", "text": "{bold}[undefined language]{/bold}", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "{Nora}", "text": "Just make sure to-", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness", "pbg": "Connection"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test2" : {
+      "scene_id": "Ths the test",
+      "name": "Test",
+      "frames": [
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dash"},
+            "sfx": "Dash"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dot"},
+            "sfx": "Dot"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dot"},
+            "sfx": "Dot"
+        },
+        {
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "background": { "bg": "Dot"},
+            "sfx": "Dot"
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Okkkk...         Just like that..", "speed": 40, "show": "special"},
+            "background": { "sbg": "1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Alright!", "speed": 40, "show": "special"},
+            "background": { "sbg": "1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "So, I looked things-           Hey hey!             You just had it-!", "speed": 40, "show": "special"},
+            "background": { "sbg": "1","animation": "zoomspazin"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Just-             A little....    Yeah,            NoooOooo?-               Alright,     perfect.      Keep that.", "speed": 40, "show": "special"},
+            "background": { "sbg": "1","animation": "zoomspazout"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Alright      soooooo,          I looked things up aaaannd", "speed": 40, "show": "special"},
+            "background": { "sbg": "1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Imma do what the fancy people call:        a “teaser”.", "speed": 40, "show": "special"},
+            "background": { "sbg": "1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "So let's start out with..       ze precious boyo..", "speed": 40, "show": "special"},
+            "background": { "sbg": "2", "spbg": "1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Zayn!", "speed": 40, "show": "special"},
+            "background": { "sbg": "3", "spbg": "2"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Ain’t he just too sweet.", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Looks like he would run into a tree while daydreaming..", "speed": 40, "show": "special"},
+            "background": { "sbg": "3", "animation": "zoomin"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Aaaaand might just take the entire tree down with him,         honestly.", "speed": 40, "show": "special"},
+            "background": { "sbg": "3", "animation": "zoomout"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "I would really love to tell you more about him but..", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Well..       Not even he could do that.", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "A cruel fate to not know where you are from or why you exist.", "speed": 40, "show": "special"},
+            "background": { "sbg": "3", "animation": "refocus"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Or perhaps a blessing?", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Welp,           at least he found himself with a nice companion called Nora!", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Though,         that might not really help the confusion of his unfortunate situation...", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "But yeah.       Thats all for now!", "speed": 40, "show": "special"},
+            "background": { "sbg": "3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "See ya next time!", "speed": 40, "show": "special"},
+            "background": { "sbg": "3", "animation": "zoomin"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+    "test3" : {
+      "scene_id": "Ths the test3",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection", "pbg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "1 2,         1 2", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Alright.        Nice.          Lovely.", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "wiggle"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "I think..          With that the connection is stable.", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Honestly farther than I thought I would get..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Uhm..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Nevermind..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "wiggle"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "The visual core is not fully working..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "I’ll get it to work next time..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Until then:", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Go check out the Library!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "And the last memory of course!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Yeah!", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Man I suck at this-", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection", "animation": "wiggle"}
         },
         {
             "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},

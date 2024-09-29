@@ -286,7 +286,7 @@ const Background = ({ background }) => {
       />}
       </div>
       )}
-      <div className={` absolute -z-50 w-full h-full ease-in`}>
+      { background.bg && (<div className={` absolute ${background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-full h-full ease-in`}>
         { background.bg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
@@ -295,7 +295,7 @@ const Background = ({ background }) => {
         width={3840}
         height={2160}
       />}
-      </div>
+      </div>)}
 
       { background.pbg && (<div className=" absolute -z-40 w-full h-full opacity-0 animate-[vibeout_2s] ease-in">
         { background.pbg === "bitch" ? null :
@@ -304,6 +304,29 @@ const Background = ({ background }) => {
         src={`BG${background.pbg}.png`}
         alt={'background.pgb'}
         width={3840}
+        height={2160}
+      />}
+      </div>
+      )}
+      {/*------------------------------------Shorts BG---------------------------------------------- */}
+      {background.sbg && (<div className={` absolute ${background.animation === "zoomin" ? "animate-[zoomin_5s]" : background.animation === "rotateright" ? "animate-[rotateright_4s]" : background.animation === "refocus" ? "animate-[refocus_2s]" : background.animation === "zoomout" ? "animate-[zoomout_5s]" : background.animation === "zoomspazin" ? "animate-[zoomspazin_10s]" : background.animation === "zoomspazout" ? "animate-[zoomspazout_10s]" : background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-[32%] h-full ease-in left-[50%] translate-x-[-50%]`}>
+        { background.sbg === "bitch" ? null :
+       <Image
+        className=" z-0 w-full h-full"
+        src={`SHORTS${background.sbg}.png`}
+        alt={`SHORTS${background.sbg}.png`}
+        width={1214}
+        height={2160}
+      />}
+      </div>)}
+
+      { background.spbg && (<div className=" absolute -z-40 w-[32%] h-full opacity-0 animate-[vibeout_0.5s] ease-in left-[50%] translate-x-[-50%]">
+        { background.spbg === "bitch" ? null :
+       <Image
+        className=" -z-40 w-full h-full"
+        src={`SHORTS${background.spbg}.png`}
+        alt={'background.spgb'}
+        width={1214}
         height={2160}
       />}
       </div>
@@ -538,8 +561,8 @@ const LSC = () => {
     localStorage.setItem('InbetweenVibe', 'Friendly');
   }
   //----------------------------------------------------Event checks-----------------------------------
-  if (localStorage.getItem('Yellow') === '1' && localStorage.getItem('Cyan') === '1' && localStorage.getItem('Magenta') === '1' && localStorage.getItem('Spydent') === 'false'){
-    localStorage.setItem('Spydent', "true");
+  if (localStorage.getItem('Yellow') === '1' && localStorage.getItem('Cyan') === '1' && localStorage.getItem('Magenta') === '1' && localStorage.getItem('Spydent') === 'NS'){
+    localStorage.setItem('Spydent', "1");
   }
 });
   return (
@@ -582,6 +605,7 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('EventFV', "NS"); // First Visit Event:  / 1: Starting / 2: Finished talk with Lyz / 3: Finished talk with Architect  / 4: First Warp to Nexus Core /5: Finsihed fist convo with Nexus /6: Inquired about Story
       localStorage.setItem('EventPR', "NS"); // Password Restriction Event / 1: Starting / 2:
       localStorage.setItem('EventSC', "NS"); // Slime Connection Event
+      localStorage.setItem('Spydent', "NS"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
       //------------------------------------------STATS--------------------------------------------
       localStorage.setItem('Curious', "0");
       localStorage.setItem('Interested', "0");
@@ -595,7 +619,6 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('Trusting', "0");
       localStorage.setItem('Questioning', "0");
       localStorage.setItem('SlimeInterest', "0"); //+1: Is Inquiry by asking it at the start //+1 First trying PR event //+1 Finding it in table //+1 Entering the Beacon room from the Pings (yt shorts)
-      localStorage.setItem('Spydent', "false"); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
       //------------------------------------------Choice Answers--------------------------------------------
       localStorage.setItem('true', "true");
       localStorage.setItem('Error', "false"); //You cannot go back to the Story if this is true
@@ -617,13 +640,14 @@ export const Scene = ({ initial_content }) => {
       localStorage.setItem('InformationWLNB', "0"); //1: Checked the book on the table /2: Reached the end of a released chapter
       localStorage.setItem('InformationCagliostro', '0'); // 1: Asked about Cagliostro to Nexus
       localStorage.setItem('InformationInBetween', '0'); //1: Interacted with the Mist / 2: Asked about The Inbetwen to Nexus
+      localStorage.setItem('PostDream', "false") //set on true after the final 3rd dream. No longer plays them in the story (still have to make that special next that skips them if true)
       //-------------------------------------------RoomUnlocks---------------------------------
       localStorage.setItem('Ha11-7L', "false"); // Lyzzy will tell you the room in PR event //: true -> you got the unlock //: unlock -> You have it in your device
       localStorage.setItem('f659-f9', "false"); //You dont need it on true to get the unlock
       //-------------------------------------------CharacterUnlocks---------------------------------
       localStorage.setItem('SlimeName', "false"); //Imma be honesty this is hardly useful as of right now but ig i keep it.
       localStorage.setItem('InbetweenVibe', ''); // Either Analytical, Scaredy Cat, Friendly
-      localStorage.setItem('GreenTourGuide', 'false');
+      localStorage.setItem('GreenTourGuide', 'false'); //Telling it it would make a good tour guide
       localStorage.setItem('Yellow', "0"); // 1: Finding yellow //2:
       localStorage.setItem('Cyan', "0"); // 1: Finding Cyan //2:
       localStorage.setItem('Magenta', "0"); // 1: Finding Magenta //2:
@@ -686,7 +710,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
   const [voice, setVoice] = useState([
     ["Innkeeper","Slime"],
     ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
-    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz"],
+    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz", "L7"],
     ["Scarlett","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?"],
     ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
     ["Green", "(Green)","Yellow","(Yellow)","{Dial}"]]);
@@ -765,7 +789,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
     const parts = text.split(/(\{bold\}|\{\/bold\}|\{italic\}|\{\/italic\}|\{name\}|\{\/name\})/);
   
     return (
-      <p>
+      <div  className=" text-center items-center justify-center flex">
         {parts.map((part, index) => {
           if (part === '{bold}') {
             return (
@@ -798,7 +822,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             return part;
           }
         })}
-      </p>
+      </div>
     );
   };
   
@@ -834,7 +858,6 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         const interval = setInterval(() => {
           if (currentIndex < text.length) {
             const char = text[currentIndex];
-  
             if (((text === "...") || text === '(...)' || text === '...!' || text === '...?' || text.includes('*'))) {
               if (currentIndex === 0) {
                 console.log('Do it once');
@@ -847,7 +870,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               }, 1000);
               }
             } else {
-            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && (((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
+            if ((text.slice(currentIndex, currentIndex + 1) === ' ' || currentIndex === 0) && ((text.slice(currentIndex + 1, currentIndex + 2) === ' ' && currentIndex === 0)||((text.slice(currentIndex + 2, currentIndex + 3) === ' '||text.slice(currentIndex).length <= 2) && text.slice(currentIndex + 1, currentIndex + 2) !== ' ') || ((text.slice(currentIndex + 3, currentIndex + 4) === ' '||text.slice(currentIndex).length <= 3) && text.slice(currentIndex + 1, currentIndex + 2) !== ' '))){
               playAudio();
               //console.log('1');
               //console.log(text.slice(currentIndex));
@@ -944,7 +967,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       }, [text, speed, ps, currentIndex, bold, italic, name, why]);
     
       return (
-        <div>
+        <div className=" text-center items-center justify-center flex">
           <span dangerouslySetInnerHTML={{ __html: displayText.replace(/[{}]/g, '') }} />
           {text !== '' && ps !== '' && (<audio ref={audioRef}>
                <source src={(`${voice[0].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral0.mp3" : voice[1].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral1.mp3" : voice[2].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral2.mp3" : voice[3].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral3.mp3" : voice[4].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral4.mp3" : voice[5].includes(tb.name) ? "https://beans.images.ni-verse.com/TextingNeutral5.mp3" : null }`)} type="audio/mpeg"></source>
@@ -972,7 +995,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div className="h-[45%] text-2xl font-semibold">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
           </div>
-        <div className=" z-20 text-xl text-white h-[40%]">
+        <div className=" z-20 text-xl text-white h-[60%]">
         {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
             reset();
           } else {
@@ -990,10 +1013,10 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           height={602} />
         }
       <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
-        <div className="h-[45%] text-2xl font-semibold">
+        <div className="h-[39%] text-2xl font-semibold">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && localStorage.getItem("SlimeName") === 'false') || (name === "Lyzzy" && localStorage.getItem("SlimeName") === 'false')? "???" : name}
           </div>
-        <div className=" z-20 text-xl text-white h-[40%]">
+        <div className=" z-20 text-xl text-white h-[46%]">
         {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {
           if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
             reset();
@@ -1807,32 +1830,60 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       {(scene.next.type === "ChapSelect" && frame >= scene.frames.length -1) && (
         <div className="">
         <div className="absolute z-40 w-[100%] h-[100%] top-[0%] left-[0%]">
-          <div className="absolute flex place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
+          <div className="absolute flex flex-col place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
             {(true) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 console.log('Chappy 1 select');
                 preload(await load("Chapter1", "Chapter1"));
                 setContent(await load("Chapter1", "Chapter1"));
                 setFrame(0);
-              }}>Instance 1</button>
+              }}><div className="z-50 translate-y-[80%]">Instance 1</div>
+              <Image
+                className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                src={`ChapSelectButtonV1.png`}
+                alt={"ChapSelectButtonV1.png"}
+                width={763}
+                height={260}
+           /></button>
             )}
             {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 6) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 preload(await load("Chapter2", "Chapter2"));
                 setContent(await load("Chapter2", "Chapter2"));
-                setFrame(0);}}>Instance 2</button>
+                setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 2</div>
+                <Image
+                  className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                  src={`ChapSelectButtonV1.png`}
+                  alt={"ChapSelectButtonV1.png"}
+                  width={763}
+                  height={260}
+             /></button>
             )}
            {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 11) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 preload(await load("Chapter3", "Chapter3"));
                 setContent(await load("Chapter3", "Chapter3"));
-                setFrame(0);}}>Instance 3</button>
+                setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 3</div>
+                <Image
+                  className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                  src={`ChapSelectButtonV1.png`}
+                  alt={"ChapSelectButtonV1.png"}
+                  width={763}
+                  height={260}
+             /></button>
             )}
             {(parseInt(localStorage.getItem('StoryProgress' as string)|| '0') >= 15) && (
-              <button className=" z-50 hover:text-gray-400 text-2xl p-1 font-bold m-4 text-black border-solid border-4 border-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
                 preload(await load("Chapter4", "Chapter4"));
                 setContent(await load("Chapter4", "Chapter4"));
-                setFrame(0);}}>Instance 4</button>
+                setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 4</div>
+                <Image
+                  className="z-40 top-[0%] left-[0%] w-[100%] h-[110%] translate-y-[-25%]"
+                  src={`ChapSelectButtonV1.png`}
+                  alt={"ChapSelectButtonV1.png"}
+                  width={763}
+                  height={260}
+             /></button>
             )}
           </div>
         </div>
@@ -1841,10 +1892,10 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
   
         <Image
            className=" absolute z-30 top-[0%] left-[0%] w-[100%] h-[100%]"
-           src={`ChapSelect.png`}
-            alt={"ChapSelect.png"}
-            width={3000}
-            height={2000}
+           src={`ChapSelectV1.png`}
+            alt={"ChapSelectV1.png"}
+            width={3840}
+            height={2160}
            />
         
       </div>
@@ -2152,11 +2203,12 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div>
           {/* -----------------------------------------------------Table------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) && (
-            <button className="absolute w-[17.2%] h-[33.4%] top-[60.9%] left-[16.6%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
+            <button className="absolute w-[18.9%] h-[36%] top-[59.3%] left-[15.8%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
               if (localStorage.getItem('H7Table') === "false"){
                 preload(await load('Ha117L', 'Table'));
                 setContent(await load('Ha117L', 'Table'));
                 setFrame(0);
+                reset();
               } else {
                 if ((day.getDay() === 5) && localStorage.getItem('H7Table') === 'true'){
                   var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
@@ -2165,10 +2217,12 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                   preload(await load('Ha117L', 'TableL'));
                   setContent(await load('Ha117L', 'TableL'));
                   setFrame(0);
+                  reset();
                 } else {
                   preload(await load('Ha117L', 'Table6'));
                   setContent(await load('Ha117L', 'Table6'));
                   setFrame(0);
+                  reset();
                 }
               }
             }}>
@@ -2181,9 +2235,9 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               />
               {(day.getDay() === 5 && localStorage.getItem('H7Table') === "true" && 
             <Image
-            className=" absolute w-[112%] h-[99.5%] top-[1%] left-[0%]"
-            src={`LB_H7TableL.png`}
-            alt={"LB_H7TableL.png"}
+            className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
+            src={`LB_H7TableLyz.png`}
+            alt={"LB_H7TableLyz.png"}
             width={663}
             height={717}
               />
@@ -2200,6 +2254,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             setFrame(0);
             setRoom(0);
             setHud(0);
+            reset();
           }
           //------------------------------------------------------------------------------------------------------------------------
           setRoom(1);
@@ -2221,9 +2276,20 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           {/* -----------------------------------------------------Beacon------------------------------------------------------------*/}
           {(room === 1 && hud === 0 ) && (
             <button className="absolute w-[37.7%] h-[98.7%] top-[0%] left-[31.1%] z-10 [&:not(:hover)]:opacity-0 hover:opacity-1 hover:animate-[vibe_1s]" onClick={async () =>{
-                  preload(await load('Transmitter', 'BeaconOne'));
-                  setContent(await load('Transmitter', 'BeaconOne'));
-                  setFrame(0);
+              if (localStorage.getItem('T1Beacon') === 'false'){
+                var tempSPs = parseInt(localStorage.getItem('SlimeInterest' as string)|| '0');
+                tempSPs += 1;
+                localStorage.setItem('SlimeInterest', tempSPs.toString());
+                preload(await load('Transmitter', 'BeaconOne'));
+                setContent(await load('Transmitter', 'BeaconOne'));
+                setFrame(0);
+                reset();
+              } else {
+                preload(await load('Transmitter', 'BeaconOneN'));
+                setContent(await load('Transmitter', 'BeaconOneN'));
+                setFrame(0);
+                reset();
+              }    
             }}>
                <Image
             className=" absolute w-[100%] h-[100%] top-[0%] left-[0%]"
@@ -2297,6 +2363,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               preload(await load(scene.next.target, scene.next.sceneID));
               setContent(await load(scene.next.target, scene.next.sceneID));
               setFrame(0);
+              reset();
             } else if (scene.next.type === 'CL'){//---------------------Crystal Log Chronological (If you read it in Simul you will read it chronological)
               if (hud === 4){
                 if (scene.next.target === "ReadingChambers"){
@@ -2304,25 +2371,30 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                   setContent(await load(scene.next.target, scene.next.sceneID));
                   setFrame(0);
                   setHud(0);
+                  reset();
                 } else {
                   preload(await load("CrystalLog", scene.next.continuation));
                   setContent(await load("CrystalLog", scene.next.continuation));
                   setFrame(0);
+                  reset();
                 }
               } else {
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
+                reset();
               }
             } else if (scene.next.type === 'statcheck') {//-------------------Simple Stat condition (Currently only with "if higher then X")---------------------------
               if (parseInt(localStorage.getItem(scene.next.stat as string)|| '0') >= scene.next.higher){
                 preload(await load(scene.next.targetA,  scene.next.sceneIDA));
                 setContent(await load(scene.next.targetA,  scene.next.sceneIDA));
                 setFrame(0);
+                reset();
               } else { //Maybe add is LOWER & Is higher then "other stat"
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
+                reset();
               }
             } else if (scene.next.type === 'special'){//-------------------Special condition (Compares a fixed localStorage check)---------------------------
               // ------------------------------------------------ First VISIT--------------------------------
@@ -2330,12 +2402,14 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load(scene.next.target, 'Scene2'));
                 setContent(await load(scene.next.target, 'Scene2'));
                 setFrame(0);
+                reset();
               } 
               // ------------------------------------------------ Password Restriction--------------------------------
               else if (scene.next.target === 'CrystalLog' && scene.next.sceneID === 'Log1' && localStorage.getItem('EventPR') !== 'FIN'){
                 preload(await load(scene.next.target, 'CLPW'));
                 setContent(await load(scene.next.target, 'CLPW'));
                 setFrame(0);
+                reset();
                 localStorage.setItem('CurrentPart', 'CLPW');
               }
               // -------------------------------------------------- Hall-7 Unlock--------------------------
@@ -2343,15 +2417,18 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load(scene.next.target, 'PRHall7U'));
                 setContent(await load(scene.next.target, 'PRHall7U'));
                 setFrame(0);
+                reset();
               } //-----------------------------------------------First time End of Chapter----------------------------
               else if (scene.next.target === "Extra" && scene.next.sceneID === "NoNewContent" && localStorage.getItem('InformationWLNB') === '1'){
                 preload(await load(scene.next.target, "FNoNewContent"));
                 setContent(await load(scene.next.target, "FNoNewContent"));
                 setFrame(0);
+                reset();
               } else {
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
+                reset();
               }
 
             } else if (scene.next.type === 'TIB'){//-------------------The Inbetween condition (Go where the mood demands)---------------------------
@@ -2361,18 +2438,21 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                   preload(await load(scene.next.target, 'GreenHypoA'));
                   setContent(await load(scene.next.target, 'GreenHypoA'));
                   setFrame(0);
+                  reset();
                 }
               } else if (localStorage.getItem('InbetweenVibe') === 'Friendly'){
                 if (scene.next.sceneID === 'GreenHypo'){
                   preload(await load(scene.next.target, 'GreenHypoF'));
                   setContent(await load(scene.next.target, 'GreenHypoF'));
                   setFrame(0);
+                  reset();
                 }
               } else if (localStorage.getItem('InbetweenVibe') === 'Scaredy cat'){
                 if (scene.next.sceneID === 'GreenHypo'){
                   preload(await load(scene.next.target, 'GreenHypoS'));
                   setContent(await load(scene.next.target, 'GreenHypoS'));
                   setFrame(0);
+                  reset();
                 }
               }
 
@@ -2400,6 +2480,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               setContent(await load(trgt, scn));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
+              reset();
             } else if (scene.next.type === "random") {//-------------------Random condition (Its random)---------------------------
               const min = 1;
               const max = scene.RNG.amount;
@@ -2410,6 +2491,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               setContent(await load(scene.next.target, bar));
               //setContent(await load(scene.scene_id + 1));
               setFrame(0);
+              reset();
             } else if (scene.next.type === "start"){//-------------------Website bootup / reload condition (You land where you are supposed to at story start)---------------------------
               if (/Mobi|Android/i.test(navigator.userAgent)){
                   console.log('Moblie user');
@@ -2425,6 +2507,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 //Preload not needed ig
                 setContent(await load('ReadingChambers', 'ReadingChambers'));
                 setFrame(0);
+                reset();
               } else {
                 const CC = localStorage.getItem('CurrentChapter');
                 const CP = localStorage.getItem('CurrentPart');
@@ -2450,11 +2533,13 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load(trgt, 'Scene2'));
                 setContent(await load(trgt, 'Scene2'));
                 setFrame(0);
+                reset();
               } else {
                 preload(await load(trgt, scn));
                 setContent(await load(trgt, scn));
                 //setContent(await load(scene.scene_id + 1));
                 setFrame(0);
+                reset();
               }
             }
             //
