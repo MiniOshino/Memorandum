@@ -58,8 +58,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "Inspect them", "path": "Tables2", "compare": "true", "with": "true", "stats": "Curious"},
-            "two": {"text": "Sit down", "path": "Tables3", "compare": "true", "with": "true", "stats": "Silly"}
+            "one": {"text": "Inspect them", "path": "Tables2", "compare": "Confirm", "with": "Confirm", "stats": "Curious"},
+            "two": {"text": "Sit down", "path": "Tables3", "compare": "Confirm", "with": "Confirm", "stats": "Silly"}
             }
           },
           "Tables2" : {
@@ -181,8 +181,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "Keep starring", "path": "InfoWall2", "compare": "true", "with": "true", "stats": "Curious"},
-            "two": {"text": "Touch it", "path": "InfoWall3", "compare": "true", "with": "true", "stats": "Confused"}
+            "one": {"text": "Keep starring", "path": "InfoWall2", "compare": "Confirm", "with": "Confirm", "stats": "Curious"},
+            "two": {"text": "Touch it", "path": "InfoWall3", "compare": "Confirm", "with": "Confirm", "stats": "Confused"}
             }
           },
           "InfoWall2" : {
@@ -385,7 +385,7 @@
             "eight": {"text": "About; The Inbetween", "path": "ATI", "compare": "NQuestionInBetween", "with": "true", "stats": "Interested"},
             "eightB": {"text": "About; The Inbetween", "path": "ATI", "compare": "NQuestionInBetween", "with": "read"},
             "nine": {"text": "About; The Story", "path": "ATS", "compare": "EventFV", "with": "5"},
-            "ten": {"text": "All for now", "path": "AFN", "compare": "true", "with": "true"}
+            "ten": {"text": "All for now", "path": "AFN", "compare": "Confirm", "with": "Confirm"}
       }
     },
     "WITP" : {

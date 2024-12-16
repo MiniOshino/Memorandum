@@ -40,6 +40,171 @@
             "background": { "bg": "Light"}
         },
         {
+            "textBox": { "name": "{Nexus}", "text": "Has thou been here before?", "speed": 40 },
+            "background": { "bg": "Light"}
+        },
+        {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+        }
+    ],
+    "next": { "type": "choice", "question": "(Has thou been here before?)",
+    "one": {"text": "Indeed", "path": "login", "compare": "Confirm", "with": "Confirm"},
+    "two": {"text": "Not that I remember..", "path": "new", "compare": "Confirm", "with": "Confirm"}
+        }
+    },
+    "login" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "I see.        My appologies.", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "Would thou please verify thyself, so that I can link the corresponding information thread?", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "login", "target": "Library0", "sceneID": "confirmation"}
+      },
+      "confirmation" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "Nexus", "text": "Wonderful.", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "Nexus", "text": "I shall send thee to the reading chambers as usual.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "Nexus", "text": "See you around,     little soul~", "speed": 40 },
+            "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+      },
+      "confirmationfail" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "Hm.      It seems like verification was not possible..", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "Art thou sure to have been here before?", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "choice", "question": "(Art thou sure to have been here before?)",
+    "one": {"text": "Confident.", "path": "login", "compare": "Confirm", "with": "Confirm"},
+    "two": {"text": "I'm not sure..", "path": "new", "compare": "Confirm", "with": "Confirm"}
+        }
+      },
+      "new" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "No worries, little soul.", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "Thou may reserve an information thread if that is what thine wish.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "choice", "question": "(Thou may reserve an information thread if that is what thine wish.)",
+        "one": {"text": "Yes please.", "path": "register", "compare": "Confirm", "with": "Confirm"},
+        "two": {"text": "Not yet..", "path": "guest", "compare": "Confirm", "with": "Confirm"}
+            }
+      },
+      "register" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "Alright then, little soul~", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "Do please remember to keep the identifiers safe.      I will not be able to relink thee to a thread otherwise.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "Enter thine 'name' at the top and the confidential 'ID-link' at the bottom.", "speed": 40 },
+            "background": { "bg": "Light"}
+            },
+        {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+        }
+        ],
+        "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
+      },
+      "registered" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "Delightful.", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "A thread has been reserved.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "With that out of the way,      let me introduce myself.", "speed": 40 },
+            "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "fixed", "target": "Library0", "sceneID": "continue" }
+      },
+      "guest" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "Very well.", "speed": 40 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "Please remember, as long as thou is not linked to a thread, I will not be able to find thee again, if thine 'connection' breaks.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "Thou may reserve a thread at anytime later on.      Simply find me at the core.", "speed": 40 },
+            "background": { "bg": "Light"}
+            },
+        {
+            "textBox": { "name": "{Nexus}", "text": "...Ah,      right.     Let me introduce myself.", "speed": 40 },
+            "background": { "bg": "Light"}
+        }
+        ],
+        "next": { "type": "fixed", "target": "Library0", "sceneID": "continue" }
+      },
+    "continue" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+        "frames": [
+        {
             "textBox": { "name": "{Nexus}", "text": "We are the cagliostro,       the vessels of this place...", "speed": 40 },
             "background": { "bg": "Light"}
         },

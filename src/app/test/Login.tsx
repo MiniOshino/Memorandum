@@ -49,6 +49,7 @@ export function Login() {
         <button type="submit" onClick={handle}>
             login
         </button>
+        
     </form>;
 }
 
@@ -105,7 +106,7 @@ export function StatDisplay() {
 
     return <form>
         <ul>
-            {stats.map(s => <li><span>{s.key}</span> <span>{s.value}</span></li>)}
+            {stats.map(s => <li key={s.key}><span>{s.key}</span> <span>{s.value}</span></li>)}
         </ul>
         <button type="submit" onClick={handle}>
             get stats

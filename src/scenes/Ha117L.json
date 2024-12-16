@@ -52,9 +52,9 @@
           }
         ],
         "next": { "type": "choice", "question": "(...)",
-            "one": {"text": "Hi there!", "path": "F1C1", "compare": "true", "with": "true", "stats": "Friendly"},
-            "two": {"text": "Oh, the architect's robot.", "path": "F1C2", "compare": "true", "with": "true", "stats": "Analytical"},
-            "three": {"text": "Why are you looking at me like that..", "path": "F1C3", "compare": "true", "with": "true", "stats": "Scaredy cat"}
+            "one": {"text": "Hi there!", "path": "F1C1", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
+            "two": {"text": "Oh, the architect's robot.", "path": "F1C2", "compare": "Confirm", "with": "Confirm", "stats": "Analytical"},
+            "three": {"text": "Why are you looking at me like that..", "path": "F1C3", "compare": "Confirm", "with": "Confirm", "stats": "Scaredycat"}
           }
       },
       "F1C1" : {
@@ -128,8 +128,8 @@
             }
         ],
         "next": { "type": "choice", "question": "(It is favored by many due to its convenient ID and almost perfect % usage)",
-            "one": {"text": "Sweet", "path": "F2C1", "compare": "true", "with": "true"},
-            "two": {"text": "Are you a tour guide or something?", "path": "F2C2", "compare": "true", "with": "true"}
+            "one": {"text": "Sweet", "path": "F2C1", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Are you a tour guide or something?", "path": "F2C2", "compare": "Confirm", "with": "Confirm"}
           }
       },
       "F2C1" : {
@@ -223,8 +223,8 @@
             }
         ],
         "next": { "type": "choice", "question": "(...)",
-            "one": {"text": "You would make a great tour guide tough..", "path": "F3C1", "compare": "true", "with": "true"},
-            "two": {"text": "Is there something wrong?", "path": "F3C2", "compare": "true", "with": "true"}
+            "one": {"text": "You would make a great tour guide tough..", "path": "F3C1", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Is there something wrong?", "path": "F3C2", "compare": "Confirm", "with": "Confirm"}
           }
       },
       "F3C1" : {
@@ -285,9 +285,9 @@
             }
         ],
         "next": { "type": "choice", "question": "(How would that make you feel?)",
-            "one": {"text": "Protected. I'm sure they are looking out for me.", "path": "FScene6", "compare": "true", "with": "true", "stats": "Friendly"},
-            "two": {"text": "Intrigued. I would like to know what is following me.", "path": "FScene6", "compare": "true", "with": "true", "stats":"Analytical"},
-            "three": {"text": "Nervous. I would run for my life.", "path": "FScene6", "compare": "true", "with": "true", "stats":"Scaredy cat"}
+            "one": {"text": "Protected. I'm sure they are looking out for me.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
+            "two": {"text": "Intrigued. I would like to know what is following me.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats":"Analytical"},
+            "three": {"text": "Nervous. I would run for my life.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats":"Scaredycat"}
           }
       },
       "FScene6" : {
@@ -447,8 +447,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "Move on", "path": "TableM", "compare": "true", "with": "true"},
-            "two": {"text": "Keep starring", "path": "Table2", "compare": "true", "with": "true"}
+            "one": {"text": "Move on", "path": "TableM", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Keep starring", "path": "Table2", "compare": "Confirm", "with": "Confirm"}
             }
           },
           "TableM" : {
@@ -496,8 +496,8 @@
             }
         ],
         "next": { "type": "choice", "question": "",
-            "one": {"text": "Move on", "path": "TableM", "compare": "true", "with": "true"},
-            "two": {"text": "Focus on the table", "path": "Table3", "compare": "true", "with": "true"}
+            "one": {"text": "Move on", "path": "TableM", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Focus on the table", "path": "Table3", "compare": "Confirm", "with": "Confirm"}
             }
       },
       "Table3" : {
@@ -547,8 +547,8 @@
             }
         ],
         "next": { "type": "choice", "question": "",
-            "one": {"text": "Carry on", "path": "Table5", "compare": "true", "with": "true", "stats": "Silly"},
-            "two": {"text": "Touch it", "path": "Table4", "compare": "true", "with": "true", "stats": "Confused"}
+            "one": {"text": "Carry on", "path": "Table5", "compare": "Confirm", "with": "Confirm", "stats": "Silly"},
+            "two": {"text": "Touch it", "path": "Table4", "compare": "Confirm", "with": "Confirm", "stats": "Confused"}
             }
       },
       "Table4" : {
@@ -677,8 +677,8 @@
             }
         ],
         "next": { "type": "choice", "question": "",
-            "one": {"text": "I knew it.", "path": "TableL2", "compare": "true", "with": "true", "stats": "Questioning"},
-            "two": {"text": "You?!", "path": "TableL3", "compare": "true", "with": "true", "stats": "Confused"}
+            "one": {"text": "I knew it.", "path": "TableL2", "compare": "Confirm", "with": "Confirm", "stats": "Questioning"},
+            "two": {"text": "You?!", "path": "TableL3", "compare": "Confirm", "with": "Confirm", "stats": "Confused"}
             }
       },
       "TableL2" : {

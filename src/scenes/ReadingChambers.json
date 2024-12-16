@@ -92,9 +92,9 @@
             }
         ],
         "next": { "type": "choice", "question": "(It continues rubbing its sleeve over the puddle until it vanishes)",
-        "one": {"text": "What are you?", "path": "1C1", "stats": "Analytical", "compare": "true", "with": "true"},
-        "two": {"text": "Who are you?", "path": "1C2", "stats": "Empathetic", "compare": "true", "with": "true"}, 
-        "three": {"text": "Where am I?", "path": "1C3", "stats": "Self Interest", "compare": "true", "with": "true"}
+        "one": {"text": "What are you?", "path": "1C1", "stats": "Analytical", "compare": "Confirm", "with": "Confirm"},
+        "two": {"text": "Who are you?", "path": "1C2", "stats": "Empathetic", "compare": "Confirm", "with": "Confirm"}, 
+        "three": {"text": "Where am I?", "path": "1C3", "stats": "SelfInterest", "compare": "Confirm", "with": "Confirm"}
             }
         },
         "1C1" : {
@@ -195,8 +195,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(As far as you are concerned, this might as well be the worst replica in the history of ever)",
-            "one": {"text": "Probably a good replica", "path": "Pot2", "compare": "true", "with": "true", "stats": "Trusting"},
-            "two": {"text": "Definitely a bad replica", "path": "Pot2", "compare": "true", "with": "true", "stats": "Questioning"}
+            "one": {"text": "Probably a good replica", "path": "Pot2", "compare": "Confirm", "with": "Confirm", "stats": "Trusting"},
+            "two": {"text": "Definitely a bad replica", "path": "Pot2", "compare": "Confirm", "with": "Confirm", "stats": "Questioning"}
             }
           },
           "Pot2" : {
@@ -290,8 +290,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "Try to read as well", "path": "Cell2", "compare": "true", "with": "true", "stats": "Curious"},
-            "two": {"text": "Back away", "path": "Cell3", "compare": "true", "with": "true", "stats": "Scaredy cat"}
+            "one": {"text": "Try to read as well", "path": "Cell2", "compare": "Confirm", "with": "Confirm", "stats": "Curious"},
+            "two": {"text": "Back away", "path": "Cell3", "compare": "Confirm", "with": "Confirm", "stats": "Scaredycat"}
             }
           },
           "Cell2" : {
@@ -349,8 +349,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "Attempt to call out to them", "path": "Souls2", "compare": "true", "with": "true", "stats": "Empathetic"},
-            "two": {"text": "Look down at yourself", "path": "Souls3", "compare": "true", "with": "true", "stats": "Self Interest"}
+            "one": {"text": "Attempt to call out to them", "path": "Souls2", "compare": "Confirm", "with": "Confirm", "stats": "Empathetic"},
+            "two": {"text": "Look down at yourself", "path": "Souls3", "compare": "Confirm", "with": "Confirm", "stats": "SelfInterest"}
             }
           },
           "Souls2" : {
@@ -404,8 +404,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "Reach out to it", "path": "BC1", "compare": "true", "with": "true", "stats": "Confused"},
-            "two": {"text": "Use the force", "path": "BC2", "compare": "true", "with": "true", "stats": "Silly"}
+            "one": {"text": "Reach out to it", "path": "BC1", "compare": "Confirm", "with": "Confirm", "stats": "Confused"},
+            "two": {"text": "Use the force", "path": "BC2", "compare": "Confirm", "with": "Confirm", "stats": "Silly"}
             }
           },
           "BC1" : {
@@ -488,8 +488,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(What would you like to think about?)",
-            "one": {"text": "Continue", "path": "WLNBNC", "compare": "true", "with": "true"},
-            "two": {"text": "Select a Chapter", "path": "WLNBNS", "compare": "true", "with": "true"}
+            "one": {"text": "Continue", "path": "WLNBNC", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Select a Chapter", "path": "WLNBNS", "compare": "Confirm", "with": "Confirm"}
             }
           },
           "WLNBNS" : {
@@ -547,8 +547,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(You feel that shiver again as you glare at the endless seeming corridor outside)",
-            "one": {"text": "Leave the room", "path": "Lost", "compare": "true", "with": "true"},
-            "two": {"text": "Stay here", "path": "RatherNot", "compare": "true", "with": "true"}
+            "one": {"text": "Leave the room", "path": "Lost", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Stay here", "path": "RatherNot", "compare": "Confirm", "with": "Confirm"}
             }
           },
           "RatherNot" : {
@@ -651,8 +651,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(Alright..)",
-            "one": {"text": "OW.. my eyes..", "path": "L1C1", "compare": "true", "with": "true", "stats": "Confused"},
-            "two": {"text": "What is this place?", "path": "L1C2", "compare": "true", "with": "true", "stats": "Curious"}
+            "one": {"text": "OW.. my eyes..", "path": "L1C1", "compare": "Confirm", "with": "Confirm", "stats": "Confused"},
+            "two": {"text": "What is this place?", "path": "L1C2", "compare": "Confirm", "with": "Confirm", "stats": "Curious"}
           }
         },
         "L1C1" : {
@@ -728,10 +728,10 @@
                 }
             ],
             "next": { "type": "choice", "question": "(What were you feeling and or thinking about, when leaving the room?)",
-            "one": {"text": "Confused", "path": "Lost3", "compare": "true", "with": "true", "stats": "Confused"},
-            "two": {"text": "Curious", "path": "Lost3", "compare": "true", "with": "true", "stats": "Curious"},
-            "three": {"text": "Scared", "path": "Lost3", "compare": "true", "with": "true", "stats": "Scaredy cat"},
-            "four": {"text": "Hungry", "path": "Lost3", "compare": "true", "with": "true", "stats": "Silly"}
+            "one": {"text": "Confused", "path": "Lost3", "compare": "Confirm", "with": "Confirm", "stats": "Confused"},
+            "two": {"text": "Curious", "path": "Lost3", "compare": "Confirm", "with": "Confirm", "stats": "Curious"},
+            "three": {"text": "Scared", "path": "Lost3", "compare": "Confirm", "with": "Confirm", "stats": "Scaredycat"},
+            "four": {"text": "Hungry", "path": "Lost3", "compare": "Confirm", "with": "Confirm", "stats": "Silly"}
           }
         },
         "Lost3" : {
@@ -756,7 +756,7 @@
                 }
             ],
             "next": { "type": "choice", "question": "(What were you experiencing before “waking up”?)",
-            "one": {"text": "The World before the convergence", "path": "Lost4", "compare": "true", "with": "true", "stats": "Trusting"},
+            "one": {"text": "The World before the convergence", "path": "Lost4", "compare": "Confirm", "with": "Confirm", "stats": "Trusting"},
             "two": {"text": "Where Lilies never bloom", "path": "Lost4", "compare": "InformationWLNB", "with": "1", "stats": "Questioning"}
           }
         },
@@ -783,9 +783,9 @@
             ],
             "next": { "type": "choice", "question": "What was the first thing you noticed after “waking up”?",
             "one": {"text": "A slime", "path": "Lost5", "compare": "SlimeInterest", "with": "1", "stats": "Analytical"},
-            "two": {"text": "A Creature", "path": "Lost5", "compare": "true", "with": "true", "stats": "Questioning"},
-            "three": {"text": "Flying Lights", "path": "Lost5", "compare": "true", "with": "true", "stats": "Trusting"},
-            "four": {"text": "A book", "path": "Lost5", "compare": "true", "with": "true", "stats": "Trusting"}
+            "two": {"text": "A Creature", "path": "Lost5", "compare": "Confirm", "with": "Confirm", "stats": "Questioning"},
+            "three": {"text": "Flying Lights", "path": "Lost5", "compare": "Confirm", "with": "Confirm", "stats": "Trusting"},
+            "four": {"text": "A book", "path": "Lost5", "compare": "Confirm", "with": "Confirm", "stats": "Trusting"}
           }
         },
         "Lost5" : {
@@ -830,7 +830,7 @@
                 }
             ],
             "next": { "type": "choice", "question": "",
-            "one": {"text": "What do you mean like the rest?", "path": "Lost7", "compare": "true", "with": "true", "stats": "Questioning"},
+            "one": {"text": "What do you mean like the rest?", "path": "Lost7", "compare": "Confirm", "with": "Confirm", "stats": "Questioning"},
             "two": {"text": "What is even happening...", "path": "Lost6FIN", "compare": "EventSC", "with": "FIN", "stats": "Confused"},
             "three": {"text": "What is even happening...", "path": "Lost6NS", "compare": "EventSC", "with": "NS", "stats": "Confused"}
           }
@@ -958,8 +958,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(Just ask them about things in the future and not me)",
-            "one": {"text": "Ok. Thank you!", "path": "L2C1", "compare": "true", "with": "true", "stats": "Friendly"},
-            "two": {"text": "How do I use this?", "path": "L2C2", "compare": "true", "with": "true", "stats": "Confused"}
+            "one": {"text": "Ok. Thank you!", "path": "L2C1", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
+            "two": {"text": "How do I use this?", "path": "L2C2", "compare": "Confirm", "with": "Confirm", "stats": "Confused"}
           }
         },
         "L2C1" : {
@@ -1033,8 +1033,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(......)",
-            "one": {"text": "AAAAAAAAAA!", "path": "PR1C1", "compare": "true", "with": "true"},
-            "two": {"text": "Why are you staring at me like that..?", "path": "PR1C2", "compare": "true", "with": "true"},
+            "one": {"text": "AAAAAAAAAA!", "path": "PR1C1", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "Why are you staring at me like that..?", "path": "PR1C2", "compare": "Confirm", "with": "Confirm"},
             "three": {"text": "Another Slime?", "path": "PR1C3", "compare": "Analytical", "with": "2", "stats": "Analytical"}
           }
         },
@@ -1055,8 +1055,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(AAAAAAAAAAAAAAA)",
-            "one": {"text": "AAAAAAAAAAAAAAAAAAA!", "path": "PR1C11", "compare": "true", "with": "true"},
-            "two": {"text": "You scared me!", "path": "PR1C12", "compare": "true", "with": "true", "stats": "Scaredy cat"}
+            "one": {"text": "AAAAAAAAAAAAAAAAAAA!", "path": "PR1C11", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "You scared me!", "path": "PR1C12", "compare": "Confirm", "with": "Confirm", "stats": "Scaredycat"}
           }
         },
         "PR1C2" : {
@@ -1081,8 +1081,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(Well..      at least partly)",
-            "one": {"text": "What is that supposed to mean?", "path": "PR1C21", "compare": "true", "with": "true", "stats":"Self Interest"},
-            "two": {"text": "I’m flattered.", "path": "PR1C22", "compare": "true", "with": "true", "stats": "Friendly"}
+            "one": {"text": "What is that supposed to mean?", "path": "PR1C21", "compare": "Confirm", "with": "Confirm", "stats":"SelfInterest"},
+            "two": {"text": "I’m flattered.", "path": "PR1C22", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"}
           }
         },
         "PR1C3" : {
@@ -1151,8 +1151,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(Why are we having a screaming contestttt?)",
-            "one": {"text": "Because it’s funny.", "path": "PR1C111", "compare": "true", "with": "true", "stats": "Silly"},
-            "two": {"text": "I don’t know...", "path": "PR1C112", "compare": "true", "with": "true", "stats": "Confused"}
+            "one": {"text": "Because it’s funny.", "path": "PR1C111", "compare": "Confirm", "with": "Confirm", "stats": "Silly"},
+            "two": {"text": "I don’t know...", "path": "PR1C112", "compare": "Confirm", "with": "Confirm", "stats": "Confused"}
           }
         },
         "PR1C12" : {
@@ -1251,8 +1251,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(So all you gotta do is figure out the password the owner of the audio log would have used)",
-            "one": {"text": "Who is the owner?", "path": "PR2C1", "compare": "true", "with": "true"},
-            "two": {"text": "I might know who that is.", "path": "PR2C2", "compare": "true", "with": "true", "stats": "Analytical"}
+            "one": {"text": "Who is the owner?", "path": "PR2C1", "compare": "Confirm", "with": "Confirm"},
+            "two": {"text": "I might know who that is.", "path": "PR2C2", "compare": "Confirm", "with": "Confirm", "stats": "Analytical"}
           }
         },
         "PR2C1" : {
@@ -1272,8 +1272,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(Isn’t that obvious?)",
-            "one": {"text": "Not really no. Tell me.", "path": "PR2C11", "compare": "true", "with": "true", "stats": "Confused"},
-            "two": {"text": "Is it? I’ll figure it out myself then.", "path": "PR2C12", "compare": "true", "with": "true", "stats": "Curious"}
+            "one": {"text": "Not really no. Tell me.", "path": "PR2C11", "compare": "Confirm", "with": "Confirm", "stats": "Confused"},
+            "two": {"text": "Is it? I’ll figure it out myself then.", "path": "PR2C12", "compare": "Confirm", "with": "Confirm", "stats": "Curious"}
           }
         },
         "PR2C11" : {
@@ -1349,7 +1349,7 @@
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene4", "event": "Ha11-7L", "eventupdate": "true"}
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene4", "event": "Ha117L", "eventupdate": "true"}
         },
         "PRScene4" : {
             "scene_id": "-",
@@ -1368,8 +1368,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(Uhm..    Imma go now.)",
-            "one": {"text": "Ok bye!", "path": "PR3C1", "compare": "true", "with": "true", "stats": "Friendly"},
-            "two": {"text": "Wait, What’s your name?", "path": "PR3C2", "compare": "true", "with": "true", "stats": "Curious"}
+            "one": {"text": "Ok bye!", "path": "PR3C1", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
+            "two": {"text": "Wait, What’s your name?", "path": "PR3C2", "compare": "Confirm", "with": "Confirm", "stats": "Curious"}
           }
         },
         "PR3C1" : {
@@ -1457,8 +1457,8 @@
                 }
             ],
             "next": { "type": "choice", "question": "(And hinting you in the correct direction of the password!)",
-            "one": {"text": "Uh… Sorry..?", "path": "FT1", "compare": "true", "with": "true", "stats": "Friendly"},
-            "two": {"text": "I’m trying to read here..", "path": "FT2", "compare": "true", "with": "true", "stats": "Silly"}
+            "one": {"text": "Uh… Sorry..?", "path": "FT1", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
+            "two": {"text": "I’m trying to read here..", "path": "FT2", "compare": "Confirm", "with": "Confirm", "stats": "Silly"}
           }
         },
         "FT1" : {
