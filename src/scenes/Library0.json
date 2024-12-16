@@ -2,6 +2,7 @@
     "Begining" : {
       "scene_id": "Begining",
       "name": "Begining",
+      "jayson": "Library0",  
       "frames": [
         {
             "textBox": { "name": "{Nexus}", "text": "...", "speed": 500},
@@ -49,13 +50,14 @@
         }
     ],
     "next": { "type": "choice", "question": "(Has thou been here before?)",
-    "one": {"text": "Indeed", "path": "login", "compare": "Confirm", "with": "Confirm"},
+    "one": {"text": "Indeed", "path": "login2", "compare": "Confirm", "with": "Confirm"},
     "two": {"text": "Not that I remember..", "path": "new", "compare": "Confirm", "with": "Confirm"}
         }
     },
-    "login" : {
+    "login2" : {
         "scene_id": "Begining",
         "name": "Begining",
+        "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "I see.        My appologies.", "speed": 40 },

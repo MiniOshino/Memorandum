@@ -4,9 +4,8 @@ import { load } from "./actions/load";
 import Image from 'next/image';
 import { Bagel_Fat_One } from "next/font/google";
 import Combat from "./Combat.js";
-import { validateToken } from "./actions/account";
-import { Login, Signup, StatDisplay, StatForm, TestVerify } from './app/test/Login';
-
+import { login, validateToken } from "./actions/account";
+import { Login } from "./app/test/Login";
 
  
 
@@ -541,6 +540,9 @@ export const Scene = ({ initial_content }) => {
     setInput(event.target.value);
   };
   //------------------------------------------------------------------------SAVESTATE-------------------------------------------------------------------------------------
+    const [errorPW, setErrorPW] = useState({ userName: '', password: '' });
+
+    
 //------------------------------------------General Things--------------------------------------------
   const [Username, setUsername] = useState('');
   const [Password, setPassword] = useState('');
@@ -555,7 +557,7 @@ export const Scene = ({ initial_content }) => {
   const [EventSC, setEventSC] = useState('NS'); // Slime Connection Event
   const [Spydent, setSpydent] = useState('NS'); //LSC: If all spydents are on 1, aka found, set this true -> sets up the event
         //------------------------------------------STATS--------------------------------------------
-  const [Curious, setCurious] = useState('0'); 
+  const [Curious, setCurious] = useState('0');   
   const [Interested, setInterested] = useState('0'); 
   const [Scaredycat, setScaredycat] = useState('0'); 
   const [Analytical, setAnalytical] = useState('0'); 
@@ -631,7 +633,19 @@ export const Scene = ({ initial_content }) => {
       Yellow: Yellow, Cyan: Cyan, Magenta: Magenta,
       RCPot: RCPot, RCSoul: RCSoul, RCCell: RCCell, NCTables: NCTables, NCRoof: NCRoof, NCInfoWall: NCInfoWall, H7Table: H7Table, T1Beacon: T1Beacon}
     
-
+    const handlelogin = async (e) => {
+        e.preventDefault();
+        const { errors } = await login(Username, Password);
+        if (errors.userName) setErrorPW({ userName: errors.userName, password: "" });
+        if (errors.password) setErrorPW({ userName: errors.userName, password: errors.password });
+        if (!errors){
+          await validateToken(); //you did the login
+        }
+        if (await validateToken()){
+          //goes in when user is logged in
+        }
+    }
+    
   const preload = ((nextscene) => {
     //console.log(nextscene);
     const images = new Set();
@@ -669,6 +683,9 @@ export const Scene = ({ initial_content }) => {
     setSkip(false); 
     setSkipted(true);
   };
+  //
+  
+  
   //---------------------------------------------------------------------TEMP EVENT LOCALSTORAGE CHECKER--------------------------------------------------------------------------------------
 const LSC = () => {
   useEffect (() => {
@@ -1403,8 +1420,22 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
          </div>
       )}
     {/* ----------------------------------------------------------Imput---------------------------------------------------------------------------- */}
-    {(scene.next.type === "login" && frame >= scene.frames.length -1) && <Login />}
-      {(scene.next.type === "input" && frame >= scene.frames.length - 1 ) && (
+    {(scene.next.type === "login" && frame >= scene.frames.length -1) && (<div>
+      <form>
+        <h2>Login</h2>
+        <input className='text-black' name='username' type='text' value={Username} onChange={(e) => setUsername(e.target.value)} />
+        {errorPW.userName && <span>Error: {errorPW.userName}</span>}
+        <br />
+        <input className='text-black' name='password' type='password' value={Password} onChange={(e) => setPassword(e.target.value)} />
+        {errorPW.password && <span>Error: {errorPW.password}</span>}
+        <br />
+        <button type="submit" onClick={handlelogin}>
+            login
+        </button>
+        
+    </form>
+    </div>)}
+      {/* {(scene.next.type === "input" && frame >= scene.frames.length - 1 ) && <Login></Login>(
         <div className="absolute w-[100%] h-[100%] z-40">
           <input
             type="text"
@@ -1445,9 +1476,10 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div className="absolute w-[100%] place-content-start place-items-center bottom-0 h-[15%] flex flex-col">
             <div className="text-white text-2xl font-bold">{scene.next.sceneID === 'Lost2' ? "(What’s your Identifier or Name?)" : "(As long as it is remembered.)"}</div>
           </div>
-        </div>
+        </div> 
 
       )}
+        */}
       {/* ----------------------------------------------------------CrystalLogPW---------------------------------------------------------------------------- */}
       {(scene.next.type === "CLP" && frame >= scene.frames.length - 1 ) && (
         <div className="absolute w-[100%] h-[100%] z-40">
