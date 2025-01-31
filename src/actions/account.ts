@@ -6,7 +6,6 @@ import { jwtVerify, SignJWT } from "jose";
 import { db } from "@/drizzle";
 import { eq } from "drizzle-orm";
 import { stats, users } from "@/drizzle/schema";
-import { use } from "react";
 
 
 export async function signup(userName: string, password: string) {
@@ -16,18 +15,19 @@ export async function signup(userName: string, password: string) {
 
     const secret = new TextEncoder().encode(process.env.JWT_SECRET);
     const jwt = await new SignJWT({ userName })
-        .setProtectedHeader({ alg: "HS256" })
-        .setIssuedAt()
-        .setExpirationTime('2d')
-        .sign(secret);
-
-    cookies().set({
+    .setProtectedHeader({ alg: "HS256" })
+    .setIssuedAt()
+    .setExpirationTime('2d')
+    .sign(secret);
+    
+    const cookieStore = await cookies();
+    cookieStore.set({
         name: 'user-token',
         value: jwt,
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         path: "/",
-        maxAge: 60 * 60 * 2,
+        maxAge: 60 * 60 * 24 * 7,
         sameSite: 'strict',
     })
 
@@ -53,13 +53,14 @@ export async function login(userName: string, password: string) {
         .setExpirationTime('2d')
         .sign(secret);
 
-    cookies().set({
+    const cookieStore = await cookies();
+    cookieStore.set({
         name: 'user-token',
         value: jwt,
         httpOnly: true,
         secure: process.env.NODE_ENV === 'production',
         path: "/",
-        maxAge: 60 * 60 * 2,
+        maxAge: 60 * 60 * 24 * 7,
         sameSite: 'strict',
     })
 
@@ -67,12 +68,27 @@ export async function login(userName: string, password: string) {
 }
 
 export async function validateToken() {
-    const token = cookies().get('user-token');
+    const cookieStore = await cookies();
+    const token = cookieStore.get('user-token');
     if (!token) return false;
 
     const secret = new TextEncoder().encode(process.env.JWT_SECRET)
     try {
         const { payload } = await jwtVerify(token.value, secret);
+        const jwt = await new SignJWT({ userName: payload.userName })
+        .setProtectedHeader({ alg: "HS256" })
+        .setIssuedAt()
+        .setExpirationTime('2d')
+        .sign(secret);
+        cookieStore.set({
+            name: 'user-token',
+            value: jwt,
+            httpOnly: true,
+            secure: process.env.NODE_ENV === 'production',
+            path: "/",
+            maxAge: 60 * 60 * 24 * 7,
+            sameSite: 'strict',
+        })
         return payload;
     } catch (error) {
         return false;
