@@ -1,10 +1,10 @@
 "use server";
-import * as fs from "fs";
+import lib0 from "@/scenes/Library0.json";
+
+const SCENES = {
+  Library0: lib0,
+};
 
 export async function load(id: string, sceneID: string) {
-
-  const file = await fs.readFileSync(`./src/scenes/${id}.json`, "utf-8");
-  const data = JSON.parse(file);
-
-  return data[sceneID];
+  return SCENES[id][sceneID];
 }
