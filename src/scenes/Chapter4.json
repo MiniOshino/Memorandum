@@ -2,7 +2,9 @@
     "Chapter4" : {
       "scene_id": "15",
         "name": "Chappy4",
+        "hud": "StoryHud1",   
         "storyProgressID": 16,
+        "logbook": {"entry": 7, "newpage": 4, "update": true},
       "frames": [
         {
             "textBox": { "name": "", "text": "", "speed": 40},
@@ -200,7 +202,7 @@
         {
           "textBox": { "name": "", "text": "{italic}*Swooshhh*{/italic}", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Zayn_L_Thinking_Surprised","left":"Nora_L_Neutral_SusSF"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Wind magic?", "speed": 40, "show":"true"},
@@ -218,14 +220,14 @@
           "background": { "bg": "FogDayBubble"}
         },
         {
-          "textBox": { "name": "Nora", "text": "At least temporary..", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "At least temporary..        and only stationary.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Zayn_L_Thinking_Distracted","center":"Nora_L_Neutral_Distracted"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Practical,        once again.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Zayn_L_Thinking_Neutral","center":"Nora_L_Neutral_Neutral"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Nora", "text": "M-        mhm!        Onwards then!", "speed": 40, "show":"true"},
@@ -240,12 +242,12 @@
         {
           "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Sweating","right":"Nora_L_Neutral_Sigh", "movementR":"RRTR"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "(She definitely is feeling uneasy..          Though..         I cannot fault her completely.)", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Sweating","right":"Nora_L_Neutral_Sigh"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Zayn", "text": "(It feels like this fog is weighing on me..)", "speed": 40, "show":"true"},
@@ -260,12 +262,12 @@
         {
           "textBox": { "name": "Zayn", "text": "(It’s like something is crawling along my skin..)", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Thinking_Serious","right":"Nora_L_Neutral_Distracted"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"center":"Zayn_L_Thinking_Distracted","right":"Nora_R_Neutral_Neutral"},
-          "background": { "bg": "FogDayBubble"},
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"},
           "items": { "item": "Scanner", "show": "true"}
         },
         {
@@ -282,15 +284,15 @@
         {
           "textBox": { "name": "Nora", "text": "…Say,        jokes aside.          This place does feel..         odd,         right?", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Distracted","right":"Nora_L_Neutral_Neutral"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "..Sort of..", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Neutral","right":"Nora_L_Neutral_Neutral"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "(...What {italic}is{/italic} this feeling..? It feels almost..)", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "(...What  {italic} is {/italic}  this feeling..? It feels almost..)", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Thinking","right":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "FogDayBubble"}
         },
@@ -302,12 +304,12 @@
         {
           "textBox": { "name": "Nora", "text": "Oh?!            Zayn,       over there.", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_ThinkingV","right":"Nora_L_Neutral_Surprised", "effectR":"jump"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "Looks like ruins..", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Neutral","right":"Nora_L_Neutral_Neutral"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Zayn", "text": "You think it was a house?", "speed": 40, "show":"true"},
@@ -316,18 +318,18 @@
         },
         {
           "textBox": { "name": "Nora", "text": "Looks like it.         Long grown over though.            You think it was abandoned or destroyed?", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Thinking_Neutral","left":"Nora_L_Neutral_Neutral", "movementL":"RTL"},
+          "sprites": {"center":"Zayn_L_Thinking_Neutral","left":"Nora_L_Neutral_Surprised", "movementL":"RTL"},
           "background": { "bg": "FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Hard to tell..          It doesn’t seem all too scattered but also not in place..          Maybe dismantled?", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Thinking_Thinking","left":"Nora_R_Neutral_Neutral"},
-          "background": { "bg": "FogDay"}
+          "sprites": {"center":"Zayn_L_Thinking_Thinking","left":"Nora_R_Neutral_Surprised"},
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "Rrrright..             Who doesn’t pack their brick walls before their departure.", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Thinking_Thinking","left":"Nora_R_Neutral_Sus"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Nora", "text": "..Though it seems cleanly scavenged.            Guess we are too late to the party.", "speed": 40, "show":"true"},
@@ -336,26 +338,26 @@
         },
         {
           "textBox": { "name": "Zayn", "text": "Maybe there is more stuff further in.", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Neutral_Neutral","left":"Nora_R_Neutral_Neutral"},
+          "sprites": {"center":"Zayn_L_Thinking_Neutral","left":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "Classic line right before someone gets lost..          Or worse.", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Neutral_Neutral","left":"Nora_R_Neutral_Sigh"},
+          "sprites": {"center":"Zayn_L_Thinking_Neutral","left":"Nora_R_Neutral_Sigh"},
           "background": { "bg": "FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Distracted","right":"Nora_R_Neutral_Neutral", "movementR":"LTR"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Neutral","right":"Nora_R_Neutral_Distracted"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
-          "textBox": { "name": "Nora", "text": "…The brick layout looks like this was an entire town.", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "…The brick layout makes it look like this was an entire town.", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Neutral_Neutral","right":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "FogDayBubble"}
         },
@@ -366,32 +368,32 @@
         },
         {
           "textBox": { "name": "Nora", "text": "I..       doubt it..", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Thinking_Neutral","right":"Nora_R_Neutral_Neutral"},
-          "background": { "bg": "FogDay"}
+          "sprites": {"center":"Zayn_L_Thinking_Neutral","right":"Nora_R_Neutral_NeutralS"},
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Because the fog seems..", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Thinking_Thinking","right":"Nora_R_Neutral_Neutral"},
-          "background": { "bg": "FogDayBubble"}
+          "sprites": {"center":"Zayn_L_Thinking_Thinking","right":"Nora_R_Neutral_NeutralS"},
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Nora", "text": "..Made?          Yes.", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Thinking_Thinking","right":"Nora_R_Neutral_Neutral"},
+          "sprites": {"center":"Zayn_L_Thinking_Thinking","right":"Nora_R_Neutral_DistractedS"},
           "background": { "bg": "FogDayBubble"}
         },
         {
-          "textBox": { "name": "Nora", "text": "Well, partly.            It’s definitely not natural fog", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "Well, partly.            It’s definitely not natural fog.", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_L_Thinking_Distracted","right":"Nora_R_Neutral_Neutral"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "Oh?!", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Neutral_Neutral","right":"Nora_R_Neutral_Surprised"},
-          "background": { "bg": "FogDayBubble"}
+          "sprites": {"center":"Zayn_L_Neutral_Neutral","right":"Nora_L_Neutral_Surprised"},
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Another building?", "speed": 40, "show":"true"},
-          "sprites": {"center":"Zayn_L_Neutral_Surprised","right":"Nora_R_Neutral_Neutral"},
+          "sprites": {"center":"Zayn_L_Neutral_Surprised","right":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "FogDayBubble"}
         },
         {
@@ -401,7 +403,7 @@
         },
         {
           "textBox": { "name": "Zayn", "text": "An actual not broken down building.", "speed": 40, "show":"true"},
-          "background": { "bg": "FogTower"}
+          "background": { "bg": "FogTower", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "And..       a tall building.", "speed": 40, "show":"true"},
@@ -432,7 +434,7 @@
           "background": { "bg": "FogTower"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "If anything a poltergeist..", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "If anything a poltergeist..", "speed": 40, "show":"true"},
           "background": { "bg": "FogTower"}
         },
         {
@@ -446,7 +448,7 @@
         {
           "textBox": { "name": "Zayn", "text": "Only one way to find out.           Let’s look for a door.", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Neutral_Thinking","left":"Nora_R_Neutral_Straightface", "movementL":"fade", "movementR": "fade"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogTower"}
         },
         {
           "textBox": { "name": "Nora", "text": "...", "speed": 40, "show":"true"},
@@ -456,12 +458,12 @@
         {
           "textBox": { "name": "Zayn", "text": "Nora?", "speed": 40, "show":"true"},
           "sprites": {"sright":"Zayn_L_Neutral_Surprised","left":"Nora_R_Neutral_Sigh"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "I-..           Ok look.              I’m not afraid of ghosts,           I actually don't believe in them…                    but.", "speed": 40, "show":"true"},
           "sprites": {"sright":"Zayn_L_Neutral_Surprised","left":"Nora_R_Neutral_Straightface"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Zayn", "text": "...but?", "speed": 40, "show":"true"},
@@ -474,7 +476,7 @@
           "background": { "bg": "FogDayBubble"}
         },
         {
-          "textBox": { "name": "Nora", "text": "Every bone in my body is yelling at me and that is {bold}NOT{/bold} a common occurrence.", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "Every bone in my body is screaming at me and that is {bold}NOT{/bold} a common occurrence.", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Thinking_Neutral","left":"Nora_R_Neutral_Nervous"},
           "background": { "bg": "FogDayBubble"}
         },
@@ -494,22 +496,22 @@
           "background": { "bg": "FogDayBubble"}
         },
         {
-          "textBox": { "name": "Nora", "text": "Well,     can you sense a ghost?", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "Well,         can you sense a ghost?", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Neutral_Distracted","left":"Nora_R_Neutral_Straightface"},
           "background": { "bg": "FogDayBubble"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I thought you don't believe in ghosts.", "speed": 40, "show":"true"},
-          "sprites": {"right":"Zayn_L_Neutral_Thinking","left":"Nora_R_Neutral_Straightface"},
+          "sprites": {"right":"Zayn_L_Neutral_Confused","left":"Nora_R_Neutral_Straightface"},
           "background": { "bg": "FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "Well yes but..", "speed": 40, "show":"true"},
-          "sprites": {"right":"Zayn_L_Neutral_Thinking","left":"Nora_R_Neutral_Straightface"},
+          "sprites": {"right":"Zayn_L_Neutral_Confused","left":"Nora_R_Neutral_Straightface"},
           "background": { "bg": "FogDayBubble"}
         },
         {
-          "textBox": { "name": "Nora", "text": "I can’t..             punch a feeling?", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "I can’t..                punch a feeling?", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Neutral_Thinking","left":"Nora_R_Neutral_SusSF"},
           "background": { "bg": "FogDayBubble"}
         },
@@ -554,7 +556,7 @@
           "background": { "bg": "FogDayBubble"}
         },
         {
-          "textBox": { "name": "Nora", "text": "Alright…         Alright.", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "Alright…               Alright.", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Neutral_Neutral","left":"Nora_R_HOS_Hmpf"},
           "background": { "bg": "FogDayBubble"}
         },
@@ -566,12 +568,12 @@
         {
           "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"sright":"Zayn_R_Neutral_Neutral","right":"Nora_R_Neutral_Neutral", "movementSR":"RTSR", "movementR":"LTR"},
-          "background": { "bg": "FogDay"}
+          "background": { "bg": "FogDay", "pbg":"FogDayBubble"}
         },
         {
           "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"sright":"Zayn_R_Neutral_Neutral","right":"Nora_R_Neutral_Nervous"},
-          "background": { "bg": "FogDayBubble"}
+          "background": { "bg": "FogDayBubble", "pbg":"FogDay"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Door!", "speed": 40, "show":"true"},
@@ -594,8 +596,13 @@
           "background": { "bg": "FogDayBubble"}
         },
         {
+          "textBox": { "name": "", "text": "{italic}*click*{/italic}", "speed": 40, "show":"true"},
+          "sprites": {"sright":"Zayn_R_Neutral_Thinking","right":"Nora_R_Neutral_Neutral"},
+          "background": { "bg": "FogDayBubble"}
+        },
+        {
           "textBox": { "name": "Nora", "text": "...Nevermind.", "speed": 40, "show":"true"},
-          "sprites": {"rrright":"Zayn_R_Neutral_Neutral","left":"Nora_R_Neutral_NeutralS", "movementRRR":"SRTRRR"},
+          "sprites": {"rrright":"Zayn_R_Neutral_Neutral","right":"Nora_R_Neutral_NeutralS", "movementRRR":"SRTRRR"},
           "background": { "bg": "FogDayBubble"}
         },
         {
@@ -609,7 +616,9 @@
     "Scene2" : {
       "scene_id": "16",
         "name": "Chappy4Part2",
+        "hud": "StoryHud1",   
         "storyProgressID": 17,
+        "logbook": {"entry": 7, "newpage": 4, "update": false},
       "frames": [
         {
           "textBox": { "name": "Nora", "text": "…Well I'll be damned..          It {italic}is{/italic} a forgotten library..", "speed": 40, "show":"true"},
@@ -672,213 +681,213 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "Nora", "text": "WE'RE DEAD!", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "{bold}WE'RE DEAD!{/bold}", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Neutral_Shocked","sright":"Nora_R_Neutral_BLCrying", "movementSR":"CTSR"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "Nora", "text": "I TAKE EVERYTHING BACK, GHOSTS EXIST!", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "{bold}I TAKE EVERYTHING BACK, GHOSTS EXIST!{/bold}", "speed": 40, "show":"true"},
           "sprites": {"right":"Zayn_L_Neutral_Surprised","sright":"Nora_R_Neutral_BLCrying", "effectSR":"wiggle"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Rude..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF", "movementLL":"fade"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF", "movementSL":"fade"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Calling me a “ghost” is not any better..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "Mistwraith?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "No.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "Specter?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Stop.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "Right.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_HOS_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_HOS_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "{italic}*sigh*{/italic}", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Sigh", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_HOS_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Sigh", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_HOS_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Now.               Can we have a normal discussion or will you keep clutching your weapons?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_HOS_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_HOS_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "You are the one who jumped us!", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_SusSF", "effectSR":"jump"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_SusSF", "effectSR":"jump"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "And you are the ones entering my quarters without permission.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "…Fair enough.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Sigh"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Sigh"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "{italic}*deep exhale*{/italic}", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sigh"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sigh"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Now then.              What brings two strangers to such a remote place like this?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Surely you have not just..             stumbled into a clearly fog infested valley and got lost,          right?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "What if we have?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Not buying it.            Especially that one.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Me?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Who else is here?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "Why him?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "He can talk for himself.            Why are you here?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "We..           found this place in a book..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "...Surely,            it was not one that told you specifically {bold}NOT{/bold} to visit said place,          right?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "..Perhaps?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Sweating","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Sweating","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "{italic}*sigh*{/italic}", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Sigh", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Sigh", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I told you this was a bad idea.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_R_Neutral_Confused","sright":"Nora_L_Neutral_SusSF"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_R_Neutral_Confused","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "You hardly objected to it!", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_R_Neutral_Confused","sright":"Nora_L_Neutral_Surprised"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_R_Neutral_Confused","sright":"Nora_L_Neutral_Surprised", "effectSR":"jump"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "And how was I supposed to know it was inhabited anyway?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Confused","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Confused","sright":"Nora_L_Neutral_Sus", "effectSR":"wiggle"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "So,        you brought him here for the thrills? ", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Well..         Is that all?             Happy with what you found?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Surprised","sright":"Nora_L_Shrug_Surprised"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Surprised","sright":"Nora_L_Shrug_Surprised"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "If so,         you may leave.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "...Just like that?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Surprised"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Surprised"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "What did you expect..?             Want me to haunt you or something?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Surprised"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Surprised"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "I-", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Do not, answer that actually.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "But sure,          why not.             You may leave under one condition.            He stays.           At least for a bit.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Huh?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Surprised", "effectR":"jump"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Surprised", "effectR":"jump"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "I’m not leaving him here with you!", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "How delightful...          Then you both may take a seat.              I have some questions that need answering.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "And you better not think about running.", "speed": 40, "show":"true"},
-          "sprites": {"llleft":"Scarlett_L_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus", "movementLLL":"LLTLLL"},
+          "sprites": {"llleft":"Scarlett_L_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus", "movementLLL":"SLTLLL"},
           "background": { "bg": "TowerLit"}
         },
         {
@@ -953,111 +962,111 @@
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "The “Tiny 12 year old” can hear you..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_R_Thinking_Surprised","sright":"Nora_L_Neutral_Sus", "effectR":"jump", "movementLL":"fade"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Agitated", "right":"Zayn_R_Thinking_Surprised","sright":"Nora_L_Neutral_Sus", "effectR":"jump", "movementSL":"fade"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Besides,             I am deeply offended that you think I am a mere 12 years old..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Discomfort", "right":"Zayn_L_Thinking_Surprised","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Discomfort", "right":"Zayn_L_Thinking_Surprised","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "Told you.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Discomfort", "right":"Zayn_L_Thinking_Surprised","sright":"Nora_L_Neutral_uwu"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Discomfort", "right":"Zayn_L_Thinking_Surprised","sright":"Nora_L_Neutral_uwu"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "And most certainly not a 1000..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_uwu"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_uwu"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Shrug_Straightface"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Shrug_Straightface"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Now then.         Do you just..           follow her around or..?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Why are you here?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "textBox": { "name": "(Scarlett)", "text": "Truthfully now.          Why are {bold}you{/bold} here?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "He-", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": " Not you.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Pissed", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I..           I came here to figure out who I am.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I thought that..            Maybe this place had some information.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_SurprisedV", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_SurprisedV", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Amnesia?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Something like that..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Distracted","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Distracted","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "How convenient…", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "What about that flower.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "!", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Surprised","sright":"Nora_L_Neutral_Neutral", "effectR":"jump"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Surprised","sright":"Nora_L_Neutral_Neutral", "effectR":"jump"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I’m..          not sure.           But it’s important to me.           At least that's what I feel.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "And how are you feeling now?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Uh..       Fine?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Uh-huh..           May I?", "speed": 40, "show":"true"},
-          "sprites": {"left":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_SusSF", "movementL": "LLTL"},
+          "textBox": { "name": "(Scarlett)", "text": "Uh-huh..                    May I?", "speed": 40, "show":"true"},
+          "sprites": {"left":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_SusSF", "movementL": "SLTL"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "...", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
           "sprites": {"left":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "I will be gentle with it..   Just..     kneel down a bit..", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "I will be gentle with it..            Just..     kneel down a bit..", "speed": 40, "show":"true"},
           "sprites": {"left":"Scarlett_R_Neutral_Worried", "right":"Zayn_L_Neutral_Sad","sright":"Nora_L_Neutral_SusSF"},
           "background": { "bg": "TowerLit"}
         },
@@ -1078,181 +1087,783 @@
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Curious..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus", "movementLL":"CTLL"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Sus", "movementSL":"CTSL"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "And you know nothing about it?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Not really.           Is there something special about it?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "You could say that much.          As far as I can tell,            this is an actual flower.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "…Yeah..?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Confused","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Confused","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "For how long do you remember having it?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Confused","sright":"Nora_L_Neutral_Neutral"},
+          "textBox": { "name": "(Scarlett)", "text": "For how long do you remember having this lily?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Confused","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Since I woke up.      About..     4 days ago?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Surprised"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Surprised", "effectSR":"jump"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Yet it shows no sign of wilting.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Sus"},
+          "textBox": { "name": "(Scarlett)", "text": "Yet it shows no sign of wilting.               Not to mention how long you may have had it before then.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Not even a sliver..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Sus"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "...Is that odd?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Course.          Everything that lives is destined to wither and fade eventually.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "textBox": { "name": "(Scarlett)", "text": "Course.          Everything that lives is destined to wither and fade eventually.         Flowers included.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "It is but a matter of time..       Mostly at least.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_NeutralS"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_NeutralS"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I see…", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_DistractedS"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Distracted","sright":"Nora_L_Neutral_DistractedS"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Is there anything else you can tell me?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_R_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Hardly without dissecting it..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Worried","sright":"Nora_R_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Worried","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Besides that you are quite..        Odd.             Though I am sure you are well aware of that yourself.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Ah..       Alright..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_R_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "…Well then.          If you seek a {italic}thrill{/italic} or information about,       what I assume,       Is Fortiris;", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Worried", "right":"Zayn_L_Neutral_Sad","sright":"Nora_R_Neutral_Neutral"},
+          "textBox": { "name": "(Scarlett)", "text": "…Well then.          If you seek a {italic}thrill{/italic} or information about, what I assume, is Fortiris;", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Worried", "right":"Zayn_L_Neutral_Sad","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "I would recommend you make your way towards Indarr.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "The capital?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Indeed.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "They currently should be hosting a tournament to determine their ranks for the next half-year.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Lucky for the both of you,          they accept everyone and if you reach a certain rank you may get access to their library.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "I presume at least one of you is eager to fight something?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Nora", "text": "Tsk.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_L_Neutral_Distracted","sright":"Nora_R_Neutral_NeutralS"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_L_Neutral_Distracted","sright":"Nora_R_Neutral_NeutralS", "effectSR":"shake"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Delightful.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_NeutralS"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "…Well off you go then.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "textBox": { "name": "(Scarlett)", "text": "…Well,        off you go then.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "Hm?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "So eager yet also hesitant to leave..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "We discussed everything,      did we not?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Unless you actually allow me to dissect your flower?", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_SurprisedV", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_SurprisedV", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "Zayn", "text": "I’d rather not..", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Worried","sright":"Nora_L_Neutral_DistractedS", "effectR":"wiggle"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Worried","sright":"Nora_L_Neutral_DistractedS", "effectR":"wiggle"},
           "background": { "bg": "TowerLit"}
         },
         {
           "textBox": { "name": "(Scarlett)", "text": "Case in point.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Worried","sright":"Nora_L_Neutral_DistractedS"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Worried","sright":"Nora_L_Neutral_DistractedS"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "So unless you would like to spend your night in the 'creatues' quarters,      I would recommend you leave before nightfall.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_DistractedS"},
+          "textBox": { "name": "(Scarlett)", "text": "So unless you would like to spend your night in the 'creatures' quarters,      I would recommend you leave before nightfall.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_DistractedS"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "So unless you would like to spend your night in the 'creatues' quarters,      I would recommend you leave before nightfall.", "speed": 40, "show":"true"},
-          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_DistractedS"},
+          "textBox": { "name": "Zayn", "text": "...Could we?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_DistractedS"},
           "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "??? & N", "text": "No.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Distracted","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "Absolutely not.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_R_Neutral_Worried","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Why not?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Worried","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "We have been traveling all day and have no place to rest.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Serious","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "... And this sofa is more comfortable than anything I have slept on.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Serious","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "For you maybe.               I won’t get any shuteye in a place like this.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_L_Neutral_DistractedS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Is a tree or some leaves any better?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Surprised","sright":"Nora_L_Neutral_DistractedS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "At least I'd get some mental rest there..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Surprised","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Well I feel as calm here as I have ever been.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_L_Neutral_NeutralS"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "Happy for you.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_L_Neutral_Neutral"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "Unfortunately,            she already declined,          so.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Neutral","sright":"Nora_L_Shrug_Straightface"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...?", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Worried","sright":"Nora_L_Shrug_Straightface"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Neutral_Worried","sright":"Nora_L_Neutral_Neutral"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "There..         may be some rooms you could stay in..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Neutral_Surprised","sright":"Nora_L_Neutral_Surprised"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "{bold}WHAT?!{/bold}", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Glee","sright":"Nora_L_Neutral_Surprised", "effectSR":"shake"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "That would be very nice~", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Glee","sright":"Nora_L_Neutral_Surprised", "effectR":"wiggle"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "You..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Glee","sright":"Nora_L_Neutral_Sus"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "Fine.         Whatever.             What is one night without sleep.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_R_HOS_Worried"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "It is not as bad here as you act...", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_R_HOS_Worried"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Besides,           your legs have stopped shaking a while ago.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_R_HOS_Worried"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Nora", "text": "Keep your eyes to yourself,      spectwerp.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_R_Thinking_Neutral","sright":"Nora_L_Neutral_Sus", "effectSR":"shake"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "??? & N", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_L_Thinking_Neutral","sright":"Nora_L_Neutral_Sus"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_R_Thinking_Sweating","sright":"Nora_L_Neutral_Sus"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
+          "textBox": { "name": "", "text": "", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Smug", "right":"Zayn_R_Thinking_Sweating","sright":"Nora_L_Neutral_Sus", "movementSL":"fadeout", "movementR":"fadeout", "movementSR":"fadeout"},
+          "background": { "bg": "Darkness", "pbg": "TowerLit"}
         }
         
       ],
-      "next": { "type": "special", "target": "Extra", "sceneID": "NoNewContent" }
+      "next": { "type": "fixed", "target": "Chapter4", "sceneID": "Scene3" }
+    },
+    "Scene3" : {
+      "scene_id": "17",
+        "name": "Chappy4Part2",
+        "storyProgressID": 18,
+        "hud": "StoryHud1",   
+        "logbook": {"entry": 8, "newpage": 5, "update": true},
+      "frames": [
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(Can’t sleep..)", "speed": 40, "show":"true"},
+          "sprites": {"center":"Zayn_R_Neutral_Worried"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(And I still really wanna check out those books..)", "speed": 40, "show":"true"},
+          "sprites": {"center":"Zayn_R_Thinking_Thinking"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"center":"Zayn_R_Thinking_Thinking"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(Wonder if Nora is able to sleep as well.)", "speed": 40, "show":"true"},
+          "sprites": {"center":"Zayn_R_Thinking_Neutral"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"center":"Zayn_R_Thinking_Distracted"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(Whatever.        What could go wrong.)", "speed": 40, "show":"true"},
+          "sprites": {"center":"Zayn_R_Thinking_Neutral"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"rrright":"Zayn_R_Thinking_Neutral", "movementRRR":"CTRRR"},
+          "background": { "bg": "Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(...This place really is massive..)", "speed": 40, "show":"true"},
+          "sprites": {"center":"Zayn_R_Neutral_Neutral", "movementC":"LLLTC"},
+          "background": { "bg": "TowerNight", "pbg":"Darkness"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(I wonder how many things are written here that nobody else knows..)", "speed": 40, "show":"true"},
+          "sprites": {"left":"Zayn_L_Thinking_Neutral", "movementL":"CTL"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"left":"Zayn_L_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(Probably quite a few..           Some of these look really old.          And others quite the opposite..)", "speed": 40, "show":"true"},
+          "sprites": {"rright":"Zayn_R_Thinking_Serious", "movementRR":"LTRR"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(..?        And from the same year even?)", "speed": 40, "show":"true"},
+          "sprites": {"rright":"Zayn_R_Thinking_Confused"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Not able to sleep after all?", "speed": 40, "show":"true"},
+          "sprites": {"rright":"Zayn_R_Thinking_Surprised", "effectRR":"jump"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "How does everyone keep sneaking up on me…", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Thinking_Confused", "movementLL":"fade"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Seems like a “you” problem..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Thinking_Confused"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Guess so..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Neutral_Distracted"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...Liking the books?", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_L_Neutral_Distracted"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Kinda.        I’m fond of how they look.           Especially this many.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_R_Neutral_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Not to mention the amount of information stored in them..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_R_Neutral_Sparkle"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Good thing I wrote them then.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_R_Neutral_Sparkle"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "You wrote these?             All of them?", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Thinking_Surprised", "effectRR":"jump"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "More or less.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_L_Thinking_Surprised"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "You must have been here for a while then..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_R_Thinking_Surprised"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "You better not start trying to guess my age as well…", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "rright":"Zayn_R_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Didn’t plan to..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Questioning", "rright":"Zayn_R_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "This place is nice though..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "sright":"Zayn_R_Thinking_Neutral", "movementSR":"RRTSR"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "You mentioned...", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "sright":"Zayn_R_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_R_Thinking_Surprised", "movementRR":"SRTRR"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Would you..       care to join me for a stroll?", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_R_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Like..        outside?", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_L_Thinking_Surprised"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Precisely.           We will not get lost,        if that is your concern.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Thinking_Surprised"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Uh..       ..Alright then.        Why not.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Neutral_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Mhm.         Follow me.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_L_Neutral_Thinking", "rright":"Zayn_L_Neutral_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"llleft":"Scarlett_L_Neutral_Neutral", "rright":"Zayn_L_Neutral_Neutral", "movementLLL":"LLTLLL"},
+          "background": { "bg": "TowerNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"llleft":"Zayn_L_Neutral_Neutral", "movementLLL":"RRTLLL"},
+          "background": { "bg": "TowerNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Neutral", "rright": "Scarlett_R_Neutral_Neutral", "movementLL":"LLLTLL", "movementRR":"LLLTRR"},
+          "background": { "bg": "FogNight", "pbg": "TowerNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "This fog is..       Quite thick.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Distracted", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "You get used to it..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "M-       hm..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Sweating", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Thinking", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Thinking", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Soooo..-", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "It is a rare occurrence that anyone comes here, you know...", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Thinking"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "An even rarer one that someone calls it “calming”..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Well..        “only”            occurrence.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "…Is it normal to {italic}not{/italic} like this place?", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "I suppose that depends..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "But the usual response is dread.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Surprised", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(How odd..           This place doesn’t strike me as anything like that.)", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Distracted", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "(It almost makes me feel..           Warm..          It’s nice.)", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Thinking_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "We are here..", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Neutral", "rright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "This goes without saying..         But do keep this a secret.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Zayn_R_Neutral_Neutral", "rright": "Scarlett_L_Neutral_Thinking"},
+          "background": { "bg": "FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Surprised", "sright": "Scarlett_L_Neutral_Neutral", "movementSL":"LLTSL", "movementSR":"RRTSR"},
+          "background": { "bg": "LiliesNight", "pbg":"FogNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "..What..       is this?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Surprised", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "A field of Lilies..                  Or at least what is left of them..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Neutral", "sright": "Scarlett_L_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...What              ..happened?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Serious", "sright": "Scarlett_L_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Withered..           Decayed..           I have yet to find a fitting word..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Serious", "sright": "Scarlett_R_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Because of time?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Neutral", "sright": "Scarlett_R_Neutral_Questioning"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "No.                    Well..            not quite.             The last one died very recently..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Neutral", "sright": "Scarlett_R_Neutral_Worried"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "As far as I am aware,         there is no information about its cause.            Not even about something similar.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Neutral", "sright": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Same goes for any potential cure..              They are barely being held together..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Serious", "sright": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Well..            it is too late for that anyway..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Neutral", "sright": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Worried", "sright": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Yet..        here you are.            Carrying a near identical lily,          as if stuck in time..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Worried", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "I..         I’m not sure what to say..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sad", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Silence never hurt anybody..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sad", "sright": "Scarlett_L_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sad", "sright": "Scarlett_L_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sad", "sright": "Scarlett_L_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "..How             do you feel watching this field?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sad", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Cold..               but somehow,          also very warm..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Worried", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...heh.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Worried", "sright": "Scarlett_R_ArmsC_Smile"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Hm..?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Surprised", "sright": "Scarlett_R_ArmsC_Smile"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "I have seen a lot of odd people in my time..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Neutral", "sright": "Scarlett_R_ArmsC_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "But you..         You take the cake.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Neutral", "sright": "Scarlett_R_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "..I suppose that is another figure of speech?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sweating", "sright": "Scarlett_R_Neutral_Thinking"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Case in point.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sweating", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...Care to head back,         Zayn?", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Neutral", "center": "Scarlett_L_Neutral_Neutral", "movementC":"SRTC"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Course.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Neutral", "center": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_L_Neutral_Neutral", "center": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_L_Neutral_Neutral", "center": "Scarlett_R_ArmsC_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Uh...", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sweating", "center": "Scarlett_R_ArmsC_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Scarlett", "text": "...Scarlett.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Sweating", "center": "Scarlett_R_ArmsC_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "Scarlett..          I uh-          kinda need your help to find back..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Confused", "center": "Scarlett_R_ArmsC_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Scarlett", "text": "Mhm..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Confused", "center": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Scarlett", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Neutral", "center": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "background": { "bg": "ScarlettHL", "pbg":"LiliesNight", "effect": "memories5"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Worried", "center": "Scarlett_R_ArmsC_Longing"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Scarlett", "text": "{italic}*sigh*{/italic}", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Neutral_Neutral", "center": "Scarlett_R_ArmsC_Hopeless"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Scarlett", "text": "Let us head back..", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_L_Neutral_Neutral", "llleft": "Scarlett_L_Neutral_Neutral", "movementLLL":"CTLLL"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Zayn_L_Neutral_Worried"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"llleft":"Zayn_L_Neutral_Worried", "movementLLL":"SLTLLL"},
+          "background": { "bg": "Darkness", "pbg":"LiliesNight"} 
+        }
+      ],
+      "next": { "type": "fixed", "target": "Dream", "sceneID": "Incident1" }
     }
   }

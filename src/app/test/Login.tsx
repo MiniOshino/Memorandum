@@ -77,7 +77,7 @@ export function StatForm() {
 
     const handleStatSaves = async (e) => {
         e.preventDefault();
-        const success = await pushState("Stat", stat);
+        const success = await pushState("Stat", stat); //one of these for each stat.
         console.log(success);
     }
 
@@ -106,7 +106,7 @@ export function StatDisplay() {
         if ('error' in result) {
             console.error(result.error);
         } else {
-            //result.forEach(x => (setLookup[x.key](x.value)));      
+            //result.forEach(x => (setLookup[x.key](x.value)));    //This goes trough all the things it pulled from the site and storres it in the correct states  
          }
         }
 

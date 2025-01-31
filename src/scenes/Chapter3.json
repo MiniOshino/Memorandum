@@ -635,8 +635,23 @@
                 "background": { "bg": "ForestThiccNight"}
             },
             {
-                "textBox": { "name": "Zayn", "text": "Fair.", "speed": 40, "show":"true"},
+                "textBox": { "name": "Zayn", "text": "What about the kidnapped villagers?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Nora_L_Neutral_Straightface","rright": "Zayn_L_Neutral_Surprised"},
+                "background": { "bg": "ForestThiccNight"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "If they know what's good for them they are already freeing themselves.", "speed": 40, "show":"true"},
+                "sprites": {"lleft": "Nora_R_Neutral_Neutral","rright": "Zayn_L_Neutral_Surprised"},
+                "background": { "bg": "ForestThiccNight"}
+            },
+            {
+                "textBox": { "name": "Nora", "text": "Not like anyone could stop them right now.", "speed": 40, "show":"true"},
+                "sprites": {"lleft": "Nora_L_Neutral_Neutral","rright": "Zayn_L_Thinking_Neutral"},
+                "background": { "bg": "ForestThiccNight"}
+            },
+            {
+                "textBox": { "name": "Zayn", "text": "Fair.", "speed": 40, "show":"true"},
+                "sprites": {"lleft": "Nora_L_Neutral_Neutral","rright": "Zayn_L_Thinking_Neutral"},
                 "background": { "bg": "ForestThiccNight"}
             },
             {

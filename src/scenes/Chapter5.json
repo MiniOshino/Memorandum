@@ -1,0 +1,15 @@
+{
+"Chapter5" : {
+      "scene_id": "19",
+        "name": "Chappy5",
+        "storyProgressID": 20,
+        "hud": "StoryHud1",   
+        "logbook": {"entry": 8, "newpage": 5, "update": false},
+      "frames": [
+          {
+            "background": { "bg": "Chapter5"}
+          }
+        ],
+        "next": { "type": "special", "target": "Extra", "sceneID": "NoNewContent" }
+      }
+    }

@@ -153,7 +153,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "Well now I know for sure soo..", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "Well now I know for sure,     soo..", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Angy_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -305,15 +305,19 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "Adding unnecessary information...         And it continued..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Adding unnecessary information...", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "At every intersection in that mission, she kept adding unnecessary information.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "And that continued..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "Favorite colors..   Favorite food..    Favorite Number..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "At every intersection in that mission,        she kept adding unnecessary information.", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "{Nora}", "text": "Favorite colors..      Favorite food..      Favorite Number..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -329,11 +333,15 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "I still listened everytime she mentioned something new..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "I still listened to every new thing she mentioned..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
                 "textBox": { "name": "{Nora}", "text": "Until the mission was over.", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "{Nora}", "text": "That was usually the end of it.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -399,7 +407,7 @@
             },
             {
                 "textBox": { "name": "Z5R15-3", "text": "No.", "speed": 40, "show": "true"},
-                "sprites": {"lleft": "Luna_Neutral_X", "rright": "Nora_Angy_C0"},
+                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Angy_C0"},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -447,11 +455,11 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "“An odd word to refer to one’s memory”, I thought.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "“An odd word to refer to one’s memory”,      I thought.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "But that was her style..    A flawless memory.     A perfect database.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "But that was her style..             A flawless memory.          A perfect database.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -494,7 +502,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”?", "text": "You know,   since you didn't even know where to start?", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”?", "text": "You know,        since you didn't even know where to start?", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C1"},
                 "background": { "bg": "Darkness"}
             },
@@ -530,7 +538,7 @@
             },
             {
                 "textBox": { "name": "”Ally”?", "text": "Yay!", "speed": 40, "show":"true"},
-                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Distracted_C1"},
+                "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Distracted_C1", "effectLL":"jump"},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -671,7 +679,7 @@
                 "background": { "bg": "Darkness", "pbg":"NightSkySmog"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "...", "speed": 500, "show":"true"},
+                "textBox": { "name": "{Nora}", "text": "...there...", "speed": 500, "show":"true"},
                 "background": { "bg": "Darkness"}
             }
           ],

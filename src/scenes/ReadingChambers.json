@@ -666,22 +666,12 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "Please answer these questions:", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
-                    "background": { "bg": "ReadingChambers"}
-                },
-                {
-                    "textBox": { "name": "(Architect)", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "ReadingChambers"}
-                },
-                {
-                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "textBox": { "name": "(Architect)", "text": "Alright.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "input", "target": "ReadingChambers", "sceneID": "Lost2"}
+            "next": { "type": "check", "target": "ReadingChambers", "sceneID": "thread", "targetA":"ReadingChambers", "sceneIDA":"nothread", "compare":"Username", "with":"Guest"}
           },
           "L1C2" : {
             "scene_id": "-",
@@ -694,22 +684,47 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "Please answer these questions:", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
-                    "background": { "bg": "ReadingChambers"}
-                },
-                {
-                    "textBox": { "name": "(Architect)", "text": "What’s your Identifier or Name?", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
-                    "background": { "bg": "ReadingChambers"}
-                },
-                {
-                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
-                    "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
+                    "textBox": { "name": "(Architect)", "text": "Alright.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
-            "next": { "type": "input", "target": "ReadingChambers", "sceneID": "Lost2"}
+            "next": { "type": "check", "target": "ReadingChambers", "sceneID": "thread", "targetA":"ReadingChambers", "sceneIDA":"nothread", "compare":"Username", "with":"Guest"}
+          },
+          "thread" : {
+            "scene_id": "-",
+            "name": "OW my eyes",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "(Architect)", "text": "Seems like you have a thread, {name}{/name}.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Architect)", "text": "Odd name,        but not my choice.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Lost2"}
+          },"nothread" : {
+            "scene_id": "-",
+            "name": "OW my eyes",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "(Architect)", "text": "Seems like you do not have a thread yet.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "(Architect)", "text": "Make sure to deal with that before losing connection..", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Lost2"}
           },
           "Lost2" : {
             "scene_id": "-",
@@ -717,6 +732,10 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
+                    "textBox": { "name": "(Architect)", "text": "Regardless,      please answer these questions.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Architect_NeutralSFV_NeutralS"},
+                    "background": { "bg": "ReadingChambers"}
+                },{
                     "textBox": { "name": "(Architect)", "text": "What were you feeling and or thinking about, when leaving the room?", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
                     "background": { "bg": "ReadingChambers"}
@@ -766,7 +785,7 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "(Architect)", "text": "Alright..   Final question:", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Alright..        Final question:", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_ThinkingSFV_NeutralS"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -804,7 +823,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "So..      usually souls like you don't just..     Go outside of rooms.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "So..      usually souls like you don't just..       {italic}Go{/italic} outside of rooms.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Distracted_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -814,12 +833,12 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "Since you seem unable to just “Go” to other rooms like the rest, use this instead..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Since you seem unable to just “Go” to other rooms like the rest,           use this instead..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "{you}", "text": "(They hand you a device but before you are able to process what it is, it turns into blue particles, flowing into you)", "speed": 40, "show": "true"},
+                    "textBox": { "name": "{you}", "text": "(They hand you a device but before you are able to process what it is,        it turns into blue particles,      flowing into you)", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -877,12 +896,12 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "(Architect)", "text": "...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "...", "speed": 500, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "Righty.. I should start from the beginning.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Righty..         I should start from the beginning.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -892,22 +911,22 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "An infinite space of stored knowledge and memories from past to present and so on.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "An infinite space of stored knowledge and memories,         from past to present and so on.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Thinking_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "Souls visit this place mostly accidentally through either deep meditation or slumber, experiencing various bits of data stored in these halls.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Souls visit this place mostly accidentally through either deep meditation or slumber,          experiencing various bits of data stored in these halls.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_DistractedSFV_ReadingRS"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "If you had a fever dream once you probably visited section CRSD.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "If you had a fever dream once,            you probably visited section CRSD.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "After returning to consciousness, said souls leave this place again since an aware one cannot upkeep a connection to the Library.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "After returning to consciousness,           said souls leave this place again,         since an aware one cannot upkeep a connection to the Library.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Neutral_Distracted"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -927,7 +946,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "(Architect)", "text": "Ugh, I don't like this anymore..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Ugh,              I don't like this anymore..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Stressed_Lookup"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -968,7 +987,7 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "(Architect)", "text": "Y-yeah.. No problem...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "(Architect)", "text": "Y-yeah..          No problem...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Architect_Stressed_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },

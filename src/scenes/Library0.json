@@ -6,7 +6,7 @@
       "frames": [
         {
             "textBox": { "name": "{Nexus}", "text": "...", "speed": 500},
-            "background": { "bg": "Darkness"}
+            "background": { "bg": "Darkness", "pbg":"MemoRandum"}
         },
         {
             "textBox": { "name": "{Nexus}", "text": "...", "speed": 500 },
@@ -50,11 +50,11 @@
         }
     ],
     "next": { "type": "choice", "question": "(Has thou been here before?)",
-    "one": {"text": "Indeed", "path": "login2", "compare": "Confirm", "with": "Confirm"},
+    "one": {"text": "Indeed", "path": "login", "compare": "Confirm", "with": "Confirm"},
     "two": {"text": "Not that I remember..", "path": "new", "compare": "Confirm", "with": "Confirm"}
         }
     },
-    "login2" : {
+    "login" : {
         "scene_id": "Begining",
         "name": "Begining",
         "jayson": "Library0",  
@@ -64,7 +64,7 @@
             "background": { "bg": "Light"}
           },
           {
-              "textBox": { "name": "{Nexus}", "text": "Would thou please verify thyself, so that I can link the corresponding information thread?", "speed": 40 },
+              "textBox": { "name": "{Nexus}", "text": "Would thou please verify thyself,        so that I can link the corresponding information thread?", "speed": 40 },
               "background": { "bg": "Light"}
           },
           {
@@ -77,25 +77,23 @@
       "confirmation" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
-            "textBox": { "name": "Nexus", "text": "Wonderful.", "speed": 40 },
+            "textBox": { "name": "{Nexus}", "text": "Wonderful.", "speed": 40 },
             "background": { "bg": "Light"}
           },
           {
-              "textBox": { "name": "Nexus", "text": "I shall send thee to the reading chambers as usual.", "speed": 40 },
-              "background": { "bg": "Light"}
-          },
-          {
-            "textBox": { "name": "Nexus", "text": "See you around,     little soul~", "speed": 40 },
+            "textBox": { "name": "{Nexus}", "text": "See you around,       little soul~", "speed": 40 },
             "background": { "bg": "Light"}
           }
         ],
-        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers"}
+        "next": { "type": "fixed", "target": "start", "sceneID": "login"}
       },
       "confirmationfail" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Hm.      It seems like verification was not possible..", "speed": 40 },
@@ -118,6 +116,7 @@
       "new" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "No worries, little soul.", "speed": 40 },
@@ -140,6 +139,7 @@
       "register" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Alright then, little soul~", "speed": 40 },
@@ -150,7 +150,7 @@
               "background": { "bg": "Light"}
           },
           {
-            "textBox": { "name": "{Nexus}", "text": "Enter thine 'name' at the top and the confidential 'ID-link' at the bottom.", "speed": 40 },
+            "textBox": { "name": "{Nexus}", "text": "Enter thine 'name' at the top and the confidential 'ID-code' at the bottom.", "speed": 40 },
             "background": { "bg": "Light"}
             },
         {
@@ -160,9 +160,122 @@
         ],
         "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
       },
+      "unavailable" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+      "jayson": "Library0",  
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "...", "speed": 500 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "My apologies,           it seems that the thread name thou chose is already occupied or unavailable.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "Please use a different identifier.", "speed": 40 },
+            "background": { "bg": "Light"}
+            },
+        {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+        }
+        ],
+        "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
+      },
+      "unavailableS" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+      "jayson": "Library0",  
+        "frames": [
+          {
+            "textBox": { "name": "{Nexus}", "text": "...", "speed": 500 },
+            "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "...", "speed": 500 },
+            "background": { "bg": "Light"}
+          },
+          {
+              "textBox": { "name": "{Nexus}", "text": "My apologies,           it seems that the thread name thou chose is already occupied or unavailable.", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "Please use a different identifier.", "speed": 40 },
+            "background": { "bg": "Light"}
+            },
+        {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+        }
+        ],
+        "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
+      },
+      "unavailableN" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+      "jayson": "Library0",  
+        "frames": [
+          {
+              "textBox": { "name": "{Nexus}", "text": "Please refrain from using the 'name' of myself or my kin,       little soul..", "speed": 40 },
+              "background": { "bg": "Light"}
+          },
+          {
+            "textBox": { "name": "{Nexus}", "text": "Choose a different one.", "speed": 40 },
+            "background": { "bg": "Light"}
+            },
+        {
+            "textBox": { "name": "{Nexus}", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+        }
+        ],
+        "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
+      },
+      "unavailableA" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+      "jayson": "Library0",  
+        "frames": [
+          {
+              "textBox": { "name": "(Architect)", "text": "No ur not.", "speed": 40 },
+              "background": { "bg": "Connection"}
+          },
+        {
+            "textBox": { "name": "", "text": "", "speed": 40 },
+            "background": { "bg": "Connection"}
+        }
+        ],
+        "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
+      },
+      "unavailableL" : {
+        "scene_id": "Begining",
+        "name": "Begining",
+      "jayson": "Library0",  
+        "frames": [
+          {
+              "textBox": { "name": "", "text": "...", "speed": 500 },
+              "background": { "bg": "Eye"}
+            },
+            {
+              "textBox": { "name": "", "text": "(You feel a cold sense crawling along you)", "speed": 40 },
+              "background": { "bg": "Eye"}
+            },
+            {
+              "textBox": { "name": "", "text": "(For completely unrelated reasons,            you decide to go for a different name)", "speed": 40 },
+              "background": { "bg": "Eye"}
+            },
+          {
+            "textBox": { "name": "", "text": "", "speed": 40 },
+            "background": { "bg": "Light"}
+          }
+        ],
+        "next": { "type": "register", "target": "Library0", "sceneID": "registered"}
+      },
       "registered" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Delightful.", "speed": 40 },
@@ -182,6 +295,7 @@
       "guest" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Very well.", "speed": 40 },
@@ -200,11 +314,12 @@
             "background": { "bg": "Light"}
         }
         ],
-        "next": { "type": "fixed", "target": "Library0", "sceneID": "continue" }
+        "next": { "type": "fixed", "target": "Library0", "sceneID": "continue", "event": "Username", "eventupdate": "Guest" }
       },
     "continue" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
         {
             "textBox": { "name": "{Nexus}", "text": "We are the cagliostro,       the vessels of this place...", "speed": 40 },
@@ -225,6 +340,7 @@
     "1" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Say, little one..", "speed": 40 },
@@ -249,6 +365,7 @@
       "2" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "..The world before the convergence?", "speed": 40 },
@@ -269,6 +386,7 @@
       "3" : {
         "scene_id": "Begining",
         "name": "Begining",
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Art thou curious about something specific?", "speed": 40 },
@@ -294,6 +412,7 @@
         "scene_id": "Begining",
         "name": "Begining",
         "storyProgressID": 1,
+      "jayson": "Library0",  
         "frames": [
           {
             "textBox": { "name": "{Nexus}", "text": "Very well then...", "speed": 40 },

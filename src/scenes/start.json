@@ -5,9 +5,31 @@
       "frames": [
         {
           "textBox": { "name": "", "text": "", "speed": 50},
-          "background": { "bg": "Darkness"}
+          "background": { "bg": "MemoRandum"}
         }
       ],
       "next": { "type": "start"}
+    },
+    "continue" : {
+      "scene_id": "strt",
+      "name": "-",
+      "frames": [
+        {
+          "textBox": { "name": "", "text": "", "speed": 50},
+          "background": { "bg": "Darkness", "pbg":"MemoRandum"}
+        }
+      ],
+      "next": { "type": "startup"}
+    },
+    "login" : {
+      "scene_id": "strt",
+      "name": "-",
+      "frames": [
+        {
+          "textBox": { "name": "", "text": "", "speed": 50},
+          "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "startup"}
     }
   }

@@ -4,8 +4,7 @@ import { load } from "./actions/load";
 import Image from 'next/image';
 import { Bagel_Fat_One } from "next/font/google";
 import Combat from "./Combat.js";
-import { login, validateToken } from "./actions/account";
-import { Login } from "./app/test/Login";
+import { login, validateToken, signup, pullState, pushState } from "./actions/account";
 
  
 
@@ -265,7 +264,7 @@ const Background = ({ background }) => {
 
   return (
     <div key={key}>
-      { background.effect && (<div className={` z-30 absolute ${background.effectstyle === "lingering" ? "opacity-0 animate-[lingering_2s]" : background.effectstyle === "vibeout" ? "opacity-0 animate-[vibeout_2s]" : background.effectstyle === "svibeout" ? "opacity-0 animate-[svo_1s]" : background.effectstyle === "vibe" ? "opacity-1 animate-[vibe_2s]" : null} w-[200%] h-[200%]`}>
+      { background.effect && (<div className={` z-30 absolute ${background.effectstyle === "lingering" ? "opacity-0 animate-[lingering_2s]" : background.effectstyle === "vibeout" ? "opacity-0 animate-[vibeout_2s]" : background.effectstyle === "svibeout" ? "opacity-0 animate-[svo_1s]" : background.effectstyle === "vibe" ? "opacity-1 animate-[vibe_2s]" : background.effectstyle === "chill" ? "opacity-25" : null} w-[200%] h-[200%]`}>
         { background.effect === "bitch" ? null :
         <Image
         className=" z-40 w-[50%] h-[50%]"
@@ -287,7 +286,7 @@ const Background = ({ background }) => {
       />}
       </div>
       )}
-      { background.bg && (<div className={` absolute ${background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-full h-full ease-in`}>
+      { background.bg && (<div className={` absolute ${background.pbg ? "animate-[vibe_0.2s]" : null} ${background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-full h-full ease-in`}>
         { background.bg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
@@ -393,6 +392,12 @@ const Logbook = ({entry}) => {
           {(entry.entry >= 5 && page === 99) && (
             <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(3)}}>{entry.entry === 5 && entry.update ? "Entry 3 *" : "Entry 3" }</button>
           )}
+          {(entry.entry >= 7 && page === 99) && (
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(4)}}>{entry.entry === 7 && entry.update ? "Entry 4 *" : "Entry 4" }</button>
+          )}
+          {(entry.entry >= 8 && page === 99) && (
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(5)}}>{entry.entry === 8 && entry.update ? "Entry 5 *" : "Entry 5" }</button>
+          )}
          {/* ----------------------------------------------------------INFORMATION---------------------------------------------------------------------------- */}
 
           {(entry.entry >= 3 && page === 98) && (
@@ -403,10 +408,10 @@ const Logbook = ({entry}) => {
           )}
          {/* ----------------------------------------------------------PEOPLE---------------------------------------------------------------------------- */}
          {(entry.entry >= 5 && page === 97) && (
-            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(80)}}>{entry.entry === 5 || entry.entry === 6 && entry.update ? "Nora *" : "Nora" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(80)}}>{(entry.entry === 5 || entry.entry === 6 || entry.entry === 7 || entry.entry === 8) && entry.update ? "Nora *" : "Nora" }</button>
           )}
           {(entry.entry >= 5 && page === 97) && (
-            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(81)}}>{entry.entry === 5 && entry.update ? "Zayn *" : "Zayn" }</button>
+            <button className=" z-50 hover:text-gray-400 text-xl font-bold text-black" onClick={async () => {setPage(81)}}>{(entry.entry === 5 || entry.entry === 7 || entry.entry === 8) && entry.update ? "Zayn *" : "Zayn" }</button>
           )}
         </div>)}
       </div>
@@ -447,7 +452,7 @@ const Logbook = ({entry}) => {
           height={2000}
          />
       )}
-      {(page === 80 && entry.entry >= 6) && (<Image
+      {(page === 80 && entry.entry >= 6 && entry.entry < 7) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
          src={`PNora2.png`}
           alt={"PNora2.png"}
@@ -455,12 +460,45 @@ const Logbook = ({entry}) => {
           height={2000}
          />
       )}
+      {(page === 80 && entry.entry >= 7 && entry.entry < 8) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`PNora3.png`}
+          alt={"PNora3.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
+      {(page === 80 && entry.entry >= 8) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`PNora4.png`}
+          alt={"PNora4.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
+         {/* ---------------------------------------------Zayn---------------------------------------------- */}
 
 
-      {(page === 81) && (<Image
+      {(page === 81 && entry.entry < 7) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
          src={`PZayn1.png`}
           alt={"PZayn1.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
+      {(page === 81 && entry.entry >= 7 && entry.entry < 8) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`PZayn2.png`}
+          alt={"PZayn2.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
+      {(page === 81 && entry.entry >= 8) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`PZayn2_1.png`}
+          alt={"PZayn2_1.png"}
           width={3000}
           height={2000}
          />
@@ -485,6 +523,22 @@ const Logbook = ({entry}) => {
          />
       )}
          {/* ----------------------------------------------------------DIARY---------------------------------------------------------------------------- */}
+         {(page === 5) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`Diary5.png`}
+          alt={"Diary5.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
+         {(page === 4) && (<Image
+         className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
+         src={`Diary4.png`}
+          alt={"Diary4.png"}
+          width={3000}
+          height={2000}
+         />
+      )}
       {(page === 3) && (<Image
          className=" absolute z-30 top-[-1%] left-[8%] w-[85%] h-[100%]"
          src={`Diary3.png`}
@@ -542,13 +596,12 @@ export const Scene = ({ initial_content }) => {
   //------------------------------------------------------------------------SAVESTATE-------------------------------------------------------------------------------------
     const [errorPW, setErrorPW] = useState({ userName: '', password: '' });
 
-    
 //------------------------------------------General Things--------------------------------------------
   const [Username, setUsername] = useState('');
   const [Password, setPassword] = useState('');
-  const [StoryProgress, setStoryProgress] = useState('0');
-  const [CurrentChapter, setCurrentChapter] = useState('Library0');
-  const [CurrentPart, setCurrentPart] = useState('Begining');
+  const [StoryProgress, setStoryProgress] = useState('1');
+  const [CurrentChapter, setCurrentChapter] = useState('Chapter0');
+  const [CurrentPart, setCurrentPart] = useState('Part1');
   const [Warptablet, setWarptablet] = useState('false');
         //------------------------------------------Events--------------------------------------------
         //NS: NOT STARTED, //1,2,3,4: CONVERSATION/EVENTPROGRESS //FIN: FINISHED
@@ -619,35 +672,172 @@ export const Scene = ({ initial_content }) => {
     EventFV: setEventFV, EventPR: setEventPR, EventSC: setEventSC, Spydent: setSpydent, Curious: setCurious, Interested: setInterested, Scaredycat: setScaredycat, 
     Analytical: setAnalytical, Friendly: setFriendly, Empathetic: setEmpathetic, SelfInterest: setSelfInterest, Confused: setConfused, Silly: setSilly, Trusting: setTrusting, 
     Questioning: setQuestioning, SlimeInterest: setSlimeInterest, Error: setError, NQuestionCagliostro: setNQuestionCagliostro, NQuestionSlime: setNQuestionSlime, NQuestionMist: setNQuestionMist, NQuestionInBetween: setNQuestionInBetween, 
-    AQuestionUnlockID: setAQuestionUnlockID, InformationWLNB: setInformationWLNB, InformationCagliostro: setInformationCagliostro, InformationInBetween: setInformationInBetween, 
-    Ha117L: setHa117L, SlimeName: setSlimeName, Green: setGreen, 
+    AQuestionUnlockID: setAQuestionUnlockID, InformationWLNB: setInformationWLNB, NQuestionWITP: setNQuestionWITP, NQuestionHDIL: setNQuestionHDIL, NQuestionArchitect: setNQuestionArchitect, NQuestionNexus: setNQuestionNexus, InformationCagliostro: setInformationCagliostro, InformationInBetween: setInformationInBetween, 
+    Ha117L: setHa117L, f659f9: setf659f9, SlimeName: setSlimeName, InbetweenVibe: setInbetweenVibe, Green: setGreen, 
     Yellow: setYellow, Cyan: setCyan, Magenta: setMagenta,
     RCPot: setRCPot, RCSoul: setRCSoul, RCCell: setRCCell, NCTables: setNCTables, NCRoof: setNCRoof, NCInfoWall: setNCInfoWall, H7Table: setH7Table, T1Beacon: setT1Beacon}
 
     const Lookup = {Username: Username, Password: Password, StoryProgress: StoryProgress, CurrentChapter: CurrentChapter, CurrentPart: CurrentPart, Warptablet: Warptablet, 
       EventFV: EventFV, EventPR: EventPR, EventSC: EventSC, Spydent: Spydent, Curious: Curious, Error: Error, Interested: Interested, Scaredycat: Scaredycat, 
       Analytical: Analytical, Friendly: Friendly, Empathetic: Empathetic, SelfInterest: SelfInterest, Confused: Confused, Silly: Silly, Trusting: Trusting, 
-      Questioning: Questioning, SlimeInterest: SlimeInterest, Confirm: Confirm, NQuestionCagliostro: NQuestionCagliostro, NQuestionSlime: NQuestionSlime, NQuestionMist: NQuestionMist, NQuestionInBetween: NQuestionInBetween, 
+      Questioning: Questioning, SlimeInterest: SlimeInterest, Confirm: Confirm, NQuestionWITP: NQuestionWITP, NQuestionHDIL: NQuestionHDIL, NQuestionArchitect: NQuestionArchitect, NQuestionNexus: NQuestionNexus,
+       NQuestionCagliostro: NQuestionCagliostro, NQuestionSlime: NQuestionSlime, NQuestionMist: NQuestionMist, NQuestionInBetween: NQuestionInBetween, 
       AQuestionUnlockID: AQuestionUnlockID, InformationWLNB: InformationWLNB, InformationCagliostro: InformationCagliostro, InformationInBetween: InformationInBetween, 
       Ha117L: Ha117L, SlimeName: SlimeName, Green: Green, 
       Yellow: Yellow, Cyan: Cyan, Magenta: Magenta,
       RCPot: RCPot, RCSoul: RCSoul, RCCell: RCCell, NCTables: NCTables, NCRoof: NCRoof, NCInfoWall: NCInfoWall, H7Table: H7Table, T1Beacon: T1Beacon}
     
-    const handlelogin = async (e) => {
-        e.preventDefault();
+      
+      const reset = () => {
+        setSkipted(false);
+        setSkip(true);
+      };
+      const why2 = () => {
+        setSkip(false); 
+        setSkipted(true);
+      };
+    
+      const saveprogress = async () => {
+        console.log('Saving progress');
+        console.log(Username);
+        await pushState("Username", Username); //one of these for each stat.
+        await pushState("Password", Password);
+        await pushState("StoryProgress", StoryProgress);
+        await pushState("CurrentChapter", CurrentChapter);
+        await pushState("CurrentPart", CurrentPart);
+        await pushState("Warptablet", Warptablet);
+        await pushState("EventFV", EventFV);
+        await pushState("EventPR", EventPR);
+        await pushState("EventSC", EventSC);
+        await pushState("Spydent", Spydent);
+        await pushState("Curious", Curious);
+        await pushState("Interested", Interested);
+        await pushState("Scaredycat", Scaredycat);
+      await pushState("Analytical", Analytical);
+      await pushState("Friendly", Friendly);
+      await pushState("Empathetic", Empathetic);
+      await pushState("SelfInterest", SelfInterest);
+      await pushState("Confused", Confused);
+      await pushState("Silly", Silly);
+      await pushState("Trusting", Trusting);
+      await pushState("Questioning", Questioning);
+      await pushState("SlimeInterest", SlimeInterest);
+      await pushState("NQuestionWITP", NQuestionWITP);
+      await pushState("NQuestionHDIL", NQuestionHDIL);
+      await pushState("NQuestionArchitect", NQuestionArchitect);
+      await pushState("NQuestionNexus", NQuestionNexus);
+      await pushState("NQuestionCagliostro", NQuestionCagliostro);
+      await pushState("NQuestionSlime", NQuestionSlime);
+      await pushState("NQuestionMist", NQuestionMist);
+      await pushState("NQuestionInBetween", NQuestionInBetween);
+      await pushState("AQuestionUnlockID", AQuestionUnlockID);
+      await pushState("InformationWLNB", InformationWLNB);
+      await pushState("InformationCagliostro", InformationCagliostro);
+      await pushState("InformationInBetween", InformationInBetween);
+      await pushState("Ha117L", Ha117L);
+      await pushState("f659f9", f659f9);
+      await pushState("SlimeName", SlimeName);
+      await pushState("InbetweenVibe", InbetweenVibe);
+      await pushState("Green", Green);
+      await pushState("Yellow", Yellow);
+      await pushState("Cyan", Cyan);
+      await pushState("Magenta", Magenta);
+      await pushState("RCPot", RCPot);
+      await pushState("RCSoul", RCSoul);
+      await pushState("RCCell", RCCell);
+      await pushState("NCTables", NCTables);
+      await pushState("NCRoof", NCRoof);
+      await pushState("NCInfoWall", NCInfoWall);
+      await pushState("H7Table", H7Table);
+      await pushState("T1Beacon", T1Beacon);
+      await pushState("Error", Error);
+      console.log(StoryProgress)
+    }
+  const loadprogress = async () => {
+    console.log('Loading progress');
+    const result = await pullState();
+
+    //console.log(result);
+    if ('error' in result) {
+      console.error(result.error);
+    } else {
+        console.log(result);
+        result.forEach(x => {
+          console.log(x.key);
+          console.log(x.value);
+          SetLookup[x.key](x.value);
+          
+        });    //This goes trough all the things it pulled from the site and storres it in the correct states  
+     }
+    }
+
+    const handlelogin = async () => {
         const { errors } = await login(Username, Password);
         if (errors.userName) setErrorPW({ userName: errors.userName, password: "" });
         if (errors.password) setErrorPW({ userName: errors.userName, password: errors.password });
-        if (!errors){
-          await validateToken(); //you did the login
-        }
         if (await validateToken()){
-          //goes in when user is logged in
+          await validateToken(); //you did the login
+          loadprogress();
+          preload(await load(scene.next.target, scene.next.sceneID));
+          setContent(await load(scene.next.target, scene.next.sceneID));
+          setFrame(0);
+          reset();
+          console.log('Completed login');
+        } else {
+          // preload(await load('Library0', 'confirmationfail'));
+          // setContent(await load('Library0', 'confirmationfail'));
+          // setFrame(0);
+          // reset();
+          console.log("Login fail.");
         }
+        console.log('did the loging');
     }
-    
+    const handleregister = async () => {
+            const { errors } = await signup(Username, Password);
+            if (errors.userName) setErrorPW({ userName: errors.userName, password: "" });
+            if (errors.password) setErrorPW({ userName: errors.userName, password: errors.password });
+            if (await validateToken()){
+              await validateToken(); //you did the login
+              saveprogress();
+              if (EventFV !== 'NS'){
+                preload(await load("NexusCore", "registered"));
+                setContent(await load("NexusCore", "registered"));
+                setFrame(0);
+                reset();
+                console.log('You did it! Library edition');
+              } else {
+                preload(await load(scene.next.target, scene.next.sceneID));
+                setContent(await load(scene.next.target, scene.next.sceneID));
+                setFrame(0);
+                reset();
+                console.log('You did it!');
+              }
+            } else {
+              console.log('you failed it');
+            }
+    }
+    const toggleFullscreen = () => {
+      const element = document.documentElement; // The <html> element
+      if (!document.fullscreenElement) {
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.requestFullscreen) { // Safari
+          element.requestFullscreen();
+        } else if (element.requestFullscreen) { // Older Microsoft Edge
+          element.requestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.exitFullscreen) { // Safari
+          document.exitFullscreen();
+        } else if (document.exitFullscreen) { // Older Microsoft Edge
+          document.exitFullscreen();
+        }
+      }
+    }
   const preload = ((nextscene) => {
-    //console.log(nextscene);
+    console.log("im preloading");
     const images = new Set();
     for(const f of nextscene.frames){
       //console.log(f);
@@ -675,14 +865,7 @@ export const Scene = ({ initial_content }) => {
     });
   });
 
-  const reset = () => {
-    setSkipted(false);
-    setSkip(true);
-  };
-  const why2 = () => {
-    setSkip(false); 
-    setSkipted(true);
-  };
+  
   //
   
   
@@ -744,7 +927,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
     ["Innkeeper","Slime"],
     ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
     ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz", "L7"],
-    ["Scarlett","(Scarlett)","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?"],
+    ["Scarlett","(Scarlett)","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?","??? & N"],
     ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
     ["Green", "(Green)","Yellow","(Yellow)","{Dial}"]]);
   //   const [speach, setSpeach] = useState('TextingNeutral');
@@ -827,7 +1010,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           if (part === '{bold}') {
             return (
               <strong key={index} className="font-bold">
-                {parts[index + 1]}
+                {parts[index+1]}
               </strong>
             );
           } else if (part === '{italic}') {
@@ -850,9 +1033,9 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             parts[index - 1] === '{italic}' ||
             parts[index - 1] === '{name}'
           ) {
-            return null; // Skip the closing tags and already processed parts
+            return '\u200B'; // Skip the closing tags and already processed parts
           } else {
-            return part;
+            return part + '\u200B'; //Colin premium 100% me approved. I am legaly liable for this.
           }
         })}
       </div>
@@ -1222,7 +1405,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             width={1091}
             height={630}
               /></button>)}
-            <button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+            <button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
+              e.preventDefault();
+              if (await validateToken()){
+                saveprogress();
+              }
               preload(await load("ReadingChambers", "ReadingChambersV"));
               setContent(await load("ReadingChambers", "ReadingChambersV"));
               setFrame(0);
@@ -1236,7 +1423,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             width={1091}
             height={630}
               /></button>
-            <button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+            <button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
+              e.preventDefault();
+              if (await validateToken()){
+                saveprogress();
+              }
               if (EventFV === '3'){
                 preload(await load("NexusCore", "FirstVisit"));
                 setContent(await load("NexusCore", "FirstVisit"));
@@ -1259,7 +1450,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             width={1091}
             height={630}
               /></button>
-            {Ha117L === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+            {Ha117L === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
+              e.preventDefault();
+              if (await validateToken()){
+                saveprogress();
+              }
                 preload(await load("Ha117L", "Ha117LV"));
                 setContent(await load("Ha117L", "Ha117LV"));
                 setFrame(0);
@@ -1273,7 +1468,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             width={1091}
             height={630}
               /></button>)}
-              {f659f9 === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async () =>{
+              {f659f9 === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
+                e.preventDefault();
+                if (await validateToken()){
+                  saveprogress();
+                }
                if (T1Beacon === 'false'){
                 preload(await load('Transmitter', 'BeaconOneF'));
                 setContent(await load('Transmitter', 'BeaconOneF'));
@@ -1420,9 +1619,9 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
          </div>
       )}
     {/* ----------------------------------------------------------Imput---------------------------------------------------------------------------- */}
-    {(scene.next.type === "login" && frame >= scene.frames.length -1) && (<div>
-      <form>
-        <h2>Login</h2>
+    {((scene.next.type === "login" || scene.next.type === "register") && frame >= scene.frames.length -1) && (<div>
+      <div>
+        {/* <h2>Login</h2>
         <input className='text-black' name='username' type='text' value={Username} onChange={(e) => setUsername(e.target.value)} />
         {errorPW.userName && <span>Error: {errorPW.userName}</span>}
         <br />
@@ -1431,52 +1630,133 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <br />
         <button type="submit" onClick={handlelogin}>
             login
-        </button>
-        
-    </form>
-    </div>)}
-      {/* {(scene.next.type === "input" && frame >= scene.frames.length - 1 ) && <Login></Login>(
+        </button> */}
         <div className="absolute w-[100%] h-[100%] z-40">
           <input
             type="text"
+            name='username'
             spellCheck='false'
-            className=" absolute p-4 z-50 bg-transparent outline-none text-cyan-600 top-[36%] left-[32.5%] w-[36%] h-[7%]"
-            placeholder="..."
-            value={input}
-            onChange={handleInputChange}
+            className=" absolute p-4 z-50 bg-transparent outline-none text-cyan-600 top-[35.5%] left-[32.5%] w-[36%] h-[7%]"
+            placeholder="Name"
+            value={Username}
+            onChange={(e) => setUsername(e.target.value)}
             maxLength={15}
           />
-          <button
+          <div className=" absolute p-4 z-50 bg-transparent outline-none text-cyan-600 top-[41.2%] left-[32%] w-[36%] h-[7%]">
+          {errorPW.userName && <span>Error: {errorPW.userName}</span>}
+          </div>
+          <input
+            type="text"
+            name='password'
+            spellCheck='false'
+            className=" absolute p-4 z-50 bg-transparent outline-none text-cyan-600 top-[46.5%] left-[32.5%] w-[36%] h-[7%]"
+            placeholder="Security Code"
+            value={Password}
+            onChange={(e) => setPassword(e.target.value)}
+            maxLength={15}
+          />
+          <div className="absolute p-4 z-50 bg-transparent outline-none text-cyan-600 top-[52.2%] left-[32%] w-[36%] h-[7%]">
+          {errorPW.password && <span>Error: {errorPW.password}</span>}
+          </div>
+          <button 
             className=" absolute px-4 py-2 z-50 rounded-md bg-transparent top-[57.5%] left-[43%] w-[15%] h-[9.5%]"
-            onClick={async () => {
-              //-----------------Username Input-------------------------------
-              if(scene.next.sceneID === 'Lost2'){
-                //localStorage.setItem('Username', input);
-                setInput('');
-                preload(await load(scene.next.target, scene.next.sceneID));
-                setContent(await load(scene.next.target, scene.next.sceneID));
-                setFrame(0);
-              }
-              if (scene.next.sceneID === 'FScene4'){
-                //localStorage.setItem('Password', input);
-                setInput('');
-                preload(await load(scene.next.target, scene.next.sceneID));
-                setContent(await load(scene.next.target, scene.next.sceneID));
-                setFrame(0);
-              }
+            onClick={async (e) => {
+              e.preventDefault();
+
+              if (scene.next.type === "register"){
+                if (Username === ''){
+                  if (EventFV !== 'NS')
+                  {
+                    preload(await load('NexusCore', 'guest'));
+                    setContent(await load('NexusCore', 'guest'));
+                    setFrame(0);
+                    reset();
+                  } else {
+                    preload(await load('Library0', 'guest'));
+                    setContent(await load('Library0', 'guest'));
+                    setFrame(0);
+                    reset();
+                  }
+                } else if (["zayn", "nora", "roy", "luna", "lily", "life", "death", "void", "null",
+                  "inbetween", "theinbetween", "chronos", "aspect", "ru'ne", "alice", "z5r15-3", "z5r15-2", "z5r15-1", "lorelei", "laphia", "gatekeeper", "guest"
+                ].includes(Username.toLowerCase())){
+                  console.log('Name spotted');
+                  console.log(Username);
+                  preload(await load('Library0', 'unavailable'));
+                  setContent(await load('Library0', 'unavailable'));
+                  setFrame(0);
+                  reset();
+                } else if (["scarlett"].includes(Username.toLowerCase())){
+                  console.log('Scarlett spotted');
+                  preload(await load('Library0', 'unavailableS'));
+                  setContent(await load('Library0', 'unavailableS'));
+                  setFrame(0);
+                  reset();
+                } else if (["nexus","cagliostro", "cagli"].includes(Username.toLowerCase())){
+                  console.log('Nexus spotted');
+                  preload(await load('Library0', 'unavailableN'));
+                  setContent(await load('Library0', 'unavailableN'));
+                  setFrame(0);
+                  reset();
+                } else if (["architect", "red", "blue", "green", "yellow", "magenta", "cyan"].includes(Username.toLowerCase())){
+                  console.log('Architect spotted');
+                  preload(await load('Library0', 'unavailableA'));
+                  setContent(await load('Library0', 'unavailableA'));
+                  setFrame(0);
+                  reset();
+                } else if (["lyz","lyzzy","vyrnix","vnl","vyrnixlyz"].includes(Username.toLowerCase())){
+                  console.log('Lyz spotted');
+                  preload(await load('Library0', 'unavailableL'));
+                  setContent(await load('Library0', 'unavailableL'));
+                  setFrame(0);
+                  reset();
+                } else {
+                  console.log("registering happening");
+                  handleregister();
+                }
+              } else if (scene.next.type === "login"){
+                if (Username === ''){
+                  preload(await load('Library0', 'confirmationfail'));
+                  setContent(await load('Library0', 'confirmationfail'));
+                  setFrame(0);
+                  reset();
+                } else {
+                  console.log('login happening');
+                  handlelogin();
+                }
+             }
+              // //-----------------Username Input-------------------------------
+              // if(scene.next.sceneID === 'Lost2'){
+              //   //localStorage.setItem('Username', input);
+              //   setInput('');
+              //   preload(await load(scene.next.target, scene.next.sceneID));
+              //   setContent(await load(scene.next.target, scene.next.sceneID));
+              //   setFrame(0);
+              // }
+              // if (scene.next.sceneID === 'FScene4'){
+              //   //localStorage.setItem('Password', input);
+              //   setInput('');
+              //   preload(await load(scene.next.target, scene.next.sceneID));
+              //   setContent(await load(scene.next.target, scene.next.sceneID));
+              //   setFrame(0);
+              // }
             }}
           ></button>
           <Image
             className=" absolute z-30 top-[20%] left-[28%] w-[45%] h-[55%]"
-            src={`InputPrompt.png`}
-            alt={"InputPrompt.png"}
+            src={`InputPromptAcc.png`}
+            alt={"InputPromptAcc.png"}
             width={1243}
             height={807}
         />
         <div className="absolute w-[100%] place-content-start place-items-center bottom-0 h-[15%] flex flex-col">
-            <div className="text-white text-2xl font-bold">{scene.next.sceneID === 'Lost2' ? "(What’s your Identifier or Name?)" : "(As long as it is remembered.)"}</div>
+            <div className="text-white text-2xl font-bold">{scene.next.type === 'register' ? "(Enter thine 'name' at the top and the confidential 'ID-code' at the bottom.)" : "(Would thou please verify thyself, so that I can link the corresponding information thread?)"}</div>
           </div>
         </div> 
+    </div>
+    </div>)}
+      {/* {(scene.next.type === "input" && frame >= scene.frames.length - 1 ) && <Login></Login>(
+        
 
       )}
         */}
@@ -1965,6 +2245,9 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load('ReadingChambers', 'DoorF'));
                 setContent(await load('ReadingChambers', 'DoorF'));
                 setFrame(0);
+                if (await validateToken()){
+                  saveprogress();
+                }
               } else {
                 preload(await load('ReadingChambers', 'DoorN'));
                 setContent(await load('ReadingChambers', 'DoorN'));
@@ -2098,13 +2381,15 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               />
             </button>
           )}
-        {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async () =>{
+        {room === 0 && (<button className="absolute w-[100%] h-[100%] z-40" onClick={async (e) =>{
+          e.preventDefault();
           //------------------------------------------------------------First ARRIVAL EVENT CHECK------------------------------------
           if (EventFV === 'NS' || EventFV === '1'){
             setEventFV('1');
             preload(await load('ReadingChambers', 'FirstArrival'));
             setContent(await load('ReadingChambers', 'FirstArrival'));
             setFrame(0);
+            //saveprogress();
           }
            //------------------------------------------------------------Password Restriction EVENT CHECK------------------------------------
            if ((EventPR === 'NS' || EventPR === '1') && StoryProgress === '14'){
@@ -2387,7 +2672,8 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       </div>
       <div>
       {(scene.type !== 'PNC' && scene.type !== 'Combt')  && (<button className="absolute w-[100%] h-[100%] z-30"
-        onClick={async () => {
+        onClick={async (e) => {
+          e.preventDefault();
           if (frame >= scene.frames.length - 1) {
             // -------------------------------------------------------------- WHERE ARE YOU IN THE STORY????--------------------------------------
             
@@ -2407,7 +2693,8 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             if (scene.storyProgressID > tempSP){
               setCurrentChapter(scene.next.target);
               setCurrentPart(scene.next.sceneID);
-              setStoryProgress(scene.storyProgressID);
+              setStoryProgress(scene.storyProgressID.toString());
+              //saveprogress();
             }
             console.log("get next scene");
 
@@ -2451,6 +2738,19 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
                 reset();
+              }
+            }else if (scene.next.type === 'check') {//-------------------Simple Stat condition (Currently only with "if higher then X")---------------------------
+              if (Lookup[scene.next.compare] === scene.next.with){
+                preload(await load(scene.next.targetA,  scene.next.sceneIDA));
+                setContent(await load(scene.next.targetA,  scene.next.sceneIDA));
+                setFrame(0);
+                reset();
+              } else { //Maybe add is LOWER & Is higher then "other stat"
+                preload(await load(scene.next.target, scene.next.sceneID));
+                setContent(await load(scene.next.target, scene.next.sceneID));
+                setFrame(0);
+                reset();
+                console.log(Lookup[scene.next.compare]);
               }
             } else if (scene.next.type === 'special'){//-------------------Special condition (Compares a fixed localStorage check)---------------------------
               // ------------------------------------------------ First VISIT--------------------------------
@@ -2561,46 +2861,19 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               //onst scn = localStorage.getItem('CurrentPart');
               //const trgt = JSON.parse(localStorage.getItem('CurrentChapter')!);
               //const scn = JSON.parse(localStorage.getItem('CurrentPart')!);
-
-              if (EventFV !== 'NS'){
-                //Preload not needed ig
-                setContent(await load('ReadingChambers', 'ReadingChambers'));
+              toggleFullscreen();
+              if (await validateToken()){
+                loadprogress();
+                preload(await load('start', 'continue'));
+                setContent(await load('start', 'continue'));
                 setFrame(0);
                 reset();
-              } else {
-                const CC = CurrentChapter;
-                const CP = CurrentPart;
-                let trgt: string;
-                let scn: string;
-                
-                if (CC !== null) {
-                trgt = CC;
-              } else {
-                // Handle the case where the value is null, maybe assign a default value
-                trgt = ""; // Or whatever default value you want
-              }
-              if (CP !== null) {
-                scn = CP;
-              } else {
-                // Handle the case where the value is null, maybe assign a default value
-                scn = ""; // Or whatever default value you want
-              }
-              console.log(trgt);
-              console.log(scn);
-
-              if (trgt === 'Chapter2' && scn === 'Scene5'){
-                preload(await load(trgt, 'Scene2'));
-                setContent(await load(trgt, 'Scene2'));
-                setFrame(0);
-                reset();
-              } else {
-                preload(await load(trgt, scn));
-                setContent(await load(trgt, scn));
-                //setContent(await load(scene.scene_id + 1));
-                setFrame(0);
-                reset();
-              }
-            }
+                //goes in when user is logged in              
+          } else {
+            preload(await load('Library0', 'Begining'));
+            setContent(await load('Library0', 'Begining'));
+            setFrame(0);
+          }
             //
             //frame.sprites.rrright
             //frame.sprites.sright
@@ -2617,32 +2890,87 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             
             reset();
           }
+          } else if (scene.next.type === "startup"){
+            if (EventFV !== 'NS'){
+              //Preload not needed ig
+              setContent(await load('ReadingChambers', 'ReadingChambersV'));
+              setFrame(0);
+              reset();
+            } else {
+
+              const CC = CurrentChapter;
+              const CP = CurrentPart;
+
+              let trgt: string;
+              let scn: string;
+              
+              if (CC !== null) {
+              trgt = CC;
+            } else {
+              // Handle the case where the value is null, maybe assign a default value
+              trgt = ""; // Or whatever default value you want
+            }
+            if (CP !== null) {
+              scn = CP;
+            } else {
+              // Handle the case where the value is null, maybe assign a default value
+              scn = ""; // Or whatever default value you want
+            }
+            console.log(trgt);
+            console.log(scn);
+
+            if (trgt === 'Chapter2' && scn === 'Scene5'){
+              preload(await load(trgt, 'Scene2'));
+              setContent(await load(trgt, 'Scene2'));
+              setFrame(0);
+              reset();
+            } else {
+              preload(await load(trgt, scn));
+              setContent(await load(trgt, scn));
+              //setContent(await load(scene.scene_id + 1));
+              setFrame(0);
+              reset();
+            }
           }
-          } else {
+          }
+          } else if (frame === 0){ //--------------------------------------------------------SAVEPROGRESS--------------------------
+            console.log('Start of Section');
+            if (await validateToken()){
+            if (scene.storyProgressID){
+              console.log('Yes Storyprogress exists');
+              console.log(StoryProgress);
+              saveprogress();
+            }
+          }
+            setFrame(frame + 1);
+            reset();
+            console.log("Next frame please");
+          } 
+            else {
             //---Preload next frame?
-      const images = new Set();
-      if (scene.frames[frame + 2]?.sprites){
-      if (scene.frames[frame + 2]?.sprites.rrright && scene.frames[frame + 2]?.sprites.rrright !== scene.frames[frame + 1]?.sprites?.rrright) images.add(scene.frames[frame + 2].sprites.rrright + ".png")
-      if (scene.frames[frame + 2]?.sprites.sright && scene.frames[frame + 2]?.sprites.sright !== scene.frames[frame + 1]?.sprites?.sright) images.add(scene.frames[frame + 2].sprites.sright + ".png")
-      if (scene.frames[frame + 2]?.sprites.rright && scene.frames[frame + 2]?.sprites.rright !== scene.frames[frame + 1]?.sprites?.rright) images.add(scene.frames[frame + 2].sprites.rright + ".png")
-      if (scene.frames[frame + 2]?.sprites.right && scene.frames[frame + 2]?.sprites.right !== scene.frames[frame + 1]?.sprites?.right) images.add(scene.frames[frame + 2].sprites.right + ".png")
-      if (scene.frames[frame + 2]?.sprites.center && scene.frames[frame + 2]?.sprites.center !== scene.frames[frame + 1]?.sprites?.center) images.add(scene.frames[frame + 2].sprites.center + ".png")
-      if (scene.frames[frame + 2]?.sprites.left && scene.frames[frame + 2]?.sprites.left !== scene.frames[frame + 1]?.sprites?.left) images.add(scene.frames[frame + 2].sprites.left + ".png")
-      if (scene.frames[frame + 2]?.sprites.lleft && scene.frames[frame + 2]?.sprites.lleft !== scene.frames[frame + 1]?.sprites?.lleft) images.add(scene.frames[frame + 2].sprites.lleft + ".png")
-      if (scene.frames[frame + 2]?.sprites.sleft && scene.frames[frame + 2]?.sprites.sleft !== scene.frames[frame + 1]?.sprites?.sleft) images.add(scene.frames[frame + 2].sprites.sleft + ".png")
-      if (scene.frames[frame + 2]?.sprites.llleft && scene.frames[frame + 2]?.sprites.llleft !== scene.frames[frame + 1]?.sprites?.llleft) images.add(scene.frames[frame + 2].sprites.llleft + ".png")
-      if (scene.frames[frame + 2]?.sprites.down && scene.frames[frame + 2]?.sprites.down !== scene.frames[frame + 1]?.sprites?.down) images.add(scene.frames[frame + 2].sprites.down + ".png") 
-      }
+    //   const images = new Set();
+    //   if (scene.frames[frame + 2]?.sprites){
+    //   if (scene.frames[frame + 2]?.sprites.rrright && scene.frames[frame + 2]?.sprites.rrright !== scene.frames[frame + 1]?.sprites?.rrright) images.add(scene.frames[frame + 2].sprites.rrright + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.sright && scene.frames[frame + 2]?.sprites.sright !== scene.frames[frame + 1]?.sprites?.sright) images.add(scene.frames[frame + 2].sprites.sright + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.rright && scene.frames[frame + 2]?.sprites.rright !== scene.frames[frame + 1]?.sprites?.rright) images.add(scene.frames[frame + 2].sprites.rright + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.right && scene.frames[frame + 2]?.sprites.right !== scene.frames[frame + 1]?.sprites?.right) images.add(scene.frames[frame + 2].sprites.right + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.center && scene.frames[frame + 2]?.sprites.center !== scene.frames[frame + 1]?.sprites?.center) images.add(scene.frames[frame + 2].sprites.center + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.left && scene.frames[frame + 2]?.sprites.left !== scene.frames[frame + 1]?.sprites?.left) images.add(scene.frames[frame + 2].sprites.left + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.lleft && scene.frames[frame + 2]?.sprites.lleft !== scene.frames[frame + 1]?.sprites?.lleft) images.add(scene.frames[frame + 2].sprites.lleft + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.sleft && scene.frames[frame + 2]?.sprites.sleft !== scene.frames[frame + 1]?.sprites?.sleft) images.add(scene.frames[frame + 2].sprites.sleft + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.llleft && scene.frames[frame + 2]?.sprites.llleft !== scene.frames[frame + 1]?.sprites?.llleft) images.add(scene.frames[frame + 2].sprites.llleft + ".png")
+    //   if (scene.frames[frame + 2]?.sprites.down && scene.frames[frame + 2]?.sprites.down !== scene.frames[frame + 1]?.sprites?.down) images.add(scene.frames[frame + 2].sprites.down + ".png") 
+    //   }
     
-    if (scene.frames[frame + 2]?.background?.bg && scene.frames[frame + 2].background?.bg !== scene.frames[frame + 1]?.background?.bg) images.add("BG" + scene.frames[frame + 2].background.bg + ".png")
-    if (scene.frames[frame + 2]?.background?.effect) images.add(scene.frames[frame + 1].background?.effect + ".gif")
-    if (scene.frames[frame + 2]?.items?.item) images.add("Item" + scene.frames[frame + 1].items?.item + ".png")
+    // if (scene.frames[frame + 2]?.background?.bg && scene.frames[frame + 2].background?.bg !== scene.frames[frame + 1]?.background?.bg) images.add("BG" + scene.frames[frame + 2].background.bg + ".png")
+    // if (scene.frames[frame + 2]?.background?.effect) images.add(scene.frames[frame + 1].background?.effect + ".gif")
+    // if (scene.frames[frame + 2]?.items?.item) images.add("Item" + scene.frames[frame + 1].items?.item + ".png")
     
-    //console.log('IMAGES HERE');
-    //console.log(images);
-    images.forEach((img) => {
-      fetch(`https://beans.images.ni-verse.com/${img}`, {mode: "no-cors"});
-    });
+    // //console.log('IMAGES HERE');
+    // //console.log(images);
+    // images.forEach((img) => {
+    //   fetch(`https://beans.images.ni-verse.com/${img}`, {mode: "no-cors"});
+    // });
             setFrame(frame + 1);
             reset();
             console.log("Next frame please");

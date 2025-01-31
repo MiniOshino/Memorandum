@@ -30,7 +30,7 @@ async function test() {
 
 
 export default async function Home() {
-  //const defaultScene = await load("Chapter4", "Chapter4");
+  //const defaultScene = await load("Dream", "Incident1");
   //const defaultScene = await load("test", "test");
   //const defaultScene = await load("Fights", "Fights");
   
