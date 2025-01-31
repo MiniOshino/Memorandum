@@ -93,7 +93,6 @@ export async function validateToken() {
     } catch (error) {
         return false;
     }
-
 }
 
 export async function pullState() {
