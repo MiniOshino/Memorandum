@@ -169,40 +169,7 @@
                 "background": { "bg": "Ha117L"}
             },
             {
-                "textBox": { "name": "Green", "text": "I was asked to collect a security code from all scanned souls.", "speed": 40, "show": "true"},
-                "sprites": { "center": "Green"},
-                "background": { "bg": "Ha117L"}
-            },
-            {
-                "textBox": { "name": "Green", "text": "This security code may be whatever you choose.", "speed": 40, "show": "true"},
-                "sprites": { "center": "Green"},
-                "background": { "bg": "Ha117L"}
-            },
-            {
-                "textBox": { "name": "Green", "text": "It may be something you love, something important, something random.", "speed": 40, "show": "true"},
-                "sprites": { "center": "Green"},
-                "background": { "bg": "Ha117L"}
-            },
-            {
-                "textBox": { "name": "Green", "text": "As long as it is remembered.", "speed": 40, "show": "true"},
-                "sprites": { "center": "Green"},
-                "background": { "bg": "Ha117L"}
-            },
-            {
-                "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
-                "sprites": { "center": "Green"},
-                "background": { "bg": "Ha117L"}
-            }
-        ],
-        "next": { "type": "input", "target": "Ha117L", "sceneID": "FScene4" }
-      },
-      "FScene4" : {
-        "scene_id": "-",
-        "name": "F-Scene 4",
-        "jayson": "Ha117L",
-        "frames": [
-            {
-                "textBox": { "name": "Green", "text": "Appreciated.", "speed": 40, "show": "true"},
+                "textBox": { "name": "Green", "text": "And both reasons have been concluded with your arrival.", "speed": 40, "show": "true"},
                 "sprites": { "center": "Green"},
                 "background": { "bg": "Ha117L"}
             },
@@ -223,8 +190,9 @@
             }
         ],
         "next": { "type": "choice", "question": "(...)",
-            "one": {"text": "You would make a great tour guide tough..", "path": "F3C1", "compare": "Confirm", "with": "Confirm"},
-            "two": {"text": "Is there something wrong?", "path": "F3C2", "compare": "Confirm", "with": "Confirm"}
+            "one": {"text": "You would make a great tour guide tough..", "path": "F3C1", "compare": "Confirm", "with": "Confirm", "stats":"Friendly"},
+            "two": {"text": "Then why are you still staring at me..?", "path": "F3C3", "compare": "Confirm", "with": "Confirm", "stats":"Scaredycat"},
+            "three": {"text": "Well clearly not.", "path": "F3C2", "compare": "Confirm", "with": "Confirm", "stats":"Analytical"}
           }
       },
       "F3C1" : {
@@ -238,7 +206,7 @@
                 "background": { "bg": "Ha117L"}
             },
             {
-                "textBox": { "name": "Green", "text": "Though,       answer me a question first:", "speed": 40, "show": "true"},
+                "textBox": { "name": "Green", "text": "Though,        answer me a question first:", "speed": 40, "show": "true"},
                 "sprites": { "center": "Green"},
                 "background": { "bg": "Ha117L"}
             }
@@ -263,13 +231,31 @@
         ],
         "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene5" }
       },
+      "F3C3" : {
+        "scene_id": "-",
+        "name": "tour guide!",
+        "jayson": "Ha117L",
+        "frames": [
+            {
+                "textBox": { "name": "Green", "text": "It is simply a contemplating stare.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            },
+            {
+                "textBox": { "name": "Green", "text": "I can assure you,           I am the least of your worries in this instance.", "speed": 40, "show": "true"},
+                "sprites": { "center": "Green"},
+                "background": { "bg": "Ha117L"}
+            }
+        ],
+        "next": { "type": "fixed", "target": "Ha117L", "sceneID": "FScene5" }
+      },
       "FScene5" : {
         "scene_id": "-",
         "name": "tour guide!",
         "jayson": "Ha117L",
         "frames": [
             {
-                "textBox": { "name": "Green", "text": "If,     hypothetically,       something was watching over you from the shadows.", "speed": 40, "show": "true"},
+                "textBox": { "name": "Green", "text": "If,       hypothetically,        something was watching over you from the shadows.", "speed": 40, "show": "true"},
                 "sprites": { "center": "Green"},
                 "background": { "bg": "Ha117L"}
             },
@@ -287,7 +273,7 @@
         "next": { "type": "choice", "question": "(How would that make you feel?)",
             "one": {"text": "Protected. I'm sure they are looking out for me.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
             "two": {"text": "Intrigued. I would like to know what is following me.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats":"Analytical"},
-            "three": {"text": "Nervous. I would run for my life.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats":"Scaredycat"}
+            "three": {"text": "Terrified. I would run for my life.", "path": "FScene6", "compare": "Confirm", "with": "Confirm", "stats":"Scaredycat"}
           }
       },
       "FScene6" : {
