@@ -1726,7 +1726,12 @@
           "background": { "bg": "LiliesNight"} 
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Yet..        here you are.            Carrying a near identical lily,          as if stuck in time..", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "Yet..         here you are.", "speed": 40, "show":"true"},
+          "sprites": {"sleft":"Zayn_R_Thinking_Worried", "sright": "Scarlett_L_Neutral_Neutral"},
+          "background": { "bg": "LiliesNight"} 
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "Carrying an identical lily,        unique to this valley,            as if stuck in time..", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Zayn_R_Thinking_Worried", "sright": "Scarlett_L_Neutral_Neutral"},
           "background": { "bg": "LiliesNight"} 
         },

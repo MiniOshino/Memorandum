@@ -41,7 +41,7 @@
             "background": { "bg": "Light"}
         },
         {
-            "textBox": { "name": "{Nexus}", "text": "Has thou been here before?", "speed": 40 },
+            "textBox": { "name": "{Nexus}", "text": "Hast thou been here before?", "speed": 40 },
             "background": { "bg": "Light"}
         },
         {
@@ -49,7 +49,7 @@
             "background": { "bg": "Light"}
         }
     ],
-    "next": { "type": "choice", "question": "(Has thou been here before?)",
+    "next": { "type": "choice", "question": "(Hast thou been here before?)",
     "one": {"text": "Indeed", "path": "login", "compare": "Confirm", "with": "Confirm"},
     "two": {"text": "Not that I remember..", "path": "new", "compare": "Confirm", "with": "Confirm"}
         }
