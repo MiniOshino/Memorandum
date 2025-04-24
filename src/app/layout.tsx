@@ -18,8 +18,8 @@ export const metadata: Metadata = {
         media: '(prefers-color-scheme: dark)',
         url: '/icon/websiteIcon_Dark.png',
         href: '/icon/websiteIcon_Dark.png',
-      },
-    ]
+      }
+    ],
     },
   };
 
