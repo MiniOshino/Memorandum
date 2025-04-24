@@ -309,7 +309,11 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "And that continued..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "As if it mattered...", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "{Nora}", "text": "But, it continued..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -341,15 +345,15 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "That was usually the end of it.", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "That was the end of it.", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "Yet..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Usually..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "That was not the last time I would see her...", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Yet,       it was not the last time I would see her...", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -368,7 +372,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "Cheers for a successful second mission together!", "speed": 40, "show":"true"},
+                "textBox": { "name": "”Ally”", "text": "Cheers on a successful second mission together!", "speed": 40, "show":"true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -378,11 +382,15 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "I think..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Or they saw me...?", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "Or was it just because she was unique?", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "We were all nobody's..           how was I any diffrent..?", "speed": 40},
+                "background": { "bg": "Darkness"}
+            },
+            {
+                "textBox": { "name": "{Nora}", "text": "Yet she was...", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
@@ -591,7 +599,7 @@
                 "background": { "bg": "NightSkySmog"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "That is what it was to me.", "speed": 40, "show":"true"},
+                "textBox": { "name": "{Nora}", "text": "That is all it was to me.", "speed": 40, "show":"true"},
                 "background": { "bg": "NightSkySmog"}
             },
             {

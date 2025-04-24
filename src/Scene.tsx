@@ -698,8 +698,8 @@ export const Scene = ({ initial_content }) => {
       };
     
       const saveprogress = async () => {
-        console.log('Saving progress');
-        console.log(Username);
+        //console.log('Saving progress');
+        //console.log(Username);
         await pushState("Username", Username); //one of these for each stat.
         await pushState("Password", Password);
         await pushState("StoryProgress", StoryProgress);
@@ -751,20 +751,20 @@ export const Scene = ({ initial_content }) => {
       await pushState("H7Table", H7Table);
       await pushState("T1Beacon", T1Beacon);
       await pushState("Error", Error);
-      console.log(StoryProgress)
+      //console.log(StoryProgress)
     }
   const loadprogress = async () => {
-    console.log('Loading progress');
+    //console.log('Loading progress');
     const result = await pullState();
 
     //console.log(result);
     if ('error' in result) {
-      console.error(result.error);
+      //console.error(result.error);
     } else {
-        console.log(result);
+        //console.log(result);
         result.forEach(x => {
-          console.log(x.key);
-          console.log(x.value);
+          //console.log(x.key);
+          //console.log(x.value);
           SetLookup[x.key](x.value);
           
         });    //This goes trough all the things it pulled from the site and storres it in the correct states  
@@ -782,15 +782,15 @@ export const Scene = ({ initial_content }) => {
           setContent(await load(scene.next.target, scene.next.sceneID));
           setFrame(0);
           reset();
-          console.log('Completed login');
+          //console.log('Completed login');
         } else {
           // preload(await load('Library0', 'confirmationfail'));
           // setContent(await load('Library0', 'confirmationfail'));
           // setFrame(0);
           // reset();
-          console.log("Login fail.");
+          //console.log("Login fail.");
         }
-        console.log('did the loging');
+        //console.log('did the loging');
     }
     const handleregister = async () => {
             const { errors } = await signup(Username, Password);
@@ -804,16 +804,16 @@ export const Scene = ({ initial_content }) => {
                 setContent(await load("NexusCore", "registered"));
                 setFrame(0);
                 reset();
-                console.log('You did it! Library edition');
+                //console.log('You did it! Library edition');
               } else {
                 preload(await load(scene.next.target, scene.next.sceneID));
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
                 reset();
-                console.log('You did it!');
+                //console.log('You did it!');
               }
             } else {
-              console.log('you failed it');
+              //console.log('you failed it');
             }
     }
     const toggleFullscreen = () => {
@@ -837,7 +837,7 @@ export const Scene = ({ initial_content }) => {
       }
     }
   const preload = ((nextscene) => {
-    console.log("im preloading");
+    //console.log("im preloading");
     const images = new Set();
     for(const f of nextscene.frames){
       //console.log(f);
@@ -1076,7 +1076,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             const char = text[currentIndex];
             if (((text === "...") || text === '(...)' || text === '...!' || text === '...?' || text.includes('*'))) {
               if (currentIndex === 0) {
-                console.log('Do it once');
+                //console.log('Do it once');
                 playAudio();
               setTimeout(() => {
                 playAudio();
@@ -1680,38 +1680,38 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 } else if (["zayn", "nora", "roy", "luna", "lily", "life", "death", "void", "null",
                   "inbetween", "theinbetween", "chronos", "aspect", "ru'ne", "alice", "z5r15-3", "z5r15-2", "z5r15-1", "lorelei", "laphia", "gatekeeper", "guest"
                 ].includes(Username.toLowerCase())){
-                  console.log('Name spotted');
-                  console.log(Username);
+                  //console.log('Name spotted');
+                  //console.log(Username);
                   preload(await load('Library0', 'unavailable'));
                   setContent(await load('Library0', 'unavailable'));
                   setFrame(0);
                   reset();
                 } else if (["scarlett"].includes(Username.toLowerCase())){
-                  console.log('Scarlett spotted');
+                  //console.log('Scarlett spotted');
                   preload(await load('Library0', 'unavailableS'));
                   setContent(await load('Library0', 'unavailableS'));
                   setFrame(0);
                   reset();
                 } else if (["nexus","cagliostro", "cagli"].includes(Username.toLowerCase())){
-                  console.log('Nexus spotted');
+                  //console.log('Nexus spotted');
                   preload(await load('Library0', 'unavailableN'));
                   setContent(await load('Library0', 'unavailableN'));
                   setFrame(0);
                   reset();
                 } else if (["architect", "red", "blue", "green", "yellow", "magenta", "cyan"].includes(Username.toLowerCase())){
-                  console.log('Architect spotted');
+                  //console.log('Architect spotted');
                   preload(await load('Library0', 'unavailableA'));
                   setContent(await load('Library0', 'unavailableA'));
                   setFrame(0);
                   reset();
                 } else if (["lyz","lyzzy","vyrnix","vnl","vyrnixlyz"].includes(Username.toLowerCase())){
-                  console.log('Lyz spotted');
+                  //console.log('Lyz spotted');
                   preload(await load('Library0', 'unavailableL'));
                   setContent(await load('Library0', 'unavailableL'));
                   setFrame(0);
                   reset();
                 } else {
-                  console.log("registering happening");
+                  //console.log("registering happening");
                   handleregister();
                 }
               } else if (scene.next.type === "login"){
@@ -1721,7 +1721,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                   setFrame(0);
                   reset();
                 } else {
-                  console.log('login happening');
+                  //console.log('login happening');
                   handlelogin();
                 }
              }
@@ -2168,7 +2168,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           <div className="absolute flex flex-col place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
             {(true) && (
               <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
-                console.log('Chappy 1 select');
+                //console.log('Chappy 1 select');
                 preload(await load("Chapter1", "Chapter1"));
                 setContent(await load("Chapter1", "Chapter1"));
                 setFrame(0);
@@ -2689,14 +2689,14 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
 
             //var tempSP = +localStorage.getItem?('StoryProgress'): '';
             var tempSP = parseInt(StoryProgress);
-            console.log(tempSP);
+            //console.log(tempSP);
             if (scene.storyProgressID > tempSP){
               setCurrentChapter(scene.next.target);
               setCurrentPart(scene.next.sceneID);
               setStoryProgress(scene.storyProgressID.toString());
               //saveprogress();
             }
-            console.log("get next scene");
+            //console.log("get next scene");
 
             if (scene.next.type === "fixed") {//-------------------Normal condition (With Event updates)---------------------------
 
@@ -2750,7 +2750,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 setContent(await load(scene.next.target, scene.next.sceneID));
                 setFrame(0);
                 reset();
-                console.log(Lookup[scene.next.compare]);
+                //console.log(Lookup[scene.next.compare]);
               }
             } else if (scene.next.type === 'special'){//-------------------Special condition (Compares a fixed localStorage check)---------------------------
               // ------------------------------------------------ First VISIT--------------------------------
@@ -2830,8 +2830,8 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 // Handle the case where the value is null, maybe assign a default value
                 scn = ""; // Or whatever default value you want
               }
-              console.log(trgt);
-              console.log(scn);
+              //console.log(trgt);
+              //console.log(scn);
               preload(await load(trgt, scn));
               setContent(await load(trgt, scn));
               //setContent(await load(scene.scene_id + 1));
@@ -2842,7 +2842,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               const max = scene.RNG.amount;
               const rand = Math.round(min + Math.random() * (max - min));
               var bar = '' + rand;
-              console.log(bar);
+              //console.log(bar);
               preload(await load(scene.next.target, bar));
               setContent(await load(scene.next.target, bar));
               //setContent(await load(scene.scene_id + 1));
@@ -2853,7 +2853,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               //validateToken();
               
               if (/Mobi|Android/i.test(navigator.userAgent)){
-                  console.log('Moblie user');
+                  //console.log('Moblie user');
                   setContent(await load("Extra", 'mobile'));
                   setFrame(0);
               } else {
@@ -2916,8 +2916,8 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               // Handle the case where the value is null, maybe assign a default value
               scn = ""; // Or whatever default value you want
             }
-            console.log(trgt);
-            console.log(scn);
+            //console.log(trgt);
+            //console.log(scn);
 
             if (trgt === 'Chapter2' && scn === 'Scene5'){
               preload(await load(trgt, 'Scene2'));
@@ -2934,17 +2934,17 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           }
           }
           } else if (frame === 0){ //--------------------------------------------------------SAVEPROGRESS--------------------------
-            console.log('Start of Section');
+            //console.log('Start of Section');
             if (await validateToken()){
-            if (scene.storyProgressID){
-              console.log('Yes Storyprogress exists');
-              console.log(StoryProgress);
+            if (scene.hud === "StoryHud1" || scene.hud === "StoryHud0" || scene.storyProgressID){ //do it if its either the story hud or story progress id is set
+              //console.log('Yes Storyprogress exists');
+              //console.log(StoryProgress);
               saveprogress();
             }
           }
             setFrame(frame + 1);
             reset();
-            console.log("Next frame please");
+            //console.log("Next frame please");
           } 
             else {
             //---Preload next frame?
@@ -2973,7 +2973,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
     // });
             setFrame(frame + 1);
             reset();
-            console.log("Next frame please");
+            //console.log("Next frame please");
           }
         }}
         >

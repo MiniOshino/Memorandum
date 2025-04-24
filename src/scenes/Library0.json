@@ -262,6 +262,10 @@
               "background": { "bg": "Eye"}
             },
             {
+              "textBox": { "name": "", "text": "(I               see                  you.)", "speed": 40 },
+              "background": { "bg": "Eye"}
+            },
+            {
               "textBox": { "name": "", "text": "(For completely unrelated reasons,            you decide to go for a different name)", "speed": 40 },
               "background": { "bg": "Eye"}
             },
@@ -419,7 +423,7 @@
             "background": { "bg": "Light"}
           },
           {
-              "textBox": { "name": "{Nexus}", "text": "Come here, little soul..           I shall bring thee to the place where the last memory is preserved.", "speed": 40 },
+              "textBox": { "name": "{Nexus}", "text": "Come here, little soul..           I shall bring thee to the last memory, that experienced the previous universe, before its end.", "speed": 40 },
               "background": { "bg": "Light"}
           }
         ],
