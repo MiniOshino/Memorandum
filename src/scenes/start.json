@@ -5,7 +5,7 @@
       "frames": [
         {
           "textBox": { "name": "", "text": "", "speed": 50},
-          "background": { "bg": "MemoRandum"}
+          "background": { "bg": "Darkness"}
         }
       ],
       "next": { "type": "start"}

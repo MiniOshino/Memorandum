@@ -555,7 +555,8 @@
         {
             "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show": "true"  },
             "sprites": { "rright": "Zayn_L_NeutralNF_Sad", "effectRR": "shake"},
-            "background": { "bg": "ForestClearingEvening"}
+            "background": { "bg": "ForestClearingEvening"},
+            "sfx": "thump"
         },
         {
             "textBox": { "name": "Nora", "text": "I’ll..         just help you regardless..", "speed": 40, "show": "true"  },

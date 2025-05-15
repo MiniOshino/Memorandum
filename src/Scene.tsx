@@ -826,15 +826,16 @@ export const Scene = ({ initial_content }) => {
         } else if (element.requestFullscreen) { // Older Microsoft Edge
           element.requestFullscreen();
         }
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.exitFullscreen) { // Safari
-          document.exitFullscreen();
-        } else if (document.exitFullscreen) { // Older Microsoft Edge
-          document.exitFullscreen();
-        }
       }
+      // } else {
+      //   if (document.exitFullscreen) {
+      //     document.exitFullscreen();
+      //   } else if (document.exitFullscreen) { // Safari
+      //     document.exitFullscreen();
+      //   } else if (document.exitFullscreen) { // Older Microsoft Edge
+      //     document.exitFullscreen();
+      //   }
+      // }
     }
   const preload = ((nextscene) => {
     //console.log("im preloading");
