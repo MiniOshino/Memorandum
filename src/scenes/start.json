@@ -8,7 +8,7 @@
           "background": { "bg": "Darkness"}
         }
       ],
-      "next": { "type": "start"}
+      "next": { "type": ""}
     },
     "continue" : {
       "scene_id": "strt",

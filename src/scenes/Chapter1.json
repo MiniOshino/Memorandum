@@ -555,14 +555,12 @@
         {
             "textBox": { "name": "Zayn", "text": "...", "speed": 500, "show": "true"  },
             "sprites": { "rright": "Zayn_L_NeutralNF_Sad", "effectRR": "shake"},
-            "background": { "bg": "ForestClearingEvening"},
-            "sfx": "thump"
+            "background": { "bg": "ForestClearingEvening"}
         },
         {
             "textBox": { "name": "Nora", "text": "I’ll..         just help you regardless..", "speed": 40, "show": "true"  },
             "sprites": { "rright": "Zayn_L_NeutralNF_Hurt", "effectRR": "shake"},
-            "background": { "bg": "ForestClearingEvening"},
-            "sfx": "VOTOWH"
+            "background": { "bg": "ForestClearingEvening"}
         },
         {
             "textBox": { "name": "Nora", "text": "Here..", "speed": 40, "show": "true"  },
