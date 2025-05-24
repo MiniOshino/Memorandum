@@ -2433,7 +2433,7 @@
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
-                            "textBox": { "name": "Zayn", "text": "(Staring at the moon again..)", "speed": 40, "show": "true" },
+                            "textBox": { "name": "Zayn", "text": "(She's staring at the moon again..)", "speed": 40, "show": "true" },
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
@@ -2449,11 +2449,11 @@
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
-                            "textBox": { "name": "Zayn", "text": "Of course.           I feel so lost...", "speed": 40, "show": "true" },
+                            "textBox": { "name": "Zayn", "text": "Of course.          I           feel so lost without...", "speed": 40, "show": "true" },
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
-                            "textBox": { "name": "Nora", "text": "Hmh..     That has nothing to do with the memory part trust me..", "speed": 40, "show": "true" },
+                            "textBox": { "name": "Nora", "text": "Hmmh..            That has nothing to do with the memory part trust me..", "speed": 40, "show": "true" },
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
@@ -2465,7 +2465,7 @@
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
-                            "textBox": { "name": "Zayn", "text": "Like I lost a part of me.", "speed": 40, "show": "true" },
+                            "textBox": { "name": "Zayn", "text": "Like,          I lost a part of me.", "speed": 40, "show": "true" },
                             "background": { "bg": "NightSkyRoofNZ"}
                         },
                         {
@@ -2518,15 +2518,15 @@
                         },
                         {
                             "textBox": { "name": "", "text": "You know..", "speed": 40},
-                            "background": { "bg": "Darkness"}
+                            "background": { "bg": "Darkness", "effect": "static", "effectstyle": "chill"}
                         },
                         {
                             "textBox": { "name": "", "text": "If I had one wish..", "speed": 40},
-                            "background": { "bg": "Darkness"}
+                            "background": { "bg": "Darkness", "effect": "static", "effectstyle": "chill"}
                         },
                         {
                             "textBox": { "name": "", "text": "It would be that those eyes could have stayed as innocent as they were back then.", "speed": 40},
-                            "background": { "bg": "Darkness"}
+                            "background": { "bg": "Darkness", "effect": "static", "effectstyle": "chill"}
                         },
                         {
                             "textBox": { "name": "Zayn", "text": "...Hm?       Did you say something?", "speed": 40, "show": "true" },

@@ -5,10 +5,10 @@
       "frames": [
         {
           "textBox": { "name": "", "text": "", "speed": 50},
-          "background": { "bg": "Darkness"}
+          "background": { "bg": "MemoRandum"}
         }
       ],
-      "next": { "type": ""}
+      "next": { "type": "start"}
     },
     "continue" : {
       "scene_id": "strt",

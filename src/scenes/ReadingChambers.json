@@ -1447,7 +1447,7 @@
             "frames": [
                 {
                     "textBox": { "name": "", "text": "{italic}*bzzzzzzz*{/italic}", "speed": 40, "show": "true"},
-                    "background": { "bg": "CL", "grain": "CL"}
+                    "background": { "bg": "Darkness", "grain": "CL"}
                 },
                 {
                     "textBox": { "name": "Lyzzy", "text": "Hey, hey, wait, hol up.", "speed": 40, "show": "true"},
@@ -1532,7 +1532,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "Lyz", "text": "I’m sure an apparent smarty like you will figure out what to do with that..", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "I’m sure an apparent {italic}smarty{/italic} like you will figure out what to do with that..", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_Puddle"},
                     "background": { "bg": "ReadingChambers"}
                 },

@@ -4,10 +4,10 @@
         "name": "Bluescreen->ReadingChambers",
         "frames": [
             {
-                "background": { "bg": "BlueScreen"}
+                "background": { "bg": "BlueScreenR"}
             }
         ],
-        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers" }
+        "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambersV" }
     },
     "FNoNewContent" : {
         "scene_id": "-",
@@ -15,11 +15,11 @@
         "jayson": "Extra",  
         "frames": [
             {
-                "background": { "bg": "BlueScreen"}
+                "background": { "bg": "BlueScreenR"}
             },
             {   
                 "textBox": { "name": "{you}", "text": "(It seem like you reached the final released chapter for now)", "speed": 40, "show": "true"},
-                "background": { "bg": "Darkness", "pbg": "BlueScreen"}
+                "background": { "bg": "Darkness", "pbg": "BlueScreenR"}
             },
             {
                 "textBox": { "name": "Lyzzy", "text": "", "speed": 40, "show": "true"},
@@ -48,8 +48,8 @@
             }
         ],
         "next": { "type": "choice", "question": "(I do not control the speed at which chapters are released..)",
-            "one": {"text": "Fair enough..", "path": "NoNewContent1", "compare": "true", "with": "true", "stats": "Trusting"},
-            "two": {"text": "Doubt that…", "path": "NoNewContent2", "compare": "true", "with": "true", "stats": "Questioning"}
+            "one": {"text": "Fair enough..", "path": "NoNewContent1", "compare": "Confirm", "with": "Confirm", "stats": "Trusting"},
+            "two": {"text": "Doubt that…", "path": "NoNewContent2", "compare": "Confirm", "with": "Confirm", "stats": "Questioning"}
           }
     },
     "NoNewContent1" : {
@@ -123,11 +123,11 @@
         "name": "Neutral end of release chapter",
         "frames": [
             {
-                "background": { "bg": "BlueScreen"}
+                "background": { "bg": "BlueScreenR"}
             },
             {   
                 "textBox": { "name": "{you}", "text": "(It seem like you reached the final released chapter for now)", "speed": 40, "show": "true"},
-                "background": { "bg": "ReadingChambers", "pbg": "BlueScreen"}
+                "background": { "bg": "ReadingChambers", "pbg": "BlueScreenR"}
             },
             {   
                 "textBox": { "name": "{you}", "text": "(All you can do is wait..)", "speed": 40, "show": "true"},

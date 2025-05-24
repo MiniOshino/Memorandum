@@ -25,7 +25,7 @@
           "background": { "bg": "ValleyEvening"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "The fog is seemingly bubbling out of the valley..", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "The fog is nearly bubbling out of the valley..", "speed": 40, "show":"true"},
           "sprites": {"lleft": "Nora_R_Neutral_uwu", "rright":"Zayn_L_Neutral_Surprised"},
           "background": { "bg": "ValleyEvening"}
         },
@@ -836,6 +836,11 @@
           "background": { "bg": "TowerLit"}
         },
         {
+          "textBox": { "name": "Nora", "text": "...", "speed": 500, "show":"true"},
+          "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Surprised","sright":"Nora_L_Shrug_Surprised", "effectSR":"jump"},
+          "background": { "bg": "TowerLit"}
+        },
+        {
           "textBox": { "name": "(Scarlett)", "text": "Well..         Is that all?             Happy with what you found?", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Neutral_Surprised","sright":"Nora_L_Shrug_Surprised"},
           "background": { "bg": "TowerLit"}
@@ -861,7 +866,7 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Do not, answer that actually.", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "Do not,       answer that actually.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Questioning", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_L_Neutral_Straightface"},
           "background": { "bg": "TowerLit"}
         },
@@ -1116,12 +1121,12 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "Since I woke up.      About..     4 days ago?", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "Since I woke up.      About..     4 days ago?     Probably for longer...", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Thinking", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Surprised", "effectSR":"jump"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Yet it shows no sign of wilting.               Not to mention how long you may have had it before then.", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "Huh...       Well it shows no sign of wilting.               Not to mention how long you may have had it before then.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Thinking_Thinking","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
@@ -1161,12 +1166,12 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Besides that you are quite..        Odd.             Though I am sure you are well aware of that yourself.", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "Besides that,     you are        quite..        Odd.             Though I am sure you are well aware of that yourself.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Ah..       Alright..", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "Ah..       Alright..", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Sad","sright":"Nora_R_Neutral_Neutral"},
           "background": { "bg": "TowerLit"}
         },
@@ -1196,7 +1201,7 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Lucky for the both of you,          they accept everyone and if you reach a certain rank you may get access to their library.", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "Lucky for the both of you,          they accept everyone        and          if you reach a certain rank you may get access to their library.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Neutral","sright":"Nora_R_Neutral_Distracted"},
           "background": { "bg": "TowerLit"}
         },
@@ -1281,7 +1286,7 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "... And this sofa is more comfortable than anything I have slept on.", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "... And this seat is more comfortable than anything I have slept on.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_R_Thinking_Serious","sright":"Nora_L_Neutral_NeutralS"},
           "background": { "bg": "TowerLit"}
         },
@@ -1346,7 +1351,7 @@
           "background": { "bg": "TowerLit"}
         },
         {
-          "textBox": { "name": "Nora", "text": "You..", "speed": 40, "show":"true"},
+          "textBox": { "name": "Nora", "text": "But..", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Scarlett_R_Neutral_Neutral", "right":"Zayn_L_Neutral_Glee","sright":"Nora_L_Neutral_Sus"},
           "background": { "bg": "TowerLit"}
         },
@@ -1416,7 +1421,7 @@
           "background": { "bg": "Darkness"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "(Wonder if Nora is able to sleep as well.)", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "(Wonder if Nora isn't able to sleep as well.)", "speed": 40, "show":"true"},
           "sprites": {"center":"Zayn_R_Thinking_Neutral"},
           "background": { "bg": "Darkness"}
         },
@@ -1556,7 +1561,17 @@
           "background": { "bg": "TowerNight"}
         },
         {
-          "textBox": { "name": "Zayn", "text": "Uh..       ..Alright then.        Why not.", "speed": 40, "show":"true"},
+          "textBox": { "name": "Zayn", "text": "Uh..       Do I get to look at the books later?", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "(Scarlett)", "text": "If you so desire.", "speed": 40, "show":"true"},
+          "sprites": {"lleft":"Scarlett_R_Neutral_Thinking", "rright":"Zayn_L_Thinking_Neutral"},
+          "background": { "bg": "TowerNight"}
+        },
+        {
+          "textBox": { "name": "Zayn", "text": "..Alright then.         Why not.", "speed": 40, "show":"true"},
           "sprites": {"lleft":"Scarlett_R_Neutral_Neutral", "rright":"Zayn_L_Neutral_Neutral"},
           "background": { "bg": "TowerNight"}
         },
@@ -1791,7 +1806,7 @@
           "background": { "bg": "LiliesNight"} 
         },
         {
-          "textBox": { "name": "(Scarlett)", "text": "Case in point.", "speed": 40, "show":"true"},
+          "textBox": { "name": "(Scarlett)", "text": "Case in point,        once again.", "speed": 40, "show":"true"},
           "sprites": {"sleft":"Zayn_R_Neutral_Sweating", "sright": "Scarlett_L_Neutral_Neutral"},
           "background": { "bg": "LiliesNight"} 
         },

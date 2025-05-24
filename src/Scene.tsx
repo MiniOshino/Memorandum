@@ -753,6 +753,62 @@ export const Scene = ({ initial_content }) => {
       await pushState("Error", Error);
       //console.log(StoryProgress)
     }
+    const saveprogressL = async () => {
+        await pushState("StoryProgress", StoryProgress);
+        await pushState("CurrentChapter", CurrentChapter);
+        await pushState("CurrentPart", CurrentPart);
+        await pushState("Warptablet", Warptablet);
+        await pushState("EventFV", EventFV);
+        await pushState("EventPR", EventPR);
+        await pushState("EventSC", EventSC);
+        await pushState("Spydent", Spydent);
+        await pushState("Curious", Curious);
+        await pushState("Interested", Interested);
+        await pushState("Scaredycat", Scaredycat);
+      await pushState("Analytical", Analytical);
+      await pushState("Friendly", Friendly);
+      await pushState("Empathetic", Empathetic);
+      await pushState("SelfInterest", SelfInterest);
+      await pushState("Confused", Confused);
+      await pushState("Silly", Silly);
+      await pushState("Trusting", Trusting);
+      await pushState("Questioning", Questioning);
+      await pushState("SlimeInterest", SlimeInterest);
+      await pushState("NQuestionWITP", NQuestionWITP);
+      await pushState("NQuestionHDIL", NQuestionHDIL);
+      await pushState("NQuestionArchitect", NQuestionArchitect);
+      await pushState("NQuestionNexus", NQuestionNexus);
+      await pushState("NQuestionCagliostro", NQuestionCagliostro);
+      await pushState("NQuestionSlime", NQuestionSlime);
+      await pushState("NQuestionMist", NQuestionMist);
+      await pushState("NQuestionInBetween", NQuestionInBetween);
+      await pushState("AQuestionUnlockID", AQuestionUnlockID);
+      await pushState("InformationWLNB", InformationWLNB);
+      await pushState("InformationCagliostro", InformationCagliostro);
+      await pushState("InformationInBetween", InformationInBetween);
+      await pushState("Ha117L", Ha117L);
+      await pushState("f659f9", f659f9);
+      await pushState("SlimeName", SlimeName);
+      await pushState("InbetweenVibe", InbetweenVibe);
+      await pushState("Green", Green);
+      await pushState("Yellow", Yellow);
+      await pushState("Cyan", Cyan);
+      await pushState("Magenta", Magenta);
+      await pushState("RCPot", RCPot);
+      await pushState("RCSoul", RCSoul);
+      await pushState("RCCell", RCCell);
+      await pushState("NCTables", NCTables);
+      await pushState("NCRoof", NCRoof);
+      await pushState("NCInfoWall", NCInfoWall);
+      await pushState("H7Table", H7Table);
+      await pushState("T1Beacon", T1Beacon);
+      await pushState("Error", Error);
+    }
+    const saveprogressS = async () => {
+        await pushState("StoryProgress", StoryProgress);
+        await pushState("CurrentChapter", CurrentChapter);
+        await pushState("CurrentPart", CurrentPart);
+    }
   const loadprogress = async () => {
     //console.log('Loading progress');
     const result = await pullState();
@@ -925,9 +981,9 @@ const LSC = () => {
 const TextBox = ({ name, text, speeed, show, tb}) => {
   //   const [rename, setRename] = useState(name);
   const [voice, setVoice] = useState([
-    ["Innkeeper","Slime"],
+    ["Innkeeper","Slime","Bandit"],
     ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
-    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz", "L7"],
+    ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz", "L7", "Z & N"],
     ["Scarlett","(Scarlett)","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?","??? & N"],
     ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
     ["Green", "(Green)","Yellow","(Yellow)","{Dial}"]]);
@@ -1224,7 +1280,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       {show !== "special" && (<div className={`z-20`}>
         {show === "true" &&
   
-          <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`TextBox.png`}
+          <Image className={`absolute bottom-0 h-[28%] w-[100%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : tb.effect === 'crash' ? "animate-[crash_0.5s]" : null}`} src={`TextBox.png`}
           alt={"TextBox"}
           width={3840}
           height={602} />
@@ -1409,7 +1465,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             <button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
               e.preventDefault();
               if (await validateToken()){
-                saveprogress();
+                saveprogressL();
               }
               preload(await load("ReadingChambers", "ReadingChambersV"));
               setContent(await load("ReadingChambers", "ReadingChambersV"));
@@ -1427,7 +1483,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             <button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
               e.preventDefault();
               if (await validateToken()){
-                saveprogress();
+                saveprogressL();
               }
               if (EventFV === '3'){
                 preload(await load("NexusCore", "FirstVisit"));
@@ -1454,7 +1510,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             {Ha117L === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
               e.preventDefault();
               if (await validateToken()){
-                saveprogress();
+                saveprogressL();
               }
                 preload(await load("Ha117L", "Ha117LV"));
                 setContent(await load("Ha117L", "Ha117LV"));
@@ -1472,7 +1528,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               {f659f9 === 'unlock' &&(<button className=" w-[21%] h-[21%] m-2" onClick={async (e) =>{
                 e.preventDefault();
                 if (await validateToken()){
-                  saveprogress();
+                  saveprogressL();
                 }
                if (T1Beacon === 'false'){
                 preload(await load('Transmitter', 'BeaconOneF'));
@@ -1806,6 +1862,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 preload(await load('Extra', 'BlueScreen'));
                 setContent(await load('Extra', 'BlueScreen'));
                 setFrame(0);
+                setRoom(0);
               }
 
             }}
@@ -2168,8 +2225,12 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
         <div className="absolute z-40 w-[100%] h-[100%] top-[0%] left-[0%]">
           <div className="absolute flex flex-col place-items-start place-content-start w-[92%] h-[88%] top-[6%] left-[4%]">
             {(true) && (
-              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async (e) => {
                 //console.log('Chappy 1 select');
+                e.preventDefault();
+              if (await validateToken()){
+                saveprogressL();
+              }
                 preload(await load("Chapter1", "Chapter1"));
                 setContent(await load("Chapter1", "Chapter1"));
                 setFrame(0);
@@ -2183,7 +2244,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
            /></button>
             )}
             {(parseInt(StoryProgress) >= 6) && (
-              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async (e) => {
+                e.preventDefault();
+                if (await validateToken()){
+                  saveprogressL();
+                }
                 preload(await load("Chapter2", "Chapter2"));
                 setContent(await load("Chapter2", "Chapter2"));
                 setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 2</div>
@@ -2196,7 +2261,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
              /></button>
             )}
            {(parseInt(StoryProgress) >= 11) && (
-              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async (e) => {
+                 e.preventDefault();
+                if (await validateToken()){
+                  saveprogressL();
+                }
                 preload(await load("Chapter3", "Chapter3"));
                 setContent(await load("Chapter3", "Chapter3"));
                 setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 3</div>
@@ -2209,7 +2278,11 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
              /></button>
             )}
             {(parseInt(StoryProgress) >= 15) && (
-              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async () => {
+              <button className=" z-50 w-[20%] h-[10%] flex flex-col place-content-center place-items-center hover:text-gray-400 text-2xl p-1 font-bold m-1 text-black" onClick={async (e) => {
+                 e.preventDefault();
+                if (await validateToken()){
+                  saveprogressL();
+                }
                 preload(await load("Chapter4", "Chapter4"));
                 setContent(await load("Chapter4", "Chapter4"));
                 setFrame(0);}}><div className="z-50 translate-y-[80%]">Instance 4</div>
@@ -2247,7 +2320,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
                 setContent(await load('ReadingChambers', 'DoorF'));
                 setFrame(0);
                 if (await validateToken()){
-                  saveprogress();
+                  saveprogressL();
                 }
               } else {
                 preload(await load('ReadingChambers', 'DoorN'));
@@ -2814,6 +2887,9 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               }
 
             } else if (scene.next.type === 'continue'){//-------------------Continue condition (Continuzes with story accordnig to where u max were)---------------------------
+              if (await validateToken()){
+                saveprogressL();
+              }
                 const CC = CurrentChapter;
                 const CP = CurrentPart;
                 let trgt: string;
@@ -2937,10 +3013,10 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           } else if (frame === 0){ //--------------------------------------------------------SAVEPROGRESS--------------------------
             //console.log('Start of Section');
             if (await validateToken()){
-            if (scene.hud === "StoryHud1" || scene.hud === "StoryHud0" || scene.storyProgressID){ //do it if its either the story hud or story progress id is set
+            if (scene.storyProgressID){ //do it if its either the story hud or story progress id is set
               //console.log('Yes Storyprogress exists');
               //console.log(StoryProgress);
-              saveprogress();
+              saveprogressS();
             }
           }
             setFrame(frame + 1);

@@ -226,7 +226,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "..N...", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "..Nnnnnn...", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Neutral_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -236,7 +236,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "”Ally”", "text": "You look like a N to me tho..", "speed": 40, "show": "true"},
+                "textBox": { "name": "”Ally”", "text": "...Nnnnnnooo--?", "speed": 40, "show": "true"},
                 "sprites": {"lleft": "Luna_Thinking_X", "rright": "Nora_Angy_C0"},
                 "background": { "bg": "Darkness"}
             },
@@ -321,7 +321,7 @@
                 "background": { "bg": "Darkness"}
             },
             {
-                "textBox": { "name": "{Nora}", "text": "Favorite colors..      Favorite food..      Favorite Number..", "speed": 40},
+                "textBox": { "name": "{Nora}", "text": "Favorite colors..      Favorite food..      Favorite number..", "speed": 40},
                 "background": { "bg": "Darkness"}
             },
             {
