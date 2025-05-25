@@ -1265,7 +1265,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           height={602} />
         }
       <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[30%] left-[50%] translate-x-[-50%]">
-        <div className="h-[45%] text-2xl font-semibold">
+        <div className="h-[45%] text-2xl font-semibold text-white">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && SlimeName === 'false') || (name === "Lyzzy" && SlimeName === 'false')? "???" : name}
           </div>
         <div className=" z-20 text-xl text-white h-[60%]">
@@ -1286,7 +1286,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
           height={602} />
         }
       <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[100%]">
-        <div className="h-[39%] text-2xl font-semibold">
+        <div className="h-[39%] text-2xl font-semibold text-white">
             {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && SlimeName === 'false') || (name === "Lyzzy" && SlimeName === 'false')? "???" : name}
           </div>
         <div className=" z-20 text-xl text-white h-[46%]">
