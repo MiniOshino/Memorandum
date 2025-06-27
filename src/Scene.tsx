@@ -2940,13 +2940,13 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               
               //validateToken();
               
-              // if (/Mobi|Android/i.test(navigator.userAgent)){
-              //     //console.log('Moblie user');
-              //     setContent(await load("Extra", 'mobile'));
-              //     setFrame(0);
-              // } else {
+              if (/Mobi|Android/i.test(navigator.userAgent)){
+                  //console.log('Moblie user');
+                  setContent(await load("Extra", 'mobile'));
+                  setFrame(0);
+              } else {
 
-
+                
               //const trgt = localStorage.getItem('CurrentChapter');
               //onst scn = localStorage.getItem('CurrentPart');
               //const trgt = JSON.parse(localStorage.getItem('CurrentChapter')!);
@@ -2979,7 +2979,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             //frame.items.item
             
             reset();
-          
+          }
           } else if (scene.next.type === "startup"){
             if (EventFV !== 'NS'){
               //Preload not needed ig

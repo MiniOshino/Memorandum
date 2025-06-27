@@ -16,23 +16,6 @@
   }
 }
 
-@media only screen and (orientation: portrait) {
-  body {
-    transform: rotate(90deg);
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #000; /* optional: black background */
-  }
-  html, body {
-    min-width: 100vh;
-    min-height: 100vw;
-  }
-}
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
