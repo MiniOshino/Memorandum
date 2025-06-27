@@ -94,7 +94,8 @@
         "next": { "type": "choice", "question": "(It continues rubbing its sleeve over the puddle until it vanishes)",
         "one": {"text": "What are you?", "path": "1C1", "stats": "Analytical", "compare": "Confirm", "with": "Confirm"},
         "two": {"text": "Who are you?", "path": "1C2", "stats": "Empathetic", "compare": "Confirm", "with": "Confirm"}, 
-        "three": {"text": "Where am I?", "path": "1C3", "stats": "SelfInterest", "compare": "Confirm", "with": "Confirm"}
+        "three": {"text": "Where am I?", "path": "1C3", "stats": "SelfInterest", "compare": "Confirm", "with": "Confirm"},
+        "four": {"text": "Oh, Hey Lyzzy!", "path": "1C4", "stats": "Friendly", "compare": "Confirm", "with": "Confirm"}
             }
         },
         "1C1" : {
@@ -135,6 +136,47 @@
                 }
             ],
             "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2" }
+          },
+          "1C4" : {
+            "scene_id": "-",
+            "name": "First Arrival",
+            "jayson": "ReadingChambers",
+            "frames": [
+                {
+                    "textBox": { "name": "Lyzzy", "text": "Wuh-!", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Wuh", "effectRR": "jump"},
+                    "background": { "bg": "ReadingChambersNP"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "1C4B", "event": "SlimeName", "eventupdate": "true" }
+          },
+          "1C4B" : {
+            "scene_id": "-",
+            "name": "First Arrival",
+            "jayson": "ReadingChambers",
+            "frames": [
+                {
+                    "textBox": { "name": "Lyzzy", "text": "H-hey,      that's way too suspicious!", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Wuh", "effectRR": "wiggle"},
+                    "background": { "bg": "ReadingChambersNP"}
+                },
+                {
+                    "textBox": { "name": "Lyzzy", "text": "We have never met.        We gotta act the part.", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyzzy_Intense"},
+                    "background": { "bg": "ReadingChambersNP"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "{italic}*Clears throat dramatically*{/italic}", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Zoneout", "effectRR": "shake"},
+                    "background": { "bg": "ReadingChambersNP"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Alright,         back in character..", "speed": 40, "show": "true"},
+                    "sprites": {"rright": "Lyz_Zoneout"},
+                    "background": { "bg": "ReadingChambersNP"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "Scene2", "event": "SlimeInterest", "eventupdate": "1" }
           },
           "Scene2" : {
             "scene_id": "-",
@@ -1054,7 +1096,8 @@
             "next": { "type": "choice", "question": "(......)",
             "one": {"text": "AAAAAAAAAA!", "path": "PR1C1", "compare": "Confirm", "with": "Confirm"},
             "two": {"text": "Why are you staring at me like that..?", "path": "PR1C2", "compare": "Confirm", "with": "Confirm"},
-            "three": {"text": "Another Slime?", "path": "PR1C3", "compare": "Analytical", "with": "2", "stats": "Analytical"}
+            "three": {"text": "Another Slime?", "path": "PR1C3", "compare": "Analytical", "with": "2", "stats": "Analytical"},
+            "four": {"text": "Hi again, Lyz!", "path": "PR1C4", "compare": "SlimeName", "with": "true", "stats": "Analytical"}
           }
         },
         "PR1C1" : {
@@ -1206,12 +1249,94 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "Lyz", "text": "...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessN"},
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
                     "textBox": { "name": "Lyz", "text": "..Weirdo.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C4" : {
+            "scene_id": "-",
+            "name": "AAAAAAAAAAAAAAAAAAAAAA!",
+            "jayson": "ReadingChambers",  
+            "frames": [
+               {
+                    "textBox": { "name": "Lyz", "text": "Yaho.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Zoneout", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Hope ur liking the story so far.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Neutral"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "It's a lil slow at the start but I guess you call that ”setup”.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Zoneout", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "", "text": "", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Zoneout"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "choice", "question": "(It's a lil slow at the start but I guess you call that ”setup”.)",
+            "one": {"text": "Yeah, I like it.", "path": "PR1C41", "compare": "Confirm", "with": "Confirm", "stats": "Analytical"},
+            "two": {"text": "It's a little boring.", "path": "PR1C42", "compare": "Confirm", "with": "Confirm", "stats": "Silly"}
+          }
+        },
+        "PR1C41" : {
+            "scene_id": "-",
+            "name": "idk",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Mhm       mhm!", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Sparkle", "effectC": "jump"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "It's kinda neat.          Just you wait until you get to the best part!", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_Sparkle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Well..          As soon as that chapter is out.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD","effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "PRScene2"}
+        },
+        "PR1C42" : {
+            "scene_id": "-",
+            "name": "idk",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Oh.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessD", "effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "Just let it cook.", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "It gets really neat!", "speed": 40, "show": "true"},
+                    "sprites": { "center": "Lyz_FormlessN","effectC": "wiggle"},
+                    "background": { "bg": "ReadingChambers"}
+                },
+                {
+                    "textBox": { "name": "Lyz", "text": "As soon as more chapters are released...", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_FormlessD"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1234,7 +1359,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "Lyz", "text": "...", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "true"},
                     "sprites": { "center": "Lyz_Neutral"},
                     "background": { "bg": "ReadingChambers"}
                 },
@@ -1327,7 +1452,7 @@
             "jayson": "ReadingChambers",  
             "frames": [
                 {
-                    "textBox": { "name": "Lyz", "text": "Oya.     U a smarty ain’t ya.        Noice.", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "Oya.     Ur a smarty ain’t ya.        Noice.", "speed": 40, "show": "true"},
                     "sprites": { "center": "Lyz_Zoneout", "effectC": "wiggle"},
                     "background": { "bg": "ReadingChambers"}
                 }
@@ -1388,7 +1513,8 @@
             ],
             "next": { "type": "choice", "question": "(Uhm..    Imma go now.)",
             "one": {"text": "Ok bye!", "path": "PR3C1", "compare": "Confirm", "with": "Confirm", "stats": "Friendly"},
-            "two": {"text": "Wait, What’s your name?", "path": "PR3C2", "compare": "Confirm", "with": "Confirm", "stats": "Curious"}
+            "two": {"text": "Wait, What’s your name?", "path": "PR3C2", "compare": "SlimeName", "with": "false", "stats": "Curious"},
+            "three": {"text": "Until later Lyz!", "path": "PR3C3", "compare": "SlimeName", "with": "true", "stats": "Friendly"}
           }
         },
         "PR3C1" : {
@@ -1435,6 +1561,19 @@
                 {
                     "textBox": { "name": "Lyzzy", "text": "Until we meet againnnnnnnnnnn~", "speed": 40, "show": "true"},
                     "sprites": { "down": "Lyzzy_Neutral", "movementD": "CTD"},
+                    "background": { "bg": "ReadingChambers"}
+                }
+            ],
+            "next": { "type": "fixed", "target": "ReadingChambers", "sceneID": "ReadingChambers", "event": "EventPR", "eventupdate": "2"}
+        },
+        "PR3C3" : {
+            "scene_id": "-",
+            "name": "byez",
+            "jayson": "ReadingChambers",  
+            "frames": [
+                {
+                    "textBox": { "name": "Lyz", "text": "Mhm!          See you aroundddd!", "speed": 40, "show": "true"},
+                    "sprites": { "down": "Lyz_FormlessN", "movementD": "CTD"},
                     "background": { "bg": "ReadingChambers"}
                 }
             ],
@@ -1542,7 +1681,7 @@
                     "background": { "bg": "ReadingChambers"}
                 },
                 {
-                    "textBox": { "name": "Lyz", "text": "byeeeeeeeee….", "speed": 40, "show": "true"},
+                    "textBox": { "name": "Lyz", "text": "Byeeeeeeeee….", "speed": 40, "show": "true"},
                     "sprites": { "down": "Lyz_Puddle", "movementD": "CTD"},
                     "background": { "bg": "ReadingChambers"}
                 }
