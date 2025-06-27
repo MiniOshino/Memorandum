@@ -443,5 +443,3643 @@
         }
       ],
       "next": { "type": "fixed", "target": "shorts", "sceneID": "test" }
+    },
+  "Nora" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Nora1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Alright~!           Next in line for our little character previewwww...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "...Iiiisssss an odd one,     n-g-l.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...            That should have worked..     right?       Spelling it out so it will be shortened?", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora1"}
+        },
+        {
+            "textBox": { "name": "", "text": "{italic}*Beep*{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora1", "animation": "refocus"},
+            "sfx": "Dot"
+        },
+        {
+            "textBox": { "name": "L7", "text": "I'll take that as a {italic}”yes”{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Anyway;        Nora.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora2", "spbg": "Nora1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Nora,            nora,             nora...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora3", "spbg": "Nora2","animation": "zoomin"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "I can't quite read that one...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora3", "animation": "zoomout"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "On one hand,         it looks like she knows exactly where to go,       yet doesn't tell why;", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4", "spbg": "Nora3"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "And on the other,             she looks almost more clueless then Zayn!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "An odd duo that found one another to be sure.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "But it still bothers me...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "I know,             she's clearly motivated by something...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4", "animation":"refocus"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Yet,                 I'm not fully confident she knows what it is either...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Unlike {italic}another{/italic} soul that is introduced a bit later..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "But,         we will get to that next time~", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "You know,      now that I think about it..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "..These characters are probably the worst to make an ”introduction” to...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Whatever~", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "See you in the library~!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4"}
+        },
+        {
+            "textBox": { "name": "", "text": "{italic}*Booop*{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nora4", "animation": "zoomspazin"},
+            "sfx": "Dash"
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Nora" }
+    },
+    "Scarlett" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Scarlett1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Alright,         not quite sure how to introduce this one..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "But whatever she is..         Definitely not normal.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett1"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Though I guess the same can be said for the entire cast..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Once again,        quite fitting!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett2", "spbg": "Scarlett1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Introducing;          Scarlett!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett3", "spbg": "Scarlett2", "animation": "zoomin"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Claude in black;", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett3", "animation": "zoomout"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Definitely not triggering any ”possessed puppet” vibes if I have ever seen it..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "For the record,        I have not.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett4", "spbg": "Scarlett3"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Honestly don’t even have to..         These library halls harbor way worse..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett5", "spbg": "Scarlett4"}
+        },
+        {
+            "textBox": { "name": "(Bot)", "text": "{italic}Beep        Boop{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett5", "animation": "refocus"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Yeah,       yeah,                 I know.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett5"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Besides that;          There is so much attitude in that form I can practically feel it leaking out.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett6", "spbg": "Scarlett5"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Snappy,         cutthroat            and looks like she knows more than she lets on..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett7", "spbg": "Scarlett6"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "..I'm noticing a pattern here...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett8", "spbg": "Scarlett7"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Thank the realm tree that Roy is there to keep things reasonable..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett8"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Oh wait..         That's a spoiler.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett8", "animation":"refocus"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Cut that last p-", "speed": 40, "show": "special"},
+            "background": { "sbg": "Scarlett8"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Nora" }
+    },
+    "Whoops" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops2"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Alright so-", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops2"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "Hmm..            No..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1", "spbg": "Whoops2"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "How about-", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops2", "spbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Mmmm…             nevermind…", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1", "sspbg": "Whoops2"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "aaaaAAAAA-", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "I dunno what to do neeeexttttt!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "How am I already out of ideassss..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "...huff...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "I’ll just-", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops2", "spbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "ooOP-", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops2"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "{italic}*crash*{/italic}", "speed": 40, "show": "special", "animation": "crash"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Uggghhhhh...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Why are legs like this..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "{italic}*thunk*{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops1", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Nghhhhhhhhh-!", "speed": 60, "show": "special"},
+            "background": { "sbg": "Whoops3"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "…mmmmmmmmmmmmmmmmmm.. ", "speed": 60, "show": "special"},
+            "background": { "sbg": "Whoops4", "spbg":"Whoops3"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "This is the worst timeline..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops4", "animation": "refocus"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops5", "sspbg":"Whoops4"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Great.              No,          hey lovely that you recorded all that..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops6", "spbg":"Whoops5"}
+        },
+        {
+            "textBox": { "name": "(Bot)", "text": "{italic}Boop     Beep-Boop{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops6"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "{italic}*sigh*{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops6", "animation":"zoomin"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Now please delete it all.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops6", "animation":"zoomout"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "Send it to the shadowrealm.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops6"}
+        },
+        {
+            "textBox": { "name": "(Bot)", "text": "{bold}[Sending it to beacon]{/bold}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops5", "spbg": "Whoops6"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "n-NO NO NO!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops8", "animation": "jump"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "{bold}[Upload complete]{/bold}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Whoops8"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Whoops2" }
+    },
+    "Whoops2" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "…Well..        Uhm..         So..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "How bout we make a deal..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "We just..       Forget that last post ever happened..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "And in an exchange..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "L7L", "text": "We treat this like an official reveal!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Yo!             Names Lyz or Lyzzy.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I go by many names but let's keep it to those two.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I’m a slime..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Uhh..         That’s about it…          for now.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Wouldn’t wanna ruin the surprises, right~?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "..So yeah.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I’m fairly new to this whole library thing so I’m just gonna take you souls along with me, I think.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Not much a secret anymore after all..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Ugh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Even turned my arm into a censor bar n stuff.....", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Ugh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Anyway,         I’ll also be working on a reverse information flow so that I can start reading responses.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "If there even are any..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "As far as I’m aware,         I’m speaking into the void..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "So nothing newwwwww~", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "..Welp,         until next time then!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Byeeeeeeeeeeeeeee", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Wuh", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Cagliostro" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Okio~", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "So,         I decided I’ll just introduce the beings of the library next.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "First off;        We got the legendary Cagliostro.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1", "animation": "zoomin"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "They keep this place on track.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1", "animation": "zoomout"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And with “they” I mean {bold}THEY{/bold}.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I have counted about 127 already…          I think..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Though that really means nothing..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "They all look the same after all…", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Cagliostro", "text": "Y-        you know I can hear everything right…", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Oop-!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro2", "spbg": "Cagliostro1"}
+        },
+        {
+            "textBox": { "name": "Cagliostro", "text": "And what are you even doing underneath the table..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro2", "animation": "refocus"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Uhhhhhhhhm...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro2"}
+        },
+        {
+            "textBox": { "name": "Cagliostro", "text": "W-        wait,      what’s this thing you are pointing at me..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro2"}
+        },
+        {
+            "textBox": { "name": "Cagliostro", "text": "Y-    y-     you aren’t r-       recording this right?!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro3", "spbg": "Cagliostro2"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Aaaaaand I’m out!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro3"}
+        },
+        {
+            "textBox": { "name": "Cagliostro", "text": "WHA-!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Cagliostro3"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Curious..", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The rest have been acting pretty much the same as one another..", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Hmm...", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Anyway;", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Next time we're gonna look at their Nexus!", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Until thennnnn!", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Nexus" }
+    },
+    "Nexus" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "There they are..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The Nexus Cagliostro in their natural habitat.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1", "animation": "zoomin"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Meaning they just sit there,         ordering and sorting memory and data flow.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1", "animation": "zoomout"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "..They got eyes everywhere..            They probably even know I’m here already.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "I do.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...Well shit..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "It is rather hard not to notice when thee enters through such unconventional means..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "Especially here in the,       “Predators den”,         to go along with thine allegory..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "{italic}*gulp*{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "Disappointingly to thee,         that is not what I am though.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "Now if thou would be so kind and leave me to my dealings..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "The conventional way please.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus2", "spbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "I would be delighted to converse with thee another time..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1", "sspbg": "Nexus2"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "On a..         Non recorded occasion,            if possible.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "..mmhm          mmhmm..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Uhmm..          My baddddddddd...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Nexus2", "spbg": "Nexus1"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "{italic}*sigh*{/italic}", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus2"}
+        },
+        {
+            "textBox": { "name": "Nexus", "text": "And there it leaves the same way it came from…", "speed": 40, "show": "special"},
+            "background": { "sbg": "Nexus1", "spbg": "Nexus2"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Architect" }
+    },
+    "Architect" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Alright;           Today,           we are looking at something special.", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It's none other then;", "speed": 40, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Tadaaaaaa~!            The Architect!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Orrrrr their bots to be more exact.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1", "animation": "zoomin"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Their hotwired,         decommissioned bots to be even more exact.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1", "animation": "zoomout"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "There are tons of these everywhere!      Very similar to the Cagliostro but more...            fixing and internal.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "This ones design is called;       ”Red”.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect2", "spbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I agree,           riveting naming convention from the Architect..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect2"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But interestingly enough;", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect2"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "This is also a face reveal for you goobers.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect3", "spbg": "Architect2"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "A lot of the tech stuff I use,        is pretty much yoinked from the Architect..", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect3"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Including you!          The camera!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect3"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I even overtook one of the unused rooms and made it my own~            Kekekeke~", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1", "spbg": "Architect3"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "So yeah,         this is the closest I can get to em..       Because they can never find out~~", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And my sneaking abilities have been proven to be...         lacking...       to say the least...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Besides that;         The reverse flow should be done fairly soon if everything goes alright...", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It never does...              But oh well.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Until next time~", "speed": 40, "show": "special"},
+            "background": { "sbg": "Architect1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Nora" }
+    },
+    "Chronos" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Boom!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Jumpscare character reveal!", "speed": 40, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "..Least indirectly.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "This is Chronos.              Governor of Time.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The growth of the realm tree,         the pace of worlds being created;", "speed": 40, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The possibilities of all realities somehow happening at once;           It’s all according to chronos.", "speed": 40, "show": "special"},
+            "background": { "sbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Now,          I know this might seem like another cop-out like with the architect,        but hear me out.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "movementC":"fade"},
+            "background": { "sbg": "Whoops1", "spbg": "Chronos1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Nobody has ever seen it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Like..                ever.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I think the only being that has seen it,     is Life.           If im generous;     Maybe the Nexus as well.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "They are highly elusive..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Course,          not as elusive as me~", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But for real,        I just know they exist.           That’s it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It’s already hard enough to get these bot-cameras into the places I need beforehand.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "So it's sheer impossible to get it on footage;       IF even possible.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Oh-!          And the In-Between might also have seen it!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But I know even less about that sooooooo..                Yah..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...The rest of these beings might be a bit harder to find....            no less,       record.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Welp,           only one way to find out.              Until next time.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Reverse" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Yo.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I did the thing.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Essentially,          I made an emulator of a device you call;        “PC”.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Then I just had to connect to your “internet“ thingy and bam!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Now I can do all sorts of things!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Read comments,          watch videos,         learn about more stories,          play games!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Turns out,           sending information back to the library is way simpler then the other way around..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...It's kinda obvious in retrospect...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "..Suppose I procrastinated for no reason, huh..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessN"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Well regardless,            I now got way easier access to information about your lil world with this!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Gone are the days of browsing random memories to find something specific.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Now I can just..            Look it up!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "That said..          It appears you have a lot of rules there.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "All the way up to at least 34!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "So I'll make sure to read through alllll of those to not cause any problems!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"wiggle"},  
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Until later!~~", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "FoundYou" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Well..          The more you know,       huh.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "There are              quite a few things I don’t fully understand yet..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Like for example-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection", "pbg":"Darkness"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "Oya oya..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "Here we go~", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "So THIS world is the reason why these signals seem so..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "Rhythmic~", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "How intriguing..", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "Carry on.", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "This is going to be LOTS of fun to observe~~", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "(Luna)", "text": "Until later,                 “Lyz”~~", "speed": 40, "show": "special"},
+            "background": { "bg": "Connection"}
+        },
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500},
+            "background": { "bg": "Darkness", "pbg":"Connection"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Deemo" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "L7", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Deemo my beloved~", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "A game so sweet and lovely,            it warms my hea-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "…my-             uhm....", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "......Bones......", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "If you love more melodical focused music,          like me,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Enjoy rhythm games,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And possess opposable thumbs;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Play it.            Now.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The last prerequisite is optional.          Just play it.            Somehow.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The amount of songs and artists I have found from this game and their collaborations alone,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Is higher than I can count on my hands,               without it not looking like hands anymore.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And along with the incredibly precious story,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I quite literally cannot listen to some tracks without losing my form and melting.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Fluquor is too powerful, man...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I wanna keep talking,         but now I wanna listen to all those songs again... ", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I'll do just that actually...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Until next timeeeeeeeeeeeee.", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyz_Puddle", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Sekiro" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Sekiroooooooo!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "THE;        dare I say;             Best open world rhythm game out there.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "After finishing the tutorial,               you can start another run on either NG+,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Or simply start all over        and give back the charm you don't need anymore,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "To really start playing Sekiro          as the realm tree intended.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Nothing gets quite as satisfying as a fight with no downtime,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Blades clinking from start to finish,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Even if it takes learning the perfect parry pattern of a flailing monkey.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Unless there are two of them.                That's just simply too many monkeys.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "My REAL bones,       that are part of my skeleton,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Which I'm sure        my fellow bone utilizers can relate to,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Are practically {bold}quacking{/bold} for more!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But for some unholy reason,            there has yet to be a second entry.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Lament"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Who knew the “Path of further hardships” was actually just waiting for that...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I want more...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Octopath" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I'm in love.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I thought Octopath Traveler one was phenomenal..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And part two SOMEHOW improved on EVERYTHING.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The flexible combat,          The pixel artstyle,          The boss designs,           The connecting story", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And o-          m-    g…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The music.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I cannot create a form,            that would satisfy the required energy output,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "That I have bottled up             when listening to this ost.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "From literally the normal combat theme,           to phenomenal transitions,            to Otherworldly Entity.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I attempted Galdera more then zero times,         and on the winning attempt,         I still loved hearing every second of it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Ok I contemplated,         it's not fair to only list that one track,        so I’ll list all that come to mind;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Osvald,     Temenos      and Hikaris themes.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Empty memories,       Tempest on the Battlefield.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Critical Clash,         both.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Normal Battle three.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Fierce Confrontation.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "For the Dawn        and Those who deny it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Vide the Wicked.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Fuck it;        Cait's theme.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The Journey for xyz ends,         Every single one of them         i-d-c.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "O-      m-      g the flute in Legends ends…          If I could cry,          I would.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "{italic}*Deep Inhale*{/italic}", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I can’t keep my form anymore...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It’s too good…            I don't even have lungs and I'm out of breath...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I wanna call it “out of this world”           but it's even beyond this library..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I love it so much…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Nioh" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Ahhh Nioh…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The only way I can describe this game           is as a “feels good” game.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Their weapon complexity        along with different stances        and a very utility focused skill tree,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Gives way to a combat feeling        that you still enjoy using on your second playthrough.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It kinda reminds me of Z-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "That…             was almost a spoiler again…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Anywayyyyyy;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I’m not sure if it's just because of the Ki refresh on a well timed button click,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Or just the various options and rotations you can do after.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But understanding it,          is the key difference between getting smacked by a Yoki;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Or one-rotating it without flinching.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Like Octopath,         the second entry of this game vastly improved on all aspects.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And to my luck;          Apparently they announced the 3rd entry!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "What a time to experience this world's life!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Also,             I noticed that I melted at the end of all my last entries so I wont this time.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Nuh uh.            Stable,          Solid Lyzzy.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Unmoving.                    Until the feed cuts.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I said,          until the feed cu-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"}, 
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Terraria" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I cannot explain why..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But Terraria triggers the equivalent of dopamine in my form.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m not sure if its the smooth scaling of power,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Or the sheer amount of joy I feel,        when my favorite weapon has a stronger form.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But along with the style of the game,           I just wanna play more.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I CAN,          because this game's modded community is a blessing!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I could kiss        every single one of you.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "At least I think that's what you humans do for adoration…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Everything I adore about this game is amplified by all your mods.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "More elaborate bosses,            Harder modes,             The sheer Bullet-hell experience,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Weapons that you find at the start          and upgrade to the fullest post Moon Lord.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Fargos,          The Stars Above,         Thorium,            The Story of the Red Cloud,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And my personal favorite;          Calamity.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "They really cannot be compared.              The only reason to why I would designate Calamity,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Is because of the music.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Plain and simple;             It is pure           and absolute Cinema.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I didn't think I would love Dog or Yharon       THIS much          but here we are.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I mean also both Calamitas..      And Crabba but at that point I would have to list again..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "SO,         before I get carried away again;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "A wonderful game         with a baseline for a wonderful modded community to grow with it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And how they have bloomed indeed.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Peak experience.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Now go play it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"}, 
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "MHWorld" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "A boss rush simulator where you upgrade your gear during the game's progress?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Who would have thought I’d like that..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I did.            I thought that.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Monster Hunter World has a special place in my...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Form.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I played it fully with the dlc         and it kept me        CLUTCH CLAWED        until the end!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "That           hurt to say…               Note to self,           never do that again…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Puddle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Anyway;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The monster designs in this game         and how threatening they are presented,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Is a marvel to experience.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "From fighting your local goober         to the apex          to the elders.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "From Pukei         to Odogaron            to my beloved Vaal Hazak.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "All the way to beasts like Alatreon and Fatalis.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And just for the record;              I would     TOTALLY be an elder dragon.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "{bold}The Elden Slime...{/bold}", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And def as memorable as the raging Brachy out of nowhere!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Or me getting Stockholm’ed by a detonating Bagel.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I almost miss him when he isn't there..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Oh!      Not to mention the builds you can do!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "There is a reason why I have several hours in this game..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I would play more          if there weren't still so many great things to experience..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "{italic}*Side-eyes Wilds*{/italic}", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Until next timeeeee~~", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Habby", "movementD":"CTD"}, 
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Persona5" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "There simply isn't a more stylish game than Persona 5.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "This game is so extra and over the top,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It kinda wraps back around and becomes sick again?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "My bones were experiencing a severe case of Schrödinger's Cringe.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But in the end,              the combat flows and looks      straight up delightful,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The different Personas and possible fusions         makes it never go stale,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And the mixup between constant combat,         and time management simulator,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "That depending on who you are,         is either chill      OR        stresses you out beyond believe;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "All      make this game flow super well       and is sheer eye-candy to look at.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Even the MENUS are a joy to look at!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And once again,           I gotta gush about it.         I didn't make the rules;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The music.     It's the music again.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m noticing a real pattern here.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m not even sure what this “Coffee” thing is,            but Leblanc’s theme makes me wanna drink it!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m just running to the boss location after sending a calling card,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Why do I feel like it's the coolest thing I have ever done?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It’s the music!              Every other track is simply peak!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "How do you go from local school shenanigans           to killing god?!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I didn’t notice,          because I was grooving to the sound and style of this game too hard!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "There seem to be more of these types of games.        “JRPG’s”,      I think?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Oh yeah,          I also heard someone call the main character       “Johnny Anime”", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "What’s an     “Anime”,         and why is it called Johnny?             Is that the J in JRPG?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I gotta go look this stuff up...        Until laterrrr!", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Thinking", "movementD":"CTD"}, 
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Hades" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Banger.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Simply a banger.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Hades pretty much nailed it from a game,        and from a roguelike perspective.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "A great combat feel,      a healthy scaling of power,       interesting and unique builds each round, ", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "visual clarity,         a great artstyle,         lovely music,        great voice acting,         well balanced difficulty;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "With the arguably best endgame difficulty increase there is!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Not only can you individually increase which type of difficulty you would like,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But also unqiue types of difficulty,         like a harder versions of a boss;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "With more moves,       new models        and even whole different arenas,        instead of just;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "More health,        more damage.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And all the while        you can look at..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Uhmm....                  Very..        Pretty..         People..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "....Maybe the Nexus has a point....", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But that's not even all,         because there is also a confidant mechanic!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It quite literally got everything you could want and then some.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Even a sequel!!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I can't wait for it to fully release         so I can sink my t-..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Uhmmm...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Do this;      with it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "…Picking up your kind’s slang really doesn't mesh well with being a slime n all,        huh.. ", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"}, 
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Anyway!       Hades!        Amazing game!          Love it!        Go play it!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"}, 
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Hollow" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Hollow Knight is such a charming game.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "movementC": "fade"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "T-B-H,         the entire world is incredibly charming.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Obviously Hallownest is brutal and ruthless,          but it draws you in.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m not sure if it's the artstyle      or the pacing,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "but at some point you just wanna explore more!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Actually,          it might be the fact that you    CAN'T     go everywhere from the start.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Every upgrade this small and adorable knight,           that I wanna hug really badly,             gets;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Makes exploring and fighting just THAT much smoother each time,         without fail.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And along with the phenomenal ambience,          makes the entire world feel so alive!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS"
+        },
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Great enemy designs and bosses also contribute to that,          by not only being fun to fight,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "but also        by having a place and purpose in the world          without having to say a single word.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It’s near impossible to pick favorite fights in this game,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But I'm giving it to Nightmare King Grimm          for the intensity and amazing theme.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Now,              if I made myself       Orange;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": " I          would totally be the best boss fight in the game~", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Oh,        also!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m not sure why every Hollow Knight enjoyer was wearing a clown getup until recently,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But I’m super excited for the sequel,        that will definitely drop in this human year!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Metaphor" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Not my first “JRPG”;            And def not my last one       if these keep being so great.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Metaphor blesses you once again        with an impeccable style,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "lovely chars,        spicy combat,        and great music all at once!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I-D-K        Who that guy is         that keeps singing in all these tracks,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But he needs a raise.          Like,        at least plus 4 earthly dabloons.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Actually,           all the voice acting in this game deserves more dabloons.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "They contributed greatly to why I liked      every        single       confidant       in this game.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But I won't mention my two favorites;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Because that says more about me        than the game.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Unlessssss            we include non-confidant characters            because my lord,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Louis Guiabern          has        PRESENCE!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Haven't seen an antagonist like this one in quite a bit!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Like,           WOW.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Ok,        let's move on before I have to retitle the video;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Once again,         the mix between daily shenanigans and combat is well balanced.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The complexity of builds is less expansive than other titles,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But nonetheless interesting         and had me invested for the entire game!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Now…          Do I pray for Persona 6 or Metaphor 2...?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Hmmmmmmmmmmmmmmmm.......", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyz_Hmm", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Factorio" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The factory must grow.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It must..            Expand…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...!", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Ah!        Sorry,        I was in a trance.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Factorio just kinda does that to ya.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It ignites some deep      deep      down desire to grow,       expand         and optimize.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And there is no stopping.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "You decide on building green science,         actually red science could be made better;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Oh,      I probably need more power,         that probably needs more coal as well;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Actually,        green is kinda stagnant,         lemme read the ratios;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Boom.           You forgot how time feels.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It reminds me of the programming work I had to do,          to get this connection working.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I think that likewise,          It will only look beautiful to me.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Like;           What is this?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Idk why I made it round,         but it works,          and looks beautifully funky.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But that’s the charm about it.         I made this.          I created this.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "From my own blo-..            Uhhh..                 Slime,           Goop         and…                  more…         slime.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Regardless;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It’s like a complex puzzle box           that has infinite ways to the solution.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessN"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And I fear that my desire for automation will now taint every other game…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I jest.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But whatever it is...        It MUST expand……", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyz_Zoneout", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "EldenRing" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I am but a poor DEX user in a STR world..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Lament", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Elden Ring is a fantastic game,           but         It took me a while to get into it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "My first run was me going full glass cannon dex,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Barely getting scrap,      as I didn’t just wanna run uchi forever.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I won’t lie,          going from a quick paced and persistent Sekiro,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "To Margit,         taking 7 earthly business days to finish his attack,         was rough.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Then I found the moonlight greatsword,         respec'd my build with some more Vit;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And proceed to obliterate every boss unrelenting.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Left me a little indecisive on my view on the game,                until:", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I started a new run,         balanced build,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Still keeping my vita low enough for a lil self imposed challenge;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "AND,         played the DLC.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And that DLC         rounded out the game       delightfully     for me.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Not only were those bosses relentless         like my preferred fighting style;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But it finally felt like I was in my element again!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "There is a reason to why 3 out of my 4 favorite bosses were dlc.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Messmer,         Rellana,           Malenia...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And dare I say...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Promised Consort Radahn.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "What can I say...         I like my ruthless and fast bosses.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Other then that;        There are ZERO correlations you could pull from those 4.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I   D    K          what ur talking about.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "(Bot)", "text": "{italic}Boop     Beep-Boop{/italic}", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "What do you mean I have been yapping for way over a minute again already!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I got so much more to say!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "aaaAA-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Furi" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "This game is sick.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Furi is just a boss rush game       and damn it's good at it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Every fight has a purpose,          to understand the mechanics,              flow of the game               or to test it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Along with a personal aesthetic,         a way to fight,          and an amazing track.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It’s a perfect game for when you have a bit of time to just          sit down,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And try your hand at a boss           until you beat it,         or take another break.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I played this over a comparatively long period,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And you notice how the muscle mem-...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Well...           Slime memory        in my case...             stays with you.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And it's BECAUSE this game is all boss fights,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You REALLY notice the progress in learning them.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Once you beat them all like         twice;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You breeze through them.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And holy realm tree          you feel sick while doing so.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Super simple game.          Super well designed.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "If you enjoy boss fights and a sick OST;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Play it.           It’s worth it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "MGRR" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "What..          did I just play…", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You        can't tell me this game was created sober.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I couldn’t replicate the chemical components in my form            that were used for it's creation.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I {bold}love{/bold} it for it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Metal Gear Rising: Revengeance;       has no right to be this sick,              I mean     it does,      but,          yeah.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Playing this game feels like a fever dream,      straight out of section CRSD;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "That SOMEHOW           managed to produce one of the best OST’s out there.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It’s quite literally a power fantasy            that actually works!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You could collect all mathematicians of the world,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "to calculate the possible good outcomes of this games creation,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "and they would collectively agree;       That there was only one answer!!!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Disregarding the sheer amount of DNA’s of the soul this game created;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It also just plays super well.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It doesn’t go overboard with mechanics,          keeps itself very contained,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And for its comparatively short playtime,          gives back double the enjoyment.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I have no clue what the story is about admittedly;          But that’s optional.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Go Play it.         This is an experience that words cannot describe well enough.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Until next timeee.", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyz_Zoneout", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Bloodborne" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The world of Bloodborne is something special.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I’m not sure if its the setting,        the impeccable fashion,         the weapon designs,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Or just outright the phenomenal creature designs;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But this world speaks to me.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Now,        DEX users still don't get any love at the start,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Until they get handed the sickest weapons in the game.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "So         I finished a run,           got my beloved scythe,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And then NG+        with the dlc this time          and wow.            I loved it", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You know the game is peak            if you cannot listen to one of the tracks;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Without also hearing the screeching of the boss.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Only Nexus knows how much I love screeches.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It         makes me wanna;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "SCREEEEEEEEEEEE!!!", "speed": 40, "show": "special", "animation":"crash"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"crash"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Yeah,      Bloodborne is just peak.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I can’t wait for the seq-", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Oh no...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Well...", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessD"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "At least I can groove to the beauty that is      “Mensis Motorway”,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessN"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "That we have been blessed with in the meantime.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_FormlessN", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And now we wait.", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyz_FormlessD", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "STS" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "What a deeply satisfying game to play.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Unlike other roguelikes,      where you mostly have to work with what you got.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Slay the Spire is more about,       refining         and fine tuning your build throughout the run.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Course,         you can also succeed with a fun mayhem 40+ deck,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But the art lies in reducing your deck to just what's necessary;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Just enough damage,           just enough survivability,            just enough card cycle.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "My favorite card is “Wraith form”,              and not only because the card art is sick,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But also           because it effectively starts a timer         and a bet;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "“I can beat you,         before my time runs out.”", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I almost wish it was more..            Detrimental?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Like,          instead of reducing armor gain,          increase the enemies damage every turn or something.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "That said,         my favorite character is also the Silent.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "What can I say,         I love my daggers         and I love my poison.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Gimme Catalyst or I'm stealing your bones.            I didn’t make the rules.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I also really enjoy the Watcher,        but thinking about it;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Every character is uniquely different          and really fun to play,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I think that speaks for how well this game is designed.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I highly recommend it,       and I cannot wait to touch part 2.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Until laterrrr~~", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Habby", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "TGAA" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "An edgelord prosecutor,          In old england,          An intriguing and connected story,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "movementC": "fade"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "With an amazing ost          and Herlock -fucking Sholmes?!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Yeah no,        The Great Ace Attorney just has exactly what I want.          I love it so much..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It’s technically 2 separate games           but one big story,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "So if you don’t play both            you're probably committing a cardinal sin.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "This Story's pacing is damn near perfection.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "They manage to set up,          and loop back         every         single         thread they made,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And left practically no loose ends.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Even the      -usually      weak cases         are somehow connected to the bigger picture.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And some of these cases just           go off the rails in terms of lore significance.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I was practically glued to each one of them.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "AND HOW COULD I NOT BE!?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "This games characters are so endearing and charming,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You cannot help but be dragged into it all.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Lemme reiterate;         They got someone called     Herlock           -fucking           Sholmes.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And it works.           It’s not out of place,           it fits perfectly in character         and somehow;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "You still take this absolute lunatic of a character seriously when you have to.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "In addition to that,           Ace attorney ost’s have never let me down;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And this one just          picked me up,              cradled me,            gave me a kiss       and packed my lunch for me.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I         have rarely felt so good and satisfied after a game's ending.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I am still baffled by it.           It’s just peak.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "But that's not even CLOSE to describing how great this game is!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It’s INEFFABLE!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I'm way over time..            But I wanna yap more.. ", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Lament", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "PLAY THE GAME!           IT'S SO GOOD!", "speed": 40, "show": "special", "animation":"crash"},
+            "background": { "sbg": "Whoops9", "animation":"jump"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Stardew" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Stardew Valley is such a chill game~", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Unless you played factorio before          and are a minmaxer;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Then you are stressing to optimize the day as much as you can.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "If ur not going to bed one swing away from passing out,             value lost.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Relationships?            More like,       I need to spend the entire day watering my farm!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Half jokes aside,          It is very cozy.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And I think           most people don’t attempt to finish the community center in the first year.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And If I treat my second year,           how others probably play their first,           it is indeed cozy.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "This game also has a really great modding community;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And it’s full of super cool and sweet things!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I’m talking;          Mods with more hair varietyyyy        and that It doesn't clip,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Pretty clohes,           More decoration,             Expansion mods,           Npc mods           and even;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Automation.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Very precious stuff!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I think when played with a friend,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "This game would shine         as it seems like the perfect co-op game!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Maybe I could convince the Nexus to play with me..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Or Cagli....", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Or a duplicate of myself........", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Hmmmmmmmmmmmmm...", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Thinking", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "VRising" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "V-Rising is a delightful game         that hits the vampire fantasy on the spot.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It’s progress is very akin to Terraria,        in the sense of;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Build a base,          get resources,           fight a boss to unlock progression,         upgrade base,         repeat.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Its combat is also really smooth,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And with multiple different weapons and spells to adjust your style;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "You can become all powerful!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And honestly what more do you want from a Vampire fantasy?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Sit in your self built castle,         Seduce people into becoming your servants,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Looking for the purest of blood quality,           Avoiding the sun.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Turn into a rat.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "At least I think that's what vampires do..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Why would they not,          rat strats are very powerful.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I would know.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Oh,          and before I forget.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Not only does this game keep getting updated and better,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But it also has a really nice ”hard mode”,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "With added boss abilities and such!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I would very much recommend it         if you like the progression of Terraria, ", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "The combat of Hades              or just the Vampire aesthetic in general!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "See u laterr~", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Habby", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Necrodancer" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And once again         a small n sweet game has captured the equivalent of my heart.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "movementC": "SRTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Crypt of the NecroDancer is put plainly,           a perfect encapsulated bit of joy.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "A rhythmmmm                   dungeon crawler?            Rogue-like?", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Not sure,          but precious nonetheless.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "For how short and simple the game is,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "It takes quite a bit of learning         before you get the hang of it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "There isn't really time to think when you have to move in a beat.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "All you got is pattern memorisation,            general instinct,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And the rhythm in your bones.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Also,         I don’t need to mention this          but I'll do it anyway;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The rhythm game indeed has great music.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And I am not ashamed to admit;             I have died on bosses,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Because I was grooving too hard to the track.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I also haven’t beaten the game with theeee           half heart character yet,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "A slime can only do so many things at once..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Ugh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And the tie to your world seems to have an impact on Chronos..", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_Hmm"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Eh,         I’m sure that will not cause any critical or lasting consequences.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Cya.", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyz_Neutral", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Expedition33" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "OMG Esquie,       mon ami!     Hiiiiii!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "movementC": "SLTC"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "I swear        if this game wasn’t peak,          this would be an Esquie video.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And I'm           THIS    close           from making it one regardless.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "But alas;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Clair Obscur: Expedition 33,       is a masterful game          that excels in nearly every aspect.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "An intriguing and beautiful world / story,             A satisfying and expansive combat,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "A delightful cast of characters,          A phenomenal soundtrack,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "And the existence of Esquie.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Every character plays differently         and it's really cool to craft a build for everyone.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "There are so many different forms of Pictos,           that I had to self ban a few of them,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Thinking", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Because my Maelle turned into a continental nuke.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And as cool as it is to obliterate every enemy or boss indiscriminately;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I would like to actually fight them.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And that also means         more time spent listening to impeccable battle music!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And,       Oh     my       realm tree.          Monoco’s track.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "All I’m saying;           If I had actual pants,           I would no longer have them.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Anyway,          here are my top 3 favorite characters;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "3rd place:          Esquie", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "2nd place:          Esquie with a headband", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Hearts", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "1st place:          Esquie offering a hug", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_HeartsS", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Ty for reading.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Au revoir,    mon amiiiiii~", "speed": 40, "show": "special"},
+            "sprites": {"down": "Lyzzy_Hearts", "movementD":"CTD"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
+    },
+    "Lamb" : {
+      "scene_id": "Ths the test2",
+      "name": "Test",
+      "frames": [
+        {
+            "textBox": { "name": "", "text": "...", "speed": 500, "show": "special"},
+            "background": { "bg": "Darkness"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I love the artstyle of this game soooo muchhhh!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "movementC": "fade"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Cult of the Lamb is a pure treat        to anyone that likes chill base building,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": " Mixed with a lil rogue-like to spice things up.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And this game balances that delightfully well.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "The beautifully precious OST           along with the style of the game          really make this one shine!", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And I gotta say,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "There is something charmingly odd and surreal         about seeing a bunch of adorable animals,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Doing all kinds of deranged cult things.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Now       given,              I made them do it            {bold}BUT{/bold}", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Wuh", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "They shan't worry;", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Habby", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyzzy", "text": "Because not even death      can excuse them from service,     in my cult.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyzzy_Intense", "effectC":"jump"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Death is temporary,           Slime is eternal.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "That said,           Go play the game.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "It’s short n sweet,", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "And I really cannot describe this game's charm in mere words.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Distracted", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "Also you play as a lamb.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "I like lambs.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Sparkle", "effectC":"wiggle"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "That’s it.         Shooo.            Come back after you finish it.", "speed": 40, "show": "special"},
+            "sprites": {"center": "Lyz_Neutral"},
+            "background": { "sbg": "Whoops1"}
+        },
+        {
+            "textBox": { "name": "Lyz", "text": "...", "speed": 500, "show": "special"},
+            "sprites": {"center": "Lyz_Zoneout"},
+            "background": { "sbg": "Whoops1"}
+        }
+      ],
+      "next": { "type": "fixed", "target": "shorts", "sceneID": "Cagliostro" }
     }
-  }
+}

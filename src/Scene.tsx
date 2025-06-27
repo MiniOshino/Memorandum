@@ -309,7 +309,7 @@ const Background = ({ background }) => {
       </div>
       )}
       {/*------------------------------------Shorts BG---------------------------------------------- */}
-      {background.sbg && (<div className={` absolute ${background.animation === "zoomin" ? "animate-[zoomin_5s]" : background.animation === "rotateright" ? "animate-[rotateright_4s]" : background.animation === "refocus" ? "animate-[refocus_2s]" : background.animation === "zoomout" ? "animate-[zoomout_5s]" : background.animation === "zoomspazin" ? "animate-[zoomspazin_10s]" : background.animation === "zoomspazout" ? "animate-[zoomspazout_10s]" : background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[jump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : ""} -z-50 w-[32%] h-full ease-in left-[50%] translate-x-[-50%]`}>
+      {background.sbg && (<div className={` absolute ${background.animation === "zoomin" ? "animate-[zoomin_5s]" : background.animation === "rotateright" ? "animate-[rotateright_4s]" : background.animation === "refocus" ? "animate-[refocus_2s]" : background.animation === "zoomout" ? "animate-[zoomout_5s]" : background.animation === "zoomspazin" ? "animate-[zoomspazin_10s]" : background.animation === "zoomspazout" ? "animate-[zoomspazout_10s]" : background.animation === "shake" ? "animate-[shake_0.5s]" : background.animation === "wiggle" ? "animate-[wiggle_1s]" : background.animation === "jump" ? "animate-[sjump_0.5s]" : background.animation === "crash" ? "animate-[crash_0.5s]" : background.animation === "sjump" ? "animate-[ssjump_0.5s]" : ""} -z-50 w-[32%] h-full ease-in left-[50%] translate-x-[-50%]`}>
         { background.sbg === "bitch" ? null :
        <Image
         className=" z-0 w-full h-full"
@@ -325,6 +325,17 @@ const Background = ({ background }) => {
        <Image
         className=" -z-40 w-full h-full"
         src={`SHORTS${background.spbg}.png`}
+        alt={'background.spgb'}
+        width={1214}
+        height={2160}
+      />}
+      </div>
+      )}
+      { background.sspbg && (<div className=" absolute -z-40 w-[32%] h-full opacity-0 animate-[vibeout_0.5s] ease-in left-[50%] translate-x-[-50%]">
+        { background.sspbg === "bitch" ? null :
+       <Image
+        className=" -z-40 w-full h-full"
+        src={`SHORTS${background.sspbg}.png`}
         alt={'background.spgb'}
         width={1214}
         height={2160}
@@ -984,9 +995,9 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
     ["Innkeeper","Slime","Bandit"],
     ["Zayn", "(Zayn)","..R?","Rlz?","Z...","Zayn...","{you}"],
     ["Nora","{Nora}","Nora?","Z5R15-3","Z5R15-3?","Architect","(Architect)","Lyz", "L7", "Z & N"],
-    ["Scarlett","(Scarlett)","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?","??? & N"],
-    ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?"],
-    ["Green", "(Green)","Yellow","(Yellow)","{Dial}"]]);
+    ["Scarlett","(Scarlett)","Nexus","(Nexus)", "{Nexus}","Lyzzy","Table?","??? & N", "L7L"],
+    ["Roy","Luna","(Luna)","{Luna}","”Ally”","”Ally”?","Cagliostro"],
+    ["Green", "(Green)","Yellow","(Yellow)","{Dial}","(Bot)"]]);
   //   const [speach, setSpeach] = useState('TextingNeutral');
   // console.log(speach);
   //   const VoiceCheck = () => {
@@ -1259,16 +1270,16 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
       {show === "special" && (<div className={`z-20`}>
         {show === "special" &&
   
-          <Image className={`absolute bottom-0 h-[30%] w-[32%] left-[50%] translate-x-[-50%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : null}`} src={`STextBox.png`}
+          <Image className={`absolute bottom-0 h-[30%] w-[32%] left-[50%] translate-x-[-50%] z-20 ${tb.effect === 'shake' ? "animate-[wiggle_1s]" : tb.effect === 'crash' ? "animate-[crash_0.5s]" : tb.effect === 'jump' ? "animate-[sjump_0.5s]" : null}`} src={`STextBox.png`}
           alt={"STextBox"}
           width={3840}
           height={602} />
         }
       <div className=" z-20 flex flex-col absolute place-content-center place-items-center top-[70%] h-[30%] w-[30%] left-[50%] translate-x-[-50%]">
         <div className="h-[45%] text-2xl font-semibold text-white">
-            {name.includes("(") ? "???" : name.includes("{") ? "" : (name === "Lyz" && SlimeName === 'false') || (name === "Lyzzy" && SlimeName === 'false')? "???" : name}
+            {name.includes("(") ? "???" : name.includes("{") ? "" : name === "L7L" ? "L7" : name}
           </div>
-        <div className=" z-20 text-xl text-white h-[60%]">
+        <div className={` z-20 text-xl text-white h-[90%] ${tb.animation === 'shake' ? "animate-[shake_1s]" : tb.animation === 'crash' ? "animate-[crash_0.5s]" : tb.animation === 'jump' ? "animate-[jump_0.5s]" : null} `}>
         {skiped ? (<StyledText text={text}></StyledText>) : (<Texting text={text} speed={speeed} ps={name} why={async () => {if ((scene.next.type === "choice" || scene.next.type === "input" || scene.next.type === "CLP" || scene.next.type === "ChapSelect") && frame >= scene.frames.length - 1){
             reset();
           } else {
@@ -2929,11 +2940,13 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
               
               //validateToken();
               
-              if (/Mobi|Android/i.test(navigator.userAgent)){
-                  //console.log('Moblie user');
-                  setContent(await load("Extra", 'mobile'));
-                  setFrame(0);
-              } else {
+              // if (/Mobi|Android/i.test(navigator.userAgent)){
+              //     //console.log('Moblie user');
+              //     setContent(await load("Extra", 'mobile'));
+              //     setFrame(0);
+              // } else {
+
+
               //const trgt = localStorage.getItem('CurrentChapter');
               //onst scn = localStorage.getItem('CurrentPart');
               //const trgt = JSON.parse(localStorage.getItem('CurrentChapter')!);
@@ -2966,7 +2979,7 @@ const TextBox = ({ name, text, speeed, show, tb}) => {
             //frame.items.item
             
             reset();
-          }
+          
           } else if (scene.next.type === "startup"){
             if (EventFV !== 'NS'){
               //Preload not needed ig

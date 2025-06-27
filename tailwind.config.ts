@@ -372,6 +372,14 @@ const config: Config = {
           '0%, 100%' : {transform: 'translate(0, 0)'},
           '50%' : {transform: 'translate(0, -10px)'},
         },
+        sjump: {
+          '0%, 100%' : {transform: 'translate(-50%, 0)', filter: 'blur(0px)'},
+          '50%' : {transform: 'translate(-50%, -10px)', filter: 'blur(5px)'},
+        },
+        ssjump: {
+          '0%' : {transform: 'translate(-50%, 0)', filter: 'blur(0px)'},
+          '100%' : {transform: 'translate(-50%, -10px)', filter: 'blur(5px)'},
+        },
         banner: {
           from: { transform: 'translate(0, -25%)'},
           to: {transform: 'translate(0, 0%)'},
